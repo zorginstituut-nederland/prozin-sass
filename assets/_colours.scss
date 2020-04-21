@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+$body-font-colour: black;
+$colour-accent: #e17000; 
+$colour-auto-suggest-pills: #01689b;
+$colour-base-light: #e8e8e8;
+$colour-brown: #84710a; // Bruin
+$colour-dark-blue: #01689b; // Donker blauw
+$colour-dark-blue-d: darken($colour-dark-blue, 10%);
+$colour-dark-blue-l: #cce0f1; // Donker blauw light
+$colour-dark-blue-xd: darken($colour-dark-blue, 30%);
+$colour-dark-blue-xl: #e5f0f9; // Donker blauw extra light
+$colour-dark-brown: #673327; // Donker bruin
+$colour-dark-green: #275937; // Donker groen
+$colour-dark-yellow: #ffb612; // Donker geel
+$colour-green: #39870c; // Groen
+$colour-grey-1: #f3f3f3; // Grijs 1
+$colour-grey-2: #e6e6e6; // Grijs 2
+$colour-grey-3: #cccccc; // Grijs 3
+$colour-heavenly-blue: #007bc7; // Hemel blauw
+$colour-light-blue: #8fcae7; // Licht blauw
+$colour-light-green: #d6d7b2;
+$colour-light-grey: #e8e8e8;
+$colour-link: $colour-dark-blue;
+$colour-mint: #76d2b6; // Munt groen
+$colour-moss-green: #777c00;
+$colour-moss-green-d: darken($colour-moss-green, 10%);
+$colour-moss-green-l: #d6d7b2;
+$colour-moss-green-xl: #ebebd9;
+$colour-notice: #fdf6bb; 
+$colour-orange: #e17000; // Oranje
+$colour-orange-d: darken($colour-orange, 10%); // Oranje darker
+$colour-orange-l: #f6d4b2; // Oranje light
+$colour-orange-xl: #fbead9; // Oranje extra light
+$colour-pink: #f092cd; // Roze
+$colour-primary: #A31E39;
+$colour-purple-l: #c6b8cf; // Paars light
+$colour-purple-xl: #e3dce7; // Paars extra light
+$colour-purple: #42145f; // Paars
+$colour-red: #d52b1e; // Rood
+$colour-ruby: #ca005d; // Robijn
+$colour-search-box-line: rgba(255, 255, 255, 0.4);
+$colour-search-box-text: white;
+$colour-search-box: $colour-dark-blue;
+$colour-select-bare: $colour-dark-blue;
+$colour-success: $colour-moss-green-xl;
+$colour-violette: #a90061; // Violet
+$colour-yellow: #f9e11e; // Geel
+// $colour-search-box: #01689b; // Donker blauw
+// $colour-search-box: #eef7fb;
+// $colour-search-box: #efeddb;
+// $colour-search-box: #f092cd;
+// $colour-search-box: #f9e11e; // Geel
+// $colour-search-box: #fdeff8;
+// $colour-search-box: #ffb612; // Donker geel
+// $colour-search-box: #fff4dc;
