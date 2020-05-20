@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#language-switch {
+	padding: 35px 15px;
+
+	.languages-list {
+		text-align: center;
+		li {
+			display: inline-block;
+			float: none;
+			width: auto;
+
+			&.active {
+				display: none;
+			}
+
+			a {
+				padding: 0 10px;
+				background: none;
+				border: 1px solid #b2d7ee;
+				color: #007bc7;
+				margin: 0 10px 0;
+				font-size: 17px;
+				text-decoration: none;
+				display: inline-block;
+				height: 38px;
+				line-height: 39px;
+			}
+		}
+	}
+}

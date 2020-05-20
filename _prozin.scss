@@ -24,3 +24,7 @@ $base-line-height: 1.625;
 $form-proportion-ceiling: 260%;
 $form-proportion-name: 30%;
 $form-proportion-value: 80%;
+
+// Components
+
+@import "components/language-switch";
