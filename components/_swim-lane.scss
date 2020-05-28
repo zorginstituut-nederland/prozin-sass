@@ -1,0 +1,552 @@
+@charset "UTF-8";
+
+.swim-lane {
+	background: white;
+
+	.container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		@include screen-size(small) {
+			// padding: 20px;
+		}
+	}
+
+	.lane-title {
+		margin: 0 0 20px 0;
+		font-size: 1.625rem;
+		padding-top: 10px;
+		border-top: 1px solid #e1e1e1
+	}
+
+	.lane-footer {
+		clear: both; // Required for IE 11.
+
+		a {
+			font-weight: bold;
+
+			&:before {
+				display: inline-block;
+				width: 1em;
+				font-family: fontello;
+				content: '#{$glyph-angle-right}';
+			}
+		}
+	}
+
+	&#site-navigation {
+		@include screen-size(medium-large) {
+			background: $colour-dark-blue;
+		}
+
+		* {
+			color: white;
+		}
+
+		.container {
+			padding-top: 40px;
+			padding-bottom: 15px;
+
+			@include screen-size(small) {
+				padding: 0;
+			}
+		}
+	}
+
+	&#swim-lane-editorial {
+		@include screen-size(medium-large) {
+			background-color: #f3f3f3;
+		}
+
+		.container {
+			@include screen-size(small) {
+				padding: 0;
+			}
+
+			.item-title {
+				font-size: 1.45em;
+				line-height: 1.2em;
+			}
+		}
+	}
+
+	&#swim-lane-search {
+		@media screen {
+			background-color: $colour-moss-green-xl;
+		}
+
+		will-change: transform; // creates a new paint layer
+		position: relative;
+		z-index: 1;
+		// margin-top: -60px;
+
+		.container {
+			position: relative;
+		}
+
+		.medicine-group  {
+			&::first-letter {
+				text-transform: capitalize;
+			}
+
+			:not([href]) {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+		
+		@media screen and (min-width: 950px) {
+			background-image: url(pills-5.jpg);
+			background-size: 100% auto;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		&.warning {
+			color: $colour-orange;
+			border-bottom: solid 5px $colour-orange;
+
+			h1 {
+				color: $colour-orange;
+				// font-weight: bold;
+
+				&:before {
+					content: '#{$glyph-icon-attention}';
+					margin-top: 0.5em;
+				}
+			}
+		}	
+
+		.tabs {
+			clear: left;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			@include clear-fix;
+			display: block;
+			float: left;
+			width: 100%;
+
+			&.injecting {
+				&:before {
+					display: none;
+				}
+
+				> * {
+					opacity: 1;
+
+					.counter {
+						opacity: 0;
+					}
+				}
+			}
+
+			white-space: no-wrap;
+
+			a,
+			label {
+				float: left;
+				border-top: 0;
+				margin: 0 10px 0 0;
+				font-weight: normal;
+				color: $colour-moss-green-d;
+				cursor: pointer;
+				text-decoration: none;
+				font-size: 1em;
+
+				margin: 0;
+				color: $colour-search-box;
+				float: left;
+				padding: 0.5em 1em;
+
+				&:first-child {
+					padding-left: 2.2em;
+				}
+
+				transition: padding $advanced-search-animation-speed;
+
+
+				input,
+				&:before {
+					display: none;
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&.active,
+				&.current,
+				&.checked {
+					background: white;
+					color: black;
+					text-decoration: none;
+					background: $colour-search-box;
+					cursor: default;
+					color: $colour-search-box-text;
+					
+
+					padding: 0.5em 2.2em;
+				}
+
+				.counter {
+					display: inline-block;
+					margin: 0 -0.3em 0 0.5em;
+					background-color: $colour-dark-blue;
+					color: white;
+					border-radius: 1em;
+					height: 1.7em;
+					min-width: 1.7em;
+					@include box-sizing;
+					padding: 0 0.5em;
+					transition: opacity 0.5s;
+					animation: zoomIn 0.6s;
+
+					vertical-align: baseline;
+					line-height: 1.8em;
+					font-size: 0.6em;
+					text-align: center;
+					top: -0.8em;
+
+					&.disabled {
+						background-color: $colour-moss-green-l;
+						animation: none;
+					}
+
+					&.injecting {
+						&:before {
+							display: none;
+						}
+
+						opacity: 0;
+					}
+				}
+			}
+
+			.touch & {
+				overflow-x: auto;
+				overflow-y: hidden;
+				-webkit-overflow-scrolling: touch;
+
+				margin: 0 -1 * $container-padding;
+				width: calc(100% + #{$container-padding} + #{$container-padding});
+
+				white-space: nowrap;
+
+				.extra-tabs {
+					padding-right: $container-padding;
+					display: inline-block;
+				}
+
+				a,
+				label {
+					float: none;
+					display: inline-block;
+					margin: 0;
+
+					// &:first-child {
+					// 	margin-left: $container-padding;
+					// }
+				}
+			}
+
+
+			.no-touch & {
+				span.extra-tabs {
+				    border: 2px transparent solid;
+				    padding-top: 2.3em;
+				    display: inline-block;
+				    // float: right;
+				    height: 0;
+				    width: 2.4em;
+				    overflow: hidden;
+				    position: absolute;
+				    // right: -2px;
+				    top: -6px;
+				    z-index: 1;
+
+				    @include screen-size(small) {
+				    	right: 0;
+				    }
+
+				    transition: all 0.3s;
+
+				    &:before {
+				      font-family: fontello;
+				      content: '#{$glyph-double-chevron-right}';
+				      background: $colour-moss-green;
+				      line-height: 1.8em;
+				      text-align: center;
+				      position: absolute;
+				      right: 0.3em;
+				      top: 0.3em;
+				      height: 1.8em;
+				      width: 1.8em;
+				      color: $colour-moss-green-xl;
+				      border-radius: 50%;
+				      transition: all 0.5s;
+				    }
+
+				    &:hover {
+				      border: 2px white solid;
+				      padding-bottom: 0.5em;
+				      margin-left: -17em;
+				      background-color: $colour-moss-green-xl;
+				      height: auto;
+				      width: 22em;
+
+					  @include screen-size(small) {
+					  	width: 100%;
+					  }
+
+				      &:before {
+				        color: black;
+				      	// border-radius: 0;
+				      	background-color: $colour-moss-green-l;
+				      	transform: rotate(90deg);
+				      }
+				    }
+
+				    a,
+				    label {
+				      display: block;
+				      float: none;
+				      padding: 0.3em 0.7em;
+				      margin: 0;
+				      text-align: left;
+				      color: black;
+				      line-height: 1.6;
+				      overflow: hidden;
+				      text-overflow: ellipsis;
+				      white-space: nowrap;
+				    }	
+				}
+			}
+		}
+
+
+		.options {
+			float: right;
+			position: absolute;
+			right: 15px;
+			bottom: 0;
+			color: $colour-dark-blue;
+			text-shadow: 0 0 10px $colour-moss-green-xl,
+					     0 0 10px $colour-moss-green-xl,
+					     0 0 10px $colour-moss-green-xl,
+					     0 0 10px $colour-moss-green-xl,
+					     0 0 10px $colour-moss-green-xl,
+					     0 0 10px $colour-moss-green-xl,
+					     0 0 10px $colour-moss-green-xl;
+		}
+
+		#breadcrumb {
+			@include screen-size(small) {
+				display: none;
+			}
+
+			margin-bottom: .3384em;
+			font-size: .8125em;
+			padding-top: 10px;
+			margin-top: 0;
+		}
+
+	}
+
+	&#site-summary {
+		background-color: white;
+
+		.container {
+			padding-bottom: 0; // Must be followed up by another white lane or news.
+
+			.summary {
+				// margin-bottom: 60px;
+
+				@include screen-size(large) {
+					width: 66.66667%;
+				}
+
+				p {
+					font-size: 1.3125em;
+					line-height: 1.5238;
+				}
+			}
+		}
+	}
+
+	&#editorial-navigation {
+		background: $colour-dark-blue;
+
+		* {
+			color: white;
+		}
+
+		.container {
+			padding-top: 50px;
+			padding-bottom: 15px;
+		}
+	}
+
+	&#partners {
+		.container {
+			padding-bottom: 0;
+		}
+	}
+
+	&#news {
+		.container {
+			// padding-bottom: 0;
+		}
+	}
+
+	@keyframes bounce-memo {
+		0% {
+			background-position: right 0px;
+		}
+
+		50% {
+			background-position: right 20px;
+		}
+
+		0% {
+			background-position: right 0px;
+		}
+	}
+
+	&#home-hero {
+		background-color: $colour-moss-green-xl;
+		background-image: url(#{$home-hero});
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		@include screen-size(small) {
+			min-height: 2px;
+		}
+
+		&.has-top-task-push {
+			.container:before {
+				display: none !important;
+			}
+		}
+
+		.container {
+			padding-top: 25px;
+			position: relative;
+
+			.product-fk &,
+			.product-farmacotherapeutisch-kompas & {
+				&:before {
+					display: block;
+					width: 100%;
+					height: 200px;
+					content: ' ';
+					position: absolute;
+					top: 0;
+					transition: opacity 1s; 
+
+					.current & {
+						opacity: 0;
+					}
+
+					@include screen-size(medium-large) {
+						background: url(zoek-memo.svg) no-repeat;
+						background-position: right top;
+						background-size: 551px 235px;
+						animation: bounce-memo 0.7s;
+						animation-iteration-count: 3;
+						animation-delay: 1s;
+					}
+				}
+			}
+
+			@include screen-size(medium-large) {
+				opacity: 0;
+				animation: fadeIn 1s;
+				animation-delay: 0.5s; 
+				animation-fill-mode: forwards;
+				min-height: 200px;
+			}
+
+			@include screen-size(small) {
+				padding: 20px 15px 25px;
+			}
+		}
+
+		.nav-tiles {
+			* {
+				color: white;
+			}
+		}
+
+		.top-task-push {
+			padding: 25px;
+			background: $colour-moss-green;
+			color: white;
+			box-sizing: border-box;
+
+			.pat-rich > *:last-child {
+				margin: 0;
+			}
+
+			@include screen-size(medium-large) {
+				// margin-right: -25px;
+				width: 390px;
+				float: right;
+			}
+
+			@include screen-size(small) {
+				margin-top: 1px;
+				margin-bottom: 15px;
+			}
+
+			a {
+				color: white;
+				text-decoration: underline;
+			}
+		}
+
+		.top-task-navigation {
+			background: white;
+			padding: 25px;
+			// padding-left: 62px;
+			margin-bottom: 0px;
+
+			@include box-sizing;
+
+			@include screen-size(medium-large) {
+				margin-left: -25px;
+				width: 33.33332%;
+				opacity: 0;
+				animation: fadeIn 1s;
+				animation-delay: 0.5s; 
+				animation-fill-mode: forwards; 
+			}
+
+			h2 {
+				margin-bottom: .755em;
+				line-height: 1.55rem;
+				font-size: 1.625rem;
+				font-weight: normal;
+			}
+
+			.link-list {	
+				li {
+					margin-bottom: 5px;
+
+					a {
+						font-weight: bold;
+						font-size: 1.125rem;
+						line-height: 1.625rem;
+						word-wrap: break-word;
+						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
