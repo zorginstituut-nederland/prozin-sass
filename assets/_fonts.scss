@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "RO Sans";
+    src: url("fonts/ROsanswebtextregular.eot?") format("embedded-opentype"),
+         url("fonts/ROsanswebtextregular.woff") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RO Sans";
+    src: url("fonts/ROsanswebtextitalic.eot?") format("embedded-opentype"),
+         url("fonts/ROsanswebtextitalic.woff") format("opentype");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RO Sans";
+    src: url("fonts/ROsanswebtextbold.eot?") format("embedded-opentype"),
+         url("fonts/ROsanswebtextbold.woff") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RO Serif";
+    src: url("fonts/ROserifwebregular.eot?") format("embedded-opentype"),
+         url("fonts/ROserifwebregular.woff") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RO Serif";
+    src: url("fonts/ROserifwebitalic.eot?") format("embedded-opentype"),
+         url("fonts/ROserifwebitalic.woff") format("opentype");
+    font-style: italic;
+    font-weight: normal;
+}
+
+// @font-face {
+//     font-family: "RO Serif";
+//     src: url("fonts/ROserifwebbold.eot?") format("embedded-opentype"),
+//          url("fonts/ROserifwebbold.woff") format("opentype");
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+.ro-sans {
+    display: inline-block;
+    font-family: "RO Sans";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ro-serif {
+    display: inline-block;
+    font-family: "RO Serif";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
