@@ -26,7 +26,14 @@ $form-proportion-ceiling: 260%;
 $form-proportion-name: 30%;
 $form-proportion-value: 80%;
 
+// Libraries
+
+@import "../reset";
+@import "../animate";
+@import "../patterns/patterns";
+
 // Components
 
+@import "components/form";
 @import "components/language-switch";
 @import "components/swim-lane";

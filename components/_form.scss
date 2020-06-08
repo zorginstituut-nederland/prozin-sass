@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+// Form
+$form-proportion-ceiling: 260% !default;
+$form-proportion-name: 30% !default;
+$form-proportion-value: 80% !default;
+
+.pat-form {	
+
+	counter-reset: form-panel;  
+
+	&#search-form {
+		padding-top: 80px;
+		margin-top: -80px;
+	}
+
+	.meta {
+		text-align: right;
+		font-size: .8125em;
+		line-height: 1.5;
+		color: #666;
+	}
+
+	h2 {
+		color: #01689b;
+		font-size: 1.536em;
+		font-weight: normal;
+		line-height: 1.1429;
+
+		&.req {
+			margin: .67em 0 0 0;
+		}
+	}
+
+	label.slider {
+
+
+		&.type-euro {
+			padding-bottom: 1.5em;
+
+			&:after {
+				content: attr(data-value);
+			}
+
+			input {
+				position: absolute;
+			}
+		}
+	}
+
+	.has-changes {
+		position: absolute;
+		left: -20px;
+		top: -13px;
+		bottom: -12px;
+		right:0;
+		background: rgba(255,100,0,0.1);
+		border-left: 8px solid rgba(255,100,0,0.2);
+		z-index: -1;
+		color: transparent;		
+		display: block;
+		animation: fadeIn 1s;
+	}
+
+	input:not([type="range"]),
+	textarea,
+	select {
+		background-color: white;
+		box-shadow: 0 2px 0 0 $colour-dark-blue;
+		padding: 2px 5px;
+		margin-top: -3px;
+		margin-bottom: 0;
+		border: none;
+		font-family: $body-font-family;
+
+		&[size="4"] {
+			width: 6em;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 2px 0 0 black;
+		}
+
+		// transition: box-shadow 2s;
+
+		&:invalid {
+			// background-color: $colour-orange-xl;
+			box-shadow: 0 2px 0 0 $colour-orange;
+			transition-delay: 4s;
+		}
+
+		&:required:valid {
+			// background-color: $colour-moss-green-xl;
+			box-shadow: 0 2px 0 0 $colour-dark-blue;
+			transition-delay: 0s;
+		}
+	}
+
+	.currency-field {
+		input {
+			padding-left: 1.5em; // Overrules input:not([type="range"]) found above
+		}
+	}
+
+	fieldset.form-panel {
+		padding: $baseline 0 0 20px;
+		background: $colour-grey-1;
+		@include box-sizing;
+
+		.page-type-login & {
+			margin-bottom: 35px;
+		}
+
+		h3 {
+			counter-increment: form-panel;
+
+			&:before {
+				content: counter(form-panel) '. ';
+			}
+		}
+
+		@include clear-fix;
+
+		> .button-bar {
+			width: 100%; // Prevents buttonbar from collapsing after inject in Chrome, FF and Safari iOS (12.x).
+			margin: 0;
+
+			@include screen-size(medium-large) {
+				padding-left: $form-proportion-name;
+			}
+
+			.pat-button {
+				float: left;
+			}
+
+			.filter-toggle {
+				background: transparent;
+				text-decoration: underline !important;
+				color: $colour-dark-blue;
+				padding: .4em 0;
+				cursor: pointer;
+				display: inline-block;
+				vertical-align: text-bottom;
+				line-height: 1.6;
+				float: left;
+				font-size: 1em;
+
+				&:active {
+					box-shadow: none;
+				}
+			}
+		}
+	}
+
+	select {
+		padding-right: 20px;
+	}
+
+	fieldset.horizontal {
+
+		.help {
+			padding: 0;
+
+			.help-label,
+			.help-label.collapsible-open.collapsible-in-progress {
+				position: absolute ;
+				top: -30px;
+				right: -25%;
+				z-index: 2;
+				width: 26px;
+				height: 32px;
+				overflow: hidden;
+				background-color: $colour-dark-blue;
+				color: transparent;
+				padding: 0;
+				content: '#{$glyph-vraagteken}';
+				font-family: fontello;
+				transition: translate 0.25s;
+				transform: translateY(0%);
+
+				&:hover {
+					color: transparent;
+				}
+
+				&.collapsible-open.collapsible-in-progress {
+					transform: translateY(0%);
+				}
+
+				&.collapsible-open,
+				&.collapsible-closed.collapsible-in-progress {
+					transform: translateY(100%);
+
+					&:before {
+						opacity: 0;
+					}
+
+					&:after {
+						opacity: 1;
+					}
+				}
+
+				&:before {
+					content: '#{$glyph-vraagteken}';
+					background-color: transparent;
+					transform: none;
+					margin: 0;
+					font-family: fontello;
+					color: white;
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+					line-height: 32px;
+					text-align: center;
+					font-weight: normal;
+					font-style: normal;
+					font-size: 0.8em;
+					transition: opacity 0.8s;
+					transition-delay: 0.3s;
+				}
+
+				&:after {
+					content: '#{$glyph-close}';
+					font-size: 0.8em;
+					font-family: fontello;
+					color: white;
+					width: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-weight: normal;
+					font-style: normal;
+					line-height: 32px;
+					text-align: center;
+					background: $colour-dark-blue;
+					z-index: 1;
+					opacity: 0;
+					transition: opacity 0.8s;
+					transition-delay: 0.3s;
+				}
+			}
+		}
+		
+		.pat-collapsible > .panel-content {
+			padding: 0.5 0 1.5em 0;
+			@include box-sizing;
+		}
+
+		> label {
+			// position: relative;
+			clear: both;
+			z-index: 1;
+		} 
+
+		fieldset.group,
+        div.group,
+        .help,
+        .instruction {
+        	z-index: 1;
+
+        	dfn.icon-help {
+        		margin-right: (100% - $form-proportion-name) * 100% / $form-proportion-name * -1;
+        		margin-left: 0;
+        	}
+
+        	dfn.icon-help {
+        		// bottom: -28px;
+
+				&.collapsible-open.collapsible-in-progress {
+					// bottom: -28px;
+				}
+
+				&.collapsible-open,
+				&.collapsible-closed.collapsible-in-progress {
+					bottom: -57px;
+				}
+        	}
+        }
+
+	}
+}
