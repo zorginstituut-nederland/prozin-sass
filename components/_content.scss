@@ -1,0 +1,53 @@
+#content,
+#search-content {
+	// padding-top: 2 * $baseline;
+
+	min-height: calc(100vh - 70px);
+	box-sizing: border-box;
+
+	@include screen-size(medium-large) {
+		padding-top: 60px;
+		padding-bottom: 70px;
+	}
+
+	@include screen-size(small) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	&.grid-on {
+	    background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%); /* FF3.6+ */
+	    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3))); /* Chrome,Safari4+ */
+	    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	    background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%); /* Opera11.10+ */
+	    background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%); /* IE10+ */
+	    background-image: linear-gradient(top, rgba(0,0,0,0.3) 95%,rgba(0,0,0,0.3) 100%); /* W3C */
+	     
+	    -webkit-background-size: 100% $baseline;  
+	         -o-background-size: 100% $baseline;
+	            background-size: 100% $baseline;
+	}
+}
+
+.variation-compare ~ #main #content,
+.variation-compare ~ #main #search-content,
+.variation-medicine-compare ~ #main #content,
+.variation-medicine-compare ~ #main #search-content,
+.variation-indication-compare ~ #main #content,
+.variation-indication-compare ~ #main #search-content,
+.variation-medicine-group-compare ~ #main #content
+.variation-medicine-group-compare ~ #main #search-content {
+	
+	&:not(.compare-count-0) {
+		background: white;
+		padding-top: 0;
+
+		> .container {
+			max-width: inherit;
+			
+			@include screen-size(small) {
+				padding: 0;
+			}
+		}
+	}
+}

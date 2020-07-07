@@ -34,9 +34,10 @@ $form-proportion-value: 80%;
 
 // Components
 
+@import "components/content";
 @import "components/form";
 @import "components/language-switch";
 @import "components/news-feed";
-@import "components/swim-lane";
 @import "components/page-module";
 @import "components/rich";
+@import "components/swim-lane";
