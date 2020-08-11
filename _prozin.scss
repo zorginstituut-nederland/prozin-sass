@@ -16,6 +16,12 @@ $baseline: $baseline;
 $container-padding: 15px;
 $container-padding-medium: 15px;
 
+$table-cell-padding-top: 10px;
+$table-cell-padding-right: 15px;
+$table-cell-padding-bottom: 10px;
+$table-cell-padding-left: 15px;
+$table-line-height: 1.5 !default;
+
 // Font treatment
 $body-font-family: 'RO Sans';
 $base-font-size: 112.5%;
@@ -34,10 +40,13 @@ $form-proportion-value: 80%;
 
 // Components
 
+@import "components/comments";
 @import "components/content";
 @import "components/form";
 @import "components/language-switch";
+@import "components/message-box";
 @import "components/news-feed";
 @import "components/page-module";
 @import "components/rich";
 @import "components/swim-lane";
+@import "components/table";

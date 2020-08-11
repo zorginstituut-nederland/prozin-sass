@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+.message-box {
+  position: relative;
+  transition: all 1s;
+
+  table & {
+    margin-bottom: 0;
+    line-height: $table-line-height;
+  }
+
+  .group & {
+    width: 80%;
+  }
+
+  &.status-active {
+    background-color: #efefef;
+
+    table & {
+      background-color: white;
+    }
+
+    .form-panel & {
+      background-color: white;
+    }
+
+    .button-bar {
+      // height: 2.3em;
+      height: 1.8em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+
+  textarea,
+  .content-mirror {
+      margin: 0;
+      padding-right: 2em;
+      padding-left: 0.5em;
+      padding-top: 0.4em;
+      padding-bottom: 0;
+      line-height: $base-line-height;
+
+      table & {
+        // padding: 0;
+        line-height: $table-line-height;
+      }
+
+      float: left;
+      // height: 2.3em;
+      border: none;
+      overflow: hidden;
+      background: transparent; // Was previous only declared for large screen, but necessary for all sizes.
+      
+      resize: none;
+      width: 100%;
+      // -webkit-transition: height 0.4s;
+      // -moz-transition: height 0.4s;
+      // transition: height 0.4s;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+  }
+
+  textarea {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%; // Needed for Firefox
+    -moz-transition: padding 0.5s;
+    -webkit-transition: padding 0.5s;
+    transition: padding 0.5s;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    box-shadow: none;
+    opacity: 0; // Added to compensate for a bug in Chrome
+  }
+
+  .content-mirror {
+    color: black;
+    font-family: inherit;
+    cursor: default;
+    text-align: start;
+    white-space: pre-wrap;
+    vertical-align: text-bottom;
+    overflow: visible;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+    .text .placeholder {
+        font-style: normal;
+        transition: all 0.5s;
+        // margin: -0.4em -0.5em;
+        cursor: default;
+        font-size: 1em;
+    }
+  }
+
+  .no-comments & {
+    .content-mirror {
+      .text .placeholder {
+        .pat-grid-list dd &,
+        table & {
+          background-color: transparent;
+          color: $colour-dark-blue;
+          text-decoration: underline;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.has-comments {
+    .content-mirror {
+      margin-bottom: 1em;
+    }
+  }
+
+  &.status-inactive {
+    textarea {
+      cursor: default;
+
+      table & {
+        cursor: pointer;
+      }
+
+      .pat-grid-list dd & {
+        cursor: pointer;
+      }
+    }
+
+    .content-mirror {
+        table & {
+          padding: 0;
+              
+          .placeholder {
+            line-height: inherit;
+          }
+        }
+    }
+
+    .text {
+      .placeholder {
+      }
+    }
+
+    &:hover {
+      .text {
+        .placeholder {
+          background: $colour-dark-blue-d;
+        }
+      }
+    }
+  }
+
+  &.status-active textarea
+  &.status-active .content-mirror {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  &.status-active {
+
+    textarea {
+      bottom: 2.6em;
+      opacity: 1;
+    }
+
+    .content-mirror {
+      // overflow: auto;
+      padding-bottom: 42px;
+
+      .text {
+
+        .placeholder {
+          margin: 0;
+          color: gray;
+          background-color: rgba(255,255,255,0);
+
+          .pat-grid-list dd & {
+            font-size: 1em;
+            color: gray;
+            background-color: rgba(255,255,255,0);
+            text-decoration: none;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .button-bar {
+    background-color: blacken($colour-base, 10);
+    height: 0;
+    padding: 0 0.5em;
+    overflow: hidden;
+    margin: 0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    z-index: 2;
+    position: relative;
+
+    .pat-button {
+      margin-right: 8px;
+      line-height: 30px;
+      float: left;
+    }
+
+    br {
+      display: none
+    }
+  }
+}

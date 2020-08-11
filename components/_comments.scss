@@ -1,0 +1,180 @@
+.comments {
+	background-color: transparent;
+	margin: 0 0 1em 0;
+	position: relative;
+
+	table & {
+	    margin-top: -1 * $table-cell-padding-top;
+        margin-right: -1 * $table-cell-padding-right;
+        margin-bottom: -1 * $table-cell-padding-bottom;
+        margin-left: -1 * $table-cell-padding-left;	    
+
+        padding-top: $table-cell-padding-top;
+        padding-right: $table-cell-padding-right;
+        padding-bottom: $table-cell-padding-bottom;
+        padding-left: $table-cell-padding-left;
+
+	    &:not(.no-comments) {
+	      margin-bottom: 0;
+	    }
+	}
+
+	.comment-trail {
+		font-size: 0.9em;
+
+		&.injecting.injecting-element {
+			
+			> * {
+				opacity: 1;
+			}
+
+			&:before {
+				display: none;
+			}
+
+		}
+		
+		.group & {
+			width: 80%;
+		}
+	}
+
+	.pat-grid-list dd & {
+		margin: -0.4em 0;
+
+		.comment-trail {
+			padding: 0.4em 0;
+		}
+	}
+
+	.comment:first-child {
+		// border-top: 1em solid transparent;
+		padding-top: 0;
+
+		.pat-avatar {
+			top: 0.35em;
+		}
+	}
+
+	.comment:last-child {
+		margin-bottom: 1em;
+	}
+
+	.older-comments {
+		position: relative;
+		padding: 0 0 0.8em 0;
+		margin: 0;
+
+		a {
+			color: gray;
+			font-size: 0.9em;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+		  	&:before {
+		  	  content: '#{$glyph-arrow-up-circle} ';
+		 	   font-family: fontello;
+			}
+		}
+
+        .counter {
+          float: right;
+          opacity: 0.5;
+        }
+	}
+
+
+	.comment {
+		position: relative;
+		padding: 0.5em 1em 0.5em 42px;
+		// margin-bottom: 1em;
+		min-height: 2em;
+
+		.pat-avatar {
+			position: absolute;
+			left: 0;
+			top: 0.8em;
+		}
+		
+		.comment-content,
+		.comment-header {
+			font-size: 0.9em;
+			line-height: 1.4em;
+
+			p,ul,ol,table,dl {
+				margin-bottom: 1em;
+			}
+		}
+
+		.comment-content {
+			p {
+				white-space: pre-line;
+			}
+		}
+
+		.date {
+			font-style: italic;
+			color: gray;
+		}
+
+		.preview {
+			img {
+				max-width: 100%;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+
+	    .edited-toggle {
+	      transition: opacity 1s;
+	      opacity: 1;
+	      cursor: pointer;
+
+	      &:hover {
+	        text-decoration: underline;
+	      }
+
+	      &.collapsible-open {
+	        opacity: 0;
+	        cursor: default;
+	        pointer-events: none;
+	      }
+	    }
+
+	    .original-text {
+	       opacity: 0.5;
+	       font-size: 0.8em;
+	    }
+
+		.comment-header {
+			.name {
+				display: inline-block;
+				padding-right: 0.15em;
+
+				&:after {
+					content: " —"
+				}
+			}
+
+		    .icon-cog {
+		      	position: absolute;
+		      	right: 0;
+		      	color: rgba(0,0,0,0.3);
+				font-size: 0.9em;
+				right: 0em;
+				top: 0.8em;
+
+				&:hover,
+				&.active {
+					color: black;
+				}
+		    }
+		}
+	}
+
+	.comment-trail + .message-box {
+		margin-left: 42px;
+	}
+}
