@@ -2,6 +2,9 @@
 
 #language-switch {
 	padding: 35px 15px;
+	position: relative;
+	z-index: 10;
+	background: white;
 
 	.languages-list {
 		text-align: center;
