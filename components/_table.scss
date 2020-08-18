@@ -37,6 +37,15 @@ table {
         width: auto;
         table-layout: fixed;
 
+        tr {
+            &.mutated {     
+                td,
+                th {
+                    background: rgba(255,100,0,0.1);
+                }
+            }
+        }
+
         th,
         td {
             border: none;
@@ -49,6 +58,10 @@ table {
                 font-size: 0;
                 background-color: white;
                 background-color: $colour-info !important;
+
+                &:before {
+                    display: none;
+                }
 
                 .workflow-change-title {
                     position: absolute;
