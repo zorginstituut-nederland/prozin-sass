@@ -51,6 +51,7 @@ table {
             border: none;
             position: relative;
             animation: fadeIn 1s;
+            padding-bottom: $table-cell-padding-bottom + 2px;
 
             &.workflow-change {
                 width: 50px;
