@@ -24,6 +24,15 @@ table {
     width: 100%;
     table-layout: fixed;
 
+    ins {
+        background-color: palegreen;
+        text-decoration: none;
+    }
+
+    del {
+        background-color: pink;
+    }
+
     caption {
         padding-left: 0;
         margin: 1em 0;
