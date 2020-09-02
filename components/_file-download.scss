@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+// section.downloads {
+// 	.file-download {
+// 		float: left;
+// 		width: 50%;
+// 		@include box-sizing;
+// 	}
+// }
+
+.file-download {
+	display: block;
+	background: #f3f3f3;
+	margin: 0 0 10px 0;
+	padding: 8px 8px 10px 50px;
+	position: relative;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+
+		.title {
+			text-decoration: underline;
+		}
+	}
+
+	&:before,
+	&:after {
+		position: absolute;
+		top: 10px;
+		left: 20px
+	}
+
+	&:before {
+		z-index: 1;
+	}
+
+	&:after {
+		font-family: fontello;
+		content: '#{$glyph-doc-inv}';
+		font-style: normal;
+		font-weight: normal;
+		speak: none;
+		color: white;
+
+		display: inline-block;
+		text-decoration: inherit;
+		width: 1em;
+		margin-right: .2em;
+		text-align: center;
+
+		/* fix buttons height, for twitter bootstrap */
+		line-height: 1em;
+
+		/* Animation center compensation - margins should be symmetric */
+		/* remove if not needed */
+		margin-left: .2em;
+
+		/* you can be more comfortable with increased icons size */
+		/* font-size: 120%; */
+
+		/* Font smoothing. That was taken from TWBS */
+		-webkit-font-smoothing: antialiased;
+	}
+
+	.title {
+		margin: 0 0 .33em 0;
+		font-weight: bold;
+		font-size: 1.125em;
+		cursor: pointer;
+		line-height: 1.222em;
+		color: $colour-link;
+		padding: 0;
+	}
+
+	.meta {
+		clear: left;
+		margin: 0.5em 0;
+		color: #535353;
+		font-size: 100%;
+		line-height: 1.3;
+
+		@include screen-size(small) {
+			display: inline;
+		}
+
+		.meta-item {
+			@include screen-size(medium-large) {
+				@include byline-item;
+			}
+
+			@include screen-size(small) {
+				&:after {
+					content: ', ';
+				}
+			}
+		}
+
+		@include screen-size(small) {
+			&:last-child {
+				.meta-item:last-child {
+					&:after {
+						content: '.';
+					}
+				}
+			}
+		}
+	}
+}
