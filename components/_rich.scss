@@ -10,7 +10,7 @@ $text-bottom-margin: ".8125em";
 	// -webkit-hyphens: auto;
 	// hyphens: auto;
 
-	*:not(img):not(br):not(a):empty:not(textarea) {
+	*:not(img):not(br):not(a):empty:not(textarea):not(td):not(th) {
 	    display: none;
 	}
 
