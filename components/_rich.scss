@@ -10,6 +10,9 @@ $text-bottom-margin: ".8125em";
 	// -webkit-hyphens: auto;
 	// hyphens: auto;
 
+	font-size: 1.26562rem;
+	line-height: 1.38272;
+
 	*:not(img):not(br):not(a):empty:not(textarea):not(td):not(th) {
 	    display: none;
 	}
@@ -257,19 +260,21 @@ $text-bottom-margin: ".8125em";
 	// }
 
 
-	a[class^="icon-"] {
-		// Hide underline for IE 10/11 to prevent underlined icons. 
-		@media screen and (min-width:0\0) {
-			text-decoration: none;
-
-			&:hover {
+	a {
+		&[class^="icon-"] {
+			// Hide underline for IE 10/11 to prevent underlined icons. 
+			@media screen and (min-width:0\0) {
 				text-decoration: none;
 
-				.link-label {
-					text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+
+					.link-label {
+						text-decoration: underline;
+					}
 				}
-			}
-		}		
+			}	
+		}
 	}
 
 	h1,
@@ -757,6 +762,20 @@ $text-bottom-margin: ".8125em";
 				display: none;
 			}
 		}
+
+		a {
+			text-decoration: underline;
+
+			&:hover {
+				color: $colour-dark-blue-d;
+			}
+
+			&[href$=".pdf"] {
+				&:after {
+					content: ' (PDF)'
+				}
+			}	
+		}
 	}
 
 	ul,
@@ -872,6 +891,8 @@ $text-bottom-margin: ".8125em";
 
 	&.indented {
 		padding-bottom: "96px - #{$baseline}";
+		font-size: 1em;
+		line-height: 1.4;
 
 		@include screen-size(large) {
 			@media screen {
