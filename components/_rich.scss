@@ -813,6 +813,18 @@ $text-bottom-margin: ".8125em";
 
 	ul {
 
+		&.link-list {
+			li {
+				a {
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
 		&.link-list.medicines {
 			li {
 
