@@ -43,6 +43,18 @@
 
 		.message {
 			margin-bottom: 25px;
+
+			&.with-js {
+				.no-js & {
+					display: none;
+				}
+			}
+
+			&.without-js {
+				.js & {
+					display: none;
+				}
+			}
 		}
 
 		.browser-options {
