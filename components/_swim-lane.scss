@@ -34,6 +34,40 @@
 		}
 	}
 
+	&#swim-lane-browser-warning {
+		color: white;
+		background-color: $colour-orange;
+		font-size: 26px;
+		margin: 2px 0;
+
+		.message {
+			margin-bottom: 25px;
+		}
+
+		.browser-options {
+			a {
+				color: white;
+				display: inline-block;
+				margin-right: 20px;
+				text-decoration: none;
+				padding: 0 20px 0 15px;
+				border-radius: 10px;
+				background: rgba(0,0,0,0.5);
+				line-height: 46px;
+				// font-weight: bold;
+
+				&:hover {
+					background-color: rgba(0,0,0,0.4);
+				}
+
+				&:before {
+					text-decoration: none;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+
 	&#site-navigation {
 		@include screen-size(medium-large) {
 			background: $colour-dark-blue;
