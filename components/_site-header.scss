@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+#site-header {
+	line-height: 16px;
+	border: none;
+	border-bottom: none;
+	@include screen-size(small) {
+		min-height: 72px;
+	}
+	@include screen-size(medium-large) {
+		min-height: 125px;
+	}
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	@media all and (display-mode: standalone) {
+		display: none;
+	}
+
+	#global-functions {
+		position: absolute;
+		top: 13px;
+
+		@include screen-size(medium-large) {
+			right: 15px;
+		}
+
+		@include screen-size(small) {
+			left: 15px;
+			max-width: calc(50% - 40px);
+			font-size: 14px;
+		}
+
+		a {
+			color: #666;
+			display: inline-block;
+
+			@include screen-size(medium-large) {
+				margin-left: 15px;
+				padding-left: 15px;
+				border-left: 1px silver solid;
+				float: left;
+
+				&:first-child {
+					border-left: none;
+				}
+			}
+
+			@include screen-size(small) {
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			&.active {
+				color: black;
+				text-decoration: none;
+				cursor: default;
+			}
+		}
+	}
+
+	> #login {
+		position: absolute;
+		top: 13px;
+		color: #666;
+
+		@include screen-size(medium-large) {
+			right: 15px;
+		}
+
+		@include screen-size(small) {
+			left: 15px;
+			max-width: calc(50% - 40px);
+			font-size: 14px;
+		}
+
+		&.active {
+			color: black;
+			text-decoration: none;
+			cursor: default;
+		}
+	}
+
+	// &:before {
+	// 	.css-extern & {
+	// 		position: absolute;
+	// 		opacity: 0;
+	// 		top: 10px;
+	// 		left: 50%;
+	// 		overflow: hidden;
+	// 		height: 10px;
+	// 		width: 10px;
+	// 		margin-left: -6px;
+	// 		background-color: $colour-red;
+	// 		content: "";
+	// 		display: inline-block;
+	// 		border-radius: 50%;
+	// 		animation: fadeOut 1s;
+	// 		animation-delay: 1s;
+	// 		border: 1px white solid;
+	// 	}
+	// }
+
+	.date-modified {
+		font-size: 10px;
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		color: silver;
+		cursor: default;
+		max-width: 40%;
+
+		&:hover {
+			color: black;
+		}
+	}
+
+	a.homepage {
+		width: 50px;
+		display: block;
+		margin: 0 auto;
+		text-decoration: none;
+
+		@include screen-size(small) {
+			width: 40px;
+		}
+
+		.logo {
+			display: none;
+		}
+
+		@keyframes beaker {
+		  0%, 64%, 66% {
+		    transform: rotate(0deg);
+		    opacity: 1;
+		  }
+
+		  4%, 15%, 28%, 47% {
+		    transform: rotate(-20deg);
+		    opacity: 1;
+		  }
+
+		  9%, 22%, 37% {
+		    transform: rotate(20deg);
+		    opacity: 1;
+		  }
+
+		  100% {
+		  	opacity: 0;
+		  }
+		}
+
+		.css-externN & { 
+			&:after {
+				text-align: center;
+				height: 50px;
+				width: 50px;
+				border-radius: 50%;
+				font-family: fontello;
+				line-height: 50px;
+				background-color: #154273;
+				display: block;
+				position: absolute;
+				top: 27px;
+				left: 50%;
+				margin-left: -25px;
+				content: '#{$glyph-beaker}';
+				color: white;
+				font-size: 1.6em;
+
+				animation: beaker 4s;
+				-webkit-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+				animation-delay: 2s;
+			}
+		}
+		
+		&:before {
+			display:inline-block;
+			background-color: #154273;
+			color: white;
+			font-family: fontello;
+			content: '#{$glyph-logo}';
+			text-align: center;
+
+			@include screen-size(medium-large) {
+				width: 50px;
+				height: 100px;
+				line-height: 135px;
+				font-size: 36px;
+			}
+
+			@include screen-size(small) {
+				width: 40px;
+				height: 60px;
+				line-height: 67px;
+				font-size: 30px;
+			}
+
+			@media print {
+				content: '#{$glyph-logo-squared}';
+				background-color: white;
+				color: #154273;
+				font-size: 74px;
+				line-height: 74px;		
+			}
+		}
+
+		@include screen-size(small) {
+			&:after {
+				position: absolute;
+				top: 90px;
+				right: 10px;
+				content: '#{$glyph-icon-search}';
+				line-height: 2em;
+				text-align: center;
+				font-family: fontello;
+				display: block;
+				color: white;
+				width: 2em;
+				height: 2em;
+				z-index: 2;
+
+				.page-type-homepage & {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.dept {
+		font-size: 15px;
+		position: absolute;
+		top: 51px;
+		margin-left: 12px;
+		color: black;
+
+		@include screen-size(small) {
+			display: none;
+		}
+			
+		@media print {
+			// No RO font because of problems in IE 10 with printing this font
+			font-family: "Times New Roman", Georgia, Serif !important; 
+		}
+	}
+
+	@media (max-width: 767px){
+		.header .dept{
+			width: 50px;
+			top: 20px;
+		}
+	}
+	
+	.page-type-medicine-compare &,
+	.page-type-medicine-group-compare &,
+	.page-type-indication-compare & {
+		// position: fixed;
+		// top: 0;
+		// left: 0;
+		// right: 0;
+		// z-index: 0;
+
+		@media only screen and (max-device-width : 667px) and (orientation : portrait) {
+			&:before {
+				position: absolute;
+				display: block;
+				text-align: center;
+				min-height: 92px;
+				left: 0;
+				right: 0;
+				top: 13rem;
+				content: "Schuif de pagina van rechts naar links om te vergelijken";
+				padding: 2rem 2rem 1rem 2rem;
+				padding-right: calc(100%+2rem);
+				// background-color: $colour-moss-green-xl;
+				-moz-animation: fadeOutUp;
+				-webkit-animation: fadeOutUp;
+				animation: fadeOutUp;
+				z-index: 1;
+				font-size: 1.3em;
+				line-height: 1.2;
+				color: $colour-orange;
+				background-color: $colour-moss-green-xl;
+				font-weight: bold;
+				-webkit-animation: shake 2s;
+				-webkit-animation-iteration-count: 5;
+				-webkit-animation-delay: 4s;
+				animation: shake 3s;
+				animation-iteration-count: 3;
+				animation-delay: 4s;
+				pointer-events: none;
+			}
+		}
+	}
+}

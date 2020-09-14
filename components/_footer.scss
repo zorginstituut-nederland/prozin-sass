@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+#footer {
+	background: $colour-moss-green;
+	position: relative;
+	clear: both;
+
+	@media print {
+		display: none;
+	}
+
+	@media all and (display-mode: standalone) {
+		display: none;
+	}
+
+	.container {
+		padding: 50px 0;
+
+		@include screen-size(small) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+
+	.payoff,
+	.column {
+		float: left;
+		padding: 0 $grid-gutter;
+		@include box-sizing;
+	}
+
+	.column {
+		@include screen-size(large) {
+			width: 16.66667%;
+		}
+
+		@include screen-size(medium) {
+			width: 25%;
+		}
+
+		@include screen-size(small) {
+			width: 50% !important;
+			font-size: 16px;
+		}
+	}
+
+	.payoff {
+		font-family: "RO Serif";
+		color: white;
+		position: relative;
+		font-size: 1.75em;
+		line-height: 1.4;
+		font-style: italic;
+
+		@include screen-size(large) {
+			width: 58.33333%;
+			padding-right: 8%;
+		}
+
+		@include screen-size(medium) {
+			width: 50%;
+			padding-right: 8%;
+		}
+
+		@include screen-size(small) {
+			font-size: 1.5em;
+			padding-bottom: 25px;
+			width: 100% !important; // !important added to overrule an !important in grid framework.
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	li {
+	    font-family: "RO Sans", sans-serif;
+	    list-style: none;
+	    margin: 0;
+
+		a {
+		    text-decoration: none;
+		    color: white;
+		    padding: 2px 0 2px 0;
+		    display: block;
+
+			@include screen-size(small) {
+				padding: 0;
+			}
+
+		    &:hover {
+		    	text-decoration: underline;
+		    }
+		}
+
+	}
+
+	h2 {
+	    font-family: "RO Sans", sans-serif;
+	    font-size: 1.5em;
+		margin-bottom: 5px;
+		margin: 8px 0 5px 0;
+		padding-top: 0;
+		color: #fff;
+		font-weight: normal;
+		border: 0;
+
+		@include screen-size(small) {
+			font-size: 1.25em;
+		}
+	}
+}
