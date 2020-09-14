@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.logo-cloud {
+	padding: 0;
+	@include clear-fix;
+	text-align: center;
+
+	.logo {
+		width: 19%;
+		padding: 0 1em;
+		margin: 1em 0;
+		display: inline-block ;
+		vertical-align: middle;
+		@include clear-fix;
+		@include box-sizing;
+		text-align: center;
+
+		@include screen-size(small) {
+			width: 46%;
+		}
+
+		@include screen-size(medium) {
+			width: 32%;
+		}
+
+		img {
+			max-width: 100%;
+			position: relative;
+			top: 50%;
+			// transform: translateY(-50%);
+		}
+	}
+}
