@@ -406,7 +406,7 @@
 		background-color: white;
 
 		.container {
-			padding-bottom: 0; // Must be followed up by another white lane or news.
+			// padding-bottom: 0; // Must be followed up by another white lane or news.
 
 			.summary {
 				// margin-bottom: 60px;
@@ -438,7 +438,7 @@
 
 	&#partners {
 		.container {
-			padding-bottom: 0;
+			// padding-bottom: 0;
 		}
 	}
 
@@ -568,7 +568,7 @@
 				width: 33.33332%;
 				opacity: 0;
 				animation: fadeIn 1s;
-				animation-delay: 0.5s; 
+				animation-delay: 1.5s; 
 				animation-fill-mode: forwards; 
 			}
 

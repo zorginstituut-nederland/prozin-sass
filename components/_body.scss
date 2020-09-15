@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+body {
+ 	font-family: $body-font-family;
+	font-weight: normal;
+	line-height: $base-line-height;
+	font-size: $base-font-size;
+	@media screen {
+		// background-color: #e6e6e6;
+		background-color: white;
+		// transition: background-color 1s;
+	}
+	// -webkit-font-smoothing: antialiased;
+	// text-rendering: optimizeLegibility;
+
+	*:before {
+		-webkit-font-smoothing: antialiased;
+		smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	> section.content-block,
+	> p.directory-more,
+	> .result-item,
+	> .pagination {
+		// Hide illegal injection 
+
+		display: none;
+	}
+
+	@include screen-size(medium-large) {
+		padding-top: 125px;
+	}
+
+	@include screen-size(large) {
+		font-size: 112.5%;
+	}
+
+	@media all and (display-mode: standalone) {
+		padding-top: 70px;
+	}
+
+	&[data-error-message] {
+		&:after {
+			content: "De pagina die u probeert te openen is op dit moment niet beschikbaar. Probeert u het later nog eens of neem contact op met Het Zorginstituut via de link naar het contactformulier onderaan elke pagina. \A \A Klik of raak aan om dit bericht te sluiten.";
+			text-align: center;
+			white-space: pre-wrap;
+			font-size: 1.5em;
+			line-height: 1.5;
+			display: block;
+			color: black;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			padding: 6%;
+			opacity: 0;
+			animation: fadeIn 1s;
+			animation-delay: 0.5s;
+			animation-fill-mode: forwards;
+			z-index: 10001;
+			transform: translate(-50%,-50%);
+			@include box-sizing;
+			width: 100%;
+			max-width: 1000px;
+			pointer-events: none;
+		}
+
+		&:before {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: white;
+			z-index: 10000;
+			width: 100%;
+			height: 100%;
+			content: ' ';
+			animation: fadeIn 1.5s;
+			pointer-events: none;
+		}
+
+		#site-header {
+			z-index: 10000;
+			display: block;
+			background-color: transparent;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+
+			.homepage:after {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 10002;
+				width: 100%;
+				height: 100%;
+				content: ' ';
+				display: block;
+			}
+		}
+	}
+
+	&.injecting:not(.discrete-injection) {
+		#global-nav,
+		#site-header,
+		#footer {
+			opacity: 1;
+		}
+
+		background-color: white;
+
+		#main {
+		    -ms-filter: blur(100px) saturate(250%);
+		    -moz-filter: blur(100px) saturate(250%);
+		    -webkit-filter: blur(100px) saturate(250%);
+		    filter: blur(100px) saturate(250%); 
+
+		    opacity: 0;
+		}
+
+		&:before {
+			position: fixed;
+		}
+	}
+
+	@media print {
+		* {
+			font-family: arial !important;
+			// font-size: 12pt;
+		}
+
+		font-size: 14px;
+	    line-height: 22px;
+
+		#main {
+			padding: 0 8% !important;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $colour-dark-blue;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.float-after {
+		float: right;
+	}
+
+	.float-before {
+		float: left;
+	}
+
+	[hidden] {
+		display: none;
+	}
+
+	.assistive {
+		position: absolute!important;
+		display: inline-block!important;
+		overflow: hidden;
+		clip: rect(0,0,0,0);
+		margin: -1px;
+		padding: 0;
+		width: 1px;
+		height: 1px;
+		border: 0;
+	}
+
+	.ui-helper-hidden-accessible,
+	.select2-hidden-accessible {
+		position: absolute;
+		left: -9999px;
+		opacity: 0;
+		pointer-events: none;
+	}
+}

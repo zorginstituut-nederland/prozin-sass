@@ -1,0 +1,450 @@
+@charset "UTF-8";
+
+@mixin search-open() {
+	
+	input {
+		width: 48px;
+		padding-left: 0;
+		padding-right: 0;
+		opacity: 0;
+		cursor: default;
+		-webkit-pointer-events: auto;
+		pointer-events: auto;
+
+		&:focus,
+		&.has-value {
+			@include screen-size(medium-large) {
+				width: 390px;
+			}
+			@include screen-size(small) {
+				width: 100%;
+			}
+			opacity: 1;
+			padding: 0 80px 0 10px;
+			cursor: text;
+		}
+	}
+
+	button {
+		background-color: rgba(0,0,0,0);
+		z-index: 0;
+	}
+
+	input:focus + button,
+	input.has-value + button {
+		background-color: rgba(0,0,0,1);
+		z-index: 2;
+	}
+
+}
+
+#global-nav {
+	border: none;
+	background-color: $colour-moss-green;
+	clear: both;
+	// margin-top: 125px;
+	// display: none;
+
+	@keyframes background-glow {
+	  0%, 100% {
+	    background-color: $colour-moss-green;
+	  }
+
+	  50% {
+	    background-color: DeepPink;
+	  }
+	}
+
+	.css-extern & {
+		animation: background-glow 2s 1s 3;
+	}
+
+	@include screen-size(medium-large) {
+		min-height: 70px;
+	}
+
+	@include screen-size(small) {
+		min-height: 70px;
+		margin-top: 70px;	
+	}
+
+	@media all and (display-mode: standalone) {
+		margin-top: 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
+
+	@media print {
+		display: none;
+	}
+
+	position: relative;
+	// z-index: 1;
+	// z-index: 2;	
+	z-index: 11;
+
+	position: -moz-sticky;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+
+	.container {
+		position: relative;
+  		padding: 0 $container-padding + 50px 0 $container-padding;
+
+		#breadcrumbs {
+			line-height: 1.6em;
+			
+			font-size: 1.25rem;
+			letter-spacing: .03rem;
+			float: left;
+			line-height: 70px;
+
+			// @include screen-size(medium-large) {
+			// 	padding-top: 18px;
+			// 	padding-bottom: 18px;
+			// }
+
+			@include screen-size(small) {
+				padding-top: 0;
+				padding-bottom: 0;
+				// position: absolute;
+				// left: 15px;
+				// right: 45px;
+				width: 100%;
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				box-sizing: border-box;
+				max-width: 100%;
+				white-space: nowrap;
+				height: 70px;
+				float: left;
+
+				&.homepage {
+					font-weight: normal;
+				}
+
+				@include screen-size(medium-large) {
+					font-size: 1.625rem;
+				}
+
+				@include screen-size(small) {
+					display: none;
+					padding: 0 0.2em 0;
+
+					// &.homepage {
+					// 	display: none;
+					// }
+
+					&[href]:last-of-type {
+						display: inline-block;
+					}
+				}
+
+				&[href] {
+					font-weight: normal;
+
+					&:hover {
+						.no-touchevents & {
+							text-decoration: underline;;
+						}
+					}
+
+					@include screen-size(medium-large) {
+						&:after {
+							content: '#{$glyph-right-open-1}';
+							display: inline-block;
+							font-weight: normal;
+							font-family: "fontello";
+							vertical-align: middle;
+							speak: none;
+							-webkit-font-smoothing: antialiased;
+							-moz-osx-font-smoothing: grayscale;
+							padding: 0 6px 0 10px;
+							display: inline-block;
+							font-size: 22px;
+							line-height: 1em;
+							margin: -3px 0 0 0;
+							text-decoration: none;
+							width: 21px;
+							text-align: center;
+						}
+					}
+
+					@include screen-size(small) {
+
+						&.homepage {
+							width: 30px;
+							overflow: hidden;
+							height: 70px;
+						}
+
+						&:before {
+							font-family: fontello;
+							content: '#{$glyph-left-open-1}';
+							display: inline-block;
+							padding-right: 0.3em;
+							font-size: 46px;
+							float: left;
+						}
+
+						&:after {
+							display: none;
+						}
+
+					}
+				}
+			}
+		}
+
+		#quick-search-form {
+			padding-right: 15px;
+			position: absolute;
+			right: 15px;
+
+			&.injecting {
+				opacity: 1;
+
+				&:before {
+					display: none;
+				}
+			}
+
+			@include screen-size(medium-large) {
+				padding-top: 11px;
+			}
+
+			@include screen-size(small) {
+				clear: both;
+				font-size: 1.25em;
+				padding-bottom: 12px;
+				padding-top: 12px;
+				overflow: hidden; 
+			}
+
+			label {
+				position: absolute;
+				top: 0;
+				right: -11px;
+				height: 70px;
+				width: 70px;
+				color: rgba(0,0,0,0);
+
+				&:before {
+					content: ' ';
+					display: block;
+					position: absolute;
+					top: 11px;
+					right: 11px;
+					height: 48px;
+					width: 48px;
+					background-color: black;
+					opacity: 0;
+				}
+			}
+
+			.no-touchevents & {
+				&:hover label:before {
+					opacity: 0.2;
+				}
+			}
+
+			.clear-field {
+				position: absolute;
+				width: 22px;
+				line-height: 16px;
+				top: 28px;
+				right: 57px;
+				color: transparent;
+				overflow: hidden;
+				// display: none;
+				transition: opacity 1s;
+				z-index: 10;
+				opacity: 0;
+				cursor: default;
+				-webkit-pointer-events: none;
+				pointer-events: none;
+
+				@include screen-size(small) {
+					top: 29px;
+				}
+
+				&:before {
+					font-family: "fontello";
+					content: "#{$glyph-close}";
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					color: black;
+				}
+			}
+
+			.has-value ~ .clear-field {
+				// display: block;
+				opacity: 1;
+				cursor: pointer;
+				-webkit-pointer-events: auto;
+				pointer-events: auto;
+			}
+
+			input,
+			input:focus {
+
+				// &::search-cancel-button {
+			 //        appearance: none;
+			 //    }
+
+			    &::-ms-clear {
+			    	display: none; // Hides second cross in Edge.
+			    }
+				
+				float: right;
+				background-color: white;
+				border: 0;
+				outline: 0;
+				height: 48px;
+				margin: 0;
+				z-index: 10;
+				padding: 0 80px 0 10px;
+				text-align: left;
+				max-width: 1000px;
+				transition: all 0.4s;
+				// transition-delay: 0.1s;
+					position: absolute;
+					right: 0;
+				
+				@include screen-size(medium-large) {
+					position: absolute;
+					width: 390px;
+					font-size: 1.025em;
+					top: 11px;
+				}
+				
+				@include screen-size(small) {
+					position: relative;
+					width: 100%;
+					font-size: 16px;
+					top: 0;
+				}
+				z-index: 1;
+				box-shadow: none;
+				@include box-sizing;
+			}
+
+			button {
+				width: 48px;
+				height: 48px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 0;
+				border: 0;
+				margin: 0;
+				background: black;
+				border-radius: 0;
+				color: transparent;
+				transition: all 0.3s;
+				z-index: 2;
+				font-size: 18px;
+
+				@include screen-size(medium-large) {
+					top: 11px;
+				}
+
+				@include screen-size(small) {
+					top: 12px;
+				}
+
+				&:before {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 97%;
+					color: white;
+					content: "#{$glyph-icon-search}";
+					font-family: fontello;
+					text-align: center;
+					line-height: 47px;
+					font-size: 27px;
+				}
+			}
+		}
+	}
+
+	&.variation-compare,
+	&.variation-medicine-compare,
+	&.variation-medicine-group-compare,
+	&.variation-indication-compare,
+	&.variation-medicine-compare-versions {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+
+		// @media all and (display-mode: browser) and (min-width: $break-small + 1) {
+		// 	top: 122px;
+		// }
+
+		.no-csspositionsticky & {
+			// Styles for IE
+			top: 122px !important;
+			position: !important;
+		}
+
+		& ~ #site-header {
+			// position: fixed;
+			// top: 0;
+			// left: 0;
+			// right: 0;
+			display: none;
+		}
+
+		& ~ #footer {
+			display: none;
+		}
+
+	}
+
+	&.variation-homepage,
+	&.variation-search-results,
+	&.variation-news-overview,
+	&.variation-landing-tiles,
+	&.variation-landing {
+		.container {
+			#breadcrumbs {
+				a.homepage {
+					// Reveals the back button on mobile for pages which have an anchor without href as the last node of the breadcrumbs.
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	&:not(.variation-homepage):not(.variation-search-results) {
+		.container #quick-search-form {
+			@include screen-size(medium-large) {
+				@include search-open;
+			}
+		}	
+	}
+
+	@include screen-size(small) {
+		.container #quick-search-form {
+			float: right;
+			left: 15px;
+			position: absolute;
+			// width: calc(100% - 30px);
+			pointer-events: none;
+
+			@include search-open;
+		}
+	}
+}

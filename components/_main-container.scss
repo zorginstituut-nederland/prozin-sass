@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+#main {
+	background: white;
+	// margin-top: 88px;	
+
+	// @media print {
+	// 	margin-top: 100px;	
+	// }
+
+	transition: all 0.5s;
+	
+	// padding-bottom: 30px;
+
+	padding-top: 70px; // Benefit for pat-scroll.
+	margin-top: -70px; // Benefit for pat-scroll.
+
+	// @include screen-size(medium-large) {
+	// 	padding-top: 60px;
+	// }
+
+	// @include screen-size(small) {
+	// 	padding-top: 30px;
+	// }
+
+	.page-type-homepage & {
+		// padding-top: 0;
+	}
+
+	.page-type-homepage & {
+		&.injecting {
+			* {
+				opacity: 1;
+			}
+
+			&:before {
+				display: none;
+			}
+
+			.search-button-main,
+			.search-field button {
+				transition: none;
+				text-indent: -1000px;
+
+				&:before {
+					@include throbber;
+					text-indent: 0;
+					font-size: 1.3em !important;
+				}
+			}
+		}
+	}
+}
+
+.variation-medicine-compare-versions ~ #main {
+	padding-top: 125px;
+	margin-top: -125px;
+
+	#content {
+		padding-top: 0;
+	}
+}
+
+.variation-compare ~ #main,
+.variation-medicine-compare ~ #main,
+.variation-indication-compare ~ #main,
+.variation-medicine-group-compare ~ #main {
+	position: relative;
+	z-index: 1;
+	min-width: 100%;
+	border-top: solid 2px $colour-moss-green;
+	float: left;
+	padding-top: 0;
+	margin-top: -3px;
+
+	@include screen-size(small) {
+		// max-width: 100%;
+		// width: 100%;
+		// display: block;
+	}
+
+	// top: 130px;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;
+
+}

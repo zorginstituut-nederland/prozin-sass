@@ -41,15 +41,27 @@ $form-proportion-value: 80%;
 
 // Components
 
+@import "components/body";
 @import "components/comments";
+@import "components/container";
 @import "components/content";
+@import "components/editorial-list";
 @import "components/file-download";
+@import "components/footer";
 @import "components/form";
+@import "components/global-nav";
 @import "components/language-switch";
+@import "components/link-list";
+@import "components/logo-cloud";
 @import "components/message-box";
+@import "components/menu-list";
+@import "components/main-container";
+@import "components/main-content";
+@import "components/nav-tiles";
 @import "components/news-feed";
 @import "components/page-module";
 @import "components/rich";
+@import "components/site-header";
 @import "components/swim-lane";
 @import "components/table";
 @import "components/tooltip";

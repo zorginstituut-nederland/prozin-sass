@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.container {
+    display: block;
+
+    &:before {
+        display: table;
+        content: " ";
+    }
+
+    @include screen-size(medium) {
+        max-width: 960px;
+    }
+
+    @include screen-size(large) {
+        max-width: 1200px;
+
+        .pat-modal.medium & {
+            max-width: 960px;
+        }
+
+        .pat-modal.small & {
+            max-width: 640px;
+        }
+    }
+
+    padding: 0 $container-padding;
+
+    @include screen-size(medium) {
+        padding: 0 $container-padding-medium;
+    }
+    
+    margin: 0 auto;
+    @include box-sizing;
+    @include clear-fix;   
+}

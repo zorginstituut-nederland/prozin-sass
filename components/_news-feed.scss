@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+.news-feed {
+  margin: 0 -1 * $grid-gutter $baseline;
+  display: flex; // Needed for the flex layout.
+  flex-wrap: wrap; // Needed for the flex layout.
+
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 2 * $grid-gutter; 
+
+
+  @include screen-size(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include screen-size(small) {
+    grid-template-columns: 1fr;
+  }
+
+  .item.pinned {
+    a {
+      .item-title {
+        padding-left: 28px;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+          content: '#{$glyph-pin}';
+          font-family: fontello;
+          color: white;
+          background-color: rgba(0,0,0,0.4);
+          background-color: $colour-dark-blue;
+          position: absolute;
+          width: 20px;
+          text-align: center;
+          top: 50%;
+          left: 0;
+          height: 500px;
+          line-height: 500px;
+          transform: translateY(-50%);
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  &.image-flow {
+    .item {
+      @include screen-size(medium-large) {
+        width: 50%;
+      }
+
+      .illustration {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        @include screen-size(medium-large) {
+          .illustration {
+            display: block;
+          }
+          width: 50%;
+        }
+
+        @include screen-size(small) {
+          .illustration {
+            display: block;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        @include screen-size(medium-large) {
+          .illustration {
+            display: block;
+          }
+          width: 50%;
+        }
+      }
+
+      &:nth-child(3) {
+        @include screen-size(medium) {
+          .illustration {
+            display: block;
+          }
+          width: 50%;
+          margin-bottom: 30px;
+        }
+
+        @include screen-size(large) {
+          .illustration {
+            display: block;
+          }
+          width: 33.3332%;
+          margin-bottom: 30px;
+        }
+      }
+
+      &:nth-child(4) {
+        @include screen-size(medium) {
+          .illustration {
+            display: block;
+          }
+          width: 50%;
+          margin-bottom: 30px;
+        }
+
+        @include screen-size(large) {
+          .illustration {
+            display: block;
+          }
+          width: 33.3332%;
+          margin-bottom: 30px;
+        }
+      }
+
+      &:nth-child(5) {
+        @include screen-size(large) {
+          .illustration {
+            display: block;
+          }
+          width: 33.3332%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  @mixin corner-pin() {
+
+    a {
+      .item-title {
+        padding-left: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &:after {
+        z-index: 1;
+        content: '#{$glyph-pin}';
+        font-family: fontello;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto;
+        color: white;
+        display: block;
+        width: 29px;
+        line-height: 33px;
+        text-align: center;
+      }
+
+      &:before {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        left: auto;
+        display: block;
+        content: ' ';
+        width: 0; 
+        height: 0; 
+        border-top: 35px solid transparent;
+        border-bottom: 35px solid transparent;
+        // opacity: 0.5;
+
+        border-left: 35px solid $colour-dark-blue;
+
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        outline: solid white 1px;
+      }
+    }
+  }
+
+  @include screen-size(medium-large) {
+    &.image-flow .item:nth-child(1).pinned,
+    &.image-flow .item:nth-child(2).pinned,
+    &.image-flow .item:nth-child(3).pinned,
+    &.image-flow .item:nth-child(4).pinned,
+    &.has-images .item:nth-child(1).pinned,
+    &.has-images .item:nth-child(2).pinned,
+    &.has-images .item:nth-child(3).pinned,
+    &.has-images .item:nth-child(4).pinned {
+      @include corner-pin;
+    }
+  }
+
+  @include screen-size(large) {
+    &.image-flow .item:nth-child(5).pinned,
+    &.has-images .item:nth-child(5).pinned {
+      @include corner-pin;
+    }
+  }
+
+  .item {
+    padding-left: $grid-gutter; // Needed for the flex layout.
+    padding-right: $grid-gutter; // Needed for the flex layout.
+    width: 33.33332%; // Needed for the flex layout.
+    float: left; // Needed for old browsers such as IE
+
+    @include screen-size(medium) {
+      width: 50%; // Needed for the flex layout.
+    }
+
+    @include screen-size(small) {
+      width: 100%; // Needed for the flex layout.
+    }
+
+    padding-bottom: 2 * $baseline;
+    @include box-sizing;
+
+    &.warning {
+      .item-title {
+        color: $colour-orange;
+        // padding-left: 2em;
+
+        // &:before {
+        //   position: relative;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+        // }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      position: relative;
+
+      &:hover {
+        .item-title {
+          text-decoration: underline;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 25px;
+        height: 100%;
+        font-size: 25px;
+      }
+
+      .illustration {
+        margin-bottom: 10px;
+
+        img {
+          width: 100%;
+          border: none;
+          background-size: cover;
+          background-position: center;
+          background-color: $colour-moss-green-xl;
+        }
+      }
+
+      .item-title {
+        font-size: 1.75rem;
+        line-height: 2rem;
+        font-weight: normal;
+        margin: 0 0 10px 0;
+        color: $colour-dark-blue;
+        width: auto; // Required for IE
+      }
+
+      .byline {
+        color: #000;
+        font-size: 1rem;
+        line-height: 1.375rem;
+        margin-bottom: .8125em;
+
+        time {
+          font-weight: bold;
+        }
+      }
+
+      p.source {
+        font-size: 1em;
+        font-style: italic;
+        color: rgba(0,0,0,0.5);
+        margin: .5rem 0 0 0;
+      } 
+    }
+  }
+}
