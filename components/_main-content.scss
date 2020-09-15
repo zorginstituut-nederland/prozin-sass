@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+#main-content {
+	// float: left;
+	// width: 66.66667%;
+	width: 68.3%;
+	// margin-left: 16.66667%;
+	margin: 0 auto;
+
+	@include screen-size(medium-large) {
+		padding-left: 15px;
+		padding-right: 15px;
+
+		.variation-medicine-compare-versions ~ #main & {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&.page-type-landing,
+	&.page-type-overview,
+	&.page-type-themes {
+		margin-left: 0;
+		padding: 0;
+	}
+
+	@include box-sizing;
+
+	@include screen-size(small) {
+		width: 100%;
+		margin: 0;
+	}
+}
