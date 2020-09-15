@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+$bullet-space: 22px !default;
+
+.link-list {
+	line-height: 1.3;
+	margin-bottom: 1em;
+
+	@include screen-size(large) {
+		&.col-2 {
+			column-count: 2;
+			overflow: hidden;
+		}
+
+		&.col-3 {
+			column-count: 3;
+			overflow: hidden;
+		}
+
+		&.col-4 {
+			column-count: 4;
+			overflow: hidden;
+		}
+	}
+
+	@include screen-size(medium) {
+		&.col-2 {
+			column-count: 2;
+			overflow: hidden;
+		}
+
+		&.col-3 {
+			column-count: 3;
+			overflow: hidden;
+		}
+
+		&.col-4 {
+			column-count: 3;
+			overflow: hidden;
+		}
+	}
+
+	.aside-block & {
+		@include screen-size(medium-large) {
+			font-size: 0.8em;
+		}
+
+		margin-bottom: 1em;
+		margin-left: 25px;
+	}
+
+	&.compact {
+		li {
+			margin: 0;
+			padding-bottom: 0.4em;
+
+			ul {
+				padding: 0 0 $bullet-space 0;
+			}
+		}
+	}
+
+	&.expanded {
+		li {
+			padding-bottom: 0.4em;
+		}
+	}
+
+	&.no-spread {
+		li {
+		    overflow: hidden; // Required to force Mozilla to avoid breaking inside the element, also when the amount of items does not exceed the amount of columns. 
+		}
+	}
+	
+	li {
+		margin: 0;
+		border-bottom: 0.3em solid transparent; // Faux bottom margin.
+		padding: 0 0.5em 0 $bullet-space;
+
+		&.state-draft,
+		&.state-new {
+			a {
+				color: $colour-orange;
+			}
+		}
+
+		&.warning {
+			a {
+				&:not([class*="icon-"])::before {
+					font-family: fontello;
+					content: '#{$glyph-icon-attention}';
+					color: $colour-orange;;
+					line-height: 1.5;
+					font-size: 0.7em;
+
+				}
+			}
+		}
+
+		-webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+		a,
+		.group-title {
+			display: block;
+			padding: 0;
+			font-weight: normal;
+			margin-left: 0;
+
+			position: relative; // Fix for missing icons of first item in second column and on in Firefox.
+
+			.-ms- & {
+				text-decoration: none;
+			}
+
+			&:before {
+				font-family: fontello;
+				margin-left: -1 * $bullet-space;
+				// margin-top: 0.25em;
+				font-weight: normal;
+				float: left;
+				text-decoration: none;
+
+				width: $bullet-space;
+				// margin-right: .2em;
+				text-align: left;
+				speak: none;
+
+				display: inline-block;
+				line-height: 1.3;
+
+				position: absolute; // Fix for missing icons of first item in second column and on in Firefox.
+			}
+
+			&:not([class*="icon-"]) {
+				&:before {
+					content: '#{$glyph-angle-right}';
+				}
+			}
+
+			&.type-link-external {
+				&:before {
+					content: '#{$glyph-link-external}';
+				}
+			}
+
+			&.type-link-internal {
+				&:before {
+					content: '#{$glyph-link-internal}';
+				}
+			}
+
+			&.type-tag {
+				&:before {
+					content: '#{$glyph-tag}';
+				}
+			}
+
+			&.medicine,
+			&.type-medicine {
+				&:before {
+					content: '#{$glyph-icon-medicine}';
+				}
+			}
+
+			&.medicine-group,
+			&.type-medicine-group {
+				&:before {
+					content: '#{$glyph-icon-medicine-group}';
+				}
+			}
+
+			&.indication,
+			&.super-indication,
+			&.type-indication,
+			&.type-super-indication {
+				&:before {
+					content: '#{$glyph-icon-indication}';
+				}
+			}
+
+			&.type-is {
+				&:before {
+					content: '#{$glyph-information-standard}';
+					font-size: 0.8em;
+				}
+			}
+
+			&.type-qs {
+				&:before {
+					content: '#{$glyph-award}';
+				}
+			}
+
+			&.type-mi {
+				&:before {
+					content: '#{$glyph-gauge}';
+					margin-top: 0.15em;
+					font-size: 0.8em;
+				}
+			}
+		}
+
+		&.medicine {
+			a:before {
+				content: '#{$glyph-icon-medicine}';
+			}
+		}
+
+		.group-title {
+			color: black;
+		}
+
+		ul {
+			font-size: 0.8em;
+			// margin: 0;
+			margin: 0.5em 0 0; // Some space above and below sub lists.
+			line-height: 1.2;
+
+			li {
+				margin: 0;
+				padding: 0;
+				border-bottom: none;
+
+				a {
+					padding: 0 0 0 17px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					transform: translateZ(0);
+
+					.classification-tags {
+						position: absolute;
+						right: 0;
+						top: 0;
+						background: white;
+						box-shadow: 0 0 10px 10px white;
+
+						.portlet & {
+							background: $colour-portlet;
+							box-shadow: 0 0 10px 10px $colour-portlet;
+						}
+
+						.editors-well &,
+						#portlet-drafts & {
+							background: $colour-orange-xl;
+							box-shadow: 0 0 10px 10px $colour-orange-xl;
+						}
+
+						// #portlet-drafts & {
+						// 	background: $colour-base-light;
+						// 	box-shadow: 0 0 10px 10px $colour-base-light;
+						// }
+
+					}
+
+					&:before {
+						margin-left: -17px;
+						margin-top: 0;
+						font-weight: normal;
+						float: left;
+						content: '#{$glyph-angle-right}';
+						font-family: fontello;
+						line-height: 1.1;
+					}
+				}
+			}
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+}
