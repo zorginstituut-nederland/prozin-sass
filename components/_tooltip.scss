@@ -1,0 +1,113 @@
+.tooltip-container {
+
+  &.medicine-cost-details {
+    width: 450px;
+  }
+
+  > div {
+    > section.pat-rich:last-child {
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .label {
+      display: inline-block;
+      border-radius: 0.3em;
+      background-color: gray;
+      color: white;
+      padding: 0 0.6em;
+
+      &.reimbursed {
+        background-color: $colour-moss-green;
+      }
+
+      &.contribution {
+        background-color: $colour-moss-green-l;
+        color: $colour-moss-green;
+      }
+    }
+  }
+
+  .content-type-switch {
+    display: block;
+    padding: 0.7em 0;
+    font-size: 1.5em;
+    text-align: center;
+    font-size: bold;
+
+    &:first-child {
+      // margin-top: 3em;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    .counter {
+      display: inline-block;
+      margin: 0.8em 0em 0.5em 0.5em;
+      background-color: $colour-red;
+      color: white;
+      border-radius: 1em;
+        border: 1px solid rgba(255,255,255,1);
+      height: 1.8em;
+      min-width: 1.8em;
+      @include box-sizing;
+      padding: 0 0.5em;
+      transition: opacity 0.5s;
+      animation: zoomIn 0.6s;
+      // float: right;
+      vertical-align: baseline;
+      line-height: 1.7em;
+      font-size: 0.6em;
+      text-align: center;
+      font-weight: normal;
+      position: relative;
+      top: -0.2em;
+
+      &.disabled {
+        opacity: 0.2;
+        animation: none;
+        background-color: gray;
+      }
+
+      &.injecting {
+        &:before {
+          display: none;
+        }
+
+        opacity: 0;
+      }
+    }
+  }
+
+  &.medicine-cost-details {
+    width: 450px;
+  }
+
+  > div {
+    > section.pat-rich:last-child {
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .label {
+      display: inline-block;
+      border-radius: 0.3em;
+      background-color: gray;
+      color: white;
+      padding: 0 0.6em;
+
+      &.reimbursed {
+        background-color: $colour-moss-green;
+      }
+
+      &.contribution {
+        background-color: $colour-moss-green-l;
+        color: $colour-moss-green;
+      }
+    }
+  }
+}
