@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+.pat-collapsible:not(.context-menu):not(.place-on-homescreen):not(.search-box):not(.help):not(.pat-message) {
+  clear: both;
+  float: right; width: 100%; // Prevents jumping scroll position issues in Firefox which is caused by an ineraction between the clear property above and position: sticky on the h2's
+
+  // overflow: hidden;
+
+  // &:before {
+  //   content: ' ';
+  //   display: table;
+  //   height: 0;
+  //   clear: both;
+  // }
+
+  &:not(.place-on-homescreen):not(.borderless) {
+    border-bottom: solid 1px $colour-collapsible-lines;
+    border-top: solid 1px $colour-collapsible-lines;
+    margin-bottom: $baseline;
+
+    & + .pat-collapsible {
+      margin-top: calc(-1 * #{$baseline} - 1px);
+    }
+
+    .collapsible-closed:hover {
+      .no-touchevents & {
+        background-color: rgba(0,0,0,0.03);
+      }
+    }
+  }
+
+  &.borderless {
+    @media screen {
+      .collapsible-closed,
+      .collapsible-open {
+        padding: 0 0 0 1.8rem;
+
+        &:before {
+          left: 0;
+        }
+      }
+
+      .panel-content {
+        padding-left: 1.8rem;
+        // padding-top: 1em;
+      }
+    }
+  }
+
+  display: block; 
+
+  &.warning {
+    color: $colour-orange;
+
+    .collapsible-closed,
+    .collapsible-open {
+      color: $colour-orange;
+
+      // &:before {
+      //   border-color: $colour-orange;
+      //   color: $colour-orange;
+      //   background-color: $colour-orange-xl;
+      // }
+    }
+  }
+
+  &.explanation {
+    color: $colour-dark-blue;
+
+    .collapsible-closed,
+    .collapsible-open {
+      color: $colour-dark-blue;
+
+      // &:before {
+      //   border-color: $colour-dark-blue;
+      //   color: $colour-dark-blue;
+      //   background-color: $colour-dark-blue-xl;
+      // }
+    }
+  }
+
+  .panel-content {
+    .summary {
+      margin: -8px 0 15px 0
+    }
+
+    .collapsible-loading-message {
+      height: 40px;
+      text-align: center;
+      position: relative;
+      opacity: 0;
+      animation: fadeIn 1s;
+      animation-delay: 0.4s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+
+      a {
+        opacity: 0;
+      }
+
+      &:before {
+        @include throbber;
+        color: gray;
+      }
+    }
+  }
+
+  .collapsible-closed,
+  .collapsible-open {
+    @media screen {
+      padding: 1em 0 1em $collapsible-indent;
+
+      &.borderless {
+        padding: 0;
+      }
+    }
+    
+    font-weight: bold;
+    color: $colour-dark-blue;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    // line-height: $baseline;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0;
+    text-decoration: none;
+
+    @media screen and (min-width:0\0) {
+      // Hide underline for IE 10/11 to prevent underlined icons. 
+      text-decoration: none !important;
+    } 
+
+    @media print {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    &:before {
+      font-family: fontello;
+      content: '#{$glyph-close-circled}';
+      content: '#{$glyph-close}';
+      text-indent: 0;
+      font-size: 1em;
+      width: 1em;
+      height: 1em;
+      line-height: 1.1em;
+      // border: 0.111em solid $colour-dark-blue;
+      transition: transform 0.4s;
+      // color: black;
+      // left: 0;
+      // top: 0;
+      // background-color: $colour-dark-blue-xl;
+      // position: absolute;
+      // float: left;
+      text-decoration: none;
+      display: inline-block;
+      white-space: pre-wrap;
+      border-radius: 2em;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 0.9rem;
+      transform: translateY(-50%) rotate(-45deg);
+      margin-top: -0.04em;
+      font-weight: normal;
+
+      // @-moz-document url-prefix() { 
+      //   // The following lines prevents the +/x symbol from looking jaggy and acting jumpy in FF versions <= 51 on Windows.
+      //   content: '';
+      //   background-image: url(icon-close-circled-blue.svg);
+      //   background-size: 100% 100%;
+      // }
+
+      @media print {
+        display: none;
+      }
+    }
+  }
+
+  .collapsible-closed {
+    @media screen {
+      text-decoration: none;    
+    }
+
+    &:hover {
+      .no-touchevents & {
+        color: black;
+      }
+    }
+  }
+
+  .collapsible-open {
+    text-decoration: none;
+  }
+
+  @media screen {
+
+    .collapsible-open:before ,
+    .collapsible-closed.collapsible-in-progress:before {
+      transform:  translateY(-50%) rotate(0deg);
+    }
+
+  }
+
+  .panel-content {
+    padding: 0 0 2em 0;
+    // will-change: height;
+    // overflow: hidden;
+    @media screen {
+      padding-left: $collapsible-indent;
+    }
+
+    @media print {
+      display: block !important;
+    }
+  }
+}
