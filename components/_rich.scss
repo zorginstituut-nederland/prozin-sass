@@ -942,6 +942,11 @@ $text-bottom-margin: ".8125em";
 
 						& + .recipe {
 							margin-top: 22px;
+							transition: margin 0.5s;
+						}
+
+						&.closed + .recipe {
+							margin-top: 0;
 						}
 					}
 				}
