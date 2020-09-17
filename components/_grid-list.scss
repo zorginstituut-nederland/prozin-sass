@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+.pat-grid-list {
+	@include clear-fix;
+
+	.medicine-active-substance,
+	.medicine-method,
+	.medicine-strength,
+	.medicine-manufacturer {
+		text-transform: lowercase;
+
+		&::first-letter {
+			text-transform: capitalize;
+		}
+	}
+
+	dd {
+		p {
+			margin-bottom: 0.3em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.info-button {
+			float: right;
+			margin: 3px 0 0 15px;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	dt,
+	dd {
+		&.mutated {		
+			background: rgba(255,100,0,0.1);
+		}
+
+		.pat-select {
+			color: rgba(0, 0, 0, 0.5);
+
+			@include screen-size(small) {
+				color: black;
+			}
+		}
+
+		> div {
+			*:last-child {
+				margin-bottom: 0 !important;
+			}
+		}
+
+		.link-list {
+			line-height: inherit;
+
+			&.alternatives,
+			&.variants {
+				li {
+					a {
+						.facets {
+							text-transform: lowercase;
+
+							.facet {
+								&:first-child {
+									&:before {
+										content: '(';
+									}	
+								}
+
+								&:last-child {
+									&:after {
+										content: ')';
+									}	
+								}
+
+								&:not(:last-child) {
+									&:after {
+										content: ', '
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			li {
+				line-height: inherit;
+
+				&:last-child {
+					border: none;
+				}
+
+				a {
+					line-height: inherit;
+					font-weight: normal;
+
+					&:before {
+						line-height: inherit;
+					}
+				}
+			}
+		}
+	}
+
+	dt {		
+		&.mutated {	
+			border-left: 8px solid rgba(255,100,0,0.2);
+			padding-left: 0.5em;
+		}
+	}
+
+	// &.medicine-details {
+	// 	margin: 0.5em 0;
+	// }
+}

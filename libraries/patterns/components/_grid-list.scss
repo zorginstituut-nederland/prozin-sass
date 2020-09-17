@@ -4,9 +4,13 @@
   margin-bottom: 2em;
   // float: left; // Float left was disturbing pat-message underneath it. Clear fix doen't help in this case.
   width: 100%;
-  border-bottom: 1px solid $colour-base;
+  
   display: block;
   @include clear-fix;
+
+  @include screen-size(medium-large) {
+    border-bottom: 1px solid $colour-base;
+  }
 
   dt {
     @include screen-size(medium-large) {
@@ -16,13 +20,18 @@
       padding-right: 5%;
       padding-bottom: 0.5em;
       padding-top: 0.5em;
+      color: rgba(0,0,0,0.5);
+      clear: left;
     }
+
     @include screen-size(small) {
       margin-top: 0.5em;
+      width: 100%;
+      color: black;
+      border: none;
     }
+
     font-weight: bold;
-    clear: left;
-    color: rgba(0,0,0,0.5);
     @include box-sizing;
   }
 
@@ -38,7 +47,9 @@
       margin-bottom: 0;
     }
     @include screen-size(small) {
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
+      width: 100%;
+      clear: both;
     }
     margin-left: 0;
     @include box-sizing;
