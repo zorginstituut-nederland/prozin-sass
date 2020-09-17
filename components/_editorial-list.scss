@@ -68,6 +68,12 @@
 		a {
 			&:hover {
 				text-decoration: none;
+
+				.hovermq & {
+					.item-title {
+						text-decoration: underline;
+					}
+				}
 			}
 
 			@include screen-size(small) {
