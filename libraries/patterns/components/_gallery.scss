@@ -1,0 +1,16 @@
+@import "../libraries/photoswipe/main";
+@import "../libraries/photoswipe/default-skin/default-skin";
+
+.pswp img {
+	&[src*=".svg"] {
+		background: white;
+	}
+}
+
+.pswp__bg {
+	.backdropfilter & {
+		background: none;
+		-webkit-backdrop-filter: blur(100px) saturate(2);
+		backdrop-filter: blur(100px) saturate(2);
+	}
+}

@@ -1,0 +1,37 @@
+.pat-message {
+	padding: $table-cell-padding;
+
+	&.error,
+	&.warning {
+		padding-top: 30px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: $table-cell-padding-left;
+			width: 22px;
+			height: 22px;
+			background-color: $colour-ruby;
+			color: white;
+			content: '!';
+			font-weight: bold;
+			line-height: 22px;
+			text-align: center;
+			display: block;
+		}	
+	}
+
+	&.warning {	
+		&:before {
+			background-color: $colour-orange;
+			color: $colour-orange-xl;
+		}
+	}
+
+    &.error {
+		background-color: #f7d2dd;
+		color: black;
+		position: relative;
+	}
+}
