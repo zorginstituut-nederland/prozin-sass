@@ -21,6 +21,7 @@ $table-cell-padding-top: 10px;
 $table-cell-padding-right: 15px;
 $table-cell-padding-bottom: 10px;
 $table-cell-padding-left: 15px;
+$table-cell-padding: $table-cell-padding-top $table-cell-padding-right $table-cell-padding-bottom $table-cell-padding-left;
 $table-line-height: 1.5 !default;
 
 // Font treatment
@@ -35,9 +36,9 @@ $form-proportion-value: 80%;
 
 // Libraries
 
-@import "../reset";
-@import "../animate";
-@import "../patterns/patterns";
+@import "libraries/reset";
+@import "libraries/animate";
+@import "libraries/patterns/patterns";
 
 // Components
 
@@ -57,6 +58,7 @@ $form-proportion-value: 80%;
 @import "components/menu-list";
 @import "components/main-container";
 @import "components/main-content";
+@import "components/message";
 @import "components/nav-tiles";
 @import "components/news-feed";
 @import "components/page-module";

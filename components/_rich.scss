@@ -377,7 +377,7 @@ $text-bottom-margin: ".8125em";
 			}
 
 			@include screen-size(medium-large) {
-				margin: -20px 0 32px;
+				margin: -28px 0 32px;
 			}
 
 			@include screen-size(small) {
@@ -935,6 +935,14 @@ $text-bottom-margin: ".8125em";
 					@supports (-ms-ime-align: auto) {
 						// position: relative; // Blocks Edge position sticky for its poor support.
 						// top: 0;
+					}
+
+					& + .pat-message {
+						margin-top: -5.5px;
+
+						& + .recipe {
+							margin-top: 22px;
+						}
 					}
 				}
 			}
