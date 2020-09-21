@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+@mixin white-lane() {
+	& + #swim-lane-browser-warning,
+	& + #partners,
+	& + #news,
+	& + #site-summary {
+		.container {
+			padding-top: 0;
+		}
+	}
+}
+
 .swim-lane {
 	background: white;
 
@@ -41,6 +52,7 @@
 		font-size: 26px;
 		margin: 2px 0;
 		line-height: 44px;
+		@include white-lane;
 
 		.message {
 			margin-bottom: 25px;
@@ -406,6 +418,7 @@
 
 	&#site-summary {
 		background-color: white;
+		@include white-lane;
 
 		.container {
 			// padding-bottom: 0; // Must be followed up by another white lane or news.
@@ -439,12 +452,15 @@
 	}
 
 	&#partners {
+		@include white-lane;
 		.container {
 			// padding-bottom: 0;
 		}
 	}
 
 	&#news {
+		@include white-lane;
+
 		.container {
 			// padding-bottom: 0;
 		}
