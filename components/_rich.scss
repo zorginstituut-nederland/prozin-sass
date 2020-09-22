@@ -763,7 +763,7 @@ $text-bottom-margin: ".8125em";
 			}
 		}
 
-		a {
+		a[href] {
 			text-decoration: underline;
 
 			&:hover {
@@ -815,7 +815,7 @@ $text-bottom-margin: ".8125em";
 
 		&.link-list {
 			li {
-				a {
+				a[href] {
 					text-decoration: none;
 
 					&:hover {
