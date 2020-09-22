@@ -763,18 +763,29 @@ $text-bottom-margin: ".8125em";
 			}
 		}
 
-		a[href] {
-			text-decoration: underline;
+		a {
+			&[href] {
+				text-decoration: underline;
 
-			&:hover {
-				color: $colour-dark-blue-d;
+				&:hover {
+					color: $colour-dark-blue-d;
+				}
+
+				&[href$=".pdf"] {
+					&:after {
+						content: ' (PDF)'
+					}
+				}	
 			}
 
-			&[href$=".pdf"] {
+			&.reference:not([href]) {
 				&:after {
-					content: ' (PDF)'
+					content: ' ('attr(title)')';
+					text-decoration: none;
+					color: rgba(0,0,0,0.6);
+					font-style: italic;
 				}
-			}	
+			}
 		}
 	}
 
