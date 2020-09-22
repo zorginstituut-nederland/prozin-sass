@@ -294,10 +294,12 @@ $text-bottom-margin: ".8125em";
 		}
 
 		a {
+			// color: black;
 			text-decoration: none;
-			color: black;
 
 			&[href] {
+				text-decoration: none;
+
 				&:not(.follow):after {
 					font-family: fontello;
 					content: '#{$glyph-link-internal}';
@@ -762,29 +764,29 @@ $text-bottom-margin: ".8125em";
 				display: none;
 			}
 		}
+	}	
 
-		a {
-			&[href] {
-				text-decoration: underline;
+	a {
+		&[href] {
+			text-decoration: underline;
 
-				&:hover {
-					color: $colour-dark-blue-d;
-				}
-
-				&[href$=".pdf"] {
-					&:after {
-						content: ' (PDF)'
-					}
-				}	
+			&:hover {
+				color: $colour-dark-blue-d;
 			}
 
-			&.reference:not([href]) {
+			&[href$=".pdf"] {
 				&:after {
-					content: ' ('attr(title)')';
-					text-decoration: none;
-					color: rgba(0,0,0,0.6);
-					font-style: italic;
+					content: ' (PDF)'
 				}
+			}	
+		}
+
+		&.reference:not([href]) {
+			&:after {
+				content: ' ('attr(title)')';
+				text-decoration: none;
+				color: rgba(0,0,0,0.6);
+				font-style: italic;
 			}
 		}
 	}
