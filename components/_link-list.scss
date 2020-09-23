@@ -3,7 +3,7 @@
 $bullet-space: 22px !default;
 
 .link-list {
-	line-height: 1.3;
+	line-height: 1.625rem;
 	margin-bottom: 1em;
 
 	@include screen-size(large) {
@@ -90,7 +90,7 @@ $bullet-space: 22px !default;
 					font-family: fontello;
 					content: '#{$glyph-icon-attention}';
 					color: $colour-orange;;
-					line-height: 1.5;
+					// line-height: 1.5;
 					font-size: 0.7em;
 
 				}
@@ -116,19 +116,14 @@ $bullet-space: 22px !default;
 			&:before {
 				font-family: fontello;
 				margin-left: -1 * $bullet-space;
-				// margin-top: 0.25em;
 				font-weight: normal;
 				float: left;
 				text-decoration: none;
-
 				width: $bullet-space;
-				// margin-right: .2em;
 				text-align: left;
 				speak: none;
-
 				display: inline-block;
-				line-height: 1.3;
-
+				line-height: inherit;
 				position: absolute; // Fix for missing icons of first item in second column and on in Firefox.
 			}
 
@@ -261,7 +256,7 @@ $bullet-space: 22px !default;
 						float: left;
 						content: '#{$glyph-angle-right}';
 						font-family: fontello;
-						line-height: 1.1;
+						line-height: inherit;
 					}
 				}
 			}
