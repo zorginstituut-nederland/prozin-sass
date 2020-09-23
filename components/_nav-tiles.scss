@@ -55,7 +55,7 @@
 
     a {
       padding-left: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 2rem;
       display: block;
       position: relative;
       height: 100%;
@@ -113,9 +113,10 @@
         // white-space: nowrap;
 
         @include screen-size(medium-large) {
-          font-size: 1.45em;
-          line-height: 1.2em;
-          margin-bottom: 5px;
+          font-size: 1.60181rem;
+          line-height: 1.24859;
+          font-weight: normal;
+          margin-bottom: 0rem 0rem .5rem 0rem;
         }
 
         @include screen-size(small) {
@@ -127,7 +128,8 @@
       }
 
       .byline {
-        line-height: 1.375em;
+        font-size: 1.125rem;
+        line-height: 1.33333;
 
         @include screen-size(small) {
           padding-top: 2px;

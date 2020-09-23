@@ -105,8 +105,7 @@
 		}
 
 		.container {
-			padding-top: 40px;
-			padding-bottom: 15px;
+			padding: 4rem 0rem 2.5rem 0rem;
 
 			@include screen-size(small) {
 				padding: 0;
@@ -598,11 +597,13 @@
 			}
 
 			.link-list {	
+				margin: 0;
+				
 				li {
 					margin-bottom: 5px;
 
 					a {
-						font-weight: bold;
+						font-weight: normal;
 						font-size: 1.125rem;
 						line-height: 1.625rem;
 						word-wrap: break-word;
