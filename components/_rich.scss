@@ -534,6 +534,7 @@ $text-bottom-margin: ".8125em";
 			top: 50%;
 			margin-top: -20px;
 			font-size: 1.6em;
+			color: $colour-link;
 			// color: $colour-moss-green;
 
 			@media only screen and (max-device-width : 667px) and (orientation : portrait) {
