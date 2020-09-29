@@ -79,6 +79,12 @@
     }
   }
 
+  .collapsible-loading-message {
+    .no-js & {
+      padding: 0 0 1em 1rem;
+    }
+  }
+
   .panel-content {
     .summary {
       margin: -8px 0 15px 0

@@ -4,14 +4,16 @@
 	padding-left: 1.5em;
 	position: relative;
 
-	&.checked:before,
-	&.unchecked:before {
-		font-family: fontello;
-		content: '#{$glyph-checkbox}';
-		float: left;
-		position: absolute;
-		left: 0;
-		top: 0em;
+	.js & {
+		&.checked:before,
+		&.unchecked:before {
+			font-family: fontello;
+			content: '#{$glyph-checkbox}';
+			float: left;
+			position: absolute;
+			left: 0;
+			top: 0em;
+		}
 	}
 
 	&.checked:before {
@@ -20,8 +22,14 @@
 
 	input[type="checkbox"],
 	input[type="radio"] {
-		opacity: 0;
+		.js & {
+			opacity: 0;
+		}
+		
+		font-size: 24px;
 		position: absolute;
+		left: 0;
+		top: 1px;
 	}
 }
 
@@ -56,11 +64,13 @@ label.pat-checklist {
 	}
 
 	&.radio label {
-		&:before {
-			content: '#{$glyph-radio-button}';
-		}
-		&.checked:before {
-			content: '#{$glyph-radio-button-active}';
+		.js & {
+			&:before {
+				content: '#{$glyph-radio-button}';
+			}
+			&.checked:before {
+				content: '#{$glyph-radio-button-active}';
+			}			
 		}
 	}
 

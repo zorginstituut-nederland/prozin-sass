@@ -152,6 +152,12 @@ $text-bottom-margin: ".8125em";
 					*:last-child {
 						margin-bottom: 0;
 					}
+
+					#close-excipients-warning {
+						.no-js & {
+							display: none;
+						}
+					}
 				}
 			}
 
@@ -742,6 +748,12 @@ $text-bottom-margin: ".8125em";
 		// 		display: none;
 		// 	}
 		// }
+
+		&.compare-to-other {
+			.no-js & {
+				display: none;
+			}
+		}
 
 		@media print {
 			&.compare-to-other {

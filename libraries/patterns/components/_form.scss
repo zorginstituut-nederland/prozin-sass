@@ -56,7 +56,7 @@ $form-proportion-gutter: 15px !default;
     margin-bottom: $baseline;
   }
 
-  input,
+  input:not([type="range"]):not([type="radio"]):not([type="checkbox"]),
   textarea,
   select {
     -webkit-appearance: none;
