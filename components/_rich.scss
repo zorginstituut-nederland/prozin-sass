@@ -491,7 +491,7 @@ $text-bottom-margin: ".8125em";
 			line-height: 1.2;
 
 			a {
-				color: $colour-moss-green;
+				// color: $colour-moss-green;
 			}
 		}
 
@@ -511,9 +511,17 @@ $text-bottom-margin: ".8125em";
 				height: 1em;
 				font-size: 30px;
 				color: transparent;
+				cursor: default;
+
+				&:hover {
+					&:before {
+						color: black;
+					}
+				}
 
 				&:before {
-					color: $colour-moss-green;
+					color: rgba(0,0,0,0.6);
+					text-decoration: none;
 				}
 			}
 		}
@@ -526,7 +534,7 @@ $text-bottom-margin: ".8125em";
 			top: 50%;
 			margin-top: -20px;
 			font-size: 1.6em;
-			color: $colour-moss-green;
+			// color: $colour-moss-green;
 
 			@media only screen and (max-device-width : 667px) and (orientation : portrait) {
 				left: 0;
