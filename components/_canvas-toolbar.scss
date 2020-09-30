@@ -243,8 +243,8 @@ $colour-toolbar-button: transparent !default;
 			}
 		}
 
-		&:not([disabled]),
-		&[href] {
+		&:not([disabled]):not(.current),
+		&[href]:not(.current) {
 			&:hover {
 				color: black;
 				// border: black 1px solid;
