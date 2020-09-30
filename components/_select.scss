@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.pat-select.versions {
+	&:not([data-option-value*="versie"]) {
+		&:after {
+			color: $colour-orange;
+			font-weight: bold;
+		}
+	}
+}
