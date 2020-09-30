@@ -4,14 +4,9 @@
   clear: both;
   float: right; width: 100%; // Prevents jumping scroll position issues in Firefox which is caused by an ineraction between the clear property above and position: sticky on the h2's
 
-  // overflow: hidden;
-
-  // &:before {
-  //   content: ' ';
-  //   display: table;
-  //   height: 0;
-  //   clear: both;
-  // }
+  .no-js & {
+    position: relative;
+  }
 
   &:not(.place-on-homescreen):not(.borderless) {
     border-bottom: solid 1px $colour-collapsible-lines;
@@ -55,12 +50,6 @@
     .collapsible-closed,
     .collapsible-open {
       color: $colour-orange;
-
-      // &:before {
-      //   border-color: $colour-orange;
-      //   color: $colour-orange;
-      //   background-color: $colour-orange-xl;
-      // }
     }
   }
 
@@ -70,24 +59,34 @@
     .collapsible-closed,
     .collapsible-open {
       color: $colour-dark-blue;
-
-      // &:before {
-      //   border-color: $colour-dark-blue;
-      //   color: $colour-dark-blue;
-      //   background-color: $colour-dark-blue-xl;
-      // }
     }
   }
 
   .collapsible-loading-message {
     .no-js & {
-      padding: 0 0 1em 1rem;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 67px;
+
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: transparent !important;
+
+        &:hover {
+          background-color: rgba(0,0,0,0.03);
+        }
+      }
     }
   }
 
   .panel-content {
     .summary {
-      margin: -8px 0 15px 0
+      margin: -8px 0 15px 0;
     }
 
     .collapsible-loading-message {
@@ -113,7 +112,8 @@
   }
 
   .collapsible-closed,
-  .collapsible-open {
+  .collapsible-open,
+  .block-title {
     @media screen {
       padding: 1em 0 1em $collapsible-indent;
 
@@ -153,14 +153,7 @@
       width: 1em;
       height: 1em;
       line-height: 1.1em;
-      // border: 0.111em solid $colour-dark-blue;
       transition: transform 0.4s;
-      // color: black;
-      // left: 0;
-      // top: 0;
-      // background-color: $colour-dark-blue-xl;
-      // position: absolute;
-      // float: left;
       text-decoration: none;
       display: inline-block;
       white-space: pre-wrap;
@@ -172,13 +165,6 @@
       transform: translateY(-50%) rotate(-45deg);
       margin-top: -0.04em;
       font-weight: normal;
-
-      // @-moz-document url-prefix() { 
-      //   // The following lines prevents the +/x symbol from looking jaggy and acting jumpy in FF versions <= 51 on Windows.
-      //   content: '';
-      //   background-image: url(icon-close-circled-blue.svg);
-      //   background-size: 100% 100%;
-      // }
 
       @media print {
         display: none;
