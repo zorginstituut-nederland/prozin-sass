@@ -133,10 +133,9 @@ $text-bottom-margin: ".8125em";
 		@include box-sizing;
 
 		&.content-block {
-			// margin-top: -#{$baseline};
-			// margin-bottom: #{$baseline};
 			margin-top: -96px; // New values for green bar.
-			// margin-bottom: "-96px - #{$baseline}"; // New values for green bar.
+			pointer-events: none;
+			> * { pointer-events: auto } // Keep links clickable.
 
 			section:not(.pat-collapsible):not(.action-plan):not(.pat-well):not(.recipe):not(.discrete)  {
 				margin-bottom: 0;
@@ -149,6 +148,12 @@ $text-bottom-margin: ".8125em";
 				.panel-content {
 					*:last-child {
 						margin-bottom: 0;
+					}
+
+					#close-excipients-warning {
+						.no-js & {
+							display: none;
+						}
 					}
 				}
 			}
@@ -489,7 +494,7 @@ $text-bottom-margin: ".8125em";
 			line-height: 1.2;
 
 			a {
-				color: $colour-moss-green;
+				// color: $colour-moss-green;
 			}
 		}
 
@@ -509,9 +514,17 @@ $text-bottom-margin: ".8125em";
 				height: 1em;
 				font-size: 30px;
 				color: transparent;
+				cursor: default;
+
+				&:hover {
+					&:before {
+						color: black;
+					}
+				}
 
 				&:before {
-					color: $colour-moss-green;
+					color: rgba(0,0,0,0.6);
+					text-decoration: none;
 				}
 			}
 		}
@@ -524,7 +537,8 @@ $text-bottom-margin: ".8125em";
 			top: 50%;
 			margin-top: -20px;
 			font-size: 1.6em;
-			color: $colour-moss-green;
+			color: $colour-link;
+			// color: $colour-moss-green;
 
 			@media only screen and (max-device-width : 667px) and (orientation : portrait) {
 				left: 0;
@@ -731,6 +745,12 @@ $text-bottom-margin: ".8125em";
 		// 		display: none;
 		// 	}
 		// }
+
+		&.compare-to-other {
+			.no-js & {
+				display: none;
+			}
+		}
 
 		@media print {
 			&.compare-to-other {
@@ -966,17 +986,6 @@ $text-bottom-margin: ".8125em";
 				width: auto !important;
 			}
 		}
-
-
-		// [id*=behandeling],
-		// [id*=behandelplan] {
-		// 	h2 {
-		// 		.-moz- & {
-		// 			position: relative !important;
-		// 			// Monkey patch to prevent Firefox from jumping upwards when a collapsibles are expanded in the metro line.
-		// 		}
-		// 	}
-		// }
 
 		@include screen-size(medium) {
 			h2 {

@@ -11,6 +11,15 @@
 // Search
 $advanced-search-animation-speed: 0.4s;
 
+// Buttons
+
+$button-border: none !default;
+$button-border-radius: 10px;
+$canvas-toolbar-button-border-radius: $button-border-radius;
+$button-height: 35px !default;
+$button-background-image: none !default;
+$button-font-weight: bold !default;
+
 // Grid
 $break-small: 769px;
 $break-medium: 1024px;
@@ -30,11 +39,13 @@ $table-cell-padding: $table-cell-padding-top $table-cell-padding-right $table-ce
 $table-line-height: 1.5 !default;
 
 // Font treatment
+
 $body-font-family: 'RO Sans';
 $base-font-size: 112.5%;
 $base-line-height: 1.625;
 
 // Form
+
 $form-proportion-ceiling: 260%;
 $form-proportion-name: 30%;
 $form-proportion-value: 80%;
@@ -77,6 +88,7 @@ $pswp__include-minimal-style: true;
 @import "components/form";
 @import "components/global-nav";
 @import "components/grid-list";
+@import "components/icon";
 @import "components/language-switch";
 @import "components/link-list";
 @import "components/logo-cloud";
