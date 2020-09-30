@@ -28,21 +28,23 @@ a.pat-select {
   @media print { background-image: none; }
 }
 
-label.pat-select.bare,
-a.pat-select.bare {
-  position: relative;
-  color: #666;
-  padding: 0;
-  cursor: default;
-  margin: 0;
+.js {
+  label.pat-select.bare,
+  a.pat-select.bare {
+    position: relative;
+    color: #666;
+    padding: 0;
+    cursor: default;
+    margin: 0;
 
-  &:hover,
-  &.focus { 
-    color: black;
-    text-decoration: none;
+    &:hover,
+    &.focus { 
+      color: black;
+      text-decoration: none;
+    }
+
+    @include box-sizing();
   }
-
-  @include box-sizing();
 }
 
 label.pat-select.pill,
@@ -71,25 +73,19 @@ label.pat-select.bare:after,
 a.pat-select.bare:after,
 label.pat-select.pill:after,
 a.pat-select.pill:after {
-  // content: attr(data-option) ' ∇';
-  // content: attr(data-option) ' ∨';
-  // content: attr(data-option) ' ▼';
-  // content: attr(data-option) ' V';
-
-  content: attr(data-option);
-  padding-right: 1.2em;
-  box-shadow: none !important;  
-
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-
-  background-repeat: no-repeat;
-  background-position: right 0.32em;
-  background-size: 0.8em;
-  background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
-  background-size: 12px 12px;
-;
+  .js & {
+    content: attr(data-option);
+    padding-right: 1.2em;
+    box-shadow: none !important;  
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-repeat: no-repeat;
+    background-position: right 0.32em;
+    background-size: 0.8em;
+    background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
+    background-size: 12px 12px;
+  }
 
   @media print { 
     background-image: none; 
@@ -97,15 +93,17 @@ a.pat-select.pill:after {
   }
 }
 
-label.pat-select.bare select,
-label.pat-select.pill select {
-  opacity: 0;
-  line-height: 1.5em;
-  font-size: 1em;
-  position: absolute;
-  right: 0;
-  left: 0;
-  max-width: 100%;
-  width: 100%;
-  border-right: none;
+.js {
+  label.pat-select.bare select,
+  label.pat-select.pill select {
+    opacity: 0;
+    line-height: 1.5em;
+    font-size: 1em;
+    position: absolute;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    border-right: none;
+  }
 }
