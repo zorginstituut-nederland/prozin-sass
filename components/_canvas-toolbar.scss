@@ -82,10 +82,11 @@ $colour-toolbar-button: transparent !default;
 		}
 
 		#trigger-advanced-search {
-			cursor: pointer;
+			// cursor: pointer;
 
 			&.collapsible-open {
-				color: $colour-accent;
+				background-color: $colour-accent;
+				color: white;
 			}
 				
 			// text-align: center;
