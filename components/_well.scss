@@ -71,6 +71,11 @@
 			background-color: $colour-grey-1;
 			border: none;
 
+			.no-js & {
+				padding: 1em;
+				box-sizing: border-box;
+			}
+
 			&:last-child {
 				margin-bottom: 0;
 			}
