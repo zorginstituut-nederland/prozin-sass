@@ -692,6 +692,10 @@ $text-bottom-margin: ".8125em";
 				float: right;
 				cursor: pointer;
 
+				.no-js & {
+					display: none;
+				}
+
 				@include screen-size(small) {
 					display: none;
 				}
