@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#main-content {
+#main-content:not(.content-group) {
 	// float: left;
 	// width: 66.66667%;
 	width: 68.3%;
