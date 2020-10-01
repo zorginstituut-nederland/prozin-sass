@@ -6,6 +6,13 @@
 	}
 
 	.video-player-extras {
+		.video-player-extra-title {
+			.no-js & {
+				padding: 0 0 12px 0;
+				display: block;
+			}
+		}
+
 		.file-download {
 			padding-left: 26px;
 			text-decoration: none;
