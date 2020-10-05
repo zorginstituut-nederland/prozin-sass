@@ -14,9 +14,13 @@ $colour-toolbar-button: transparent !default;
 	z-index: 1;
 	position: relative;
 
-	// .no-js & {
-	// 	display: none;
-	// }
+	&#toolbar-medicine,
+	&#toolbar-indication,
+	&#toolbar-medicine-group {
+		.no-js & {
+			display: none;
+		}
+	}
 
 	& + .pat-rich > .pat-message {
 		margin-top: -1 * $baseline - 1px;
