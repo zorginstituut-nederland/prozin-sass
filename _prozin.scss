@@ -8,7 +8,12 @@
 @import "assets/fonts";
 @import "assets/mixins";
 
+// Shadows
+
+$default-box-shadow: none;
+
 // Search
+
 $advanced-search-animation-speed: 0.4s;
 
 // Buttons
@@ -21,6 +26,7 @@ $button-background-image: none !default;
 $button-font-weight: bold !default;
 
 // Grid
+
 $break-small: 769px;
 $break-medium: 1024px;
 $break-large: 1280px;
