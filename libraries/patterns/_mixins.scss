@@ -191,7 +191,7 @@
 }
 
 @mixin pat-well() {
-    color: rgba(0,0,0,0.6);
+    color: black;
     padding: 1em;
     background-color: #efefef;
     margin-bottom: 2em;
@@ -292,12 +292,10 @@
 
     &.success {
         background-color: $colour-success;
-        color: darken($colour-success, 50%);
     }
 
     &.notice {
         background-color: $colour-notice;
-        color: darken($colour-notice, 50%);
     }
 
     &.warning {
