@@ -391,7 +391,7 @@ $form-proportion-gutter: 15px !default;
         }
 
         > {
-          input, 
+          input:not([type="range"]):not([type="radio"]):not([type="checkbox"]), 
           textarea, 
           select, 
           .composed,
