@@ -97,12 +97,6 @@ $form-proportion-value: 80% !default;
 		}
 	}
 
-	.currency-field {
-		input {
-			padding-left: 1.5em; // Overrules input:not([type="range"]) found above
-		}
-	}
-
 	fieldset.form-panel {
 		padding: $baseline 0 0 20px;
 		background: $colour-grey-1;

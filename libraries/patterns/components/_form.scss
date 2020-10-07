@@ -7,6 +7,8 @@ $form-proportion-name: 30% !default;
 $form-proportion-value: 100% !default;
 $form-proportion-gutter: 15px !default;
 
+$form-input-field-padding-top-bottom: 0.2em !default;
+
 .pat-form {
   section.help .panel-content {  
     padding-bottom: 2 * $baseline;
@@ -65,8 +67,8 @@ $form-proportion-gutter: 15px !default;
     font-family: $body-font-family;
     display: inline-block;
     @include box-sizing();
-    padding: 0.2em 0.5em;
-    margin: -0.2em 0;
+    padding: $form-input-field-padding-top-bottom 0.5em;
+    margin: -0.5 * $form-input-field-padding-top-bottom 0;
     background-color: rgba(0,0,0,0.09);
     border: none;
     color: inherit;
@@ -302,6 +304,11 @@ $form-proportion-gutter: 15px !default;
 
   .currency-field {
     position: relative;
+    display: inline-block;
+
+    input:not([type="range"]):not([type="checkbox"]):not([type="radio"]) {
+      padding-left: 1.5em; // Overrules input:not([type="range"]) found above
+    }
 
     &:after {
       content: " ";
@@ -313,8 +320,11 @@ $form-proportion-gutter: 15px !default;
     abbr {
       position: absolute;
       left: 0.5em;
-      top: 1px;
+      font-size: inherit;
+      top: 0.5 * $form-input-field-padding-top-bottom;
       text-decoration: none;
+      line-height: inherit;
+      display: inline-block;
     }
 
     input,
