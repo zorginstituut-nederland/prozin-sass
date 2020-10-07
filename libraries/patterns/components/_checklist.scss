@@ -64,10 +64,27 @@ label.pat-checklist {
 	}
 
 	&.radio label {
+		position: relative;
+
 		.js & {
+			&:after {
+				background-color: white;
+				display: block;
+				position: absolute;
+				border-radius: 50%;
+				width: 0.8em;
+				height: 0.8em;
+				top: 0.35em;
+				left: 0.02em;
+				z-index: 0;
+				content: ' ';
+			}
+
 			&:before {
 				content: '#{$glyph-radio-button}';
+				z-index: 1;
 			}
+
 			&.checked:before {
 				content: '#{$glyph-radio-button-active}';
 			}			
