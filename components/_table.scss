@@ -22,7 +22,7 @@ table {
     vertical-align: top;
     // border-right: 2px solid #fff;
     width: 100%;
-    table-layout: fixed;
+    // table-layout: fixed; // Fixed causes issues with FK cost tables
 
     ins {
         background-color: palegreen;
