@@ -15,6 +15,14 @@
 			margin: 0;
 			padding: 0;
 		}
+	}	
+
+	.variation-landing ~ #main &,
+	.variation-overview ~ #main &,
+	.variation-themes ~ #main &,
+	.variation-landing-indicator-sets ~ #main & {
+		margin-left: 0;
+		padding: 0;
 	}
 
 	&.page-type-landing,
