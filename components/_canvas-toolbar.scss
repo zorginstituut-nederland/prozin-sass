@@ -30,7 +30,7 @@ $colour-toolbar-button: transparent !default;
 		}
 
 		@include screen-size(small) {
-			#content-types {
+			#content-types-landing-browse {
 				display: none;
 			}
 		}
