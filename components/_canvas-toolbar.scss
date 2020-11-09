@@ -5,12 +5,9 @@ $canvas-toolbar-button-height: $button-height !default;
 $colour-toolbar-button: transparent !default;
 
 .canvas-toolbar {
-	margin-bottom: 1.5 * $baseline;
 	@include clear-fix();
-	height: $canvas-toolbar-button-height;
 	line-height: $canvas-toolbar-button-height;
 	color: #666;
-	height: 50px;
 	z-index: 1;
 	position: relative;
 
@@ -22,17 +19,36 @@ $colour-toolbar-button: transparent !default;
 		}
 	}
 
+	&#toolbar-landing-browse {
+		@include screen-size(medium-large) {
+			#filter-mobile {
+				display: none;
+			}
+			#dynamic-options {
+				float: right;
+			}
+		}
+
+		@include screen-size(small) {
+			#content-types {
+				display: none;
+			}
+		}
+	}
+
 	& + .pat-rich > .pat-message {
 		margin-top: -1 * $baseline - 1px;
 	}
 
 	margin-bottom: $baseline;
 	padding-bottom: 1 * $baseline;
-	// border-bottom: 1px solid $colour-dark-blue-l;
+
+	@include screen-size(medium-large) {
+		height: $canvas-toolbar-button-height;
+	}
 
 	@include screen-size(small) {
 		padding: 0;
-		// margin: 0;
 	}
 
 	.control-group {
@@ -136,32 +152,20 @@ $colour-toolbar-button: transparent !default;
 		width: auto;
 		color: #666;
 
-		// &:not(.has-versions) {
-		// 	pointer-events: none;
-
-		// 	&:after {
-		// 		background: none;
-		// 	}
-		// }
+		&:hover {
+			text-decoration: none;
+			color: black;
+		}
 
 	    @include screen-size(medium-large) { 
 	      margin-right: 1em;
 	    }
 
 	    @include screen-size(small) { 
-	      // display: block;
-	      // margin-bottom: 1em;
-	      // display: none !important;
 	      margin-right: 0.6em;
 		  margin-bottom: 0.5em;
 	    }
 	}
-
-	// .pat-checklist {
-	// 	@include screen-size(small) { 
-	// 		display: none !important;
-	// 	}
-	// }
 
 	input[type="search"] {
 		float: right;
