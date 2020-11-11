@@ -82,10 +82,12 @@ $form-proportion-value: 80% !default;
 			width: 6em;
 		}
 
-		&:focus {
-			outline: none;
+		&:focus,
+		.focus {
+			outline: 2px dotted black;
+			outline-offset: 0;
 			// box-shadow: 0 2px 0 0 black;
-			border-color: black;
+			// border-color: black;
 		}
 
 		// transition: box-shadow 2s;
