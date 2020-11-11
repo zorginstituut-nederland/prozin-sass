@@ -14,10 +14,10 @@
 			left: 0;
 			top: 0em;
 		}
-	}
 
-	&.checked:before {
-		content: '#{$glyph-checkbox-active}'
+		&.checked:before {
+			content: '#{$glyph-checkbox-active}'
+		}
 	}
 
 	input[type="checkbox"],
