@@ -9,6 +9,10 @@ $glyph-icon-ellipsis: $glyph-ellipsis-hor !default;
 		line-height: 1.4;
 	}
 
+	select {
+		width: 100%;
+	}
+
 	.close-menu {
 		color: transparent;
 		text-align: right;

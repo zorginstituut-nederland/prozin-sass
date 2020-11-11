@@ -59,7 +59,8 @@ $base-line-height: 1.625;
 $form-proportion-ceiling: 260%;
 $form-proportion-name: 30%;
 $form-proportion-value: 80%;
-$form-proportion-value-small: calc(100% - 50px);
+$form-proportion-value-small: 100%;
+$form-proportion-value-form-panel: calc(100% - 50px);
 
 // Collapsibles
 

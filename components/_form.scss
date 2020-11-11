@@ -66,11 +66,11 @@ $form-proportion-value: 80% !default;
 	textarea,
 	select {
 		background-color: white;
-		box-shadow: 0 2px 0 0 $colour-dark-blue;
+		// box-shadow: 0 2px 0 0 $colour-dark-blue;
 		padding: 2px 5px;
 		margin-top: -3px;
 		margin-bottom: 0;
-		border: none;
+		border: 1px solid dimgray;
 		font-family: $body-font-family;
 
 		div.pat-modal & {
@@ -84,21 +84,24 @@ $form-proportion-value: 80% !default;
 
 		&:focus {
 			outline: none;
-			box-shadow: 0 2px 0 0 black;
+			// box-shadow: 0 2px 0 0 black;
+			border-color: black;
 		}
 
 		// transition: box-shadow 2s;
 
 		&:invalid {
 			// background-color: $colour-orange-xl;
-			box-shadow: 0 2px 0 0 $colour-orange;
+			// box-shadow: 0 2px 0 0 $colour-orange;
 			transition-delay: 4s;
+			border-color: $colour-orange;
 		}
 
 		&:required:valid {
 			// background-color: $colour-moss-green-xl;
-			box-shadow: 0 2px 0 0 $colour-dark-blue;
+			// box-shadow: 0 2px 0 0 $colour-dark-blue;
 			transition-delay: 0s;
+			border-color: $colour-dark-blue;
 		}
 	}
 
