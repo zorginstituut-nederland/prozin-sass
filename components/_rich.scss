@@ -713,7 +713,8 @@ $text-bottom-margin: ".8125em";
 
 		svg + figcaption,
 		img + figcaption,
-		a + figcaption {
+		a + figcaption,
+		.illustration-group + figcaption {
 
 			&:before {
 				content: 'Fig. ' counter(fig) ': ';
@@ -724,7 +725,6 @@ $text-bottom-margin: ".8125em";
 		table + figcaption,
 		.scroll-table + figcaption,
 		.table-group + figcaption,
-		.illustration-group + figcaption,
 		.tables + figcaption {
 
 			// .tables is for legacy situations.
