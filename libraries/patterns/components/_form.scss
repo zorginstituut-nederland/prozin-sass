@@ -574,7 +574,10 @@ $form-input-field-padding-top-bottom: 0.2em !default;
         width: 100%;
       }
 
-      abbr {font-weight: normal; top: 0.2em}
+      abbr {
+        font-weight: normal; 
+        top: 0
+      }
     }
   }
 
