@@ -146,7 +146,7 @@ $text-bottom-margin: ".8125em";
 				margin-bottom: #{$baseline};
 
 				.panel-content {
-					*:last-child {
+					 > *:last-child {
 						margin-bottom: 0;
 					}
 
@@ -163,7 +163,7 @@ $text-bottom-margin: ".8125em";
 				margin-bottom: 0;
 
 				.panel-content {
-					*:last-child {
+					 >*:last-child {
 						margin-bottom: #{$baseline};
 					}
 				}

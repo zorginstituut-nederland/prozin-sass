@@ -11,6 +11,11 @@ $colour-toolbar-button: transparent !default;
 	z-index: 1;
 	position: relative;
 
+	&.inline {
+		margin: 0;
+		padding: 0;
+	}
+
 	&#toolbar-medicine,
 	&#toolbar-indication,
 	&#toolbar-medicine-group {
@@ -317,6 +322,9 @@ $colour-toolbar-button: transparent !default;
 		display: inline-block;
 		margin: 0 1em 1em 0;
 		vertical-align: top;
+		box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+		border-radius: $canvas-toolbar-button-border-radius;
+		background-color: rgba(black,0.06);
 	
 		&.align-centre {
 			position: relative;
@@ -330,6 +338,13 @@ $colour-toolbar-button: transparent !default;
 			margin-right: 0;
 			border-radius: 0;
 			margin: 0;
+			background-color: transparent;
+
+			&.current,
+			&.current:hover {
+				background-color: $colour-link;
+				color: white;
+			}
 
 			&:first-child {
 				border-top-left-radius: $canvas-toolbar-button-border-radius;
