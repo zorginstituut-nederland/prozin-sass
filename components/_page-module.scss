@@ -22,17 +22,52 @@ $scroll-offset: 120px !default;
 		}
 
 		.page-module-title {
-			height: 40px;
+			min-height: 40px;
 			font-weight: 600;
 			color: $colour-dark-blue;
 			background-color: $colour-dark-blue-xl;
-			padding: 10px 20px;
-			margin: 0 -20px;
+			padding: 10px 40px;
+			margin: 0 -15px;
 			border-bottom: 1px solid $colour-dark-blue-l;
+			position: relative;
+			-webkit-user-select: none;
+			user-select: none;
+			cursor: default;
+
+			&:active,
+			&:focus {
+				border: none;
+				outline: 2px solid $colour-heavenly-blue;
+				z-index: 2;
+			}
+
+			&:before {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				font-family: fontello;
+				content: '#{$glyph-down-open}';
+				display: inline-block;
+				width: 40px;
+				text-align: center;
+				font-weight: normal;
+				font-size: 20px;
+			}
+
+			&.collapsible-open,
+			&.collapsible-closed.collapsible-in-progress {
+				border: none;
+				background-color: #cce0f1;
+
+				&:before {
+					content: '#{$glyph-up-open}';
+				}
+			}
 		}
 
 		.panel-content {
-			padding: 20px 0;
+			padding: 40px 0;
 		}
 	}
 
