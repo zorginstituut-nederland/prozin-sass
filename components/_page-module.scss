@@ -16,6 +16,26 @@ $scroll-offset: 120px !default;
 		}
 	}
 
+	&.pat-collapsible {
+		& + .page-module.pat-collapsible {
+			margin-top: -130px;
+		}
+
+		.page-module-title {
+			height: 40px;
+			font-weight: 600;
+			color: $colour-dark-blue;
+			background-color: $colour-dark-blue-xl;
+			padding: 10px 20px;
+			margin: 0 -20px;
+			border-bottom: 1px solid $colour-dark-blue-l;
+		}
+
+		.panel-content {
+			padding: 20px 0;
+		}
+	}
+
 	h3 {
 		margin-top: 0;
 		margin-bottom: 13px;
@@ -81,6 +101,10 @@ $scroll-offset: 120px !default;
 
 	&.type-logos {
 		
+	}
+
+	&.type-sample-card {
+		margin-bottom: 60px;
 	}
 
 	&.type-body-text-segment {
