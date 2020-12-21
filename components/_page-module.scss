@@ -22,21 +22,22 @@ $scroll-offset: 120px !default;
 		}
 
 		.page-module-title {
-			min-height: 40px;
+			min-height: 60px;
 			font-weight: 600;
 			color: $colour-dark-blue;
 			background-color: $colour-dark-blue-xl;
-			padding: 10px 40px;
+			padding: 10px 40px 10px 39px;
 			margin: 0 -15px;
 			border-bottom: 1px solid $colour-dark-blue-l;
 			position: relative;
 			-webkit-user-select: none;
 			user-select: none;
 			cursor: default;
+			box-sizing: border-box;
 
 			&:active,
 			&:focus {
-				border: none;
+				border-bottom: 1px solid rgba(white,0);
 				outline: 2px solid $colour-heavenly-blue;
 				z-index: 2;
 			}
