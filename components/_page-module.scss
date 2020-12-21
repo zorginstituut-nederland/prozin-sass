@@ -35,7 +35,6 @@ $scroll-offset: 120px !default;
 			cursor: default;
 			box-sizing: border-box;
 
-			&:active,
 			&:focus {
 				border-bottom: 1px solid rgba(white,0);
 				outline: 2px solid $colour-heavenly-blue;
@@ -141,6 +140,11 @@ $scroll-offset: 120px !default;
 
 	&.type-sample-card {
 		margin-bottom: 60px;
+
+		&:focus {
+			outline: 2px solid $colour-heavenly-blue;
+			outline-offset: 15px;
+		}
 	}
 
 	&.type-body-text-segment {
