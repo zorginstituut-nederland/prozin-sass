@@ -27,8 +27,7 @@ $scroll-offset: 120px !default;
 			color: $colour-dark-blue;
 			background-color: $colour-dark-blue-xl;
 			padding: 10px 40px 10px 39px;
-			// margin: 0 -15px;
-			margin: 0;
+			margin: 0 -15px;
 			border-bottom: 1px solid $colour-dark-blue-l;
 			position: relative;
 			-webkit-user-select: none;
@@ -68,7 +67,7 @@ $scroll-offset: 120px !default;
 		}
 
 		.panel-content {
-			padding: 40px 15px;
+			padding: 40px 0;
 		}
 	}
 
