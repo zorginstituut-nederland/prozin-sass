@@ -157,6 +157,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 	}
 }
 
+@mixin mutation-sentinel() {
+	width: 8px;
+    height: 8px;
+    color: transparent !important;
+    overflow: hidden;
+    border: 2px solid white;
+    padding: 0;
+    border-radius: 50%;
+    background-color: $colour-heavenly-blue;
+    background: linear-gradient(to bottom, #8fcae7 0%,#007bc7 100%);
+}
+
 @mixin classification-tag() {
 	border-radius: 20px;
 	font-size: 10px;
@@ -171,14 +183,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 	margin-left: 3px;
 
 	&.mutated {
-		width: 8px;
-		height: 8px;
-		color: transparent !important;
-		overflow: hidden;
-		border: 2px solid white;
-		padding: 0;
-		background-color: $colour-light-blue;
-		background: linear-gradient(to bottom, #8fcae7 0%,#007bc7 100%);
+		@include mutation-sentinel;
 	}
 
 	&.biosimilar {

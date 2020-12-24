@@ -51,10 +51,30 @@ table {
         table-layout: fixed;
 
         tr {
-            &.mutated {     
-                td,
+            &.mutated,
+            &.has-differences {     
                 th {
+                    background: rgba(255,100,0,0.2);
+                }
+
+                td {
                     background: rgba(255,100,0,0.1);
+                }
+            }
+
+            &.has-mutations {
+                td:last-child {
+                    position: relative; 
+                    padding-right: 25px;
+
+                    &:after {
+                        position: absolute;
+                        top: 50%;
+                        right: 15px;
+                        transform: translateY(-50%);
+                        content: ' ';
+                        @include mutation-sentinel;
+                    }
                 }
             }
         }
@@ -99,7 +119,7 @@ table {
                 }
             }
 
-            &:after {
+            &:not(:last-child):after {
                 display: block;
                 content: ' ';
                 width: 2px;

@@ -16,6 +16,28 @@ $scroll-offset: 120px !default;
 		}
 	}
 
+	&.has-differences {
+		.page-module-title {
+			background: rgba(255,100,0,0.1);
+		}
+	}
+
+    &.has-mutations {
+        .page-module-title {
+            position: relative; 
+            padding-right: 25px;
+
+            &:after {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                content: ' ';
+                @include mutation-sentinel;
+            }
+        }
+    }
+
 	&.pat-collapsible {
 		& + .page-module.pat-collapsible {
 			margin-top: -130px;
@@ -62,6 +84,17 @@ $scroll-offset: 120px !default;
 
 				&:before {
 					content: '#{$glyph-up-open}';
+				}
+			}
+		}
+
+		&.has-differences {
+			.page-module-title {
+				background: rgba(255,100,0,0.1);
+
+				&.collapsible-open,
+				&.collapsible-closed.collapsible-in-progress {
+					background: rgba(255,100,0,0.2);
 				}
 			}
 		}
