@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+@mixin external-link-inline {
+	&:before {
+		display: inline-block;
+		content: '#{$glyph-3938-diagonale-pijl}';
+		font-family: fontello;
+		font-size: 0.7em;
+		margin-right: 0.4em;
+		text-decoration: none !important;
+	}
+}
+
 @mixin byline-item() {
 	border-left: 1px solid #535353;
 	padding: 0 0.5em;

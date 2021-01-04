@@ -798,6 +798,18 @@ $text-bottom-margin: ".8125em";
 			}	
 		}
 
+		body.environment-prototype & {
+			&:not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body:not(.environment-prototype) & {
+			&:not([href~="www.zorginstituutnederland.nl"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
 		&:not([href]) {
 			text-decoration: none;
 			color: inherit;
