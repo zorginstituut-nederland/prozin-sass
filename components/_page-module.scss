@@ -79,7 +79,7 @@ $scroll-offset: 120px !default;
 
 			.product-fk & {
 				color: $colour-orange;
-				background-color: $colour-orange-xl;
+				background: rgba(255,100,0,0.1);
 			}
 
 			&:focus {
@@ -108,8 +108,8 @@ $scroll-offset: 120px !default;
 				background-color: #cce0f1;
 
 				.product-fk & {
+					background: rgba(255,100,0,0.2);
 					color: darken($colour-orange, 10%);
-					background-color: darken($colour-orange-xl, 10%);
 				}
 
 				&:before {
