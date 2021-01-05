@@ -77,6 +77,11 @@ $scroll-offset: 120px !default;
 			cursor: default;
 			box-sizing: border-box;
 
+			.product-fk & {
+				color: $colour-orange;
+				background-color: $colour-orange-xl;
+			}
+
 			&:focus {
 				border-bottom: 1px solid rgba(white,0);
 				outline: 2px solid $colour-heavenly-blue;
@@ -101,6 +106,11 @@ $scroll-offset: 120px !default;
 			&.collapsible-closed.collapsible-in-progress {
 				border: none;
 				background-color: #cce0f1;
+
+				.product-fk & {
+					color: darken($colour-orange, 10%);
+					background-color: darken($colour-orange-xl, 10%);
+				}
 
 				&:before {
 					content: '#{$glyph-up-open}';
