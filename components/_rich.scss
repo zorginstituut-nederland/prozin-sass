@@ -1,6 +1,6 @@
 $bullet-space: 22px !default;
 $scroll-offset: 120px !default;
-$text-bottom-margin: ".8125em";
+$text-bottom-margin: "1.25rem";
 
 @charset "UTF-8";
 
@@ -239,8 +239,8 @@ $text-bottom-margin: ".8125em";
 	}
 
 	.introduction#page-intro {
-		font-size: 1.3125em;
-		line-height: 1.5238;
+		font-size: 1.60181rem;
+		line-height: 1.40466;
 
 		@include screen-size(small) {
 			line-height: "1.3 * #{$baseline}";
