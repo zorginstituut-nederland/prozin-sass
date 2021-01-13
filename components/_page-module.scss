@@ -1,5 +1,6 @@
 $bullet-space: 22px !default;
 $scroll-offset: 120px !default;
+$header-2-top-margin: 3rem !default;
 
 .page-module {
 	margin-bottom: 30px;
@@ -216,6 +217,10 @@ $scroll-offset: 120px !default;
 		-moz-pointer-events: none;
 		-webkit-pointer-events: none;
 		pointer-events: none;
+
+		&.pat-collapsible {
+			margin-top: calc(-100px + #{$header-2-top-margin});
+		}
 
 		.section-introduction {
 			font-weight: bold;
