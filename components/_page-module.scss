@@ -9,11 +9,31 @@ $scroll-offset: 120px !default;
 	.page-module-title {
 		margin: 0 0 20px 0;
 		font-size: 1.625rem;
+		line-height: 1.625;
 		padding-top: 10px;
 
 		&.assistive {
 			position: absolute !important;
 		}
+	}
+
+	&.pat-rich {
+		.pat-collapsible {
+
+		margin-bottom: #{$baseline};
+
+		.panel-content {
+			 > *:last-child {
+				margin-bottom: 0;
+			}
+
+			#close-excipients-warning {
+				.no-js & {
+					display: none;
+				}
+			}
+		}
+	}
 	}
 
 	&.has-differences {
@@ -57,6 +77,11 @@ $scroll-offset: 120px !default;
 			cursor: default;
 			box-sizing: border-box;
 
+			.product-fk & {
+				color: $colour-orange;
+				background: rgba(255,100,0,0.1);
+			}
+
 			&:focus {
 				border-bottom: 1px solid rgba(white,0);
 				outline: 2px solid $colour-heavenly-blue;
@@ -81,6 +106,11 @@ $scroll-offset: 120px !default;
 			&.collapsible-closed.collapsible-in-progress {
 				border: none;
 				background-color: #cce0f1;
+
+				.product-fk & {
+					background: rgba(255,100,0,0.2);
+					color: darken($colour-orange, 10%);
+				}
 
 				&:before {
 					content: '#{$glyph-up-open}';
@@ -217,6 +247,63 @@ $scroll-offset: 120px !default;
 			@include screen-size(small) {
 				width: 100%;
 				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&#section-group-information {
+		.link-list {
+			.no-js & {
+				display: none;
+			}
+		}
+	}
+
+	&[id$="compare"] {
+		.no-js & {
+			display: none;
+		}
+	}
+
+	&#section-cost {
+		// position: relative;
+
+		table.cost-table {
+            clear: none;
+            animation: fadeIn 1s;
+            -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+		    animation-fill-mode: forwards;
+        }
+
+		#cost-overview .pat-inject {
+			position: relative;
+			display: block;
+			opacity: 1;
+
+			.js & {
+				color: black;
+				text-decoration: none;
+				padding-left: 1.9em;
+
+				&:before {
+					@include throbber;
+					left: 0.5em;
+					font-size: 27px;
+					color: rgba(0,0,0,0.6);
+				}
+			}
+
+		}
+	}
+
+	// Original overlapping amount of pixels was $baseline.
+
+	.stacks-toggle {
+		a {
+			display: inline-block;
+
+			&.current {
+				display: none;
 			}
 		}
 	}
