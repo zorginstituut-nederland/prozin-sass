@@ -104,16 +104,16 @@
 	// }
 
 	.date-modified {
-		font-size: 10px;
+		font-size: 12px;
 		position: absolute;
-		top: 10px;
-		left: 15px;
+		top: 12px;
+		left: 18px;
 		color: silver;
 		cursor: default;
 		max-width: 40%;
 
-		&:hover {
-			color: black;
+		@include screen-size(small) {
+			display: none;
 		}
 	}
 
