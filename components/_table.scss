@@ -406,7 +406,8 @@ table {
                 font-variant: italic;
                 font-size: 0.8em;
                 line-height: 1.4;
-                color: #666;
+                color: $colour-orange;
+                font-weight: bold;
                 margin-bottom: 0;
                 // padding-left: 1.9em; // Old version with expandable graphs
             }
