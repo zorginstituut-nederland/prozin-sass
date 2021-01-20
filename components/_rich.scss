@@ -242,6 +242,8 @@ $header-2-top-margin: 3rem !default;
 	.introduction#page-intro {
 		font-size: 1.60181rem;
 		line-height: 1.40466;
+		-webkit-hyphens: auto;
+		hyphens: auto;
 
 		@include screen-size(small) {
 			line-height: "1.3 * #{$baseline}";
@@ -797,6 +799,48 @@ $header-2-top-margin: 3rem !default;
 					content: ' (pdf)'
 				}
 			}	
+		}
+
+		body.environment-prototype & {
+			&:not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body.product-fk & {
+			&:not([href~=".farmacotherapeutischkompas"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body.product-hor & {
+			&:not([href~=".horizonscan"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body.product-ziz & {
+			&:not([href~=".zorginzicht"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body.product-gip & {
+			&:not([href~=".gipdatabank"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body.product-med & {
+			&:not([href~=".medicijnkosten"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body.product-zor & {
+			&:not([href~=".zorgcijfers"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
 		}
 
 		&:not([href]) {
