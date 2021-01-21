@@ -61,7 +61,7 @@
 // Mixins for individual components
 
 @mixin injection() {
-  .injecting:not(.discrete-injection):not[data-error-message] {
+  &.injecting {
     > * {
       opacity: 0.19;
     }
@@ -73,8 +73,10 @@
     
     &:before {
       @include throbber();
+      opacity: 0;
+      animation: spin 2s infinite linear, fadeIn 1s linear 1s 1 forwards;
     }
-  } 
+  }
 }
 
 @mixin pat-rich() {

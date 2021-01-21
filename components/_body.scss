@@ -104,6 +104,8 @@ body {
 		}
 	}
 
+	@include injection;
+
 	&.injecting:not(.discrete-injection) {
 		#global-nav,
 		#site-header,
