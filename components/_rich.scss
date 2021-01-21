@@ -643,6 +643,7 @@ $header-2-top-margin: 3rem !default;
 	.logo-cloud {
 		img {
 			margin: 1.5em 5%;
+			display: inline-block;
 		}
 	}
 
@@ -742,6 +743,7 @@ $header-2-top-margin: 3rem !default;
 	img {
 		max-width: 100%;
 		margin: 0 auto;
+		display: block;
 	}
 
 	p,
