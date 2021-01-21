@@ -1,13 +1,23 @@
 @charset "UTF-8";
 
 @mixin external-link-inline {
+	position: relative;
+	padding-left: 1rem;
+
 	&:before {
-		display: inline-block;
+		display: inline-flex;
 		content: '#{$glyph-3938-diagonale-pijl}';
 		font-family: fontello;
-		font-size: 0.6em;
-		margin-right: 0.4em;
+		font-size: .7rem;
+		font-weight: normal;
+		line-height: inherit;
+		-webkit-font-smoothing: antialiased;
+		left: 1px;
+		top: -2px;
+		align-items: center;
+		height: 28px;
 		text-decoration: none !important;
+		position: absolute;
 	}
 }
 
