@@ -401,6 +401,34 @@ table {
                 padding: 5px 10px 5px 10px;
             }
 
+            &.injecting {
+                > p {
+                    opacity: 0.5;
+                }
+                
+                .suggested-content {
+                    &:before {
+                      @include throbber();
+                      opacity: 0;
+                      animation: spin 2s infinite linear, fadeIn 1s linear 1s 1 forwards;
+                    }
+                }
+            }
+
+            .suggested-content {
+                margin-bottom: 5px;
+                margin-top: 10px;
+                background-color: $colour-info;
+
+                p.buttons {
+                    margin-top: 5px;
+
+                    button {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
             p.contribution {
                 // color: $colour-moss-green-l;
                 font-variant: italic;
