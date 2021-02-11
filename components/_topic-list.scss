@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.topic-list {
+	margin: 3rem auto 1.5rem auto;
+
+	.topic-list-section {
+		.topic-list-section-title {
+			margin-bottom: 1.5rem;
+			font-size: 1.60181rem;
+			line-height: 1.24859;
+			font-weight: bold;
+		}
+
+		& + .topic-list-section {
+			.topic-list-section-title {
+				padding-top: 2rem;
+				border-top: 1px solid #e1e1e1;
+			}
+		}
+
+		.link-list {
+			margin-bottom: 2rem;
+		}
+	}
+}

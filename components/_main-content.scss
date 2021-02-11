@@ -19,12 +19,14 @@
 
 	.variation-overview ~ #main &,
 	.variation-themes ~ #main &,
-	.variation-landing-indicator-sets ~ #main & {
+	.variation-landing-indicator-sets ~ #main &,
+	.variation-landing-topics ~ #main & {
 		margin-left: 0;
 		padding: 0;
 	}
 
 	&.page-type-landing,
+	&.page-type-landing-topics,
 	&.page-type-overview,
 	&.page-type-themes {
 		margin-left: 0;
