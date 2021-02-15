@@ -810,44 +810,50 @@ $header-2-top-margin: 3rem !default;
 			}	
 		}
 
-		body.environment-prototype & {
-			&:not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
-				@include external-link-inline;
-			}
-		}
-
 		body.product-fk & {
-			&:not([href~=".farmacotherapeutischkompas.nl"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".farmacotherapeutischkompas.nl"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-hor & {
-			&:not([href~=".horizonscan.nl"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".horizonscan.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-ziz & {
-			&:not([href~=".zorginzicht.nl"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".zorginzicht.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-gip & {
-			&:not([href~=".gipdatabank.nl"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".gipdatabank.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-med & {
-			&:not([href~=".medicijnkosten.nl"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".medicijnkosten.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-zor & {
-			&:not([href~=".zorgcijfersdatabank.nl"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".zorgcijfersdatabank.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body.product-ist & {
+			&:not([href~=".istandaarden.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+				@include external-link-inline;
+			}
+		}
+
+		body.environment-prototype & {
+			&:not([href^="/"]):not([href^="#"]):not([href^="tel"]):not([href^="mailto"]):not([class~=type-link-external]) {
 				@include external-link-inline;
 			}
 		}
