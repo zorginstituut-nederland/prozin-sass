@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.show-more-snippet {
+	display: inline;
+	letter-spacing: -1em;
+
+	&.collapsed {
+		cursor: pointer;
+		overflow: hidden;
+		color: transparent;
+
+		&:before {
+			content: '…';
+			letter-spacing: 0;
+			color: black;
+			display: inline;
+			// font-size: 1em;
+		}
+
+		&:after {
+			color: $colour-link;
+			content: 'Show more';
+			letter-spacing: 0;
+			display: block;
+			clear: both;
+			// font-size: 1em;
+		}
+
+		&:hover {
+			&:after {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&.expanded {
+		font-size: inherit;
+		color: inherit;
+		letter-spacing: 0;
+	}
+}
