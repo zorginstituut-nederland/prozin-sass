@@ -19,7 +19,7 @@
 
 		&:after {
 			color: $colour-link;
-			content: 'Show more';
+			content: attr(title);
 			letter-spacing: 0;
 			display: block;
 			clear: both;
