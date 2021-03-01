@@ -612,6 +612,36 @@ table {
                     }
                 }
             }
+
+            tr {
+                &.separation-row {
+                    th.separation-cell {
+                        padding: 20px 0 0 0;
+                        font-weight: bold;
+                    }
+                }
+
+                &.frequency-0 {
+                    td,
+                    th {
+                        background: transparent;
+                    }
+
+                    th.side-effect-name {
+                        padding: 0 0 0 $bullet-space;
+
+                        &:before {
+                            content: "•";
+                            margin-left: -1 * $bullet-space;
+                            font-size: 1em;
+                            // background: pink;
+                            width: $bullet-space;
+                            float: left;
+                            // color: $colour-orange;
+                        }
+                    }
+                }
+            }
         }
 
         .side-effect-name {
@@ -623,6 +653,10 @@ table {
             text-align: center;
             vertical-align: middle;
             width: 100px;
+        }
+
+        .frequency-0 .frequency {
+            background-color: transparent;
         }
 
         .frequency-2 .frequency {
