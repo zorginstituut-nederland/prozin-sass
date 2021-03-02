@@ -40,7 +40,7 @@ label.pat-checklist {
 	padding-right: 0.5em;
 }
 
-.pat-checklist {
+.pat-checklist:not(.free-form) {
 
 	> br {
 		display: none;

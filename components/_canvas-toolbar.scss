@@ -351,9 +351,9 @@ $colour-toolbar-button: transparent !default;
 		display: inline-block;
 		margin: 0 1em 1em 0;
 		vertical-align: top;
-		box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+		// box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
 		border-radius: $canvas-toolbar-button-border-radius;
-		background-color: rgba(black,0.06);
+		background-color: #e7e7e7;;
 	
 		&.align-centre {
 			position: relative;
@@ -369,8 +369,15 @@ $colour-toolbar-button: transparent !default;
 			margin: 0;
 			background-color: transparent;
 
+			input {
+				position: absolute;
+				opacity: 0;
+			}
+
 			&.current,
-			&.current:hover {
+			&.current:hover,
+			&.checked,
+			&.checked:hover {
 				background-color: $colour-link;
 				color: white;
 			}
