@@ -53,6 +53,12 @@ $colour-toolbar-button: transparent !default;
 		}
 	}
 
+	&#toolbar-news-overview {
+		@include screen-size(small) {
+			display: none;
+		}
+	}
+
 	&#toolbar-landing-browse {
 		@include screen-size(medium-large) {
 			#filter-mobile {
