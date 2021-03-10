@@ -281,6 +281,33 @@ $header-2-top-margin: 3rem !default;
 			// color: black;
 			text-decoration: none;
 
+			&.follow {
+				font-size: 1.7rem;
+				color: $colour-dark-blue;
+				text-decoration: underline;
+				opacity: 0.6;
+
+				&:hover {
+					opacity: 1;
+				}
+
+				&:before {
+					content: '(';
+				}
+
+				&:after {
+					content: ')';
+				}
+			}
+		}
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		a {
 			&[href] {
 				text-decoration: none;
 
@@ -299,25 +326,6 @@ $header-2-top-margin: 3rem !default;
 					&:after {
 						text-decoration: none !important;
 					}
-				}
-			}
-
-			&.follow {
-				font-size: 1.7rem;
-				color: $colour-dark-blue;
-				text-decoration: underline;
-				opacity: 0.6;
-
-				&:hover {
-					opacity: 1;
-				}
-
-				&:before {
-					content: '(';
-				}
-
-				&:after {
-					content: ')';
 				}
 			}
 		}
