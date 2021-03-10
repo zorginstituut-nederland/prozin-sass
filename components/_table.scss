@@ -622,22 +622,24 @@ table {
                 }
 
                 &.frequency-0 {
-                    td,
-                    th {
-                        background: transparent;
-                    }
+                    #bijwerkingen & {
+                        td,
+                        th {
+                            background: transparent;
+                        }
 
-                    th.side-effect-name {
-                        padding: 0 0 0 $bullet-space;
+                        th.side-effect-name {
+                            padding: 0 0 0 $bullet-space;
 
-                        &:before {
-                            content: "•";
-                            margin-left: -1 * $bullet-space;
-                            font-size: 1em;
-                            // background: pink;
-                            width: $bullet-space;
-                            float: left;
-                            // color: $colour-orange;
+                            &:before {
+                                content: "•";
+                                margin-left: -1 * $bullet-space;
+                                font-size: 1em;
+                                // background: pink;
+                                width: $bullet-space;
+                                float: left;
+                                // color: $colour-orange;
+                            }
                         }
                     }
                 }
