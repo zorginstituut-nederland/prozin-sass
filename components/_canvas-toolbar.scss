@@ -362,6 +362,7 @@ $colour-toolbar-button: transparent !default;
 		background-color: #e7e7e7;
 		overflow: hidden;
 		white-space: nowrap;
+		max-width: $break-small;
 	
 		&.align-centre {
 			position: relative;
