@@ -361,7 +361,7 @@ $colour-toolbar-button: transparent !default;
 		border-radius: $canvas-toolbar-button-border-radius;
 		background-color: #e7e7e7;
 		overflow: hidden;
-		white-space: nowrap;
+		height: $canvas-toolbar-button-height;
 		max-width: $break-small;
 	
 		&.align-centre {
