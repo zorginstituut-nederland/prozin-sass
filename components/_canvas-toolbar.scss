@@ -359,7 +359,9 @@ $colour-toolbar-button: transparent !default;
 		vertical-align: top;
 		// box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
 		border-radius: $canvas-toolbar-button-border-radius;
-		background-color: #e7e7e7;;
+		background-color: #e7e7e7;
+		overflow: hidden;
+		white-space: nowrap;
 	
 		&.align-centre {
 			position: relative;
