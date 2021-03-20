@@ -15,6 +15,23 @@
 .pat-message {
 	padding: $table-cell-padding;
 
+	&.processing {
+		padding: 20px 20px 20px 120px ;
+		position: relative;
+
+		&:before {
+			@include throbber;
+			position: absolute;
+			top: 50%;
+			left: 60px;
+			transform: translateY(-50%,-50%);
+		}
+	}
+
+	&.info {
+		background-color: $colour-dark-blue-xl;
+	}
+
 	&.error,
 	&.warning {
 		padding-top: 30px;
