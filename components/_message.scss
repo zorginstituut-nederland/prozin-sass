@@ -16,14 +16,14 @@
 	padding: $table-cell-padding;
 
 	&.processing {
-		padding: 20px 20px 20px 120px ;
+		padding: 30px 30px 30px 140px ;
 		position: relative;
 
 		&:before {
 			@include throbber;
 			position: absolute;
 			top: 50%;
-			left: 60px;
+			left: 70px;
 			transform: translateY(-50%,-50%);
 		}
 	}
