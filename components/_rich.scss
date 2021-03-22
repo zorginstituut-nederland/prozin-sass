@@ -5,32 +5,6 @@ $header-2-top-margin: 3rem !default;
 
 @charset "UTF-8";
 
-// Counters for illustrations
-
-svg + figcaption,
-img + figcaption,
-a + figcaption,
-.illustration-group + figcaption {
-
-	&:before {
-		content: 'Fig. ' counter(fig) ': ';
-		counter-increment: fig;
-	}
-}
-
-table + figcaption,
-.scroll-table + figcaption,
-.table-group + figcaption,
-.tables + figcaption {
-
-	// .tables is for legacy situations.
-
-	&:before {
-		content: 'Tabel ' counter(tab) ': ';
-		counter-increment: tab;
-	}
-}
-
 // Rich text
 
 .article.content,
@@ -62,8 +36,6 @@ table + figcaption,
 		margin: 0.5em 0;
 		color: #666;
 	}
-
-	counter-reset: tab fig;  
 
 	overflow-wrap: break-word;
 	word-wrap: break-word;
@@ -755,6 +727,32 @@ table + figcaption,
 				&:before {
 					text-decoration: none;
 				}
+			}
+		}
+
+		// Counters for illustrations
+
+		svg + figcaption,
+		img + figcaption,
+		a + figcaption,
+		.illustration-group + figcaption {
+
+			&:before {
+				content: 'Fig. ' counter(fig) ': ';
+				counter-increment: fig;
+			}
+		}
+
+		table + figcaption,
+		.scroll-table + figcaption,
+		.table-group + figcaption,
+		.tables + figcaption {
+
+			// .tables is for legacy situations.
+
+			&:before {
+				content: 'Tabel ' counter(tab) ': ';
+				counter-increment: tab;
 			}
 		}
 	}
