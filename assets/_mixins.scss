@@ -50,41 +50,6 @@ background: linear-gradient(to bottom, #e17000 0%,#af6000 100%); /* W3C, IE10+, 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', endColorstr='#af6000',GradientType=0 ); /* IE6-9 */
 }
 
-@mixin classification-tag() {
-	border-radius: 20px;
-	font-size: 10px;
-	height: 12px;
-	line-height: 12px;
-	padding: 0 6px;
-	vertical-align: middle;
-	display: inline-block;
-	background: silver;
-	color: black;
-	margin-top: -2px;
-	margin-left: 3px;
-
-	&.biosimilar {
-		background: $colour-light-green;
-		color: $colour-green;
-	}
-
-	&.generic {
-		background: #666;
-		color: #efefef;
-	}
-
-	&.indication {
-		background: $colour-purple-l;
-		color: $colour-purple;
-	}
-
-	&.meerjarenagenda {
-		background: $colour-orange;
-		color: white;
-	}
-
-}
-
 @mixin search-button-main() {
 	width: 15rem;
 	padding: 0 0.8em;
@@ -225,6 +190,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 	&.meerjarenagenda {
 		background: $colour-orange;
 		color: white;
+	}
+
+	&.has-mutations {
+		background: $colour-orange;
+		color: white;
+		text-transform: uppercase;
 	}
 
 }
