@@ -184,6 +184,18 @@ $colour-toolbar-button: transparent !default;
 		}
 	}
 
+	.pat-select:not(.bare) select {
+		background-color: #e7e7e7;
+		border-radius: $canvas-toolbar-button-border-radius;
+		padding: 0 25px;
+		display: inline-block;
+		cursor: default;
+		color: #666;
+		white-space: nowrap;
+		font-size: 18px;
+		height: 35px;
+	}
+
 	.pat-select,
 	.pat-select.bare,
 	.context-menu {

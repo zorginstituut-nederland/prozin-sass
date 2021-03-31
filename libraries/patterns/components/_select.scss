@@ -18,9 +18,9 @@ a.pat-select {
   border: none;
 
   border-right: 0.35em solid rgba(0, 0, 0, 0);
-  padding-right: 1em;
+  padding-right: 35PX;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: calc(100% - 6px) center;
   background-image: url(data:image/svg+xml;base64,#{$arrow-down-dark});
   background-size: 12px 12px;
 ;
