@@ -1,15 +1,17 @@
+$scroll-offset: 100px;
+
 .comments {
 	background-color: transparent;
 	margin: 0 0 1em 0;
 	position: relative;
 
 	table & {
-	    margin-top: -1 * $table-cell-padding-top;
+	    margin-top: -1 * $table-cell-padding-top + -1 * $scroll-offset;
         margin-right: -1 * $table-cell-padding-right;
         margin-bottom: -1 * $table-cell-padding-bottom;
         margin-left: -1 * $table-cell-padding-left;	    
 
-        padding-top: $table-cell-padding-top;
+        padding-top: $table-cell-padding-top + $scroll-offset;
         padding-right: $table-cell-padding-right;
         padding-bottom: $table-cell-padding-bottom;
         padding-left: $table-cell-padding-left;
