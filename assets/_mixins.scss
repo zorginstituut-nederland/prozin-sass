@@ -198,6 +198,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 		text-transform: uppercase;
 	}
 
+	&.new {
+		background: $colour-green;
+		color: white;
+		text-transform: uppercase;
+	}
+
 }
 
 @mixin search-button-main() {
