@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+$scroll-offset: 120px !default;
 $bullet-space: 22px !default;
 
 .link-list {
@@ -77,6 +78,20 @@ $bullet-space: 22px !default;
 		border-bottom: 0.3em solid transparent; // Faux bottom margin.
 		padding: 0 0.5em 0 $bullet-space;
 
+		&.type-reference {
+			padding: $scroll-offset 0.5em 0 $bullet-space;
+			margin: -1 * $scroll-offset 0 0 0 ; 
+			-moz-pointer-events: none;
+			-webkit-pointer-events: none;
+			pointer-events: none;
+		}
+
+		> * {
+			-moz-pointer-events: auto;
+			-webkit-pointer-events: auto;
+			pointer-events: auto;	
+		}
+
 		&.state-draft,
 		&.state-new {
 			a {
@@ -97,13 +112,51 @@ $bullet-space: 22px !default;
 			}
 		}
 
+		&.type-reference {
+			a:before {
+				display: none !important;
+			}
+
+			.reference-badge {
+				float: left;
+				margin-left: -1 * $bullet-space;
+				font-size: 0.7em;
+				margin-top: 4px;
+				position: relative;
+
+				&:before {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					display: block;
+					background: $colour-dark-blue;
+					color: white;
+					font-family: fontello;
+					content: '#{$glyph-up-open}';
+					display: none;
+					width: 100%;
+					text-align: center;
+					margin: 0;
+					border-radius: 0.8em;
+				}
+
+				&:hover {
+					&:before {
+						display: block !important;
+					}
+				}
+			}
+		}
+
 		-webkit-column-break-inside: avoid;
           page-break-inside: avoid;
                break-inside: avoid;
 		a,
 		.group-title {
 			display: block;
-			padding: 0;
+			padding: 0 !important; // !important to reverse the effect of external links left padding in a pat-rich context. 
 			font-weight: normal;
 			margin-left: 0;
 

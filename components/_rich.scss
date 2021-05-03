@@ -5,6 +5,8 @@ $header-2-top-margin: 3rem !default;
 
 @charset "UTF-8";
 
+// Rich text
+
 .article.content,
 .pat-rich {
 	// -moz-hyphens: auto;
@@ -13,6 +15,21 @@ $header-2-top-margin: 3rem !default;
 
 	font-size: 1.26562rem;
 	line-height: 1.38272;
+
+	.inline-reference {
+		padding: $scroll-offset 0 0 0;
+
+		margin: -1 * $scroll-offset 0 0 0 ; 
+		-moz-pointer-events: none;
+		-webkit-pointer-events: none;
+		pointer-events: none;
+
+		> * {
+			-moz-pointer-events: auto;
+			-webkit-pointer-events: auto;
+			pointer-events: auto;	
+		}
+	}
 
 	*:not(img):not(br):not(a):empty:not(textarea):not(td):not(th) {
 	    display: none;
@@ -34,8 +51,6 @@ $header-2-top-margin: 3rem !default;
 		margin: 0.5em 0;
 		color: #666;
 	}
-
-	counter-reset: tab fig;  
 
 	overflow-wrap: break-word;
 	word-wrap: break-word;
@@ -730,6 +745,8 @@ $header-2-top-margin: 3rem !default;
 			}
 		}
 
+		// Counters for illustrations
+
 		svg + figcaption,
 		img + figcaption,
 		a + figcaption,
@@ -819,49 +836,49 @@ $header-2-top-margin: 3rem !default;
 		}
 
 		body.product-fk & {
-			&:not([href~=".farmacotherapeutischkompas.nl"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".farmacotherapeutischkompas.nl"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]):not([class~=reference-badge]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-hor & {
-			&:not([href~=".horizonscan.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".horizonscan.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]):not([class~=reference-badge]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-ziz & {
-			&:not([href~=".zorginzicht.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".zorginzicht.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]):not([class~=reference-badge]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-gip & {
-			&:not([href~=".gipdatabank.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".gipdatabank.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]):not([class~=reference-badge]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-med & {
-			&:not([href~=".medicijnkosten.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".medicijnkosten.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="#"]):not([class~=type-link-external]):not([class~=reference-badge]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-zor & {
-			&:not([href~=".zorgcijfersdatabank.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".zorgcijfersdatabank.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]):not([class~=reference-badge]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.product-ist & {
-			&:not([href~=".istandaarden.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]) {
+			&:not([href~=".istandaarden.nl"]):not([href^="/"]):not([href^="tel"]):not([href^="mailto"]):not([href^="/"]):not([href^="#"]):not([class~=type-link-external]):not([class~=reference-badge]) {
 				@include external-link-inline;
 			}
 		}
 
 		body.environment-prototype & {
-			&:not([href^="/"]):not([href^="#"]):not([href^="tel"]):not([href^="mailto"]):not([class~=type-link-external]) {
+			&:not([href^="/"]):not([href^="#"]):not([href^="tel"]):not([href^="mailto"]):not([class~=type-link-external]):not([class~=reference-badge]) {
 				@include external-link-inline;
 			}
 		}
@@ -979,6 +996,18 @@ $header-2-top-margin: 3rem !default;
 
 	ol {
 		counter-reset: list;
+
+		&.link-list {
+			li {
+				a[href] {
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
 
 		> li {
 			counter-increment: list;

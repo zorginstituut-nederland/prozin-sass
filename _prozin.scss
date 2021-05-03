@@ -8,6 +8,8 @@
 @import "assets/fonts";
 @import "assets/mixins";
 
+$scroll-offset: 120px;
+
 // Shadows
 
 $default-box-shadow: none;
@@ -90,11 +92,13 @@ $pswp__include-minimal-style: true;
 @import "components/body";
 @import "components/button";
 @import "components/canvas-toolbar";
+@import "components/classification-tag";
 @import "components/comments";
 @import "components/collapsible";
 @import "components/container";
 @import "components/content";
 @import "components/context-menu";
+@import "components/cookie-warning";
 @import "components/editorial-list";
 @import "components/file-download";
 @import "components/footer";
@@ -113,6 +117,7 @@ $pswp__include-minimal-style: true;
 @import "components/nav-tiles";
 @import "components/news-feed";
 @import "components/page-module";
+@import "components/reference-badge";
 @import "components/rich";
 @import "components/select";
 @import "components/site-header";
