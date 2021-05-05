@@ -271,7 +271,7 @@ $bullet-space: 22px !default;
 				border-bottom: none;
 
 				a {
-					padding: 0 0 0 17px;
+					padding: 0 0 0 17px !important;
 					white-space: nowrap;
 					overflow: hidden;
 					text-overflow: ellipsis;

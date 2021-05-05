@@ -64,7 +64,8 @@ $form-proportion-value: 80% !default;
 
 	input:not([type="range"]):not([type="radio"]):not([type="checkbox"]),
 	textarea,
-	select {
+	select,
+	.output-field {
 		background-color: white;
 		padding: 2px 5px;
 		margin-top: -3px;
