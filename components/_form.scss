@@ -155,6 +155,13 @@ $form-proportion-value: 80% !default;
 
 		.help {
 			padding: 0;
+			margin-top: 30px;
+			margin-bottom: -2px;
+
+			.help-content {
+				padding: 10px 0;
+				display: block;
+			}
 
 			.help-label,
 			.help-label.collapsible-open.collapsible-in-progress {
