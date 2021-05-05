@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+$browser-window-border-radii: 8px !default;
+
+.pat-screenshot {
+	margin-bottom: 2em;
+  overflow: hidden;
+  position: relative;
+  padding: 0 10px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: ' ';
+    z-index: 1;
+  }
+
+  object {
+  	background-color: $colour-base;
+  	width: 1280px;
+  	height: 800px;
+  	-webkit-user-select: none;
+  	user-select: none;
+  	pointer-events: none;
+  	box-shadow: $default-box-shadow;
+  	margin: 0;
+  }
+
+  &.type-app-icon {
+    object {
+      height: 480px;
+      box-shadow: none;
+    }
+  }
+
+  &.browser-window {
+  	background-color: white;
+  	border-radius: $browser-window-border-radii;
+  	box-shadow: 0 3px 16px rgba(0, 0, 0, 0.20);
+  	position: relative;
+  	overflow: hidden;
+    border: 1px solid silver;
+
+  	.auto-scale-wrapper,
+    img {
+  		border-bottom-left-radius: $browser-window-border-radii;
+  		border-bottom-right-radius: $browser-window-border-radii;
+  		overflow: hidden;
+  		border-top: 35px solid rgba(silver, 0.8);
+
+      @include screen-size(small) {
+        border-top: 25px solid rgba(silver, 0.8);
+      }
+  	}
+
+  	object {
+  		box-shadow: none;
+  		background-color: white;
+  	}
+
+  	img {
+  		display: block;
+  		width: 100%;
+  	}
+
+  	&:before,
+  	&:after {
+  		line-height: 24px;
+  		height: 24px;
+  		text-align: center;
+  		display: inline-block;
+  		position: absolute;
+  		top: 4px;
+  		border-radius: 6px;
+  		border: rgba(0,0,0,0.25) 1px solid;
+  	}
+
+  	&:before {
+  		content: '#{$glyph-arrows-apart}';
+  		font-family: fontello;
+  		width: 48px;
+  		left: 14px;
+  		background-color: rgba(255,255,255,0.5);
+  		color: rgba(0,0,0,0.5);
+  		font-size: 29px;
+
+      @include screen-size(small) {
+        transform: scale(0.65);
+        transform-origin: top left;
+      }
+  	}
+
+  	&:after {
+  		content: attr(data-url);
+  		background-color: white;
+  		left: 120px;
+  		right: 120px;
+  		font-size: 15px;
+  		padding: 0 25px;
+  		overflow: hidden;
+  		white-space: nowrap;
+  	}
+  }
+}

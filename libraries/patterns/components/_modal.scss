@@ -11,8 +11,17 @@ div.pat-modal {
     top: 50% !important;
     left: 50% !important;  
     transform: translate(-50%, -50%);
-    animation: bounceInCentred 0.5s;
+    animation: fadeIn 0.2s;
     background-color: transparent;
+    border-radius: $border-radii;
+
+    &.small {
+      animation: bounceInCentred 0.5s;
+    }
+
+    &.medium {
+      width: 900px !important;
+    }
 
     > .header {
       position: absolute;
@@ -37,10 +46,28 @@ div.pat-modal {
 
     .panel-content {
       background: white;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 50px rgba(0,0,0,0.7);
       border: 1px solid rgba(0,0,0,0.15);
       padding-top: 60px;
       border-radius: $border-radii;
+
+      .panel-body {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto; 
+        padding-top: 5px;       
+
+        .button-bar:last-child {
+          position: -webkit-sticky;
+          position: sticky;
+          bottom: -20px;
+          margin-bottom: -20px;
+          background: white;
+          padding-bottom: 25px;
+          padding-top: 20px;
+          border-top: 1px solid silver;
+          z-index: 10;
+        }
+      }
 
       .button-bar {
         margin: 0;
@@ -56,15 +83,30 @@ div.pat-modal {
       left: -2000px;
       content: ' ';
       z-index: -1;
-      background-color: rgba(255,255,255,0.15);
-      // -webkit-backdrop-filter: blur(5px);
-      // backdrop-filter: blur(5px);
+      background-color: rgba(0,0,0,0.15);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
       animation: fadeIn 1s;
     }
 
     .panel-footer,
     .panel-body {
       padding-bottom: 20px;
+    }
+
+    .panel-footer {
+      .container { 
+        &:before {
+          content: ' ';
+          height: 1px;
+          display: block;
+          margin-bottom: 20px;
+          background: silver;
+        }
+        .float-after {
+          margin-right: 0;
+        }
+      }
     }
 
     .container {
@@ -75,13 +117,7 @@ div.pat-modal {
   &:not(.panel),
   &#document-content:not(.panel) {
 
-    background-color: rgba(255,255,255,0.95);
-
-    .backdropfilter & {
-      background-color: rgba(255,255,255,0.15);
-      -webkit-backdrop-filter: blur(100px) saturate(4) brightness(1.2);
-      backdrop-filter: blur(100px) saturate(4) brightness(1.2);
-    }
+    @include modal-background;
 
     @include box-sizing();
     position: fixed;

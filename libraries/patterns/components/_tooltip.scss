@@ -1,224 +1,103 @@
-@charset "UTF-8";
+$namespace-prefix: 'tippy';
+$placements: 'top', 'bottom', 'left', 'right';
+$origins: bottom, top, right, left;
+$backdrop-origins: 0% 25%, 0% -50%, 50% 0%, -50% 0%;
+$backdrop-border-radii: 40% 40% 0 0, 0 0 30% 30%, 50% 0 0 50%, 0 50% 50% 0;
+$bullet-space: 22px !default;
+$tooltip-border-radii: $border-radii !default;
+
+@import "../libraries/tippyjs/index";
+@import "../libraries/tippyjs/themes/patterns-tooltip";
+// @import "../libraries/tippyjs/themes/light-border";
 
 .tooltip-container {
-  background-color: white;
-  position: absolute;
-  z-index: 9997;
-  border: none;
-  min-height: 50px;
   overflow: visible;
-  overflow-x: visible;
-  margin: 0;
-  
+  font-size: 1rem;
+  padding: 0;
+
   @media print {
-    display: none;
+    display: none !important;
   }
 
-  @include screen-size(medium-large) {
-    border: 1px solid silver;
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    // font-size: 0.8em;
-    line-height: 1.5em;
-    border-radius: 0.4em;
-    width: 300px;
-  }
+  .tippy-content {
+    min-width: 250px;
+    border-radius: $tooltip-border-radii;
 
-  > div {
-    padding: 1em;
-    z-index: 1;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    min-height: 60px;
-    background-color: white;
-    overflow: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    border-radius: 0.35em;
-
-    @include screen-size(small) {
-      padding-top: 4em;
-    }
-
-    &:after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-  }
-
-  > .close-panel {
-    @include close-button;
-  }
-
-  &.type-auto {
-    > .close-panel {
-      display: none;
-    }
-  }
-  &.type-sticky {
-    > .close-panel {
-      display: none;
-    }
-  }
-
-  &.type-close-button {
-    > .close-panel {
-      display: block;
-    }
-  }
-
-  &.bl .pointer, 
-  &.bm .pointer, 
-  &.br .pointer {
-    margin-top: -12px;
-  }
-  &.lt .pointer, 
-  &.lm .pointer, 
-  &.lb .pointer {
-    margin-left: 12px;
-  }
-  &.tl .pointer, 
-  &.tm .pointer, 
-  &.tr .pointer {
-    margin-top: 12px;
-  }
-  &.rt .pointer, 
-  &.rm .pointer, 
-  &.rb .pointer {
-    margin-left: -12px;
-  }
-  &.lt .pointer, 
-  &.rt .pointer {
-    margin-top: 20px;
-  }
-  &.lb .pointer, 
-  &.rb .pointer {
-    margin-top: -20px;
-  }
-  &.tl .pointer, 
-  &.bl .pointer {
-    margin-left: 20px;
-  }
-  &.tr .pointer, 
-  &.br .pointer {
-    margin-left: -20px;
-  }
-
-  // Variations
-
-  &.info {
-    > div {
-      background-color: $colour-notice;
-    }
-
-    .pointer {
-      background-color: $colour-notice;
-    }
-  }
-
-  &.rich {
-    > div {
-      @include pat-rich();
-    }
-  }
-
-  &.large {
-    @include screen-size(large) {
-      width: 50%;
-    }
-  }
-
-  h4 {
-    color: #3b3b3b;
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .item-selector {
-    position: static;
-  }
-
-  .button-bar.bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .pointer {
-    height: 20px;
-    width: 20px;
-    display: block;
-    background-color: white;
-    border: 1px solid silver;
-    z-index: 0;
-    position: absolute;
-    -webkit-transform: rotate(45deg);
-    -webkit-box-shadow: rgba(0, 0, 0, 0.19922) 0px 0px 10px;
-    -moz-transform: rotate(45deg);
-    -moz-box-shadow: rgba(0, 0, 0, 0.19922) 0px 0px 10px;
-    transform: rotate(45deg);
-    box-shadow: rgba(0, 0, 0, 0.19922) 0px 0px 10px;
-    @include screen-size(small) {
-      display: none;
+    > *:last-child {
+      margin-bottom: 0;
     }
   }
 
   ul.menu {
-    margin: 0;
+    // margin: 0;
     list-style-type: none;
     
     li {
       line-height: 1.5em;
 
       > button,
-      > form button,
+      > form > button,
       > a {
         background: none;
         display: block;
-        // color: black;
-        line-height: 1.5em;
+        color: #666;
+        // line-height: 1.5em;
         cursor: default;
-        padding: 0.2em 0 0.1em 1.6em;
+        // padding: 0.1em 0 0.1em $bullet-space;
+        box-shadow: none;
         font-size: 1em;
 
-        &:active {
+        &:hover {
+          text-decoration: none;
+          color: black;
+        }
+
+        &.disabled {
+          color: silver;
+          cursor: default;
+
+          &:hover,
+          &:active {
+            color: silver;
+          }
+        }
+
+        &:active,
+        &.active {
           box-shadow: none;
         }
       }
 
       a:before, 
       button:before {
-        margin-left: -1.6em;
+        margin-left: -1 * $bullet-space;
         float: left;
-        line-height: 1.5em;
+        // margin-top: 0.1em;
+        // line-height: 1.5em;
       }
-    }
 
-    li {
+      &.current {
+        // &:before {
+        //   content: "✓";
+        //   float: left;
+        //   margin-left: -1.5em;
+        //   font: 1em fontello;
+        // }
 
-      &.current a {
-        &:before {
-          content: "✓";
-          float: left;
-          margin-left: -1.5em;
-          font: 1em fontello;
+        color: white;
+        background-color: $colour-accent;
+        margin: 0 -10px;
+        padding: 0 10px;
+        border-radius: $tooltip-border-radii;
+
+        a {
+          color: white;
         }
-        color: black;
       }
 
       &:hover {
         text-decoration: none;
-        // background-color: rgba(0, 0, 0, 0.03);
-      }
-
-      a:hover {
-        text-decoration: none;
+        color: black;
       }
 
       &.file-upload {
@@ -263,74 +142,83 @@
       }
     }
   }
-}
 
-@include screen-size(small) {
-  .tooltip-container {
-    // width: 100% !important;
-    z-index: 10000;
-    position: fixed;
-    top: 1.2em !important;
-    right: 1.2em !important;
-    bottom: 1.2em !important;
-    left: 1.2em !important;
-    // font-size: 0.9em;
-    max-width: inherit !important;
-    max-height: inherit !important;
-    border: silver 1px solid;
-    box-shadow: 0 0 1em rgba(0,0,0,0.2);
-    transition: top 1s;
-    border-radius: 20px !important;
+  // Variations
 
-       -moz-animation: fadeInUp 0.4s;
-    -webkit-animation: fadeInUp 0.4s;
-            animation: fadeInUp 0.4s;
+  &.label {
+    .tippy-content {
+      text-align: center;
+      min-width: 0;
+      padding: 6px 10px;
+    }
+  }
 
-    // visibility: visible !important;
-
-    // &[style*=hidden] {
-    //   top: 100%;
-    // }
-
-    > div {
-      border-radius: 20px !important;
-      width: 100% !important;
-      height: 100% !important;
-      max-width: inherit !important;
-      max-height: inherit !important;
-      padding: 4em 5% 5% !important;
-      overflow: auto;
+  &.info {
+    .tippy-content {
+      background-color: $colour-notice;
     }
 
-    .close-panel {
-      &:before {
-        content: '#{$glyph-down-thin}';
+    &[data-placement^='bottom'] .tippy-arrow {
+      border-bottom-color: $colour-notice;
+
+      &::after {
+        border-bottom-color: $colour-notice;
       }
     }
 
-    &.type-auto,
-    &.type-sticky,
-    &.type-close-button {
-      > .close-panel {
-        display: block;
-        padding: 3px 6px 0 0;
-        background: none;
-        border: none;
-        // width: auto;
-        height: auto;
-        float: right;
-        right: inherit;
-        left: 50%;
+    &[data-placement^='left'] .tippy-arrow {
+      border-left-color: $colour-notice;
 
-        &:before {
-          right: 1.5em;
-          top: 0.1em;
-        }
-
-        &:after {
-          color: gray;
-        }
+      &::after {
+        border-left-color: $colour-notice;
       }
     }
+
+    &[data-placement^='right'] .tippy-arrow {
+      border-right-color: $colour-notice;
+
+      &::after {
+        border-right-color: $colour-notice;
+      }
+    }
+
+    &[data-placement^='top'] .tippy-arrow {
+      border-top-color: $colour-notice;
+
+      &::after {
+        border-top-color: $colour-notice;
+      }
+    }
+  }
+
+  &.rich {
+    .tippy-content {
+      @include pat-rich();
+    }
+  }
+
+  &.large {
+    @include screen-size(large) {
+      // width: 50%;
+      // Width 50% caused trouble with the lock steal tooltip.
+    }
+  }
+
+  h4 {
+    color: #3b3b3b;
+    /* font-size: 12px; */
+    font-size: 1em;
+    /* line-height: 18px; */
+    margin-bottom: 5px;
+  }
+
+  .item-selector {
+    position: static;
+  }
+
+  .button-bar.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }

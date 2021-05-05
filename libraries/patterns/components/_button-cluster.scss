@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+$pat-toolbar-button-height: $button-height !default;
+
+.pat-button-cluster {
+  float: left;
+  border-radius: $border-radii;
+  background: $button-background-colour-subdued;
+  box-shadow: inset 0 1px 6px rgba(0,0,0,0.15);
+  // white-space: nowrap;
+
+  button, 
+  a.button,
+  .pat-button,
+  label,
+  > a {
+    margin: 0;
+    border-radius: 0;
+    border-left-style: none;
+    float: left;
+    border: none;
+    background: transparent;
+    padding: 0 1.2em;
+    color: rgba(0,0,0,0.7);
+    cursor: default;
+    line-height: $pat-toolbar-button-height;
+    height: $pat-toolbar-button-height;
+    box-shadow: none;
+    font-size: $base-font-size;
+    font-weight: normal;
+
+    &.select-all[disabled],
+    &.deselect-all[disabled] {
+      background-color: $colour-accent;
+      color: white;
+
+      &:hover {
+        background-color: $colour-accent;
+        color: white;
+      }
+    }
+
+    &.icon {
+      padding: 0 5px;
+    }
+
+      input {
+        position: absolute;
+        opacity: 0;
+      }
+
+      &[href]:not(.current):not(.active):not(.current):hover {
+        color: black;
+      }
+
+      &:not(.active):not(.current):not(.checked):not([disabled]):hover {
+        text-decoration: none;;
+        background-color: rgba(255,255,255,0.4);
+        color: black;
+      } 
+
+    &:before {
+      margin-right: 0;
+      margin-left: 0;
+        color: rgba(0,0,0,0.7);
+    }
+
+      &.checked,
+      &.active,
+      &.current {
+        background: $colour-accent;
+        color: white;
+        text-decoration: none;
+        box-shadow: none;
+
+        &:before {
+          color: white;
+        }
+
+        .counter {
+          background: red;
+          // border: 1px solid white;
+        }
+      }
+
+    &:first-child {
+      border-top-left-radius: $border-radii;
+      border-bottom-left-radius: $border-radii;
+      // padding-left: 2em;
+    }
+
+    &:last-child {
+      border-top-right-radius: $border-radii;
+      border-bottom-right-radius: $border-radii;
+      // padding-right: 2em;
+    }
+
+    .counter {
+      display: inline-block;
+      margin: 0.8em 0em 0.5em 0.5em;
+      background-color: red;
+      color: white;
+      border-radius: 1em;
+        border: 1px solid rgba(255,255,255,1);
+      height: 1.8em;
+      min-width: 1.8em;
+      @include box-sizing;
+      padding: 0 0.5em;
+      transition: opacity 0.5s;
+      animation: zoomIn 0.6s;
+      float: right;
+      vertical-align: baseline;
+      line-height: 1.7em;
+      font-size: 0.6em;
+      text-align: center;
+      font-weight: normal;
+
+      &.disabled {
+        opacity: 0.2;
+        animation: none;
+        background-color: gray;
+      }
+
+      &.injecting {
+        &:before {
+          display: none;
+        }
+
+        opacity: 0;
+      }
+    }
+
+  }
+}

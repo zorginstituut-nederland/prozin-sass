@@ -8,7 +8,8 @@ This code is based on Zurb Foundation's grid framework.
 Copyright (c) 2012 Mark Hayes
 */
 
-.row, .columns {
+.row, 
+.columns {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -40,11 +41,17 @@ Copyright (c) 2012 Mark Hayes
   }
 }
 
-.column, .columns {
+.column, 
+.columns {
   float: left;
   min-height: 1px;
   padding: 0 #{$grid-gutter};
   position: relative;
+
+  > .panel {
+    height: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .column.centered, .columns.centered {
@@ -238,7 +245,7 @@ Copyright (c) 2012 Mark Hayes
 
 /* @end */
 
-@include screen-size(small) {
+@media only screen and (max-width: 767px) {
   /* Global Misc --- */
   /*                 */
   body {
@@ -250,14 +257,20 @@ Copyright (c) 2012 Mark Hayes
   }
   /* The Grid --- */
   /*              */
-  .row {
+  
+  .row,
+  .row .row {
     width: auto;
+    margin: 0;
     min-width: 0;
   }
+
   .column, .columns {
     width: auto !important;
     float: none;
+    padding: 0;
   }
+
   .column:last-child, .columns:last-child, [class*="column"] + [class*="column"]:last-child {
     float: none;
   }

@@ -1,3 +1,5 @@
+$pswp__assets-path: '/assets/quaive/style/photoswipe/' !default;
+
 @import "../libraries/photoswipe/main";
 @import "../libraries/photoswipe/default-skin/default-skin";
 
@@ -8,9 +10,19 @@
 }
 
 .pswp__bg {
-	.backdropfilter & {
-		background: none;
-		-webkit-backdrop-filter: blur(100px) saturate(2);
-		backdrop-filter: blur(100px) saturate(2);
+	@include modal-background;
+}
+
+.pswp__counter {
+	color: black;
+}
+
+.pswp__ui--fit .pswp__top-bar, 
+.pswp__ui--fit .pswp__caption {
+	background: none;
+
+	.pswp__caption__center {
+		text-align: center;
+		color: black;
 	}
 }

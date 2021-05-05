@@ -1,78 +1,72 @@
-@charset "UTF-8";
-
 .pat-grid-list {
   margin-bottom: 2em;
-  // float: left; // Float left was disturbing pat-message underneath it. Clear fix doen't help in this case.
+  margin-top: 0;
+  float: left;
   width: 100%;
-  
-  display: block;
-  @include clear-fix;
-
-  @include screen-size(medium-large) {
-    border-bottom: 1px solid $colour-base;
-  }
+  border-bottom: 1px solid $colour-base;
 
   dt {
+    float: left;
+    font-weight: bold;
+    clear: left;
+    border-top: 1px solid $colour-base;
+    padding-top: 0.5em;
+
     @include screen-size(medium-large) {
-      width: 40%;
-      float: left;
-      border-top: 1px solid $colour-base;
       padding-right: 5%;
       padding-bottom: 0.5em;
-      padding-top: 0.5em;
-      color: rgba(0,0,0,0.5);
-      clear: left;
+      color: rgba(0,0,0,0.7);
+      width: 35%;
     }
 
     @include screen-size(small) {
-      margin-top: 0.5em;
       width: 100%;
-      color: black;
-      border: none;
+      float: none;
+      display: block;
+      margin: 0;
+      overflow: hidden;
     }
 
-    font-weight: bold;
-    @include box-sizing;
+    @media print {
+      display: block;
+      border: none;
+    }
   }
 
   dd {
-    @include screen-size(medium-large) {
-      width: 60%;
-      margin-right: -100%;
-      display: inline-block;
-      float: left;
-      border-top: 1px solid $colour-base;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      margin-bottom: 0;
-    }
-    @include screen-size(small) {
-      margin-bottom: 1em;
-      width: 100%;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    @media print {
+      display: block;
+      border: none;
       clear: both;
-    }
-    margin-left: 0;
-    @include box-sizing;
-
-    .warning {
-      color: $colour-orange;
-      // font-weight: bold;
-
-      &:before {
-        display: inline-block;
-        margin-right: 0.3em;
-        content: '#{$glyph-3915-waarschuwing}';
-        font-family: fontello;
-        font-weight: normal;
-      }
     }
 
     > *:last-child {
       margin-bottom: 0;
     }
-  }
 
-  & + h2 {
-    clear: both;
+    @include screen-size(medium-large) {
+      width: 60%;
+      display: inline-block;
+      float: left;
+      margin-right: -100%;
+      border-top: 1px solid $colour-base;
+    }
+
+    @include screen-size(small) {
+      width: 100%;
+      float: none;
+      display: block;
+      border: none;
+      overflow: hidden;
+
+      #user-data-view & {
+        padding-left: 30px;
+        box-sizing: border-box;
+      }
+    }
   }
 }

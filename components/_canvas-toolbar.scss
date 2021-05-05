@@ -207,6 +207,7 @@ $colour-toolbar-button: transparent !default;
 		float: none;
 		width: auto;
 		color: #666;
+		vertical-align: top;
 
 		&:hover {
 			text-decoration: none;
@@ -257,6 +258,10 @@ $colour-toolbar-button: transparent !default;
 		white-space: nowrap;
 		font-size: 18px;
 		height: 35px;
+
+		&:hover {
+			text-decoration: none;
+		}
 
 		.counter {
 			display: inline-block;
