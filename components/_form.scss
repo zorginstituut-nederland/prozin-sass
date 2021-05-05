@@ -97,13 +97,8 @@ $form-proportion-value: 80% !default;
 		background: $colour-grey-1;
 		@include box-sizing;
 
-		div.pat-modal & {
-			padding: 0;
-			background-color: transparent;
-		}
-
-		.page-type-login & {
-			margin-bottom: 35px;
+		.form-separation-header {
+			margin-top: 0;
 		}
 
 		h3 {
@@ -112,6 +107,15 @@ $form-proportion-value: 80% !default;
 			&:before {
 				content: counter(form-panel) '. ';
 			}
+		}
+
+		div.pat-modal & {
+			padding: 0;
+			background-color: transparent;
+		}
+
+		.page-type-login & {
+			margin-bottom: 35px;
 		}
 
 		@include clear-fix;
