@@ -9,12 +9,32 @@
     line-height: $table-line-height;
   }
 
+  &:before {
+    content: attr(data-value);
+    opacity: 0;
+    padding-bottom: 26px;
+  }
+
   .group & {
     width: 80%;
   }
 
+  .placeholder {
+    color: $colour-link;
+    text-decoration: underline;
+    font-weight: normal;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // z-index: 1;
+  }
+
   &.status-active {
     background-color: #efefef;
+
+    .placeholder {
+      display: none;
+    }
 
     table & {
       background-color: white;
@@ -26,8 +46,9 @@
 
     .button-bar {
       // height: 2.3em;
+
       height: 1.8em;
-      padding-top: 0.5em;
+      padding-top: 2em;
       padding-bottom: 0.5em;
     }
   }
@@ -37,7 +58,7 @@
   }
 
   textarea,
-  .content-mirror {
+  &:before {
       margin: 0;
       padding-right: 2em;
       padding-left: 0.5em;
@@ -60,9 +81,6 @@
       
       resize: none;
       width: 100%;
-      // -webkit-transition: height 0.4s;
-      // -moz-transition: height 0.4s;
-      // transition: height 0.4s;
 
       &:focus {
         outline: none;
@@ -79,17 +97,12 @@
     left: 0;
     z-index: 1;
     height: 100%; // Needed for Firefox
-    -moz-transition: padding 0.5s;
-    -webkit-transition: padding 0.5s;
-    transition: padding 0.5s;
-    -moz-text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
     box-shadow: none;
-    opacity: 0; // Added to compensate for a bug in Chrome
+    border: 1px solid dimgray;
+    // opacity: 0; // Added to compensate for a bug in Chrome
   }
 
-  .content-mirror {
+  &:before {
     padding-right: 10px;
     color: black;
     font-family: inherit;
@@ -103,64 +116,21 @@
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-
-    .text .placeholder {
-        font-style: normal;
-        transition: all 0.5s;
-        // margin: -0.4em -0.5em;
-        cursor: default;
-        font-size: 1em;
-    }
-  }
-
-  .no-comments & {
-    .content-mirror {
-      .text .placeholder {
-        .pat-grid-list dd &,
-        table & {
-          background-color: transparent;
-          color: $colour-dark-blue;
-          text-decoration: underline;
-          margin: 0;
-          padding: 0;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-  &.has-comments {
-    .content-mirror {
-      margin-bottom: 1em;
-    }
   }
 
   &.status-inactive {
     textarea {
       cursor: default;
-
-      table & {
-        cursor: pointer;
-      }
+      opacity: 0;
+      cursor: pointer;
 
       .pat-grid-list dd & {
         cursor: pointer;
       }
     }
 
-    .content-mirror {
-        table & {
-          padding: 0;
-              
-          .placeholder {
-            line-height: inherit;
-          }
-        }
-    }
-
-    .text {
-      .placeholder {
-      }
+    &:before {
+      display: none;
     }
 
     &:hover {
@@ -173,7 +143,7 @@
   }
 
   &.status-active textarea
-  &.status-active .content-mirror {
+  &.status-active:before {
     padding-top: 1em;
     padding-bottom: 1em;
   }
@@ -182,30 +152,8 @@
 
     textarea {
       bottom: 2.6em;
-      opacity: 1;
     }
 
-    .content-mirror {
-      // overflow: auto;
-      padding-bottom: 42px;
-
-      .text {
-
-        .placeholder {
-          margin: 0;
-          color: gray;
-          background-color: rgba(255,255,255,0);
-
-          .pat-grid-list dd & {
-            font-size: 1em;
-            color: gray;
-            background-color: rgba(255,255,255,0);
-            text-decoration: none;
-            padding-left: 0;
-          }
-        }
-      }
-    }
   }
 
   .button-bar {
@@ -222,8 +170,9 @@
 
     .pat-button {
       margin-right: 8px;
-      line-height: 30px;
+      line-height: 19px;
       float: left;
+      padding: .4em 10px;
     }
 
     br {

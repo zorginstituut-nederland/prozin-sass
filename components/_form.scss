@@ -64,7 +64,8 @@ $form-proportion-value: 80% !default;
 
 	input:not([type="range"]):not([type="radio"]):not([type="checkbox"]),
 	textarea,
-	select {
+	select,
+	.output-field {
 		background-color: white;
 		padding: 2px 5px;
 		margin-top: -3px;
@@ -97,13 +98,8 @@ $form-proportion-value: 80% !default;
 		background: $colour-grey-1;
 		@include box-sizing;
 
-		div.pat-modal & {
-			padding: 0;
-			background-color: transparent;
-		}
-
-		.page-type-login & {
-			margin-bottom: 35px;
+		.form-separation-header {
+			margin-top: 0;
 		}
 
 		h3 {
@@ -112,6 +108,15 @@ $form-proportion-value: 80% !default;
 			&:before {
 				content: counter(form-panel) '. ';
 			}
+		}
+
+		div.pat-modal & {
+			padding: 0;
+			background-color: transparent;
+		}
+
+		.page-type-login & {
+			margin-bottom: 35px;
 		}
 
 		@include clear-fix;
@@ -153,8 +158,24 @@ $form-proportion-value: 80% !default;
 
 	fieldset.horizontal {
 
+		.group {
+			.help {
+		        .help-label {
+		          right: 0;
+		          top: -5px;
+		        }
+	        }
+		}
+
 		.help {
 			padding: 0;
+			margin-top: 30px;
+			margin-bottom: -2px;
+
+			.help-content {
+				padding: 10px 0;
+				display: block;
+			}
 
 			.help-label,
 			.help-label.collapsible-open.collapsible-in-progress {
