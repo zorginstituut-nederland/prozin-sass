@@ -1,0 +1,141 @@
+$bar-toggles-border: none;
+// $bar-toggles-background: #f7f7f7;
+$bar-toggles-background: white;
+
+
+fieldset.pat-bar-toggles,
+fieldset.pat-checklist.pat-bar-toggles:not(.free-form),
+div.pat-bar-toggles,
+div.pat-checklist.pat-bar-toggles:not(.free-form) {
+  .legend {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+
+  &.multi-line {
+    label {
+      white-space: inherit;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+
+      &.hidden {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      &:before { 
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &:not(.radio) {
+    label {
+      &.checked {  
+        padding-right: 2em;
+
+        &:after {
+          position: absolute;
+          right: 0.2em;
+          top: 0.2em;
+          content: '\2796';
+          font-family: fontello;
+          font-size: 1em;
+          width: 1.2em;
+          height: 1.2em;
+          text-align: center;
+          line-height: 1.25em;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  label {
+    padding: 0 0.5em 0 1.7em;
+    border-left: $bar-toggles-border;
+    border-right: $bar-toggles-border;
+    margin-bottom: 0;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    position: relative;
+    background: $bar-toggles-background;
+
+    &:first-of-type {
+      // border-radius: 8px 8px 0 0;
+      border-top: $bar-toggles-border;
+    }
+
+    &:last-child {
+      // border-radius: 0 0 8px 8px;
+      border-bottom: $bar-toggles-border;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+
+      .js & {
+        opacity: 0;
+      }
+      
+      .no-js & {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      padding-left: 0.5em;
+      font-family: fontello;
+      display: none;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      background: white;
+
+      &:before {
+        .js & {
+          display: inline-block;
+          opacity: 0.1;
+          content: '#{$glyph-ok}'
+        }
+      }
+
+      &.checked:after {
+        opacity: 1;
+      }
+    }
+
+    &.checked {
+      background-color: $colour-dark-blue;
+      color: white;
+
+      &:before {
+        display: inline-block;
+        content: '#{$glyph-ok}';
+        opacity: 1;
+        
+        .js & {
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
+}

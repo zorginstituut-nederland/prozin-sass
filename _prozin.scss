@@ -91,7 +91,9 @@ $pswp__include-minimal-style: true;
 // Components
 
 @import "components/body";
+@import "components/bar-toggles";
 @import "components/button";
+@import "components/browse-bar";
 @import "components/canvas-toolbar";
 @import "components/classification-tag";
 @import "components/comments";

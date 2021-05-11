@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+$colour-browse-bar: $colour-dark-blue-xl;
+
+#browse-bar {
+  // background-color: $colour-base-light;
+  background-color: $colour-browse-bar;
+  @include clear;
+  position: relative;
+  padding-top: 70px;
+  margin-top: -70px;
+
+  .collapse-expand-toggle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: $colour-browse-bar;
+    margin: 0 0 -15px -15px;
+    color: transparent;
+    transform: rotate(-90deg);
+    transition: all 0.5s;
+
+    &:focus {
+      outline: none;
+
+      box-shadow: 0 0 5px 5px lightblue;
+    }
+
+    &:before {
+      font-family: fontello;
+      content: '#{$glyph-angle-right}';
+      color: black;
+      font-size: 20px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 30px;
+      display: block;
+    }
+  }
+
+  .container {
+    padding-top: 50px;
+    padding-bottom: 150px;
+    position: relative;
+    transition: all 1s;
+
+    @include screen-size(small) {
+      // padding: 20px;
+    }
+
+    .button-bar {
+      position: absolute;
+      left: 0;
+      right: 15px;
+      bottom: 50px;
+    }
+  }
+
+  .button-bar {
+    margin-top: 1em;
+    margin-bottom: 0;
+    opacity: 1;
+    transition: all 0.5s;
+  }
+
+  .pat-bar-toggles {
+    label {
+      overflow: hidden;
+      box-sizing: border-box;
+      height: 34px;
+      transition: height 1s, padding 1s;
+
+      &.pat-depends {
+        height: 0;
+        // padding-top: 0;
+        // padding-bottom: 0;
+        display: block !important;
+      }
+
+      &.visible {
+        height: 34px;
+      }
+    }
+  }
+
+  &.state-collapsed {
+    .collapse-expand-toggle {
+      transform: rotate(90deg);
+    }
+
+    .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .button-bar {
+        margin-top: 1em;
+        margin-bottom: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .pat-bar-toggles {
+        .unchecked {
+          height: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
