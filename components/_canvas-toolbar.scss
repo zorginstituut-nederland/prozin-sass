@@ -360,7 +360,7 @@ $colour-toolbar-button: transparent !default;
 				line-height: 33px;
 			}
 
-			&.active {
+			&.active, {
 				&:after {
 					content: '#{$glyph-lock-open}';
 				}
@@ -489,7 +489,7 @@ $colour-toolbar-button: transparent !default;
 			}
 		}
 
-		&.active {
+		&.tooltip-active-click {
 
 
 			&:before {

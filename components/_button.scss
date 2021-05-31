@@ -17,13 +17,12 @@
 	line-height: 30px;
 
 	&.link {
-
-
-		&:hover {
-			background-color: transparent;
-			text-decoration: underline !important;
-			color: $colour-dark-blue;
-		}
+    	padding: 0;
+	    display: inline;
+	    background: none;
+	    color: $colour-link;
+	    line-height: inherit;
+	    text-decoration: underline;
 	}
 
 	&:hover {
