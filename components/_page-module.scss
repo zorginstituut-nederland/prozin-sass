@@ -12,6 +12,12 @@ $header-2-top-margin: 3rem !default;
 	-webkit-pointer-events: none;
 	pointer-events: none;
 
+	> * {
+		-moz-pointer-events: auto;
+		-webkit-pointer-events: auto;
+		pointer-events: auto;
+	}
+
 	h2,
 	.page-module-title {
 		margin: 0 0 20px 0;
