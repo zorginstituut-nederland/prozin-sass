@@ -3,6 +3,7 @@
 $canvas-toolbar-button-border-radius: 10px !default;
 $canvas-toolbar-button-height: $button-height !default;
 $colour-toolbar-button: transparent !default;
+$colour-toolbar-button-text: $button-text-colour !default;
 
 #global-nav.bumped ~ #main {
 	.canvas-toolbar {
@@ -16,7 +17,7 @@ $colour-toolbar-button: transparent !default;
 .canvas-toolbar {
 	@include clear-fix();
 	line-height: $canvas-toolbar-button-height;
-	color: #666;
+	color: $colour-toolbar-button-text;
 	z-index: 1;
 	position: relative;
 
@@ -190,7 +191,7 @@ $colour-toolbar-button: transparent !default;
 		padding: 0 25px;
 		display: inline-block;
 		cursor: default;
-		color: #666;
+		color: $colour-toolbar-button-text;
 		white-space: nowrap;
 		font-size: 18px;
 		height: 35px;
@@ -206,7 +207,7 @@ $colour-toolbar-button: transparent !default;
 		display: inline-block;
 		float: none;
 		width: auto;
-		color: #666;
+		color: $colour-toolbar-button-text;
 		vertical-align: top;
 
 		&:hover {
@@ -254,7 +255,7 @@ $colour-toolbar-button: transparent !default;
 		padding: 0 20px;
 		display: inline-block;
 		cursor: default;
-		color: #666;
+		color: $colour-toolbar-button-text;
 		white-space: nowrap;
 		font-size: 18px;
 		height: 35px;
@@ -475,6 +476,7 @@ $colour-toolbar-button: transparent !default;
 			// border: 1px transparent solid;
 			background: #e7e7e7;
 			border-radius: $canvas-toolbar-button-border-radius;
+			color: $colour-toolbar-button-text;
 
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
