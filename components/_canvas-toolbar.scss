@@ -406,6 +406,11 @@ $colour-toolbar-button-text: $button-text-colour !default;
 				opacity: 0;
 			}
 
+			&[disabled] {
+				opacity: 0.5;
+				color: gray;
+			}
+
 			&.current,
 			&.current:hover,
 			&.checked,
