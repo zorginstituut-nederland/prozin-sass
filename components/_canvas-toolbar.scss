@@ -175,7 +175,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 
 	label.pat-checklist {
 		&:hover {
-			color: black;
+			color: $button-text-colour-hover;
 		}
 	}
 
@@ -197,7 +197,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		height: 35px;
 
 		&:hover {
-			color: black;
+			color: $button-text-colour-hover;
 		}
 	}
 
@@ -212,7 +212,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 
 		&:hover {
 			text-decoration: none;
-			color: black;
+			color: $button-text-colour-hover;
 		}
 
 	    @include screen-size(medium-large) { 
@@ -321,8 +321,9 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		&:not([disabled]):not(.current),
 		&[href]:not(.current) {
 			&:hover {
-				color: black;
+				color: $button-text-colour-hover;
 				// border: black 1px solid;
+				background-color: $button-background-colour-hover;
 			}
 			&:active {
 				box-shadow: none;
@@ -484,10 +485,11 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		}
 
 		&:hover {
-			color: black;
+			color: $button-text-colour-hover;
 
 			&:before {
 				// border: black 1px solid;
+				background-color: $button-background-colour-hover;
 			}
 		}
 
