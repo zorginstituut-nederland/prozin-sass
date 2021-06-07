@@ -5,16 +5,16 @@
 .status-inactive .content-mirror .placeholder {
 	display: inline-block;
 	margin: 0 20px 0 0;
-	padding: .4em 10px;
-	border: 0;
-	background: $colour-dark-blue;
-	border: none;
-	border-radius: 0;
-	color: #fff;
-	font-size: 1em;
-	cursor: default;
-	font-weight: normal;
-	line-height: 30px;
+	// padding: .4em 10px;
+	// border: 0;
+	// background: $colour-dark-blue;
+	// border: none;
+	// border-radius: 0;
+	// color: #fff;
+	// font-size: 1em;
+	// cursor: default;
+	// font-weight: normal;
+	// line-height: 30px;
 
 	&.link {
     	padding: 0;
@@ -26,7 +26,7 @@
 	}
 
 	&:hover {
-		background: $colour-dark-blue-d;
+		// background: $colour-dark-blue-d;
 	}
 
 	&.warning {
@@ -38,6 +38,6 @@
 	}
 
 	&:before {
-		margin-left: -0.2em;
+		margin-left: 0;
 	}
 }

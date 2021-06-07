@@ -25,11 +25,23 @@ $advanced-search-animation-speed: 0.4s;
 // Buttons
 
 $button-border: none !default;
-$button-border-radius: 10px;
+$button-border-radius: 0;
 $canvas-toolbar-button-border-radius: $button-border-radius;
-$button-height: 35px !default;
+$button-height: 44px !default;
 $button-background-image: none !default;
-$button-font-weight: bold !default;
+$button-font-weight: normal !default;
+
+$button-background-colour-default: $colour-dark-blue;
+$button-background-colour-default-hover: $colour-dark-blue-d;
+$button-text-colour-default: white;
+$button-text-colour-default-hover: white;
+
+$button-background-colour: #f2f2f2;
+$button-background-colour-hover: #c8c8c7;
+$button-text-colour: #01689a;
+$button-text-colour-hover: #01689a;
+$button-background-image: none;
+
 
 // Grid
 
