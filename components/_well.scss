@@ -4,7 +4,7 @@
 	margin-bottom: $baseline;
 	background: $colour-dark-blue-xl;
 
-	&:not(.editors-well) a {
+	&:not(.editors-well) a:not(.pat-button) {
 		text-decoration: underline;
 	}
 
@@ -102,10 +102,6 @@
 		}
 	}
 
-	* {
-		color: black;
-	}
-
 	h2,
 	h3,
 	h4 {
@@ -154,10 +150,10 @@
 	.buttons {
 		@include clear-fix;
 
-		.pat-button {
-			color: white;
-			float: left;
-		}
+		// .pat-button {
+		// 	color: white;
+		// 	float: left;
+		// }
 	}
 
 	&.editors-well {
