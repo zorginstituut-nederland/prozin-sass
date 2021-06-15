@@ -40,11 +40,8 @@
 		}
 
 		.pat-select {
-			color: rgba(0, 0, 0, 0.5);
-
-			@include screen-size(small) {
-				color: black;
-			}
+			color: $colour-link;
+			float: left;
 		}
 
 		> div {
