@@ -26,16 +26,16 @@
       }
     }
 
-    &.count-5 {
-      .item:nth-child(4),
-      .item:nth-child(5) {
-        width: 50%;
-      }
+    // &.count-5 {
+    //   .item:nth-child(4),
+    //   .item:nth-child(5) {
+    //     width: 50%;
+    //   }
 
-      .item:nth-child(4) {
-        clear: both;
-      }
-    }
+    //   .item:nth-child(4) {
+    //     clear: both;
+    //   }
+    // }
   }
   .item {
 
