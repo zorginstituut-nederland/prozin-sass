@@ -257,6 +257,13 @@ $bullet-space: 22px !default;
 
 		.group-title {
 			color: black;
+		} 
+
+		a {
+			&:hover {
+				text-decoration: underline;
+				color: $colour-dark-blue-d;
+			}
 		}
 
 		ul {
