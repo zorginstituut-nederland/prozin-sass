@@ -92,6 +92,16 @@ table {
             animation: fadeIn 1s;
             padding-bottom: $table-cell-padding-bottom + 2px;
 
+            a {
+                &:hover {
+                    text-decoration: underline;
+
+                    &:before {
+                        text-decoration: none;
+                    }
+                }
+            }
+
             &.injecting {
                 &:before {
                     z-index: 1;
