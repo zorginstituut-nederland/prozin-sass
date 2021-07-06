@@ -449,6 +449,10 @@ table {
             border-bottom: 2px solid #fff;
             background-color: #f3f3f3;
 
+            > *:last-child {
+                margin-bottom: 0;
+            }
+
             @include screen-size(small) {
                 -moz-hyphens: auto;
                 -webkit-hyphens: auto;
