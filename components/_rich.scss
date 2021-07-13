@@ -460,12 +460,12 @@ $header-2-top-margin: 3rem !default;
 		.pat-button {
 			font-size: 0.7em;
 			float: right;
-			line-height: 2em;
+			line-height: 1.3em;
 			border: none;
-			border-radius: 1em;
 			background: $colour-dark-blue-l;
 			color: $colour-dark-blue;
 			cursor: pointer;
+			padding: 0.3em 0.5em;
 
 			&:hover {
 				background: $colour-dark-blue-xl;
