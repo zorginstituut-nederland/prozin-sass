@@ -10,6 +10,11 @@ $colour-portlet: $colour-grey-1 !default;
 		}
 	}
 
+	.pat-rich {
+		font-size: 1em;
+		line-height: 1.3;
+	}
+
 	.content {
 		position: relative;
 		background: $colour-portlet;
@@ -51,6 +56,10 @@ $colour-portlet: $colour-grey-1 !default;
 		.portlet-body {
 			padding: 0 $portlet-padding $portlet-padding;
 			overflow: auto;
+
+			> *:last-child {
+				margin-bottom: 0;
+			}
 
 			.portlet-separation-title {
 				font-size: 1em;
