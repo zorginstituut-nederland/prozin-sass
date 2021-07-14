@@ -142,6 +142,10 @@ $colour-portlet: $colour-grey-1 !default;
 					&:after {
 						text-decoration: none !important;
 					}
+
+					&:before {
+						text-decoration: none !important;
+					}
 				}
 			}
 		}
