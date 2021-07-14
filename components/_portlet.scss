@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-$portlet-padding: 20px;
+$portlet-padding: 25px;
 $colour-portlet: $colour-grey-1 !default;
 
 .portlet {
@@ -21,7 +21,7 @@ $colour-portlet: $colour-grey-1 !default;
 
 	    .portlet-intro {
 			display: flex;
-			padding: 15px $portlet-padding 10px;
+			padding: 1 * $portlet-padding $portlet-padding 0.5 * $portlet-padding;
 
 			.portlet-tool-group {
 				flex: 1;
