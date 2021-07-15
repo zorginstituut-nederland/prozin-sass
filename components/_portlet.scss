@@ -10,6 +10,19 @@ $colour-portlet: $colour-grey-1 !default;
 		}
 	}
 
+	&.span-2 {
+		.link-list {
+			column-count: 3;
+		}
+	}
+
+
+	&.span-full {
+		.link-list {
+			column-count: 5;
+		}
+	}
+
 	.pat-rich {
 		font-size: 1em;
 		line-height: 1.3;
