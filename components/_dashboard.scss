@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+#dashboard {
+	position: relative;
+	overflow: hidden;
+	margin: 0 -1 * $grid-gutter;
+
+	@include screen-size(medium) {
+		margin: 0 -0.7 * $grid-gutter;
+	}
+
+	.js {
+		&:before {
+			position: fixed !important;
+			@include throbber();
+		}
+	}
+
+	@include screen-size(small) {
+		margin: 0;
+	}
+
+	&.masonry-ready:before {
+		display: none;
+	}
+
+	.grid-sizer {
+		@include screen-size(small) {
+			width: 100%;
+		}
+		@include screen-size(medium) {
+			width: 50%;
+		}
+		@include screen-size(large) {
+			width: 33.333332%;
+		}
+	}
+
+	.portlet {
+		@include box-sizing();
+		padding: 0 #{$grid-gutter};	
+
+		@include screen-size(medium) {
+			padding: 0 0.7 * $grid-gutter;
+		}	
+
+		@include screen-size(small) {
+			padding: 0;
+		}	
+
+		.js & {
+			opacity: 0;
+
+			-moz-transition: opacity 0.5s;
+			-webkit-transition: opacity 0.5s;
+			transition: opacity 0.5s;
+		
+			&.span-1 {
+				@include screen-size(medium-large) {
+					// font-size: 0.8em;
+					// line-height: 1.4;
+				}
+				@include screen-size(large) {
+					width: 33.333332%;
+				}
+				@include screen-size(medium) {
+					width: 50%;
+				}
+			}
+		
+			&.span-2 {
+				@include screen-size(large) {
+					width: 66.66666%;
+				}
+				@include screen-size(medium) {
+					width: 50%;
+				}
+			}
+
+			&.span-3 {
+				width: 100%;
+			}
+
+			@include screen-size(small) {
+				&.stamp {
+					position: static !important;
+				}
+			}
+
+			@include screen-size(medium-large) {
+				&.stamp {
+					position: absolute;
+					top: 0;
+
+					&.right {
+						right: 0;
+					}
+
+					&.left {
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.js & {
+		&.masonry-ready {
+			.portlet {
+				opacity: 1;
+			}
+		}	
+	}
+}
