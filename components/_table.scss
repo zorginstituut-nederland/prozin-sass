@@ -632,6 +632,19 @@ table {
                 min-width: auto;
                 max-width: none;
             }
+
+            &.functions {
+                white-space: nowrap;
+
+                a {
+                    margin-left: 20px;
+                    display: inline-block;
+
+                    &:first-child {
+                        margin: 0;
+                    }
+                }
+            }
         }
     }
 
