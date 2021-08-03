@@ -37,7 +37,9 @@ $header-2-top-margin: 3rem !default;
 				text-decoration: none;
 				float: right;
 				cursor: pointer;
+			}
 
+			.icon-right-dir {
 				&:before {		
 					transform: scale(1.4);
 				}
