@@ -30,6 +30,53 @@ $header-2-top-margin: 3rem !default;
 		}
 	}
 
+	&.type-object {
+		figcaption {
+			.enlarge-link {
+				color: gray;
+				text-decoration: none;
+				float: right;
+				cursor: pointer;
+			}
+
+			.icon-right-dir {
+				&:before {		
+					transform: scale(1.4);
+				}
+			}
+		}
+
+		.enlarge-button {
+		    position: absolute;
+		    top: 0;
+		    right: 10px;
+		    bottom: 0;
+		    left: 10px;
+		    z-index: 1;
+		    color: transparent;
+		    overflow: hidden;
+
+		    &:before {
+			    position: absolute;
+			    font-family: fontello;
+			    content: '#{$glyph-dir-right}';
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+		    	color: white;
+			    width: 60px;
+			    height: 60px;
+		    	line-height: 60px;
+			    background-color: rgba(black, 0.4);
+			    font-size: 50px;
+			    display: block;
+			    text-align: center;
+				padding: 0;
+				margin: -10px 0 0 0;
+		    }
+		}
+	}
+
 	&.pat-rich {
 		.pat-collapsible {
 
@@ -203,7 +250,7 @@ $header-2-top-margin: 3rem !default;
 	}
 
 	&.type-links {
-		border-top: 1px solid #e1e1e1;
+		// border-top: 1px solid #e1e1e1;
 
 		h3 + .link-list {
 			margin-bottom: 20px;

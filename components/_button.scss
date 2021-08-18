@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+.form-panel {
+	.button-bar:last-child {
+		.pat-button {
+			margin-bottom: 0;
+		}
+	}
+}
+
 .pat-button,
 #document-alert-bar .context-menu,
 .status-inactive .content-mirror .placeholder {

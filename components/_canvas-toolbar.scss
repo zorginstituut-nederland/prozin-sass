@@ -257,7 +257,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 
 		.counter {
 			display: inline-block;
-			margin: 0.8em 0em 0.5em 0.5em;
+			margin: 1.1em 0em 0.5em 0.5em;
 			background-color: $colour-red;
 			color: white;
 			border-radius: 1em;
@@ -453,7 +453,6 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		color: #666;
 		cursor: default;
 		background: white;
-		border-radius: 50%;
 		margin: 0 0 1em 1em;
 		line-height: $canvas-toolbar-button-height;
 		// float: left;
