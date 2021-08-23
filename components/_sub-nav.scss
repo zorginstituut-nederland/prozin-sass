@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+#sub-nav {
+	background: $colour-grey-1;
+	margin: 0;
+
+	.container {
+		padding: 40px 15px 28px;
+
+		.link-list {
+			margin-bottom: -12px;
+			
+			@include screen-size(medium-large) {
+				column-count: 3;
+
+				li {
+					padding-bottom: 12px;
+					margin-bottom: 0;
+					border-bottom: none;
+
+					font-size: 20px;
+					line-height: 28px;
+
+					a {
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			
+			// font-size: 1.125rem;
+		}
+	}
+}
+
