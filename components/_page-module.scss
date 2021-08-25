@@ -136,6 +136,68 @@ $header-2-top-margin: 3rem !default;
 			user-select: none;
 			cursor: default;
 			box-sizing: border-box;
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+
+			.title-segment {
+				padding: 10px 20px 10px 39px;
+				margin: -10px 0 -10px -39px;
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+
+				.fraction-id {
+					border-radius: 4px;
+					font-size: 16px;
+					line-height: 33px;
+					position: relative;
+					top: 5px;
+					height: 32px;
+					margin-right: 10px;
+					background: rgba(black,0.1);
+					font-weight: normal;
+					font-family: monospace;
+					color: black;
+					padding: 0 15px;
+					display: inline-block;
+				}
+			}
+
+			.buttons-segment {
+				white-space: nowrap;
+
+				.icon {
+					color: transparent;
+					width: 	 	 39px;
+					height: 	 39px;
+					line-height: 39px;
+					position: relative;
+					background: $button-background-colour-default;
+					display: inline-block;
+					margin-left: 5px;
+					cursor: default;
+
+					&:hover {
+						text-decoration: none;
+						background: $button-background-colour-default-hover;
+					}
+
+					&:before {
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						text-align: center;
+						color: white;
+						line-height: 39px;
+						font-size: 20px;
+						width: 100%;
+						margin: 0;
+					}
+				}
+			}
 
 			.product-fk & {
 				color: $colour-orange;
@@ -178,6 +240,14 @@ $header-2-top-margin: 3rem !default;
 			}
 		}
 
+		&.open {
+			.page-module-title {
+				&:before {
+					content: '#{$glyph-up-open}';
+				}
+			}
+		}
+
 		&.has-differences {
 			.page-module-title {
 				background: rgba(255,100,0,0.1);
@@ -210,7 +280,7 @@ $header-2-top-margin: 3rem !default;
 			color: black;
 
 			&[href] {
-				&:not(.follow):after {
+				&:not(.follow):not(.icon):after {
 					font-family: fontello;
 					content: '#{$glyph-link-internal}';
 					margin-left: 0.5em;
@@ -274,6 +344,10 @@ $header-2-top-margin: 3rem !default;
 
 		&.pat-collapsible {
 			margin-top: calc(-100px + #{$header-2-top-margin});
+		}
+ 
+		&.pat-collapsible:first-child {
+			margin-top: -100px;
 		}
 
 		.section-introduction {
