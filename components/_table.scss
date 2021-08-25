@@ -363,8 +363,9 @@ table {
                     }
                 }
             }
+
             td {
-                width: 460px;
+                // width: 460px; // Check whether this value is needed for Horizonscan.
             }
         }
     }
@@ -515,6 +516,19 @@ table {
 
             &.data {
                 // text-align: right;
+            }
+
+            &.indicator-inid {
+                width: 90px;
+            }
+
+            &.date-compact {
+                width: 100px;
+            }
+
+            &.indicator-order,
+            &.indicator-number {
+                width: 50px;
             }
 
             &.dataSpiegel {
