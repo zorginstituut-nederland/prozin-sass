@@ -155,10 +155,11 @@ $header-2-top-margin: 3rem !default;
 					top: 5px;
 					height: 32px;
 					margin-right: 10px;
-					background: rgba(black,0.1);
+					background: $colour-dark-blue-xl;
+					filter: brightness(0.92);
 					font-weight: normal;
 					font-family: monospace;
-					color: black;
+					color: rgba(black,0.6);
 					padding: 0 15px;
 					display: inline-block;
 				}
