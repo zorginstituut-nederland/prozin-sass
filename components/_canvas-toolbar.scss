@@ -548,6 +548,13 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		display: inline-block;
 		z-index: 1;
 		margin-left: 1em;
+		color: $button-text-colour;
+		background-color: $button-background-colour;
+    
+		&:not([disabled]):not(.focus):not(.has-value):hover {
+		    color: $button-text-colour-hover;
+		    background-color: $button-background-colour-hover;
+		}
 
 		&:after {
 			position: absolute;
