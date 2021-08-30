@@ -18,6 +18,20 @@ $default-box-shadow: none;
 
 $border-radii: 0;
 
+// Form
+
+$form-input-field-padding-top-bottom: 0.2em !default;
+$form-input-field-line-height: inherit !default;
+$form-input-field-padding-top-bottom: 2px !default;
+$form-input-field-padding-left-right: 5px !default;
+$form-field-tail-white: 1em !default;
+$colour-form-fields-background: white !default;
+$form-fields-border-radius: $border-radii !default;
+$colour-placeholder: rgba(0,0,0,0.35);
+$colour-form-panel: $colour-grey-1 !default;
+$form-input-field-border: 1px solid dimgray !default
+$form-input-field-border-focus: 2px dotted black !default
+
 // Search
 
 $advanced-search-animation-speed: 0.4s;
