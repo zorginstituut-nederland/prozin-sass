@@ -17,7 +17,8 @@ $colour-portlet: $colour-grey-1 !default;
 	}
 
 
-	&.span-full {
+	&.span-full,
+	&.span-3 {
 		.link-list {
 			column-count: 5;
 		}
