@@ -88,7 +88,8 @@
     margin: 0;
 
     &:hover {
-      background: $colour-dark-blue-d;
+      background: $colour-dark-blue-d !important;
+      color: white !important;
     }
   }
 
