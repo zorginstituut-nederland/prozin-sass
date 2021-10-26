@@ -2,7 +2,7 @@
 
 $glyph-icon-ellipsis: $glyph-ellipsis-hor !default;
 
-.context-menu {
+.context-menu.pat-collapsible {
 	position: relative;
 
 	legend {
@@ -195,7 +195,7 @@ $glyph-icon-ellipsis: $glyph-ellipsis-hor !default;
 	}
 
 	&.open {
-		.label {
+		.context-menu-label {
 			color: black;
 
 			&.pat-button {
@@ -204,7 +204,7 @@ $glyph-icon-ellipsis: $glyph-ellipsis-hor !default;
 		}
 		
 		&.iconified {
-			.label {
+			.context-menu-label {
 				color: $colour-accent;
 			}
 		}
@@ -257,8 +257,6 @@ $glyph-icon-ellipsis: $glyph-ellipsis-hor !default;
 		}
 
 	    border: 1px solid silver;
-	    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-	    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 	    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 	}
 

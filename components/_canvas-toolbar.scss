@@ -251,6 +251,18 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		@include pat-button;
 		height: $canvas-toolbar-button-height;
 
+		&.no-label {
+			width: $canvas-toolbar-button-height;
+		}
+
+		&.context-menu {
+			overflow: visible;
+
+			.panel-content {
+				color: black;
+			}
+		}
+
 		&:hover {
 			text-decoration: none;
 		}
