@@ -494,15 +494,66 @@
 			min-height: 2px;
 		}
 
-		&.has-top-task-push {
+		.promo-block {
+			font-size: 24px;
+			opacity: 0;
+			padding: 25px 20% 25px 25px;
+			animation: fadeInDown 0.2s;
+			animation-delay: 0.5s;
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+			overflow: hidden;
+			background: white;
+
+			@include screen-size(medium-large) {
+				background: white url(checklist.jpg) no-repeat;
+				background-size: 33% auto;
+				background-position: center right;
+				padding: 25px 20% 25px 25px;
+			}
+
+			@include screen-size(small) {
+				padding: 25px;
+			}
+
+			.button-bar {
+				margin-bottom: 0;
+				margin-top: 15px;
+
+				.pat-button {
+					margin: 0;
+					float: left;
+				}
+			}
+		}
+
+		&.has-top-task-push,
+		&.has-promo {
 			.container:before {
 				display: none !important;
+			}
+		}
+
+		&.has-top-task-push {
+			.promo-block {
+				background: white;
+				padding-right: 25px;
 			}
 		}
 
 		.container {
 			padding-top: 25px;
 			position: relative;
+
+			@include screen-size(medium-large) {
+				display: flex;
+			    justify-content: space-between;
+			    align-items: flex-start;
+			}
+
+		    &:after {
+		    	display: none;
+		    }
 
 			.product-fk &,
 			.product-farmacotherapeutisch-kompas & {
@@ -562,7 +613,14 @@
 			@include screen-size(medium-large) {
 				// margin-right: -25px;
 				width: 390px;
+				min-width: 390px;
 				float: right;
+				opacity: 0;
+				animation: fadeInDown 0.2s;
+				animation-delay: 1s;
+				-webkit-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+				margin-left: 25px;
 			}
 
 			@include screen-size(small) {
@@ -587,10 +645,16 @@
 			@include screen-size(medium-large) {
 				margin-left: -25px;
 				width: 33.33332%;
+				min-width: 33.33332%;
 				opacity: 0;
-				animation: fadeIn 1s;
+				animation: fadeInDown 0.2s;
 				animation-delay: 1.5s; 
 				animation-fill-mode: forwards; 
+				margin-right: 25px;
+			}
+
+			@include screen-size(small) {
+				margin-bottom: 15px;
 			}
 
 			h2 {
