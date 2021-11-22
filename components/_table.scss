@@ -60,6 +60,14 @@ table {
         font-weight: bold;
     }
 
+    .status-marker {
+        font-weight: normal;
+
+        &.warning {
+            color: $colour-warning;
+        }
+    }
+
     &.data-table {
         width: auto;
         table-layout: fixed;
