@@ -528,9 +528,13 @@
 			}
 		}
 
+		.container:before {
+			display: none !important;
+		}
+
 		&.has-top-task-push,
 		&.has-promo {
-			.container:before {
+			.container:after {
 				display: none !important;
 			}
 		}
@@ -565,7 +569,7 @@
 
 			.product-fk &,
 			.product-farmacotherapeutisch-kompas & {
-				&:before {
+				&:after {
 					display: block;
 					width: 100%;
 					height: 200px;
