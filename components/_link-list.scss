@@ -78,6 +78,10 @@ $bullet-space: 22px !default;
 		border-bottom: 0.3em solid transparent; // Faux bottom margin.
 		padding: 0 0.5em 0 $bullet-space;
 
+		#sub-nav & {
+			padding-left: 30px;
+		}
+
 		&.type-reference {
 			padding: $scroll-offset 0.5em 0 $bullet-space;
 			margin: -1 * $scroll-offset 0 0 0 ; 
@@ -159,7 +163,6 @@ $bullet-space: 22px !default;
 			padding: 0 !important; // !important to reverse the effect of external links left padding in a pat-rich context. 
 			font-weight: normal;
 			margin-left: 0;
-
 			position: relative; // Fix for missing icons of first item in second column and on in Firefox.
 
 			.-ms- & {
@@ -178,6 +181,11 @@ $bullet-space: 22px !default;
 				display: inline-block;
 				line-height: inherit;
 				position: absolute; // Fix for missing icons of first item in second column and on in Firefox.
+
+				#sub-nav & {
+					margin-left: -30px;
+				}
+			
 			}
 
 			&:not([class*="icon-"]) {
