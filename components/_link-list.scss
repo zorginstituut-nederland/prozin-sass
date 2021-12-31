@@ -103,6 +103,12 @@ $bullet-space: 22px !default;
 			}
 		}
 
+		&.processed {
+			a {
+				text-decoration: line-through;
+			}
+		}
+
 		&.warning {
 			a {
 				&:not([class*="icon-"])::before {
