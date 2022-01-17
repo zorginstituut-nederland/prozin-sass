@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+.search-results {
+  line-height: 1.3;
+  position: relative;
+
+  &.injecting:before {
+    top: 1em;
+  }
+
+  @include screen-size(large) {
+    font-size: 1.1em;
+  }
+
+  .result-item {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    font-weight: normal;
+    color: black;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    margin-bottom: 1.625em;
+
+    &.state-draft {
+
+      &:before {
+        color: $colour-orange;
+      }
+
+      .result-title,
+      .meta {
+        color: $colour-orange;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .result-title {
+        text-decoration: underline;
+      }
+    }
+
+    .result-title {
+      line-height: 1.444em;
+      font-size: 1.125em;
+      padding-bottom: .3em;
+      font-style: bold;
+      color: $colour-dark-blue;
+    }
+
+    .result-description {
+      margin-top: 0;
+      margin-bottom: .433em;
+    }
+
+    .meta {
+      display: block;
+      font-weight: normal;
+      margin-bottom: 0;
+      color: #767676;
+      font-size: .875rem;
+      line-height: 1.5;
+
+      .byline-item {
+        border-left: 1px solid #767676;
+        padding: 0 0.5em;
+        display: inline-block;
+
+        &:first-child {
+          padding-left: 0;
+          border-left: none;
+        }
+      }
+    }
+
+    &:before {
+      font-family: fontello;
+      position: absolute;
+      top: 2px;
+      font-size: 1em;
+      left: 0;
+      display: inline-block;
+      color: $colour-dark-blue;
+      font-style: normal;
+    }
+
+    &.generic:before {
+      content: '#{$glyph-right-open}';
+      font-size: 0.6em;
+    }
+
+    &.news-item:before,
+    &.type-news:before {
+      content: '#{$glyph-2014-nieuws_diap}';
+    }
+
+    &.medicine:before {
+      content: '#{$glyph-icon-medicine}';
+    }
+
+    &.group:before {
+      content: '#{$glyph-icon-medicine-group}';
+    }
+
+
+    &.indication:before {
+      content: '#{$glyph-icon-indication}';
+    }
+
+    &.info:before {
+      content: '#{$glyph-icon-info}';
+    }
+
+    &.type-qs:before {
+      content: '#{$glyph-award}';
+    }
+
+    &.type-is:before {
+      content: '#{$glyph-information-standard}';
+    }
+
+    &.type-mi:before {
+      content: '#{$glyph-gauge}';
+      font-size: 0.8em;
+    }
+
+    &.type-dt:before {
+      content: '#{$glyph-wrench}';
+      font-size: 0.8em;
+    }
+  }
+
+  .result-more {
+    display: block;
+    margin-bottom: 15px;
+
+    &:before {
+      content: "\f055";
+      display: inline-block;
+      font-family: "FontAwesome";
+      font-size: 16px;
+      margin-right: 7px;
+      color: #337ab7;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
