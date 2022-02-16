@@ -1,0 +1,29 @@
+.bar-buttons {
+  margin: 5em auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+
+  .item {
+    @include pat-button;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  &.col-1 {
+    max-width: 550px;
+  }
+
+  &.col-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
