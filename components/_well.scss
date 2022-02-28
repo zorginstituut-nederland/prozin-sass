@@ -27,15 +27,15 @@
 			margin-bottom: 1em;
 
 			@include screen-size(medium-large) {
-				display: table;
-				width: 100%;
+				// display: table;
+				// width: 100%;
 
-				> * {
-					display: table-cell;
-				}
+				// > * {
+				// 	display: table-cell;
+				// }
 
 				.intro-bar-functions {
-					text-align: right;
+					float: right;
 
 					a {
 						text-decoration: none;

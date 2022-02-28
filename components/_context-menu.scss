@@ -4,6 +4,7 @@ $glyph-icon-ellipsis: $glyph-ellipsis-hor !default;
 
 .context-menu.pat-collapsible {
 	position: relative;
+	display: inline-block;
 
 	legend {
 		line-height: 1.4;
@@ -43,12 +44,11 @@ $glyph-icon-ellipsis: $glyph-ellipsis-hor !default;
 	}
 
 	.context-menu-label {
-		-webkit-user-select: none;
-		-moz-user-select: none;
 		user-select: none;
 		font-weight: normal;
 		cursor: default;
 		display: inline-block;
+		margin: 0;
 
 		.canvas-subnav & {
 			// margin-right: 10px;
