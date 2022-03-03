@@ -25,6 +25,7 @@
 
 		.intro-bar {
 			margin-bottom: 1em;
+			@include clear;
 
 			@include screen-size(medium-large) {
 				// display: table;
@@ -36,6 +37,7 @@
 
 				.intro-bar-functions {
 					float: right;
+					margin-bottom: 0;
 
 					a {
 						text-decoration: none;
