@@ -343,6 +343,7 @@ table {
                 position: sticky;
                 top: 70px;
                 text-align: center;
+                z-index: 10;
 
                 &.version-header {
                     z-index: 9;
@@ -362,6 +363,12 @@ table {
                     position: relative;
                     font-size: 25px;
                     font-weight: normal;
+                }
+
+                .load-extra-column-trigger {
+                    position: absolute;
+                    opacity: 0;
+                    z-index: -1000;
                 }
             }
         }
