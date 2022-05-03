@@ -50,17 +50,20 @@
             top: 50%;
             left: 0;
             transform: translateY(-50%);
+            transition: transform 0.2s;
         }
 
         &:hover {
             text-decoration: none;
-
-            .title {
+            
+            .no-touchevents & {
+              .title {
                 text-decoration: underline;
-            }
+              }
 
-            .byline {
-
+              &:before {
+                transform: scale(1.1) translateY(-50%);
+              }
             }
         }
 
