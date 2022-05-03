@@ -212,6 +212,13 @@
 		}
 	}
 
+	&#swim-lane-sectors {
+		.lane-title {
+			margin-top: 0;
+			border-top: none;
+		}
+	}
+
 	&#swim-lane-editorial {
 		@include screen-size(medium-large) {
 			background-color: #f3f3f3;
