@@ -38,11 +38,16 @@ $advanced-search-animation-speed: 0.4s;
 
 // Buttons
 
+$button-cluster-toggle-margin: 6px;
+
 $button-border: none !default;
 $button-border-radius: 0;
 $canvas-toolbar-button-border-radius: $button-border-radius;
 $button-height: 44px !default;
 $canvas-toolbar-button-height: 44px;
+$pat-button-cluster-button-height: 44px;
+$pat-button-cluster-button-line-height: 44px;
+$pat-toolbar-button-line-height: 44px;
 $button-background-image: none !default;
 $button-font-weight: normal !default;
 
@@ -85,7 +90,7 @@ $table-line-height: 1.5 !default;
 // Font treatment
 
 $body-font-family: 'RO Sans';
-$base-font-size: 112.5%;
+$base-font-size: 20px;
 $base-line-height: 1.625;
 
 // Form
@@ -124,6 +129,7 @@ $pswp__include-minimal-style: true;
 
 @import "components/body";
 @import "components/bar-toggles";
+@import "components/bar-buttons";
 @import "components/button";
 @import "components/browse-bar";
 @import "components/canvas-toolbar";
@@ -142,7 +148,9 @@ $pswp__include-minimal-style: true;
 @import "components/form";
 @import "components/global-nav";
 @import "components/grid-list";
+@import "components/hero";
 @import "components/icon";
+@import "components/icon-tile-navigation";
 @import "components/image-uploader";
 @import "components/language-switch";
 @import "components/link-list";
@@ -155,12 +163,15 @@ $pswp__include-minimal-style: true;
 @import "components/nav-tiles";
 @import "components/news-feed";
 @import "components/page-module";
+@import "components/photo-tiles";
 @import "components/portlet";
 @import "components/reference-badge";
 @import "components/rich";
 @import "components/select";
 @import "components/site-header";
 @import "components/show-more-snippet";
+@import "components/search";
+@import "components/search-results";
 @import "components/sub-nav";
 @import "components/swim-lane";
 @import "components/table";

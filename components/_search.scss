@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.search-box {
+	&.closed #close-trigger,
+	&.open #open-trigger {
+		display: none;
+	}
+	
+	@include clear-fix;
+
+	fieldset.horizontal {
+		margin: 0;
+	}
+	
+	.filters {
+		margin: 0;
+
+		&.panel-content {
+			padding-top: 0;
+			padding-bottom: 0;
+			@include clear-fix;
+			overflow: hidden;
+			margin: 0;
+		}
+
+		.filter-toggle {
+			display: none;
+		}
+
+		.form-panel.panel-content {
+			padding: 0 0 1.5em 0;
+		}
+
+		&.closed ~ .button-bar #close-trigger,
+		&.open ~ .button-bar #open-trigger {
+			display: none;
+		}
+	}
+
+	.form-panel + .sorting {
+		margin-top: 0;
+	}
+
+	.sorting {
+		margin: 20px 0;
+
+		.product-med & {
+			margin: 1.8em 0;
+		}
+
+		a,
+		.link {
+			color: #767676;
+			margin: 0;
+
+			&:hover {
+				color: black;
+				text-decoration: underline !important; // Added !important until I figured out why the button component has an !important on this property.
+			}
+		}
+	}
+}

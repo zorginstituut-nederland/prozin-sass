@@ -45,6 +45,105 @@
 		}
 	}
 
+	&#swim-lane-site-navigation-illustrated {
+
+		@include screen-size(medium-large) {
+			background: $colour-dark-blue;
+		}
+
+		* {
+			color: white;
+		}
+
+		.container {
+			padding: 4rem 0rem 3.5rem 0rem;
+			margin: 3px auto;
+
+			.nav-tiles-illustrated {
+				display: flex;
+
+				&.count-3 {
+					li {
+						width: 33.33332%;
+					}
+				}
+
+				li {	
+				    a {
+				      padding: 0 20px 40px;
+				      display: block;
+				      position: relative;
+				      height: 100%;
+				      text-decoration: none;
+				      text-align: center;
+				      @include box-sizing;
+
+				      &:hover {
+				        .no-touchevents & {
+				          .item-title {
+				            text-decoration: underline;
+				          }
+
+				          &:before {
+				          	transform: scale(1.1);
+				          }
+				        }
+				      }
+
+				      &:before {
+				      	display: block;
+				        height: 200px;
+				        line-height: 200px;
+				        font-size: 120px;
+					     text-align: center;
+					     width: 100%;
+						box-sizing: border-box;
+						padding: 0;
+						margin: 0;
+						margin-bottom: 30px;
+						transition: transform 0.2s;
+				      }
+
+				      &.icon-swiss-army-knife {
+				      	&:before {
+				      		 font-size: 100px;
+				      	}
+				      }
+
+				      .item-title {
+				        hyphens: auto;
+				        overflow: hidden;
+				        text-overflow: ellipsis;
+				        text-align: center;
+
+				        @include screen-size(medium-large) {
+				          	font-size: 1.45em;
+				          	line-height: 1.2em;
+					        margin-bottom: 15px;
+				        }
+
+				        @include screen-size(small) {
+				          font-size: 1.3125em;
+				          font-weight: bold;
+				          line-height: 1.2381;
+				          margin: 0;
+				        }
+				      }
+
+				      .byline {
+				        line-height: 1.375em;
+				        text-align: center;
+				      }
+				    }
+				}
+			}
+
+			@include screen-size(small) {
+				padding: 0;
+			}
+		}
+	}
+
 	&#swim-lane-browser-warning {
 		color: white;
 		color: $colour-orange;
@@ -110,6 +209,13 @@
 			@include screen-size(small) {
 				padding: 0;
 			}
+		}
+	}
+
+	&#swim-lane-sectors {
+		.lane-title {
+			margin-top: 0;
+			border-top: none;
 		}
 	}
 

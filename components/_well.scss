@@ -25,17 +25,19 @@
 
 		.intro-bar {
 			margin-bottom: 1em;
+			@include clear;
 
 			@include screen-size(medium-large) {
-				display: table;
-				width: 100%;
+				// display: table;
+				// width: 100%;
 
-				> * {
-					display: table-cell;
-				}
+				// > * {
+				// 	display: table-cell;
+				// }
 
 				.intro-bar-functions {
-					text-align: right;
+					float: right;
+					margin-bottom: 0;
 
 					a {
 						text-decoration: none;

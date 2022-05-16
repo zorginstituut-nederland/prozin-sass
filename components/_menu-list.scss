@@ -75,6 +75,13 @@ ul.menu {
         line-height: 1.3;
       }
 
+      &:not([class~=icon-]) {
+        &:before {
+          font-family: fontello;
+          content: '#{$glyph-angle-right}';
+        }
+      }
+
       &:hover {
         text-decoration: none;
         // background: rgba(0,0,0,0.05);
