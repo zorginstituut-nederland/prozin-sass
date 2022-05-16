@@ -34,6 +34,8 @@
 	input.has-value + button {
 		background-color: rgba(0,0,0,1);
 		z-index: 2;
+		-webkit-pointer-events: all;
+		pointer-events: all;
 	}
 
 }
