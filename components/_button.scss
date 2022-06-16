@@ -13,6 +13,12 @@
 .status-inactive .content-mirror .placeholder {
 	display: inline-block;
 	margin: 0 20px 0 0;
+
+	&.float-after {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+	
 	// padding: .4em 10px;
 	// border: 0;
 	// background: $colour-dark-blue;
