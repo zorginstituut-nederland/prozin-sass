@@ -18,6 +18,34 @@
 		margin-right: 0;
 		margin-left: 20px;
 	}
+
+	@keyframes make-ok {
+	  	0% {
+	    	content: '#{$glyph-docs}';
+	    	transform: scale(1.0);
+	  	}
+	  	
+	  	50% {
+	    	transform: scale(1.5);
+	    	content: '#{$glyph-docs}';
+	  	}
+
+	  	100% {
+	    	content: '#{$glyph-ok}';
+	    	transform: scale(1.0);
+	    	color: green;
+	  	}
+	}
+
+	&.validate {
+		&:active {
+			&:before {
+				animation: make-ok 0.5s;
+     			-webkit-animation-fill-mode: forwards;
+     			animation-fill-mode: forwards;
+			}
+		}
+	}
 	
 	// padding: .4em 10px;
 	// border: 0;
