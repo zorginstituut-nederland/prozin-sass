@@ -96,6 +96,42 @@ $form-proportion-value: 80% !default;
 		}
 	}
 
+	.form-callout {
+		margin: 0 -20px 20px;
+		padding: 20px;
+		outline: 1px solid silver;
+
+		.functions {
+			padding-right: 5px;
+
+			text-align: right;
+
+			.icon {
+				display: inline-block;
+				width: 30px;
+				line-height: 30px;
+				height: 30px;
+				margin: 0 0 0 10px;
+				overflow: hidden;
+				color: transparent;
+
+				&:before {
+					display: block;
+					color: $colour-dark-blue;
+					line-height: 30px;
+					width: 30px;
+					text-align: center;
+				}
+
+				&:hover {
+					&:before {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
 	fieldset.form-panel {
 		padding: $baseline 0 0 20px;
 		background: $colour-grey-1;
