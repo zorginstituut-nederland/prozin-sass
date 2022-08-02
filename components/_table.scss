@@ -564,6 +564,10 @@ table {
                 // text-align: right;
             }
 
+            &.symbol {
+                text-align: center;
+            }
+
             &.indicator-inid {
                 width: 90px;
             }
