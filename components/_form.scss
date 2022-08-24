@@ -89,11 +89,6 @@ $form-proportion-value: 80% !default;
 			transition-delay: 0s;
 			border-color: $colour-dark-blue;
 		}
-
-		&:focus,
-		.focus {
-			outline-offset: 2px;
-		}
 	}
 
 	.form-callout {
