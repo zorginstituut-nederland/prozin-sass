@@ -9,10 +9,24 @@
     line-height: $table-line-height;
   }
 
-  &:before {
+  .content-mirror {
     content: attr(data-value);
-    opacity: 0;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
     padding-bottom: 26px;
+    padding-right: 10px;
+    color: black;
+    font-family: inherit;
+    cursor: default;
+    text-align: start;
+    white-space: pre-wrap;
+    vertical-align: text-bottom;
+    overflow: visible;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
 
   .group & {
@@ -21,6 +35,8 @@
 
   .placeholder {
     color: $colour-link;
+    -webkit-text-fill-color: $colour-link;
+    text-fill-color: $colour-link;
     text-decoration: underline;
     font-weight: normal;
     // position: absolute;
@@ -57,8 +73,14 @@
     display: none;
   }
 
+  textarea {
+    &:focus {
+      border: transparent 1px solid;
+    }
+  }
+
   textarea,
-  &:before {
+  .content-mirror {
       margin: 0;
       padding-right: 2em;
       padding-left: 0.5em;
@@ -102,22 +124,6 @@
     // opacity: 0; // Added to compensate for a bug in Chrome
   }
 
-  &:before {
-    padding-right: 10px;
-    color: black;
-    font-family: inherit;
-    cursor: default;
-    text-align: start;
-    white-space: pre-wrap;
-    vertical-align: text-bottom;
-    overflow: visible;
-    width: 100%;
-    box-sizing: border-box;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-
   &.status-inactive {
     textarea {
       cursor: default;
@@ -143,7 +149,7 @@
   }
 
   &.status-active textarea
-  &.status-active:before {
+  &.status-active .content-mirror {
     padding-top: 1em;
     padding-bottom: 1em;
   }
