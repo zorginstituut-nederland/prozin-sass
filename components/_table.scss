@@ -72,6 +72,10 @@ table {
         // width: auto;
         table-layout: fixed;
 
+        .variation-medicine-compare-versions ~ #main & {
+            width: auto;
+        }
+
         tr {
             &.mutated,
             &.has-differences {     
