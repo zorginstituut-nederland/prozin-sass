@@ -605,7 +605,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		}
 
 		&.more {
-			float: right;
+			// float: right;
 
 			&:before {
 				content: "#{$glyph-ellipsis-hor}";
