@@ -36,6 +36,10 @@ $colour-toolbar-button-text: $button-text-colour !default;
 
 	    &:hover {
 	    	background: $button-background-colour-hover;
+
+	    	&:after {
+	    		background: $button-background-colour-default-hover;
+	    	}
 	    }
 
 	    &:before {
