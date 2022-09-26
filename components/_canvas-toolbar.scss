@@ -267,7 +267,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		}
 
 	    @include screen-size(medium-large) { 
-	      margin-right: 1em;
+	      margin-right: 18px;
 	    }
 
 	    @include screen-size(small) { 
@@ -500,7 +500,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 	}
 
 	.functions {
-		margin-left: 1em;
+		margin-left: 18px;
 
 		.button,
 		.icon {
@@ -611,7 +611,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		// float: left;
 		display: inline-block;
 		z-index: 1;
-		margin-left: 1em;
+		margin-left: 18px;
 		color: $button-text-colour;
 		background-color: $button-background-colour;
     
