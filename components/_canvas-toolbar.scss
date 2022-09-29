@@ -20,6 +20,67 @@ $colour-toolbar-button-text: $button-text-colour !default;
 	color: $colour-toolbar-button-text;
 	z-index: 1;
 	position: relative;
+	-webkit-user-select: none;
+	user-select: none;
+
+	.pat-select {	
+	    padding: 0 75px 0 12px;
+	    background: $button-background-colour;
+	    display: inline-block;
+	    height: 44px;
+	    line-height: 44px;
+	    position: relative;
+	    font-weight: normal !important;
+	    font-size: 0;
+	    position: relative;
+
+	    &:hover {
+	    	background: $button-background-colour-hover;
+
+	    	&:after {
+	    		background: $button-background-colour-default-hover;
+	    	}
+	    }
+
+	    &:before {
+	    	font-size: 20px;
+      		content: attr(data-option);
+		    color: $button-text-colour;
+	    }
+
+	    select {
+	    	position: absolute;
+	    	left: 0;
+	    	right: 0;
+	    	top: 0;
+	    	bottom: 0;
+	    	height: 100% !important;
+	    	width: 100% !important;
+	    	opacity: 0;
+	    	margin: 0;
+	    	z-index: 1;
+
+	    	option {
+	    		font-size: initial;
+	    		color: black;
+	    	}
+	    }
+
+	    &:after {
+	      font-family: fontello;
+	      content: '#{$glyph-down-open}';
+	      height: 44px;
+	      width: 44px;
+	      color: white;
+	      background-color: $colour-link;
+	      display: block;
+	      position: absolute;
+	      top: 0;
+	      right: 0;
+	      text-align: center;
+	      font-size: 22px;
+	    }
+	}
 
 	&.sticky {
 		background-color: rgba(255,255,255,0.95);
@@ -215,7 +276,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		}
 
 	    @include screen-size(medium-large) { 
-	      margin-right: 1em;
+	      margin-right: 18px;
 	    }
 
 	    @include screen-size(small) { 
@@ -448,7 +509,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 	}
 
 	.functions {
-		margin-left: 1em;
+		margin-left: 18px;
 
 		.button,
 		.icon {
@@ -544,7 +605,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		}
 
 		&.more {
-			float: right;
+			// float: right;
 
 			&:before {
 				content: "#{$glyph-ellipsis-hor}";
@@ -559,7 +620,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		// float: left;
 		display: inline-block;
 		z-index: 1;
-		margin-left: 1em;
+		margin-left: 18px;
 		color: $button-text-colour;
 		background-color: $button-background-colour;
     
