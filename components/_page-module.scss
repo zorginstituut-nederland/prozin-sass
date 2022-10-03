@@ -173,6 +173,10 @@ $header-2-top-margin: 3rem !default;
 					vertical-align: middle;
 					@include select-box;
 
+					&.injecting {
+						opacity: 0.3;
+					}
+
 					&[data-option-value="draft"] {
 						background-color: $colour-warning;
 
