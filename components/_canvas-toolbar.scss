@@ -525,7 +525,8 @@ $colour-toolbar-button-text: $button-text-colour !default;
 			}
 		}
 
-		&.create {
+		&.create,
+		&.new {
 			// float: right;
 
 			&:before {
