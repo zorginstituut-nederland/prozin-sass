@@ -168,6 +168,36 @@ $header-2-top-margin: 3rem !default;
 			.buttons-segment {
 				white-space: nowrap;
 
+				.pat-select {
+					--select-box-height: 39px;
+					vertical-align: middle;
+					@include select-box;
+
+					&[data-option-value="draft"] {
+						background-color: $colour-warning;
+
+						&:before {
+							color: white;
+						}
+					}
+
+					&[data-option-value="for-review"] {
+						background-color: $colour-violette;
+
+						&:before {
+							color: white;
+						}
+					}
+
+					&[data-option-value="published"] {
+						background-color: $colour-light-green;
+
+						&:before {
+							color: $colour-moss-green-d;
+						}
+					}
+				}
+
 				.icon {
 					color: transparent;
 					width: 	 	 39px;
@@ -178,6 +208,7 @@ $header-2-top-margin: 3rem !default;
 					display: inline-block;
 					margin-left: 5px;
 					cursor: default;
+					vertical-align: middle;
 
 					&:hover {
 						text-decoration: none;
