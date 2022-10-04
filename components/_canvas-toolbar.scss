@@ -23,7 +23,7 @@ $colour-toolbar-button-text: $button-text-colour !default;
 	-webkit-user-select: none;
 	user-select: none;
 
-	.pat-select {	
+	.pat-select:not(.bare) {	
 	    @include select-box;
 	}
 
