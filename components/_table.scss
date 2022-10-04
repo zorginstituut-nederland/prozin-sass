@@ -496,6 +496,17 @@ table {
     tr {
         width: 100%;
 
+        &.mutated,
+        &.has-differences {     
+            th {
+                background: rgba(255,100,0,0.2);
+            }
+
+            td {
+                background: rgba(255,100,0,0.1);
+            }
+        }
+
         td,
         th {
             padding-top: $table-cell-padding-top;
