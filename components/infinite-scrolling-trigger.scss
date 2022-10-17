@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.infinite-scrolling-trigger {
+	display: block;
+	color: rgba(0,0,0,0.5);
+	text-align: center;
+	position: relative;
+  	color: rgba(0,0,0,0.6);
+	padding-top: 185px;
+	height: 450px;
+	box-sizing: border-box;
+	clear: both;
+	text-decoration: none !important;
+	cursor: default;
+
+	&:before {
+  		@include throbber();
+		top: 150px;	
+		color: rgba(0,0,0,0.5);
+	}
+}
