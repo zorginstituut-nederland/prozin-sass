@@ -6,16 +6,19 @@
 	text-align: center;
 	position: relative;
   	color: rgba(0,0,0,0.6);
-	padding-top: 185px;
-	height: 450px;
+	padding-top: 585px;
+	margin-top: -450px;
+	height: 675px;
 	box-sizing: border-box;
 	clear: both;
 	text-decoration: none !important;
 	cursor: default;
+	-webkit-pointer-events: none;
+	pointer-events: none;
 
 	&:before {
   		@include throbber();
-		top: 150px;	
+		top: 550px;	
 		color: rgba(0,0,0,0.5);
 	}
 }
