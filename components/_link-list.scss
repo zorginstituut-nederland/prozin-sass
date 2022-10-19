@@ -248,6 +248,13 @@ $bullet-space: 22px !default;
 				}
 			}
 
+			&.type-rs {
+				&:before {
+					content: '#{$glyph-database-on-square}';
+					font-size: 0.8em;
+				}
+			}
+
 			&.type-qs {
 				&:before {
 					content: '#{$glyph-award}';
