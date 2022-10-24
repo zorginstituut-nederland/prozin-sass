@@ -7,6 +7,22 @@ $form-proportion-value: 80% !default;
 
 .pat-form {	
 
+	&.two-factor-authentication {
+		.form-panel {
+			padding-left: 0;
+
+			.pat-verification-code {
+				margin: 70px auto 50px;
+			}
+
+			.button-bar {
+				width: 352px;
+				padding: 0;
+				margin: 0 auto;
+			}
+		}
+	}
+
 	counter-reset: form-panel;  
 
 	&#search-form {
