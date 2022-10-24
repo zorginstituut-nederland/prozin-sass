@@ -69,7 +69,7 @@ table {
     }
 
     &.data-table {
-        // width: auto;
+        width: auto;
         table-layout: fixed;
 
         .variation-medicine-compare-versions ~ #main & {

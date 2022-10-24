@@ -56,7 +56,7 @@ $bullet-space: 22px !default;
 			padding-bottom: 0.4em;
 
 			ul {
-				padding: 0 0 $bullet-space 0;
+				padding: 0 0 5px 0;
 			}
 		}
 	}
@@ -244,6 +244,13 @@ $bullet-space: 22px !default;
 			&.type-is {
 				&:before {
 					content: '#{$glyph-information-standard}';
+					font-size: 0.8em;
+				}
+			}
+
+			&.type-rs {
+				&:before {
+					content: '#{$glyph-database-on-square}';
 					font-size: 0.8em;
 				}
 			}
