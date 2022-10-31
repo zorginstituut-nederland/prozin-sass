@@ -347,11 +347,6 @@ $header-2-top-margin: 3rem !default;
 	}
 
 	h1 {
-		font-weight: bold;
-		font-size: 1.75em;
-		line-height: 1.1429;
-		color: black;
-		// margin-bottom: 1em;
 		margin-bottom: 32px;
 
 		&:first-letter {
@@ -406,6 +401,19 @@ $header-2-top-margin: 3rem !default;
 				transform: translateY(-50%);
 			}
 		}
+	}
+
+	h1,
+	#title-block .pat-content-mirror {
+		font-weight: bold;
+		font-size: 1.75em;
+		line-height: 1.1429;
+		color: black;
+		box-shadow: none;
+	}
+
+	#title-block .pat-content-mirror {
+		margin: 0;
 	}
 
 	.introduction + h2 {
