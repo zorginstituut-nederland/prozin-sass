@@ -7,6 +7,18 @@
 	// margin-left: 16.66667%;
 	margin: 0 auto;
 	counter-reset: tab fig;  
+	
+	&.cms-edit-form {
+		.metadata {
+			margin-bottom: 50px;
+		}
+
+		.body-text {
+			.ProseMirror {
+				min-height: 400px;
+			}
+		}
+	}
 
 	@include screen-size(medium-large) {
 		padding-left: 15px;
