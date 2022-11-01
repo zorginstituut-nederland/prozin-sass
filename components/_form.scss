@@ -220,6 +220,30 @@ $form-proportion-value: 80% !default;
 		          top: -5px;
 		        }
 	        }
+
+			&.image-selection {
+				.button {
+					display: inline-block;
+				    font-size: $button-small-font-size;
+				    padding: $button-small-paddings;
+				    height: auto;
+				    line-height: 25px;
+				    vertical-align: baseline;
+				    box-shadow: $button-small-shadow;
+				    font-weight: 600;
+				    color: $button-text-colour-default;
+				    background-color: $button-background-colour-default;
+				    cursor: default;
+				    top: -2px;
+					position: relative;
+
+				    &:hover {
+				    	text-decoration: none;
+				    	background-color: $button-background-colour-default-hover;
+      					color: $button-text-colour-default-hover;
+				    }
+				}
+			}
 		}
 
 		.help {
