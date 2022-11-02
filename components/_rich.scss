@@ -451,11 +451,11 @@ $header-2-top-margin: 3rem !default;
 	}
 
 	h3 {
-		margin-top: 0;
-		margin-bottom: 13px;
+		font-size: 1.423828125rem;
+		line-height: 1.4046639232;
+		display: block;
 		font-weight: bold;
-		font-size: 1.125em;
-		line-height: 1.4444;
+		margin-bottom: 0.5rem;
 
 		&:before {
 			width: 1.25em;
@@ -941,6 +941,12 @@ $header-2-top-margin: 3rem !default;
 
 	ul {
 
+		li {
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+
 		&.link-list {
 			li {
 				a[href] {
@@ -1004,6 +1010,12 @@ $header-2-top-margin: 3rem !default;
 
 	ol {
 		counter-reset: list;
+
+		li {
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
 
 		&.link-list {
 			li {
