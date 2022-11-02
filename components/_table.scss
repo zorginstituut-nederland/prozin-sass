@@ -490,6 +490,18 @@ table {
                 left: 0;
                 z-index: 9;
             }
+
+            a {
+                @include sortable-table-cell;
+                &.sorting {
+                    display: block;
+                    color: black;
+                    // text-decoration: none;
+                    cursor: default;
+                    padding: 5px 20px 5px 10px;
+                    margin: -5px -10px;
+                }
+            }    
         }
     }
 
