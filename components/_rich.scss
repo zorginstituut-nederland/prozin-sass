@@ -908,33 +908,19 @@ $header-2-top-margin: 3rem !default;
 
 	ul {
 	    margin-left: 0;
+	    padding: 0;
 
 		li {
-			list-style-type: disc;
+			list-style-type: square;
 			list-style-position: outside;
 			display: list-item;
 			position: relative;
 		    left: $bullet-space;
-		    padding-right: $bullet-space;    
+		    padding-right: $bullet-space; 
+		    display: list-item;
+			text-align: match-parent;   
 		}
 
-	}
-
-	ol {
-		list-style-type: decimal;
-
-		> li {
-			margin-left: $bullet-space;
-			list-style: decimal;
-		}
-
-		p:last-child {
-			margin-bottom: 0;
-		}
-
-		&.roman {
-			list-style: upper-roman;
-		}
 	}
 
 	ul,
@@ -942,8 +928,6 @@ $header-2-top-margin: 3rem !default;
 		-webkit-margin-before: 0;
 		margin-block-start: 0;
 		-webkit-margin-after: 1.25rem;
-		-webkit-padding-start: 1.5rem;
-		padding-inline-start: 1.5rem;
 		margin-block-end: 1.25rem;
 
 		&.footnotes {
@@ -975,6 +959,29 @@ $header-2-top-margin: 3rem !default;
 			> *:last-child {
 				margin-bottom: 0;
 			}
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+		-webkit-margin-before: 0;
+		margin-block-start: 0;
+		-webkit-margin-after: 1.25rem;
+		margin-block-end: 1.25rem;
+		-webkit-padding-start: 1.5rem;
+		padding-inline-start: 1.5rem;
+
+		> li {
+			// margin-left: $bullet-space;
+			list-style: decimal;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		&.roman {
+			list-style: upper-roman;
 		}
 	}
 
