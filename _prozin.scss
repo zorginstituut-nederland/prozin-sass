@@ -84,6 +84,10 @@ $pat-toolbar-icon-background-colour-hover: $button-background-colour-hover;
 $pat-toolbar-icon-text-colour: $colour-link;
 $pat-toolbar-icon-text-colour-hover: $colour-link;
 $pat-toolbar-element-separation: 15px;
+$pat-toolbar-bump-distance: 100px !default;
+// $pat-toolbar-bump-distance-scroll-down: 40px !default;
+$pat-toolbar-top-distance: -1px !default;
+$pat-toolbar-top-distance-scroll-down: -61px !default;
 
 // Grid
 

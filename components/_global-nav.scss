@@ -91,6 +91,12 @@
 	position: -webkit-sticky !important;
 	position: sticky !important;
 	top: -0.05px !important;
+	transition: top 0.3s;
+
+	.scrolling-down &,
+	.scroll-down & {
+		top: -70px !important;
+	}
 
 	.container {
 		position: relative;
