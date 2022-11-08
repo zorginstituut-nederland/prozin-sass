@@ -4,7 +4,9 @@
 	& + #swim-lane-browser-warning,
 	& + #partners,
 	& + #news,
-	& + #site-summary {
+	& + #site-summary,
+	& + #swim-lane-secondary-tasks,
+	& + #swim-lane-sectors {
 		.container {
 			padding-top: 0;
 		}
@@ -45,7 +47,24 @@
 		}
 	}
 
+	&#swim-lane-sectors {
+		@include white-lane;
+
+		.lane-title {
+			margin-top: 0;
+			border-top: none;
+		}
+	}
+
+	&#swim-lane-secondary-tasks {
+		@include white-lane;
+	}
+
 	&#swim-lane-site-navigation-illustrated {
+
+		& + #swim-lane-secondary-tasks {
+			margin-top: 50px;
+		}
 
 		@include screen-size(medium-large) {
 			background: $colour-dark-blue;
@@ -115,6 +134,7 @@
 				        overflow: hidden;
 				        text-overflow: ellipsis;
 				        text-align: center;
+				        text-underline-offset: 0.18em;
 
 				        @include screen-size(medium-large) {
 				          	font-size: 1.45em;
@@ -209,13 +229,6 @@
 			@include screen-size(small) {
 				padding: 0;
 			}
-		}
-	}
-
-	&#swim-lane-sectors {
-		.lane-title {
-			margin-top: 0;
-			border-top: none;
 		}
 	}
 
