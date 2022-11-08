@@ -84,6 +84,11 @@ $pat-toolbar-icon-background-colour-hover: $button-background-colour-hover;
 $pat-toolbar-icon-text-colour: $colour-link;
 $pat-toolbar-icon-text-colour-hover: $colour-link;
 $pat-toolbar-element-separation: 15px;
+$pat-toolbar-bump-distance: 100px !default;
+// $pat-toolbar-bump-distance-scroll-down: 40px !default;
+$pat-toolbar-top-distance: -1px !default;
+$pat-toolbar-top-distance-scroll-down: -55px !default;
+$pat-toolbar-hiding-speed: 0.4s;
 
 // Grid
 
@@ -151,6 +156,7 @@ $pswp__include-minimal-style: true;
 @import "components/browse-bar";
 @import "components/canvas-toolbar";
 @import "components/classification-tag";
+@import "components/cms-page-module";
 @import "components/comments";
 @import "components/collapsible";
 @import "components/container";
@@ -166,6 +172,7 @@ $pswp__include-minimal-style: true;
 @import "components/global-nav";
 @import "components/grid-list";
 @import "components/hero";
+@import "components/html";
 @import "components/icon";
 @import "components/icon-tile-navigation";
 @import "components/image-uploader";

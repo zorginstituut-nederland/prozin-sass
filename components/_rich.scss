@@ -451,11 +451,11 @@ $header-2-top-margin: 3rem !default;
 	}
 
 	h3 {
-		margin-top: 0;
-		margin-bottom: 13px;
+		font-size: 1.423828125rem;
+		line-height: 1.4046639232;
+		display: block;
 		font-weight: bold;
-		font-size: 1.125em;
-		line-height: 1.4444;
+		margin-bottom: 0.5rem;
 
 		&:before {
 			width: 1.25em;
@@ -906,22 +906,29 @@ $header-2-top-margin: 3rem !default;
 		}
 	}
 
+	ul {
+	    margin-left: 0;
+	    padding: 0;
+
+		li {
+			list-style-type: square;
+			list-style-position: outside;
+			display: list-item;
+			position: relative;
+		    left: $bullet-space;
+		    padding-right: $bullet-space; 
+		    display: list-item;
+			text-align: match-parent;   
+		}
+
+	}
+
 	ul,
 	ol {
-		> li {
-			 margin-left: 0;
-			 padding-left: $bullet-space;
-
-			 &:before {
-				content: "•";
-				margin-left: -1 * $bullet-space;
-				font-size: 1em;
-				// background: pink;
-				width: $bullet-space;
-				float: left;
-				// color: $colour-orange;
-			 }
-		}
+		-webkit-margin-before: 0;
+		margin-block-start: 0;
+		-webkit-margin-after: 1.25rem;
+		margin-block-end: 1.25rem;
 
 		&.footnotes {
 			.footnote {
@@ -936,6 +943,45 @@ $header-2-top-margin: 3rem !default;
 					position: relative;
 				}
 			}
+		}
+
+		li {
+			margin: 0 0 0.5rem 0;
+			-webkit-padding-start: 0.25rem;
+			padding-inline-start: 0.25rem;
+
+			list-style-position: outside;
+			display: list-item;
+			position: relative;
+		    left: $bullet-space;
+		    padding-right: $bullet-space; 
+
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+		-webkit-margin-before: 0;
+		margin-block-start: 0;
+		-webkit-margin-after: 1.25rem;
+		margin-block-end: 1.25rem;
+		-webkit-padding-start: 1.5rem;
+		padding-inline-start: 1.5rem;
+
+		> li {
+			// margin-left: $bullet-space;
+			list-style: decimal;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		&.roman {
+			list-style: upper-roman;
 		}
 	}
 
@@ -1005,6 +1051,12 @@ $header-2-top-margin: 3rem !default;
 	ol {
 		counter-reset: list;
 
+		li {
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+
 		&.link-list {
 			li {
 				a[href] {
@@ -1017,28 +1069,6 @@ $header-2-top-margin: 3rem !default;
 			}
 		}
 
-		> li {
-			counter-increment: list;
-
-			&:before {
-				content: counter(list) ". ";
-				font-size: 1em;
-				margin-left: -$bullet-space;
-				width: $bullet-space;
-			}
-
-			> ol > li {
-				&:before {
-					content: counter(list, lower-alpha) ". ";
-				}
-
-				> ol > li {
-					&:before {
-						content: counter(list, decimal) ". ";
-					}
-				}
-			}
-		}
 	}
 
 	&.indented {
