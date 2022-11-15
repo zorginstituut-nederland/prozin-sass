@@ -170,8 +170,11 @@ $header-2-top-margin: 3rem !default;
 
 				.pat-select {
 					--select-box-height: 39px;
-					vertical-align: middle;
+					--select-box-padding-top-bottom: 0;
+					--select-box-box-shadow: none;
 					@include select-box;
+					
+					vertical-align: middle;
 
 					&.injecting {
 						opacity: 0.3;
@@ -188,7 +191,8 @@ $header-2-top-margin: 3rem !default;
 					&[data-option-value="for-review"] {
 						background-color: $colour-violette;
 
-						&:before {
+						&:before,
+						&:after {
 							color: white;
 						}
 					}
