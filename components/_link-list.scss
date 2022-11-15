@@ -77,6 +77,11 @@ $bullet-space: 22px !default;
 		margin: 0;
 		border-bottom: 0.3em solid transparent; // Faux bottom margin.
 		padding: 0 0.5em 0 $bullet-space;
+		list-style: none;
+
+		.pat-rich & {
+			list-style: none;
+		}
 
 		#sub-nav & {
 			padding-left: 30px;
