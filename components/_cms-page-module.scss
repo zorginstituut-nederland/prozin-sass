@@ -3,11 +3,10 @@ $scroll-offset: 120px !default;
 $header-2-top-margin: 3rem !default;
 
 .cms-page-module {
-	margin-bottom: 30px;
 	@include clear-fix;
 	border: 1px solid $colour-grey-2;
 	padding: 0 15px;
-	margin: 0 0 20px;
+	margin: 0 -15px 20px;
 
 	h2,
 	.page-module-title {
