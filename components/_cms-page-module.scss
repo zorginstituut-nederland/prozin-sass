@@ -5,7 +5,7 @@ $header-2-top-margin: 3rem !default;
 .cms-page-module {
 	margin-bottom: 30px;
 	@include clear-fix;
-	border: 1px solid gray;
+	border: 1px solid $colour-grey-2;
 	padding: 0 15px;
 	margin: 0 0 20px;
 
@@ -18,6 +18,40 @@ $header-2-top-margin: 3rem !default;
 
 		&.assistive {
 			position: absolute !important;
+		}
+	}
+
+	&.type-metadata {
+		margin-bottom: 60px;
+		border: 1px solid $colour-grey-2;
+
+		&.pat-collapsible {
+			.page-module-title {	
+				background: $colour-grey-1;
+				border: none;
+
+				&:hover,
+				&.collapsible-open,
+				&.collapsible-closed.collapsible-in-progress {
+					background: $colour-grey-2;
+
+					&:hover {
+						background: $colour-grey-2;
+					}
+				}
+
+				.title-segment {
+					background: transparent;
+				}	
+			}
+
+			> .panel-content {
+				border-top: 1px solid white;
+				background: $colour-grey-1;
+				padding: 15px 0 15px 0;
+				margin: 0 -15px;
+				overflow: hidden;
+			}
 		}
 	}
 
@@ -102,7 +136,7 @@ $header-2-top-margin: 3rem !default;
 			background-color: white;
 			padding: 10px 40px 10px 39px;
 			margin: 0 -15px;
-			border-bottom: 1px solid $colour-dark-blue-l;
+			// border-bottom: 1px solid $colour-dark-blue-l;
 			position: relative;
 			-webkit-user-select: none;
 			user-select: none;
