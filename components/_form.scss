@@ -222,6 +222,10 @@ $form-proportion-value: 80% !default;
 	        }
 
 			&.image-selection {
+				img {
+					max-width: 80%;
+				}
+
 				.button {
 					display: inline-block;
 				    font-size: $button-small-font-size;
