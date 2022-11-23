@@ -508,6 +508,16 @@ table {
     tr {
         width: 100%;
 
+        &.state-draft th,
+        &.state-draft th a {
+            color: $colour-warning;
+        }
+
+        &.state-archived th a {
+            text-decoration:line-through;
+            opacity: 0.5;
+        }
+
         &.mutated,
         &.has-differences {     
             th {
