@@ -508,6 +508,15 @@ table {
     tr {
         width: 100%;
 
+        &.content-type-prozin-landing-toc {
+            .item-name a:before {
+                display: inline-block;
+                margin-right: 5px;
+                font-family: fontello;
+                content: '#{$glyph-folder}';
+            }
+        }
+
         &.state-draft th,
         &.state-draft th a {
             color: $colour-warning;
