@@ -509,11 +509,13 @@ table {
         width: 100%;
 
         &.content-type-prozin-landing-toc {
-            .item-name a:before {
-                display: inline-block;
-                margin-right: 5px;
-                font-family: fontello;
-                content: '#{$glyph-folder}';
+            .item-name a {                
+                &:before {
+                    display: inline-block;
+                    margin-right: 5px;
+                    font-family: fontello;
+                    content: '#{$glyph-folder}';
+                }
             }
         }
 
@@ -741,6 +743,18 @@ table {
             &.k-label{
                 font-weight: bold;
                 width: 25%;
+            }
+        }
+
+        th {
+            &.item-name {
+                a {
+                    display: block;
+                    padding-top: $table-cell-padding-top;
+                    padding-bottom: $table-cell-padding-bottom;
+                    margin-top: -1 * $table-cell-padding-top;
+                    margin-bottom: -1 * $table-cell-padding-bottom;
+                }
             }
         }
 
