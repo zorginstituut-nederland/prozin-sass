@@ -424,7 +424,6 @@ $header-2-top-margin: 3rem !default;
 		margin: 0rem 0rem 1rem 0rem;
 		font-size: 1.80203rem;
 		line-height: 1.38732;
-		padding-top: 10px;
 		-webkit-margin-after: 0.75rem;
 		margin-block-end: 0.75rem;
 		-webkit-margin-before: 3rem;
@@ -795,7 +794,14 @@ $header-2-top-margin: 3rem !default;
 	ul,
 	ol,
 	dl {
-		margin: 0 0 #{$text-bottom-margin} 0;
+		-webkit-margin-before: 0;
+		margin-block-start: 0;
+		-webkit-margin-after: 1.25rem;
+		margin-block-end: 1.25rem;
+
+		&:not(:last-child) {
+			margin: 0 0 1rem 0;
+		}
 
 		// @include screen-size(small-medium) {
 		// 	&.compare-to-other {
