@@ -16,7 +16,10 @@ $header-2-top-margin: 3rem !default;
 		-moz-pointer-events: auto;
 		-webkit-pointer-events: auto;
 		pointer-events: auto;
+	}
 
+
+	> p {
 		&:last-child {
 			margin: 0;
 		}
