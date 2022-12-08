@@ -18,13 +18,6 @@ $header-2-top-margin: 3rem !default;
 		pointer-events: auto;
 	}
 
-
-	> p {
-		&:last-child {
-			margin: 0;
-		}
-	}
-
 	h2,
 	.page-module-title {
 		margin: 0rem 0rem 1rem 0rem;
@@ -88,22 +81,27 @@ $header-2-top-margin: 3rem !default;
 	}
 
 	&.pat-rich {
+
+		> * {
+			&:last-child {
+				margin: 0;
+			}
+		}
+		
 		.pat-collapsible {
 
-		margin-bottom: #{$baseline};
+			.panel-content {
+				 > *:last-child {
+					margin-bottom: 0;
+				}
 
-		.panel-content {
-			 > *:last-child {
-				margin-bottom: 0;
-			}
-
-			#close-excipients-warning {
-				.no-js & {
-					display: none;
+				#close-excipients-warning {
+					.no-js & {
+						display: none;
+					}
 				}
 			}
 		}
-	}
 	}
 
 	&.has-differences {
