@@ -2,10 +2,13 @@
 	position: relative;
 
 	.sortable-item {
-		padding: 0.5rem 0 0.5rem;
-		border-top: 2px solid transparent;
-		border-bottom: 2px solid transparent;
+		padding: 0;
 		position: relative;
+		@include clear;
+
+		&:not(.drop-target-above):not(.drop-target-below) {
+			overflow: hidden;
+		}
 
 		&:before {
 			display: block;
@@ -18,29 +21,23 @@
 			left: 0;
 		}
 
-		&.drop-target-above:before,
-		&.drop-target-below:before {
-			opacity: 1;
+		&.drop-target-above,
+		&.drop-target-below { 
+			&:before {
+				opacity: 1;
+			}
+
+			.sortable-handle {
+				margin-top: -22px;
+			}
 		}
 
 		&.drop-target-above:before {
-			top: -3px;
+			top: -8px;
 		}
 
 		&.drop-target-below:before {
-			bottom: -3px;
-		}
-
-		input,
-		.label {
-			margin: -0.2em 0 -0.2em -0.5em;
-			width: calc(100% - 0.4em);
-			box-sizing: inherit;
-			padding: 0.2em 0.5em;
-			cursor: default;
-
-		    border-top-left-radius: 0px;
-		    border-bottom-left-radius: 0px;
+			bottom: -2px;
 		}
 
 		.label {
@@ -50,6 +47,24 @@
 		}
 
 		.sortable-handle {
+			margin-top: -18px;
+			cursor: move;
+
+			&:before {
+				content: "#{$glyph-arrow-combo}";
+			}
+		}
+
+		.delete-button {
+			margin-top: 18px;
+
+			&:before {
+				content: "#{$glyph-trash}";
+			}
+		}
+
+		.sortable-handle,
+		.delete-button {
 			text-align: center;
 			color: white;
 			display: block;
@@ -60,12 +75,14 @@
 			width: 30px;
 			height: 30px;
 			line-height: 30px;
-			background: rgba(0, 0, 0, 0.2);
+			background: rgba(0, 0, 0, 0.1);
 			overflow: hidden;
-			cursor: move;
+
+			&:hover {
+				background: rgba(0, 0, 0, 0.15);
+			}
 
 			&:before {
-				content: "#{$glyph-arrow-combo}";
 				display: block;
 				font-family: fontello;
 				top: 0;
