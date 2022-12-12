@@ -316,19 +316,18 @@ $header-2-top-margin: 3rem !default;
 		}
 	}
 
-	h3 {
-		margin-top: -100px;
-		padding-top: 100px;
-		pointer-events: none;
-		margin-bottom: 13px;
-		font-weight: bold;
-		font-size: 1.125em;
-		line-height: 1.4444;
-	}
+	// h3 {
+	// 	margin-top: -100px;
+	// 	padding-top: 100px;
+	// 	pointer-events: none;
+	// 	margin-bottom: 13px;
+	// 	font-weight: bold;
+	// 	font-size: 1.125em;
+	// 	line-height: 1.4444;
+	// }
 
 	h2,
-	.page-module-title,
-	h3 {
+	.page-module-title {
 		a {
 			text-decoration: none;
 			color: black;

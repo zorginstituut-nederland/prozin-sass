@@ -1,0 +1,87 @@
+.sortable-list {
+	position: relative;
+
+	.sortable-item {
+		padding-left: 50px;
+		border-top: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+		position: relative;
+
+		&:before {
+			display: block;
+			width: 100%;
+			display: none;
+			height: 2px;
+			content: ' ';
+			background: $colour-link;
+			position: absolute;
+			left: 0;
+		}
+
+		&.drop-target-above:before {
+			display: block;
+			top: -11px;
+		}
+
+		&.drop-target-below:before {
+			display: block;
+			bottom: -11px;
+		}
+
+		input,
+		.label {
+			margin: -0.2em 0 -0.2em -0.5em;
+			width: calc(100% - 0.4em);
+			box-sizing: inherit;
+			padding: 0.2em 0.5em;
+			cursor: default;
+
+		    border-top-left-radius: 0px;
+		    border-bottom-left-radius: 0px;
+		}
+
+		.label {
+			background: $colour-post;
+			line-height: 1.3em;
+			// color: $colour-accent;
+		}
+
+		.sortable-handle {
+			text-align: center;
+			color: white;
+			display: block;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			background: rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+			cursor: move;
+
+			&:before {
+				content: "#{$glyph-arrow-combo}";
+				display: block;
+				font-family: fontello;
+				top: 0;
+				left: 0;
+				width: 100%;
+				line-height: 30px;
+				text-align: center;
+				font-size: 0.8em;
+				color: $colour-link;
+			}
+
+			@media print {
+				display: none;
+			}
+		}
+
+		.button-cluster {
+			display: none;
+		}
+	}
+
+}

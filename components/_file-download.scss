@@ -14,9 +14,9 @@
 	margin: 0 0 1rem 0;
 	padding: 1rem;
 	position: relative;
-	cursor: pointer;
+	// cursor: pointer;
 
-	&:hover {
+	&[href]:hover {
 		text-decoration: none;
 
 		.title {
