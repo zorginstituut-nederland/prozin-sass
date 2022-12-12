@@ -112,7 +112,7 @@
 
 @mixin byline-item() {
 	border-left: 1px solid #535353;
-	padding: 0 0.5em;
+	padding: 0 0.2em;
 	display: inline-block;
 
 	&:before {
@@ -209,26 +209,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 		text-indent: 0;
 		line-height: 1em;
 		z-index: -1;
-	}
-}
-
-@mixin byline-item() {
-	border-left: 1px solid #535353;
-	padding: 0 0.5em;
-	display: inline-block;
-
-	&:before {
-		content: '  ';
-		display: inline;
-	}
-
-	&:first-child {
-		padding-left: 0;
-		border-left: none;
-
-		&:before {
-			display: none;
-		}
 	}
 }
 
