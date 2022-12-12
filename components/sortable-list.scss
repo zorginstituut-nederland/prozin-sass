@@ -2,7 +2,7 @@
 	position: relative;
 
 	.sortable-item {
-		padding-left: 50px;
+		padding: 0.5rem 0 0.5rem;
 		border-top: 2px solid transparent;
 		border-bottom: 2px solid transparent;
 		position: relative;
@@ -10,7 +10,7 @@
 		&:before {
 			display: block;
 			width: 100%;
-			display: none;
+			opacity: 0;
 			height: 2px;
 			content: ' ';
 			background: $colour-link;
@@ -18,14 +18,17 @@
 			left: 0;
 		}
 
+		&.drop-target-above:before,
+		&.drop-target-below:before {
+			opacity: 1;
+		}
+
 		&.drop-target-above:before {
-			display: block;
-			top: -11px;
+			top: -3px;
 		}
 
 		&.drop-target-below:before {
-			display: block;
-			bottom: -11px;
+			bottom: -3px;
 		}
 
 		input,
