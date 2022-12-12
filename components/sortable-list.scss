@@ -28,7 +28,7 @@
 			}
 
 			.sortable-handle {
-				margin-top: -22px;
+				margin-top: -24px;
 			}
 		}
 
@@ -47,7 +47,7 @@
 		}
 
 		.sortable-handle {
-			margin-top: -18px;
+			margin-top: -20px;
 			cursor: move;
 
 			&:before {
@@ -56,7 +56,7 @@
 		}
 
 		.delete-button {
-			margin-top: 18px;
+			margin-top: 20px;
 
 			&:before {
 				content: "#{$glyph-trash}";
@@ -69,7 +69,7 @@
 			color: white;
 			display: block;
 			position: absolute;
-			left: 10px;
+			left: 15px;
 			top: 50%;
 			transform: translateY(-50%);
 			width: 30px;
