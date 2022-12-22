@@ -50,6 +50,7 @@
 		.sortable-handle {
 			margin-top: -20px;
 			cursor: move;
+			z-index: 1;
 
 			&:before {
 				content: "#{$glyph-arrow-combo}";
