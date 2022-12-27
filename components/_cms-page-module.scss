@@ -26,19 +26,34 @@ $header-2-top-margin: 3rem !default;
 
 		&.pat-collapsible {
 
-
 			> .panel-content {
 				border-top: 1px solid white;
-				background: $colour-grey-1;
+				// background: $colour-grey-1;
+				background: white;
 				padding: 15px 0 15px 0;
 				margin: 0 -15px;
 				overflow: hidden;
+
+				.form-panel {
+					// background: white;
+					margin-top: -15px;
+					margin-bottom: -15px;
+					padding-bottom: 20px;
+				}
 			}
 		}
 	}
 
 	&.type-metadata {
 		&.pat-collapsible {
+
+			> .panel-content {
+
+				// .form-panel {
+				// 	margin-bottom: 0;
+				// }
+			}
+
 			.page-module-title {	
 				background: $colour-grey-1;
 				border: none;
