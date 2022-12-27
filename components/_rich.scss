@@ -799,7 +799,7 @@ $header-2-top-margin: 3rem !default;
 		-webkit-margin-after: 1.25rem;
 		margin-block-end: 1.25rem;
 
-		&:not(:last-child) {
+		&:not(:last-child):not(.byline) {
 			margin: 0 0 1rem 0;
 		}
 
