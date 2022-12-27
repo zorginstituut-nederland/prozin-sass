@@ -44,6 +44,16 @@ $header-2-top-margin: 3rem !default;
 		}
 	}
 
+	&.type-see-also {
+		#external-links {
+			margin-bottom: 0;
+
+			li:last-child {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
 	&.type-metadata {
 		&.pat-collapsible {
 
