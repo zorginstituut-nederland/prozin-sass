@@ -199,6 +199,11 @@ $header-2-top-margin: 3rem !default;
 						&:before {
 							color: white;
 						}
+
+						&:after {
+							background: rgba(0, 0, 0, 0.1);
+							color: white;
+						}
 					}
 
 					&[data-option-value="for-review"] {
