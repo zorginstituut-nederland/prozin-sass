@@ -19,10 +19,25 @@ $header-2-top-margin: 3rem !default;
 		}
 	}
 
-	&.type-metadata {
+	&.type-metadata,
+	&.type-see-also {
 		margin-bottom: 60px;
 		border: 1px solid $colour-grey-2;
 
+		&.pat-collapsible {
+
+
+			> .panel-content {
+				border-top: 1px solid white;
+				background: $colour-grey-1;
+				padding: 15px 0 15px 0;
+				margin: 0 -15px;
+				overflow: hidden;
+			}
+		}
+	}
+
+	&.type-metadata {
 		&.pat-collapsible {
 			.page-module-title {	
 				background: $colour-grey-1;
@@ -41,14 +56,6 @@ $header-2-top-margin: 3rem !default;
 				.title-segment {
 					background: transparent;
 				}	
-			}
-
-			> .panel-content {
-				border-top: 1px solid white;
-				background: $colour-grey-1;
-				padding: 15px 0 15px 0;
-				margin: 0 -15px;
-				overflow: hidden;
 			}
 		}
 	}
