@@ -218,7 +218,8 @@ $header-2-top-margin: 3rem !default;
 					&[data-option-value="published"] {
 						background-color: $colour-light-green;
 
-						&:before {
+						&:before,
+						&:after {
 							color: $colour-moss-green-d;
 						}
 					}
