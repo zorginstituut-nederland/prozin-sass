@@ -8,6 +8,13 @@
     }
   }
 
+  &#transparency-calendar-toolbar {
+    .toolbar-functions-area,
+    .toolbar-navigation-area {
+      grid-template-columns: 4fr 1fr;
+    }
+  }
+
   &#image-edit-toolbar {
     .toolbar-functions-area,
     .toolbar-navigation-area {
