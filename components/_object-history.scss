@@ -44,16 +44,6 @@ $colour-timeline: $colour-moss-green;
         &[href]:hover {
           .user-name {
             text-decoration: underline;
-
-            &:after {
-              font-family: fontello;
-              content: ' #{$glyph-icon-mail}';
-              display: inline-block;
-
-              position: absolute;
-              padding-left: 10px;
-              margin-top: 2px;
-            }
           }
         }
     }
