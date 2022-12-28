@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+$colour-timeline: $colour-moss-green;
+
+.object-history {
+  position: relative;
+  margin-bottom: 8em; // Prevents timeline to stuck to bottom of modal in FF
+  
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 15px;
+    top: 2em;
+    bottom: 2em;
+    left: 16px;
+    background: $colour-timeline;
+    z-index: 1;
+  }
+
+  .object {
+    margin-bottom: 1em;
+    padding-left: 4.2em;
+    position: relative;
+    @include clear();
+
+    &:last-child {
+      height: 4em; // Prevents the line to bleed from behind last object when last object is slightly taller.
+    }
+
+    form {
+      a {
+        text-decoration: underline;
+        
+        &:hover {
+          background: none;
+          text-decoration: underline !important;
+          color: $colour-link-hover;
+        }
+      }
+    }
+
+    .meta {
+        &[href]:hover {
+          .user-name {
+            text-decoration: underline;
+
+            &:after {
+              font-family: fontello;
+              content: ' #{$glyph-icon-mail}';
+              display: inline-block;
+
+              position: absolute;
+              padding-left: 10px;
+              margin-top: 2px;
+            }
+          }
+        }
+    }
+
+    .user-name {
+      padding-top: 0.15em;
+      display: block;
+    }
+
+    &.user-inactive {
+      .meta {
+        color: gray;
+
+        .pat-avatar {
+          filter: grayscale(100%) brightness(200%) contrast(40%);
+        }
+      }
+    }
+
+    .byline {
+      padding-bottom: 6px;
+      margin-bottom: 0;
+      font-size: 16px;
+
+      a {
+          text-decoration: underline;
+          
+          &:hover {
+
+          }
+      }
+
+      * {
+        font-style: normal;
+      }
+    }
+
+    .save-message {
+      font-style: normal;
+      background-color: $colour-notice;
+      padding: 12px 14px;
+      margin: 0 0 7px 0;
+      font-size: 16px;
+      line-height: 1.4;
+      color: black;
+
+      p.generated-message {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    .pat-avatar {
+      position: absolute;
+      left: 0;
+      top: 7px;
+      border: black 0.2em solid;
+      width: 2.2em;
+      height: 2.2em;
+      z-index: 1;
+      background-color: #efefef;
+      background-size: cover;
+    }
+  }
+
+  &.action-centric {
+    // @include screen-size(large) {
+    //   margin-left: -3.2em;
+    // }
+
+    &:before {
+      display: none;
+    }
+
+    .object {
+      background-color: rgba(0,0,0,0.08);
+      margin-bottom: 0.25em;
+      // @include screen-size(large) {
+      //   border-bottom-right-radius: 2.3em;
+      //   border-top-right-radius: 2.3em;
+      // }
+      padding-left: 3.2em;
+      padding-right: 1em;
+
+      .title {
+
+        &:before {
+          font-family: fontello;
+          content: '';
+          display: block;
+          margin: 0;
+          position: absolute;
+          left: 0.96em;
+          top: 0.96em;
+          // background: white;
+          color: rgba(0,0,0,0.5);
+          line-height: 1.9em;
+          width: 1.6em;
+          height: 1.85em;
+          font-size: 1em;
+          z-index: 1;
+          text-align: center;
+        }
+
+        &.action-edited:before {
+          content: '\270e';
+        }
+
+        &.action-deleted:before {
+          content: '\e729';
+        }
+
+        &.action-created:before {
+          content: '\e831';
+          line-height: 2em;
+        }
+
+        &.action-state:before {
+          content: '\e852';
+        }
+      } 
+    }
+  }
+}
