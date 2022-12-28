@@ -33,6 +33,10 @@ $bullet-space: 22px !default;
 		&.col-3 {
 			column-count: 3;
 			overflow: hidden;
+
+			.portlet.span-2 & {
+				column-count: 2;
+			}
 		}
 
 		&.col-4 {
