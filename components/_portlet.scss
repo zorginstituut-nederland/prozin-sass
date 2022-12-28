@@ -3,6 +3,34 @@
 $portlet-padding: 25px;
 $colour-portlet: $colour-grey-1 !default;
 
+@mixin title-link {
+	text-decoration: none;
+	color: black;
+
+	&[href] {
+		&:not(.follow):after {
+			font-family: fontello;
+			content: '#{$glyph-link-internal}';
+			margin-left: 0.5em;
+			font-size: 1em;
+			text-decoration: none !important;
+			position: absolute;
+		}
+
+		&:hover {
+			text-decoration: underline;
+
+			&:after {
+				text-decoration: none !important;
+			}
+
+			&:before {
+				text-decoration: none !important;
+			}
+		}
+	}
+}
+
 .portlet {
 	&.height-full {
 		@include screen-size(large) {
@@ -78,6 +106,10 @@ $colour-portlet: $colour-grey-1 !default;
 			.portlet-separation-title {
 				font-size: 1em;
 				margin-bottom: 0.5em;
+
+				a {
+					@include title-link;	
+				}			
 			}
 
 			.portlet-toolbar {
@@ -137,31 +169,7 @@ $colour-portlet: $colour-grey-1 !default;
 		font-weight: bold;
 
 		a {	
-			text-decoration: none;
-			color: black;
-
-			&[href] {
-				&:not(.follow):after {
-					font-family: fontello;
-					content: '#{$glyph-link-internal}';
-					margin-left: 0.5em;
-					font-size: 1em;
-					text-decoration: none !important;
-					position: absolute;
-				}
-
-				&:hover {
-					text-decoration: underline;
-
-					&:after {
-						text-decoration: none !important;
-					}
-
-					&:before {
-						text-decoration: none !important;
-					}
-				}
-			}
+			@include title-link;
 		}
 
 		sup {
