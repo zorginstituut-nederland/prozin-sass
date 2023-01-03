@@ -80,8 +80,43 @@ $bullet-space: 22px !default;
 	li {
 		margin: 0;
 		border-bottom: 0.3em solid transparent; // Faux bottom margin.
-		padding: 0 0.5em 0 $bullet-space;
+		padding: 0 0 0 $bullet-space;
 		list-style: none;
+		display: flex;
+		justify-content: space-between;
+
+		.functions {
+
+			.button {
+				@include pat-button;
+				font-size: $button-small-font-size;
+			     padding: $button-small-paddings;
+			     height: $button-small-height;
+			     line-height: $button-small-line-height;
+			     vertical-align: baseline;
+			     font-weight:  $button-small-font-weight;
+
+			     .form-panel & {
+			     	box-shadow: 0 0 0 1px $colour-link;
+			     }
+
+			     margin: -2px 0 -4px 5px;
+
+			     input {
+			     	position: absolute;
+			     	opacity: 0;
+			     }
+
+				// &:before {
+				// 	font-family: fontello;
+				// 	content: "#{$glyph-trash}";
+				// }
+			}
+		}
+
+		&.deleted {
+			display: none;
+		}
 
 		.pat-rich & {
 			list-style: none;
