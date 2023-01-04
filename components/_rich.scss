@@ -681,6 +681,18 @@ $header-2-top-margin: 3rem !default;
 			display: inline-block;
 		}
 	}
+	
+
+	img,
+	iframe {
+		&:focus,
+		&.ProseMirror-selectednode {
+			outline: 3px solid $colour-accent;
+			outline-offset: 2px;
+		}
+
+		cursor: default;
+	}
 
 	figure {
 		width: 100%;
