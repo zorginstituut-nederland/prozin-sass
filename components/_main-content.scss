@@ -16,6 +16,8 @@
 		.body-text {
 			.ProseMirror {
 				min-height: 200px;
+				margin: -15px;
+				padding: 15px; // Allows for easer cursor placing after an image or table.
 			}
 		}
 	}
