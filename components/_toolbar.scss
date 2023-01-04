@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 .pat-toolbar {
+  .pat-modal & {
+    margin-top: -7px;
+    margin-bottom: 10px;
+    padding-top: 0;
+  }
+}
+
+.pat-toolbar {
   &#image-bank-toolbar {
     .toolbar-functions-area,
     .toolbar-navigation-area {
@@ -22,7 +30,7 @@
     }
   }
 
-  &#image-selection-panel-toolbar {
-    margin-bottom: 0;
-  }
+  // &#image-selection-panel-toolbar {
+  //   margin-bottom: 0;
+  // }
 }
