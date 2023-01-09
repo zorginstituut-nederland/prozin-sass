@@ -436,6 +436,10 @@ $cms-page-module-padding-left-right: 15px !default;
 	&.type-body-text-segment {
 		.panel-content > .pat-rich {
 			padding: 0 $cms-page-module-padding-left-right;
+
+			.ProseMirror > *:first-child {
+				margin-top: 0;
+			}
 		}
 	}
 
