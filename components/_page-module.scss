@@ -4,8 +4,8 @@ $header-2-top-margin: 3rem !default;
 
 .page-module {
 	// margin-bottom: 30px;
-	@include clear-fix;
-	
+	// @include clear-fix;
+	display: inline;
 	margin-top: -100px; 
 	padding-top: 100px;
 	-moz-pointer-events: none;
