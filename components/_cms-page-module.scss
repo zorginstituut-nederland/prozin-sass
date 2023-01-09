@@ -1,12 +1,13 @@
 $bullet-space: 22px !default;
 $scroll-offset: 120px !default;
 $header-2-top-margin: 3rem !default;
+$cms-page-module-padding-left-right: 15px !default;
 
 .cms-page-module {
 	@include clear-fix;
 	border: 1px solid $colour-grey-2;
-	padding: 0 15px;
-	margin: 0 -15px 20px;
+	padding: 0 $cms-page-module-padding-left-right;
+	margin: 0 -1 * $cms-page-module-padding-left-right 20px;
 
 	.page-module-title {
 		margin: 0 0 20px 0;
@@ -19,29 +20,39 @@ $header-2-top-margin: 3rem !default;
 		}
 	}
 
-	&.type-metadata,
-	&.type-see-also {
+	.form-panel {
+		// background: white;
+		// margin-left: -15px;
+		// margin-right: -15px;
+		
+		&.horizontal {
+			width: auto;
+		}
+
+		&:first-child {
+			margin-top: -29px;
+		}
+
+		&:last-child {
+			margin-bottom: -30px;
+		}
+	}
+
+	&.type-metadata {
 		margin-bottom: 60px;
 		border: 1px solid $colour-grey-2;
 
-		&.pat-collapsible {
+		// &.pat-collapsible {
 
-			> .panel-content {
-				border-top: 1px solid white;
-				// background: $colour-grey-1;
-				background: white;
-				padding: 15px 0 15px 0;
-				margin: 0 -15px;
-				overflow: hidden;
-
-				.form-panel {
-					// background: white;
-					margin-top: -15px;
-					margin-bottom: -15px;
-					padding-bottom: 20px;
-				}
-			}
-		}
+		// 	> .panel-content {
+		// 		border-top: 1px solid white;
+		// 		// background: $colour-grey-1;
+		// 		background: white;
+		// 		padding: 15px 0 15px 0;
+		// 		margin: 0 -15px;
+		// 		overflow: hidden;
+		// 	}
+		// }
 	}
 
 	&.type-see-also {
@@ -165,7 +176,7 @@ $header-2-top-margin: 3rem !default;
 			color: $colour-dark-blue;
 			background-color: white;
 			padding: 10px 40px 10px 39px;
-			margin: 0 -15px;
+			margin: 0 -1 * $cms-page-module-padding-left-right;
 			// border-bottom: 1px solid $colour-dark-blue-l;
 			position: relative;
 			-webkit-user-select: none;
@@ -344,6 +355,7 @@ $header-2-top-margin: 3rem !default;
 
 		> .panel-content {
 			padding: 30px 0;
+			margin: 0 -1 * $cms-page-module-padding-left-right;
 		}
 	}
 
@@ -422,7 +434,9 @@ $header-2-top-margin: 3rem !default;
 	}
 
 	&.type-body-text-segment {
-
+		.panel-content > .pat-rich {
+			padding: 0 $cms-page-module-padding-left-right;
+		}
 	}
 
 	&.type-body-text {

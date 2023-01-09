@@ -447,6 +447,10 @@ $header-2-top-margin: 3rem !default;
 		pointer-events: none;
 	}
 
+	.main-illustration + h2 {
+		margin-top: 0;
+	}
+
 	h3 {
 		font-size: 1.423828125rem;
 		line-height: 1.4046639232;

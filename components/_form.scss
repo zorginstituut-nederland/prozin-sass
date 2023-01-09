@@ -221,31 +221,16 @@ $form-proportion-value: 80% !default;
 		        }
 	        }
 
-			&.image-selection {
-				img {
-					max-width: 80%;
+			&.image-selection,
+			&.video-upload {
+				.pat-button {
+				    margin: 0 0 -9px 0;
 				}
+			}
 
-				.button {
-					display: inline-block;
-				    font-size: $button-small-font-size;
-				    padding: $button-small-paddings;
-				    height: auto;
-				    line-height: 25px;
-				    vertical-align: baseline;
-				    box-shadow: $button-small-shadow;
-				    font-weight: 600;
-				    color: $button-text-colour-default;
-				    background-color: $button-background-colour-default;
-				    cursor: default;
-				    top: -2px;
-					position: relative;
-
-				    &:hover {
-				    	text-decoration: none;
-				    	background-color: $button-background-colour-default-hover;
-      					color: $button-text-colour-default-hover;
-				    }
+			&.video-upload {
+				input {
+					width: 100%;
 				}
 			}
 		}
