@@ -9,6 +9,10 @@ $cms-page-module-padding-left-right: 15px !default;
 	padding: 0 $cms-page-module-padding-left-right;
 	margin: 0 -1 * $cms-page-module-padding-left-right 20px;
 
+	> .sortable-handle {
+		display: none;
+	}
+
 	.page-module-title {
 		margin: 0 0 20px 0;
 		font-size: 22px;
@@ -35,6 +39,14 @@ $cms-page-module-padding-left-right: 15px !default;
 
 		&:last-child {
 			margin-bottom: -30px;
+		}
+	}
+
+	&.type-downloads {
+		&.pat-collapsible {
+			.panel-content {
+				padding: $cms-page-module-padding-left-right; 
+			}
 		}
 	}
 

@@ -1,0 +1,8 @@
+.pat-button-bar {
+	margin-bottom: $baseline;
+	@include clear-fix;
+
+	&#button-bar-organise-sections {
+		margin: 40px 0;
+	}
+}
