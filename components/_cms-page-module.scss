@@ -9,10 +9,6 @@ $cms-page-module-padding-left-right: 15px !default;
 	padding: 0 $cms-page-module-padding-left-right;
 	margin: 0 -1 * $cms-page-module-padding-left-right 20px;
 
-	> .sortable-handle {
-		display: none;
-	}
-
 	.section-destroyer {
 		position: absolute;
 		opacity: 0;
@@ -251,15 +247,24 @@ $cms-page-module-padding-left-right: 15px !default;
 					height: 	 39px;
 					line-height: 39px;
 					position: relative;
-					background: $button-background-colour-default;
+					background: $button-background-colour;
 					display: inline-block;
 					margin-left: 5px;
 					cursor: default;
 					vertical-align: middle;
+					outline: white solid 2px;
 
 					&:hover {
 						text-decoration: none;
-						background: $button-background-colour-default-hover;
+						background: $button-background-colour-hover;
+					}
+
+					&.tooltip-active-click {
+						background: $colour-accent;
+
+						&:before {
+							color: white;
+						}
 					}
 
 					&:before {
@@ -269,7 +274,7 @@ $cms-page-module-padding-left-right: 15px !default;
 						bottom: 0;
 						left: 0;
 						text-align: center;
-						color: white;
+						color: $colour-link;
 						line-height: 39px;
 						font-size: 20px;
 						width: 100%;
