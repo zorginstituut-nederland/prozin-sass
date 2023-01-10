@@ -1,13 +1,17 @@
 $bullet-space: 22px !default;
 $scroll-offset: 120px !default;
 $header-2-top-margin: 3rem !default;
+$text-bottom-margin: 1.25rem !default;
+$header-level-2-margin-bottom: 1rem !default;
+$header-level-2-block-start: 3rem !default;
 
 .page-module {
 	// margin-bottom: 30px;
-	// @include clear-fix;
-	display: inline;
+	@include clear-fix;
+	display: block;
 	margin-top: -100px; 
 	padding-top: 100px;
+	// margin-bottom: $text-bottom-margin;
 	-moz-pointer-events: none;
 	-webkit-pointer-events: none;
 	pointer-events: none;
@@ -20,6 +24,7 @@ $header-2-top-margin: 3rem !default;
 
 	.page-module-title {
 		@include header-level-2;
+		margin-block-start: $header-level-2-block-start - $text-bottom-margin;
 
 		&.assistive {
 			position: absolute !important;
