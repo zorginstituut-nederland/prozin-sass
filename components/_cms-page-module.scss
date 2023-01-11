@@ -5,10 +5,10 @@ $cms-page-module-padding-left-right: 15px !default;
 
 .cms-page-module {
 	@include clear-fix;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	// transition: border 0.2s;
 	padding: 0 $cms-page-module-padding-left-right;
-	margin: 0 -1 * $cms-page-module-padding-left-right 10px;
+	margin: 0 -1 * $cms-page-module-padding-left-right + 3px 10px;
 
 	.section-destroyer {
 		position: absolute;
@@ -321,7 +321,7 @@ $cms-page-module-padding-left-right: 15px !default;
 		&.closed.collapsible-in-progress {
 
 			&:hover {
-				border: 1px solid $colour-grey-2;
+				border: 2px dotted $colour-light-blue;
 			}
 
 			.page-module-title:hover {
@@ -331,7 +331,7 @@ $cms-page-module-padding-left-right: 15px !default;
 
 		&.open,
 		&.closed.collapsible-in-progress {
-			border: 1px solid $colour-grey-2;
+			border: 2px dotted black;
 
 			.page-module-title {
 				background: $colour-grey-1;

@@ -8,7 +8,7 @@
 
   &:hover {
   	textarea {
-  		outline: 2px dotted lightblue;
+  		outline: 2px dotted $colour-light-blue;
       outline-offset: 10px;
   	}
   }
