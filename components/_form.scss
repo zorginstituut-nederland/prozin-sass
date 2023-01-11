@@ -217,7 +217,7 @@ $form-proportion-value: 80% !default;
 			.help {
 		        .help-label {
 		          right: 0;
-		          top: -5px;
+		          top: -1px;
 		        }
 	        }
 
@@ -246,8 +246,9 @@ $form-proportion-value: 80% !default;
 			clear: both;;
 
 			.help-content {
-				padding: 10px 0;
+				padding: 20px 0;
 				display: block;
+				line-height: 1.3;
 			}
 
 			.help-label,
