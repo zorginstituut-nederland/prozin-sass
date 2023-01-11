@@ -222,15 +222,18 @@ $form-proportion-value: 80% !default;
 	        }
 
 			&.image-selection,
+			&.image-upload,
 			&.video-upload {
 				.pat-button {
 				    margin: 0 0 -9px 0;
 				}
 			}
 
-			&.video-upload {
+			&.video-upload,
+			&.image-upload {
 				input,
-				video {
+				video,
+				img {
 					width: 100%;
 				}
 			}
