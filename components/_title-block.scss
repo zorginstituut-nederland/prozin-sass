@@ -9,13 +9,13 @@
   &:hover {
   	textarea {
   		outline: 2px dotted $colour-light-blue;
-      outline-offset: 10px;
+      outline-offset: 13px;
   	}
   }
 
   textarea:focus {
     outline: 2px dotted black;
-    outline-offset: 10px;
+    outline-offset: 13px;
   }
 
   .pat-content-mirror {
