@@ -8,7 +8,8 @@ $cms-page-module-padding-left-right: 15px !default;
 	border: 2px solid transparent;
 	// transition: border 0.2s;
 	padding: 0 $cms-page-module-padding-left-right;
-	margin: 0 -1 * $cms-page-module-padding-left-right 10px;
+	margin: 0 -1 * $cms-page-module-padding-left-right 0;
+	transition: margin 0.3s;
 
 	.section-destroyer {
 		position: absolute;
@@ -317,23 +318,24 @@ $cms-page-module-padding-left-right: 15px !default;
 
 		}	
 
-		// &.closed:not(.collapsible-in-progress) {
-		// 	.panel-content {
-		// 		height: 0 !important;
-		// 		overflow: hidden !important;
-		// 	}
-		// }
-
 		&.closed,
-		&.closed.collapsible-in-progress {
+		&.closed.in-progress {
 			&:hover {
 				border: 2px dotted $colour-light-blue;
 			}
+		}
+
+		&.closed,
+		&.open.in-progress {
+			margin-top: 0;
+			margin-bottom: 0;
 		}	
 
 		&.open,
-		&.closed.collapsible-in-progress {
+		&.closed.in-progress {
 			border: 2px dotted black;
+			margin-top: 50px;
+			margin-bottom: 50px;
 
 			.panel-content {
 				display: block !important;
