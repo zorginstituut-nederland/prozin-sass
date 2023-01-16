@@ -1,108 +1,107 @@
+@charset "UTF-8";
+
 .sortable-list {
-	position: relative;
-	margin-bottom: 0.5rem;
+	counter-reset: count;
+	-webkit-user-select: none;
+	user-select: none;
 
 	.sortable-item {
-		padding: 0;
+		// list-style: decimal;
+		counter-increment: count;
+		padding: 0.2em 0 0.2em 0.6em;
 		position: relative;
-		@include clear;
+		border-top: solid 0.2em rgba(0,0,0,0);
+		border-bottom: solid 0.2em rgba(0,0,0,0);
+		margin: -0.2em 0 0 1.6em;
 
-		&:not(.drop-target-above):not(.drop-target-below) {
-			overflow: hidden;
+		&.drop-target-above {
+			border-top-color: $colour-accent;
 		}
 
-		&:before {
-			display: block;
-			width: 100%;
-			opacity: 0;
-			height: 2px;
-			content: ' ';
-			background: $colour-link;
-			position: absolute;
-			left: 0;
+		&.drop-target-below {
+			border-bottom-color: $colour-accent;
 		}
 
-		&.drop-target-above,
-		&.drop-target-below { 
-			&:before {
-				opacity: 1;
-			}
+		input,
+		.label {
+			margin: -0.2em 0 -0.2em -0.5em;
+			width: calc(100% - 0.4em);
+			box-sizing: inherit;
+			padding: 0.2em 0.5em;
+			cursor: default;
 
-			.sortable-handle {
-				margin-top: -24px;
-			}
-		}
-
-		&.drop-target-above:before {
-			top: -8px;
-		}
-
-		&.drop-target-below:before {
-			bottom: -2px;
+		    border-top-left-radius: 0px;
+		    border-bottom-left-radius: 0px;
 		}
 
 		.label {
-			background: $colour-post;
+			background: $colour-dark-blue-xl;
 			line-height: 1.3em;
 			// color: $colour-accent;
 		}
 
+		&:before,
 		.sortable-handle {
-			margin-top: -20px;
-			cursor: move;
-			z-index: 1;
-
-			&:before {
-				content: "#{$glyph-arrow-combo}";
-			}
-		}
-
-		.delete-button {
-			margin-top: 20px;
-
-			&:before {
-				content: "#{$glyph-trash}";
-			}
-		}
-
-		.sortable-handle,
-		.delete-button {
+			content: counter(count);
+			line-height: 1.7em;
 			text-align: center;
 			color: white;
 			display: block;
 			position: absolute;
-			left: 15px;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 30px;
-			height: 30px;
-			line-height: 30px;
-			background: rgba(0, 0, 0, 0.1);
+			left: -1.6em;
+			top: 0;
+			width: 1.8em;
+			height: 1.6765em;
+			background: $colour-accent;
+			border-top-left-radius: $border-radii;
+			border-bottom-left-radius: $border-radii;
 			overflow: hidden;
 
-			&:hover {
-				background: rgba(0, 0, 0, 0.15);
-			}
-
-			&:before {
-				display: block;
-				font-family: fontello;
-				top: 0;
-				left: 0;
-				width: 100%;
-				line-height: 30px;
-				text-align: center;
-				font-size: 0.8em;
-				color: $colour-link;
-			}
-
 			@media print {
-				display: none;
+				background: transparent;
+				width: 1em;
+				text-align: left;
+				color: black;
 			}
 		}
 
 		.button-cluster {
 			display: none;
+		}
+
+		.sortable-handle {
+			opacity: 0;
+			line-height: 1.9em;
+			text-indent: -10em;
+			background: $colour-accent;
+
+			&:hover {
+				background: darken($colour-accent, 10%);
+			}
+
+			&:before {
+				content: "#{$glyph-arrow-combo}";
+				display: block;
+				font-family: fontello;
+				text-indent: 0.1em;
+				top: 0;
+				left: 0;
+				width: 100%;
+				line-height: 2.28em;
+				text-align: center;
+				font-size: 0.8em;
+			}
+		}
+
+		&:hover {
+			.sortable-handle {
+				opacity: 1;
+				cursor: move;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 	}
 
