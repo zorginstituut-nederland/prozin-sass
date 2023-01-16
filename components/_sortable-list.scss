@@ -10,16 +10,23 @@
 		counter-increment: count;
 		padding: 0.2em 0 0.2em 0.6em;
 		position: relative;
-		border-top: solid 0.2em rgba(0,0,0,0);
-		border-bottom: solid 0.2em rgba(0,0,0,0);
-		margin: -0.2em 0 0 1.6em;
+		border-top: solid 1px transparent;
+		border-bottom: solid 1px transparent;
+		transition: border 0.2s;
+		margin: 4px 0 0 1.6em;
+		animation: all 1s linear;
+		// overflow: hidden;
+
+		&.dragged {
+			opacity: 0.5;
+		}
 
 		&.drop-target-above {
-			border-top-color: $colour-accent;
+			border-top: 38px solid transparent;
 		}
 
 		&.drop-target-below {
-			border-bottom-color: $colour-accent;
+			border-bottom: 38px solid transparent;
 		}
 
 		input,
@@ -74,9 +81,15 @@
 			line-height: 1.9em;
 			text-indent: -10em;
 			background: $colour-accent;
+			cursor: grab;
 
 			&:hover {
 				background: darken($colour-accent, 10%);
+			}
+				
+			&:active,
+			&:focus {
+				cursor: grabbing;
 			}
 
 			&:before {
@@ -96,11 +109,17 @@
 		&:hover {
 			.sortable-handle {
 				opacity: 1;
-				cursor: move;
 
 				&:hover {
 					text-decoration: none;
 				}
+			}
+		}
+				
+		&:active,
+		&:focus {
+			.sortable-handle {
+				cursor: grabbing;
 			}
 		}
 	}
