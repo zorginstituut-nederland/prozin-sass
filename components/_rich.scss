@@ -747,10 +747,10 @@ $header-level-2-block-start: 3rem !default;
 		figcaption {
 			color: rgba(0,0,0,0.5);
 			font-size: 0.8em;
-			padding: "0.5 * #{$baseline} 0";
+			padding: 10px 0 0 0;
 
 			.icon-zoom-in {
-				color: gray;
+				color: $colour-link;
 				text-decoration: none;
 				float: right;
 				cursor: pointer;

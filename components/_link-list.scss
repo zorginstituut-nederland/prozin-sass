@@ -331,6 +331,12 @@ $bullet-space: 22px !default;
 		} 
 
 		a {
+			color: black;
+		}
+
+		a[href] {
+			color: $colour-link;
+
 			&:hover {
 				text-decoration: underline;
 				color: $colour-dark-blue-d;
