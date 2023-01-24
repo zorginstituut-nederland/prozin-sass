@@ -146,8 +146,12 @@ $bullet-space: 22px !default;
 
 		&.state-draft,
 		&.state-new {
-			a {
+			a[href] {
 				color: $colour-orange;
+
+				&:hover {
+					color: darken($colour-orange,10%);
+				}
 			}
 		}
 
