@@ -103,6 +103,11 @@ $colour-portlet: $colour-grey-1 !default;
 				margin-bottom: 0;
 			}
 
+			.message-no-content {
+				margin-bottom: 1.5rem;
+				font-size: 1em;
+			}
+
 			.portlet-separation-title {
 				font-size: 1em;
 				margin-bottom: 0.5em;
