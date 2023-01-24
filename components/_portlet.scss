@@ -173,6 +173,13 @@ $colour-portlet: $colour-grey-1 !default;
 		font-size: 1.2em;
 		font-weight: bold;
 
+		&:before,
+		a:before {
+			font-family: fontello;
+			display: inline-block;
+			margin-right: 5px;
+		}
+
 		a {	
 			@include title-link;
 		}
@@ -180,6 +187,30 @@ $colour-portlet: $colour-grey-1 !default;
 		sup {
 			font-size: 0.6em;
 			color: gray;
+		}
+	}
+
+	&#portlet-drafts {
+		.portlet-title {
+			&:before {
+				content: '#{$glyph-edit}';
+			}
+		}
+	}
+
+	&#portlet-bookmarked {
+		.portlet-title {
+			&:before {
+				content: '#{$glyph-bookmark}';
+			}
+		}
+	}
+
+	&#portlet-ready {
+		.portlet-title {
+			&:before {
+				content: '#{$glyph-eye}';
+			}
 		}
 	}
 
