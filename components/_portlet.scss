@@ -198,6 +198,14 @@ $colour-portlet: $colour-grey-1 !default;
 		}
 	}
 
+	&#portlet-for-revision {
+		.portlet-title {
+			&:before {
+				content: '#{$glyph-update}';
+			}
+		}
+	}
+
 	&#portlet-bookmarked {
 		.portlet-title {
 			&:before {
