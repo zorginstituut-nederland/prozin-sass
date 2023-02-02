@@ -198,7 +198,7 @@ $colour-portlet: $colour-grey-1 !default;
 		}
 	}
 
-	&#portlet-for-revision {
+	&#portlet-revise {
 		.portlet-title {
 			&:before {
 				content: '#{$glyph-update}';
