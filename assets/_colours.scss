@@ -2,7 +2,7 @@
 
 $body-font-colour: black;
 $colour-for-review: #a90061;
-$colour-accent: #e17000; 
+$colour-accent: #42145f; 
 $colour-auto-suggest-pills: #01689b;
 $colour-base: #f2f2f2;
 $colour-base-light: #e8e8e8;
@@ -13,9 +13,9 @@ $colour-dark-blue-l: #cce0f1; // Donker blauw light
 $colour-dark-blue-xd: darken($colour-dark-blue, 30%);
 $colour-dark-blue-xl: #e5f0f9; // Donker blauw extra light
 $colour-dark-brown: #673327; // Donker bruin
-$colour-dark-green: #275937; // Donker groen
-$colour-dark-yellow: #ffb612; // Donker geel
-$colour-green: #39870c; // Groen
+$colour-dark-green: #275937; // Donker groen    							Basiskleur 2
+$colour-dark-yellow: #ffb612; // Donker geel   								Grafiekkleur 1
+$colour-green: #39870c; // Groen											Basiskleur 1
 $colour-grey-1: #f3f3f3; // Grijs 1
 $colour-grey-2: #e6e6e6; // Grijs 2
 $colour-grey-3: #cccccc; // Grijs 3
@@ -31,7 +31,7 @@ $colour-moss-green-d: darken($colour-moss-green, 10%);
 $colour-moss-green-l: #d6d7b2;
 $colour-moss-green-xl: #ebebd9;
 $colour-notice: #fdf6bb; 
-$colour-orange: #e17000; // Oranje
+$colour-orange: #e17000; // Oranje  										Grafiekkleur 2
 $colour-orange-d: darken($colour-orange, 10%); // Oranje darker
 $colour-orange-l: #f6d4b2; // Oranje light
 $colour-orange-xl: #fbead9; // Oranje extra light
@@ -40,7 +40,7 @@ $colour-pink: #f092cd; // Roze
 $colour-primary: #A31E39;
 $colour-purple-l: #c6b8cf; // Paars light
 $colour-purple-xl: #e3dce7; // Paars extra light
-$colour-purple: #42145f; // Paars
+$colour-purple: #42145f; // Paars  											Steunkleur
 $colour-red: #d52b1e; // Rood
 $colour-ruby: #ca005d; // Robijn
 $colour-search-box-line: rgba(255, 255, 255, 0.4);
