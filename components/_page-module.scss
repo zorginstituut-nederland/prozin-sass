@@ -215,11 +215,11 @@ $header-level-2-block-start: 3rem !default;
 					}
 
 					&[data-option-value="published"] {
-						background-color: $colour-light-green;
+						background-color: $colour-green-l;
 
 						&:before,
 						&:after {
-							color: $colour-moss-green-d;
+							color: $colour-green-d;
 						}
 					}
 				}
