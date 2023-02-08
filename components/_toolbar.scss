@@ -6,9 +6,20 @@
     margin-bottom: 10px;
     padding-top: 0;
   }
-}
 
-.pat-toolbar {
+  &#cms-page-toolbar {
+    .toolbar-functions-area,
+    .toolbar-navigation-area {
+      grid-template-columns: 4fr 1fr;
+    }
+  }
+  
+  &#cms-page-toolbar-edit {
+    .toolbar-functions-area {
+      grid-template-columns: 3fr 1fr;
+    }
+  }
+
   &#image-bank-toolbar {
     .toolbar-functions-area,
     .toolbar-navigation-area {
@@ -29,8 +40,4 @@
       grid-template-columns: 1fr 4fr;
     }
   }
-
-  // &#image-selection-panel-toolbar {
-  //   margin-bottom: 0;
-  // }
 }
