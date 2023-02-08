@@ -208,6 +208,14 @@ $colour-portlet: $colour-grey-1 !default;
 		}
 	}
 
+	&#portlet-follow {
+		.portlet-title {
+			&:before {
+				content: '#{$glyph-1008-oog}';
+			}
+		}
+	}
+
 	&#portlet-portfolio {
 		.content {
 			background-color: white;
