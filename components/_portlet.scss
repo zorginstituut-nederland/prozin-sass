@@ -171,6 +171,7 @@ $colour-portlet: $colour-grey-1 !default;
 	.portlet-title {
 		margin: 0 0 0 0;
 		font-size: 28px;
+		line-height: 1.2;
 		font-weight: normal;
 
 		&:before,
@@ -200,6 +201,35 @@ $colour-portlet: $colour-grey-1 !default;
 		.portlet-title {
 			&:before {
 				content: '#{$glyph-edit}';
+			}
+		}
+		.content {
+			background-color: $colour-orange-xl;
+		}
+	}
+
+	&#portlet-portfolio {
+		.content {
+			background-color: white;
+			border: #e3e3e3 1px solid;
+
+			h3 {
+				font-size: 1em;
+				margin: 1em 0;
+			}
+		}
+	}
+
+	&#portlet-recent {
+		.content {
+			// No special styles as of now.
+		}
+	}
+
+	&#portlet-manufacturer-new-medicines {
+		.content {
+			.link-list {
+				margin-bottom: 26px;
 			}
 		}
 	}
