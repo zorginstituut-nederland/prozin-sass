@@ -198,7 +198,7 @@
 				padding: 0 20px 0 15px;
 				// border-radius: 10px;
 				// background: rgba(0,0,0,0.5);
-				background-color: $colour-dark-blue;
+				background-color: $button-background-colour-default;
 				line-height: 50px;
 				// font-weight: bold;
 
@@ -216,7 +216,7 @@
 
 	&#site-navigation {
 		@include screen-size(medium-large) {
-			background: $colour-dark-blue;
+			background: $colour-purple;
 		}
 
 		* {
@@ -747,7 +747,7 @@
 
 		.top-task-push {
 			padding: 25px;
-			background: $colour-moss-green;
+			background: $colour-dark-green;
 			color: white;
 			box-sizing: border-box;
 
