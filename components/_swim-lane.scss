@@ -219,7 +219,8 @@
 			background: $colour-purple;
 		}
 
-		* {
+		*,
+		*:before {
 			color: white;
 		}
 
