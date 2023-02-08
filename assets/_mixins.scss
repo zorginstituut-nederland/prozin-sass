@@ -17,6 +17,14 @@ $header-level-2-block-start: 3rem !default;
 	margin-block-start: 3rem;
 }
 
+@mixin header-level-3 {
+	font-size: 1.423828125rem;
+	line-height: 1.4046639232;
+	display: block;
+	font-weight: bold;
+	margin: 0rem 0rem 0.5rem 0rem;
+}
+
 @mixin copyright {
 	position: absolute;
 	z-index: 10;

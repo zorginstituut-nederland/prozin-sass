@@ -460,11 +460,7 @@ $header-level-2-block-start: 3rem !default;
 	}
 
 	h3 {
-		font-size: 1.423828125rem;
-		line-height: 1.4046639232;
-		display: block;
-		font-weight: bold;
-		margin: 0rem 0rem 0.5rem 0rem;
+		@include header-level-3;
 
 		&:before {
 			width: 1.25em;
