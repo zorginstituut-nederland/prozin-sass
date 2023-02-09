@@ -1,0 +1,66 @@
+.rating {
+	&[class*="stars"] {
+		position: relative;
+		color: transparent;
+		height: 1em;
+		line-height: 1em;
+		font-size: 1.5em;
+		top: 0.2em;
+		letter-spacing: 6px;
+		display: inline-block;
+		overflow: hidden;
+
+		&:before,
+		&:after {
+			font-family: fontello;
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 30px;
+			overflow: hidden;
+		}
+
+		&:before {
+			content: '#{$glyph-star}#{$glyph-star}#{$glyph-star}#{$glyph-star}#{$glyph-star}';
+			color: $colour-accent;
+			z-index: 1;
+			width: 0; // Default value
+		}
+
+		&:after {
+			content: '#{$glyph-star-empty}#{$glyph-star-empty}#{$glyph-star-empty}#{$glyph-star-empty}#{$glyph-star-empty}';
+			color: gray;
+			width: 100%;
+		}
+
+		&.stars-3 {
+			width: 90px;
+		}
+
+		&.stars-5 {
+			width: 150px;
+		}
+
+		&.score-1:before {
+			width: 30px;
+		}
+
+		&.score-2:before {
+			width: 60px;
+		}
+
+		&.score-3:before {
+			width: 90px;
+		}
+
+		&.score-4:before {
+			width: 120px;
+		}
+
+		&.score-5:before {
+			width: 150px;
+		}
+	}
+}

@@ -83,6 +83,7 @@
         width: 25px;
         height: 100%;
         font-size: 25px;
+        color: $colour-green;
 
         @include screen-size(small) {
           display: none;
@@ -130,6 +131,7 @@
       .byline {
         font-size: 1.125rem;
         line-height: 1.33333;
+        color: black;
 
         @include screen-size(small) {
           padding-top: 2px;
