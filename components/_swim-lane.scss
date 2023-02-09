@@ -216,13 +216,13 @@
 
 	&#site-navigation {
 		@include screen-size(medium-large) {
-			background: $colour-purple;
+			background: $colour-base;
 		}
 
-		*,
-		*:before {
-			color: white;
-		}
+		// *,
+		// *:before {
+		// 	color: white;
+		// }
 
 		.container {
 			padding: 4rem 0rem 2rem 0rem;

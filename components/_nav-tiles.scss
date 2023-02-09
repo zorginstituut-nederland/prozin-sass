@@ -112,6 +112,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         // white-space: nowrap;
+        color: $colour-link;
 
         @include screen-size(medium-large) {
           font-size: 1.60181rem;
