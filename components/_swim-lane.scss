@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-$site-navigation-background-clour: false;
-$site-navigation-text-clour: false;
+$site-navigation-background-colour: false !default;
+$site-navigation-text-colour: false !default;
 
 @mixin white-lane() {
 	& + #swim-lane-browser-warning,
@@ -225,18 +225,15 @@ $site-navigation-text-clour: false;
 		@include screen-size(medium-large) {
 			background: $colour-base;
 
-			@if $site-navigation-background-clour {
-				*,
-				*:before {
-					color: $site-navigation-background-clour;
-				}
+			@if $site-navigation-background-colour {
+				background: $site-navigation-background-colour;
 			}
 		}
 
-		@if $site-navigation-text-clour {
+		@if $site-navigation-text-colour {
 			*,
 			*:before {
-				color: $site-navigation-text-clour;
+				color: $site-navigation-text-colour;
 			}
 		}
 
