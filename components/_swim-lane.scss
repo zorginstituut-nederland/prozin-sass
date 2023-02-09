@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+$site-navigation-background-clour: false;
+$site-navigation-text-clour: false;
+
 @mixin white-lane() {
 	& + #swim-lane-browser-warning,
 	& + #partners,
@@ -221,12 +224,21 @@
 	&#site-navigation {
 		@include screen-size(medium-large) {
 			background: $colour-base;
+
+			@if $site-navigation-background-clour {
+				*,
+				*:before {
+					color: $site-navigation-background-clour;
+				}
+			}
 		}
 
-		// *,
-		// *:before {
-		// 	color: white;
-		// }
+		@if $site-navigation-text-clour {
+			*,
+			*:before {
+				color: $site-navigation-text-clour;
+			}
+		}
 
 		.container {
 			padding: 4rem 0rem 2rem 0rem;
