@@ -67,7 +67,7 @@
 		}
 
 		@include screen-size(medium-large) {
-			background: $colour-purple;
+			background: $colour-base;
 		}
 
 		* {
@@ -96,6 +96,7 @@
 				      text-decoration: none;
 				      text-align: center;
 				      @include box-sizing;
+				      color: black;
 
 				      &:hover {
 				        .no-touchevents & {
@@ -114,13 +115,14 @@
 				        height: 200px;
 				        line-height: 200px;
 				        font-size: 120px;
-					     text-align: center;
-					     width: 100%;
+					    text-align: center;
+					    width: 100%;
 						box-sizing: border-box;
 						padding: 0;
 						margin: 0;
 						margin-bottom: 30px;
 						transition: transform 0.2s;
+						color: $colour-green;
 				      }
 
 				      &.icon-swiss-army-knife {
@@ -135,6 +137,7 @@
 				        text-overflow: ellipsis;
 				        text-align: center;
 				        text-underline-offset: 0.18em;
+				        color: $colour-link;
 
 				        @include screen-size(medium-large) {
 				          	font-size: 1.45em;
@@ -153,6 +156,7 @@
 				      .byline {
 				        line-height: 1.375em;
 				        text-align: center;
+				        color: black;
 				      }
 				    }
 				}
