@@ -33,7 +33,7 @@
         position: relative;
 
         @include screen-size(medium-large) {
-            padding-left: 200px;
+            padding-left: 170px;
         }
 
         &:before {
@@ -44,7 +44,7 @@
             padding: 0;
             margin: 0;
             font-size: 80px;
-            width: 200px;
+            width: 170px;
             text-align: center;
             position: absolute;
             top: 50%;
