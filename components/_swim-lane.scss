@@ -3,6 +3,9 @@
 $site-navigation-background-colour: false !default;
 $site-navigation-text-colour: false !default;
 
+site-navigation-illustrated-background-colour: false !default;
+$site-navigation-illustrated-text-colour: false !default;
+
 @mixin white-lane() {
 	& + #swim-lane-browser-warning,
 	& + #partners,
@@ -68,13 +71,20 @@ $site-navigation-text-colour: false !default;
 		& + #swim-lane-secondary-tasks {
 			margin-top: 50px;
 		}
-
+		
 		@include screen-size(medium-large) {
 			background: $colour-base;
+
+			@if $site-navigation-background-colour {
+				background: $site-navigation-background-colour;
+			}
 		}
 
-		* {
-			color: white;
+		@if $site-navigation-text-colour {
+			*,
+			*:before {
+				color: $site-navigation-text-colour;
+			}
 		}
 
 		.container {
