@@ -71,6 +71,10 @@ $bullet-space: 22px !default;
 		}
 	}
 
+	.page-module-group-title + & {
+		margin-top: 20px;
+	}
+
 	&.no-spread {
 		li {
 		    overflow: hidden; // Required to force Mozilla to avoid breaking inside the element, also when the amount of items does not exceed the amount of columns. 
