@@ -3,7 +3,7 @@
 $site-navigation-background-colour: false !default;
 $site-navigation-text-colour: false !default;
 
-site-navigation-illustrated-background-colour: false !default;
+$site-navigation-illustrated-background-colour: false !default;
 $site-navigation-illustrated-text-colour: false !default;
 
 @mixin white-lane() {
@@ -75,15 +75,15 @@ $site-navigation-illustrated-text-colour: false !default;
 		@include screen-size(medium-large) {
 			background: $colour-base;
 
-			@if $site-navigation-background-colour {
-				background: $site-navigation-background-colour;
+			@if $site-navigation-illustrated-background-colour {
+				background: $site-navigation-illustrated-background-colour;
 			}
 		}
 
-		@if $site-navigation-text-colour {
+		@if $site-navigation-illustrated-text-colour {
 			*,
 			*:before {
-				color: $site-navigation-text-colour;
+				color: $site-navigation-illustrated-text-colour !important;
 			}
 		}
 
