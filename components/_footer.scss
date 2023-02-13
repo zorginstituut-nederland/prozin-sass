@@ -1,7 +1,7 @@
-@charset "UTF-8";
+$footer-background-colour: $colour-green !default;
 
 #footer {
-	background: $colour-green;
+	background: $footer-background-colour;
 	position: relative;
 	clear: both;
 

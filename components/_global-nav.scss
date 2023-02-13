@@ -1,4 +1,5 @@
 $pat-toolbar-hiding-speed: 0.3s !default;
+$global-navigation-background-colour: $colour-green !default;
 
 @mixin search-open() {
 	
@@ -42,7 +43,7 @@ $pat-toolbar-hiding-speed: 0.3s !default;
 
 #global-nav {
 	border: none;
-	background-color: $colour-green;
+	background-color: $global-navigation-background-colour;
 	clear: both;
 	// margin-top: 125px;
 	// display: none;
