@@ -198,23 +198,23 @@ $colour-portlet: $colour-grey-1 !default;
 	}
 
 	&#portlet-drafts {
-		.portlet-title {
-			&:before {
-				content: '#{$glyph-edit}';
-			}
-		}
+		// .portlet-title {
+		// 	&:before {
+		// 		content: '#{$glyph-edit}';
+		// 	}
+		// }
 		.content {
 			background-color: $colour-orange-xl;
 		}
 	}
 
-	&#portlet-follow {
-		.portlet-title {
-			&:before {
-				content: '#{$glyph-1008-oog}';
-			}
-		}
-	}
+	// &#portlet-follow {
+	// 	.portlet-title {
+	// 		&:before {
+	// 			content: '#{$glyph-1008-oog}';
+	// 		}
+	// 	}
+	// }
 
 	&#portlet-portfolio {
 		.content {
@@ -234,37 +234,37 @@ $colour-portlet: $colour-grey-1 !default;
 		}
 	}
 
-	&#portlet-manufacturer-new-medicines {
-		.content {
-			.link-list {
-				margin-bottom: 26px;
-			}
-		}
-	}
+	// &#portlet-manufacturer-new-medicines {
+	// 	.content {
+	// 		.link-list {
+	// 			margin-bottom: 26px;
+	// 		}
+	// 	}
+	// }
 
-	&#portlet-revise {
-		.portlet-title {
-			&:before {
-				content: '#{$glyph-update}';
-			}
-		}
-	}
+	// &#portlet-revise {
+	// 	.portlet-title {
+	// 		&:before {
+	// 			content: '#{$glyph-update}';
+	// 		}
+	// 	}
+	// }
 
-	&#portlet-bookmarked {
-		.portlet-title {
-			&:before {
-				content: '#{$glyph-bookmark}';
-			}
-		}
-	}
+	// &#portlet-bookmarked {
+	// 	.portlet-title {
+	// 		&:before {
+	// 			content: '#{$glyph-bookmark}';
+	// 		}
+	// 	}
+	// }
 
-	&#portlet-ready {
-		.portlet-title {
-			&:before {
-				content: '#{$glyph-1008-oog}';
-			}
-		}
-	}
+	// &#portlet-ready {
+	// 	.portlet-title {
+	// 		&:before {
+	// 			content: '#{$glyph-1008-oog}';
+	// 		}
+	// 	}
+	// }
 
 	.link {
 		// padding: 0.2em 0;
