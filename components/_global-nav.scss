@@ -48,6 +48,72 @@ $global-navigation-background-colour: $colour-green !default;
 	// margin-top: 125px;
 	// display: none;
 
+	.icons {
+		position: absolute;
+		right: 70px;
+
+		@include screen-size(medium-large) {
+			top: 11px;
+		}
+
+		@include screen-size(small) {
+			top: 12px;
+		}
+		
+		.icon {
+			width: 48px;
+			height: 48px;
+			padding: 0;
+			border: 0;
+			margin: 0;
+			color: transparent;
+			font-size: 18px;
+			position: relative;
+			float: left;
+			margin: 0 0 0 7px;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.2);
+			}
+
+			&.tooltip-active-click,
+			&.current {
+				background-color: black;
+
+				// &:before {
+				// 	color: black;
+				// }
+			}
+
+			&:before {
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				width: 100%;
+				color: white;
+				font-family: fontello;
+				font-family: fontello;
+				text-align: center;
+				line-height: 48px;
+				font-size: 22px;
+			}
+
+			&#dashboard-trigger:before {
+				content: "#{$glyph-dashboard}";
+				font-size: 20px;
+			}
+
+			&#user-menu-trigger {
+				cursor: default;
+
+				&:before {
+					content: "#{$glyph-user}";
+				}
+			}
+		}
+	}
+
 	@keyframes background-glow {
 	  0%, 100% {
 	    background-color: $colour-moss-green;
@@ -101,7 +167,7 @@ $global-navigation-background-colour: $colour-green !default;
 
 	.container {
 		position: relative;
-  		padding: 0 $container-padding + 50px 0 $container-padding;
+  		padding: 0 $container-padding + 170px 0 $container-padding;
 
 		#breadcrumbs {
 			line-height: 1.6em;
@@ -148,10 +214,6 @@ $global-navigation-background-colour: $colour-green !default;
 				@include screen-size(small) {
 					display: none;
 					padding: 0 0.2em 0;
-
-					// &.homepage {
-					// 	display: none;
-					// }
 
 					&[href]:last-of-type {
 						display: inline-block;
@@ -244,7 +306,7 @@ $global-navigation-background-colour: $colour-green !default;
 				top: 0;
 				right: -11px;
 				height: 70px;
-				width: 70px;
+				width: 60px;
 				color: rgba(0,0,0,0);
 
 				&:before {
@@ -439,12 +501,9 @@ $global-navigation-background-colour: $colour-green !default;
 		}
 	}
 
-	&:not(.variation-homepage):not(.variation-search-results) {
-		.container #quick-search-form {
-			@include screen-size(medium-large) {
-				@include search-open;
-			}
-		}	
+	&:not(.variation-homepage):not(.variation-search-results) .container #quick-search-form,
+	body.logged-in & .container #quick-search-form {	
+		@include search-open;	
 	}
 
 	@include screen-size(small) {
