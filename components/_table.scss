@@ -358,91 +358,6 @@ table {
         }
     }
 
-    tbody {
-        td:not(.separation-cell),
-        th:not(.separation-cell) {
-            @include screen-size(medium-large) { 
-                vertical-align: top;
-            }
-
-            .table-body-title {
-                display: block;
-                padding-top: 1.5em;
-                // color: $colour-orange;
-                font-weight: bold;
-                font-size: 1.125em;
-                line-height: 1.4444;
-            }
-        }
-
-        tr.header-row {
-            th,
-            td {
-                &:after {
-                    display: none;
-                }     
-
-                background: transparent;           
-
-                .table-body-title {
-                    padding-top: 1.5em;
-
-                    a {
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                }
-            }
-        }
-
-        tr.header-row:first-child {
-            .header-cell {
-                .table-body-title {
-                    padding-top: 0.5 * $baseline;
-                }
-            }
-        }
-
-        .separation-cell {
-            vertical-align: bottom;
-            padding-top: 1.5em;
-        }
-
-        tr.header-row + .separation-row {
-            .separation-cell {
-                padding-top: 0;
-            }
-        }
-    }
-
-    thead {
-        th {
-            vertical-align: bottom;
-            text-align: center;
-            // color: $colour-moss-green;
-            hyphens: none;
-
-            &.spacer-cell {
-                position: -webkit-sticky;
-                position: sticky;
-                left: 0;
-                z-index: 9;
-            }
-
-            a {
-                @include sortable-table-cell;
-                &.sorting {
-                    display: block;
-                    color: black;
-                    // text-decoration: none;
-                    cursor: default;
-                    padding: 5px 20px 5px 10px;
-                    margin: -5px -10px;
-                }
-            }    
-        }
-    }
-
     tr {
         width: 100%;
 
@@ -475,6 +390,22 @@ table {
 
             td {
                 background: rgba(255,100,0,0.1);
+            }
+        }
+
+        &.has-mutations {
+            td:last-child {
+                position: relative; 
+                padding-right: 25px;
+
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    right: 15px;
+                    transform: translateY(-50%);
+                    content: ' ';
+                    @include mutation-sentinel;
+                }
             }
         }
 
@@ -520,33 +451,6 @@ table {
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                }
-            }
-            
-            &.mutated,
-            &.has-differences {     
-                th {
-                    background: rgba(255,100,0,0.2);
-                }
-
-                td {
-                    background: rgba(255,100,0,0.1);
-                }
-            }
-
-            &.has-mutations {
-                td:last-child {
-                    position: relative; 
-                    padding-right: 25px;
-
-                    &:after {
-                        position: absolute;
-                        top: 50%;
-                        right: 15px;
-                        transform: translateY(-50%);
-                        content: ' ';
-                        @include mutation-sentinel;
-                    }
                 }
             }
 
@@ -776,6 +680,100 @@ table {
                     }
                 }
             }
+        }
+    }
+
+    tbody {
+        td:not(.separation-cell),
+        th:not(.separation-cell) {
+            @include screen-size(medium-large) { 
+                vertical-align: top;
+            }
+
+            .table-body-title {
+                display: block;
+                padding-top: 1.5em;
+                // color: $colour-orange;
+                font-weight: bold;
+                font-size: 1.125em;
+                line-height: 1.4444;
+            }
+        }
+
+        th {
+            width: 33%;
+            position: -webkit-sticky;
+            position: sticky;
+            left: 0;
+            z-index: 9;
+            background: #e6e6e6;
+        }
+
+        tr.header-row {
+            th,
+            td {
+                &:after {
+                    display: none;
+                }     
+
+                background: transparent;           
+
+                .table-body-title {
+                    padding-top: 1.5em;
+
+                    a {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        tr.header-row:first-child {
+            .header-cell {
+                .table-body-title {
+                    padding-top: 0.5 * $baseline;
+                }
+            }
+        }
+
+        .separation-cell {
+            vertical-align: bottom;
+            padding-top: 1.5em;
+        }
+
+        tr.header-row + .separation-row {
+            .separation-cell {
+                padding-top: 0;
+            }
+        }
+    }
+
+    thead {
+        th {
+            vertical-align: bottom;
+            text-align: center;
+            // color: $colour-moss-green;
+            hyphens: none;
+
+            &.spacer-cell {
+                position: -webkit-sticky;
+                position: sticky;
+                left: 0;
+                z-index: 9;
+            }
+
+            a {
+                @include sortable-table-cell;
+                &.sorting {
+                    display: block;
+                    color: black;
+                    // text-decoration: none;
+                    cursor: default;
+                    padding: 5px 20px 5px 10px;
+                    margin: -5px -10px;
+                }
+            }    
         }
     }
 
