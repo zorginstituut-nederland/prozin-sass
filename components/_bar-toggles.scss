@@ -1,6 +1,7 @@
 $bar-toggles-border: none;
 // $bar-toggles-background: #f7f7f7;
 $bar-toggles-background: white;
+$bar-toggles-seclection-colour: $colour-dark-green !default;
 
 
 fieldset.pat-bar-toggles,
@@ -122,7 +123,7 @@ div.pat-checklist.pat-bar-toggles:not(.free-form) {
     }
 
     &.checked {
-      background-color: $colour-dark-blue;
+      background-color: $bar-toggles-seclection-colour;
       color: white;
 
       &:before {

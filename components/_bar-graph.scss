@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.bar-graph {
+	width: 100%;
+	@include clear-fix;
+	
+	.segment {
+		float: left;
+		overflow: hidden;
+		color: transparent;
+		height: 1em;
+		background-color: $colour-green;
+		cursor: default;
+
+		&:nth-child(even) {
+			background-color: $colour-orange-l;
+		}
+	}
+}
