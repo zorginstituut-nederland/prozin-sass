@@ -6,6 +6,8 @@ $site-navigation-text-colour: false !default;
 $site-navigation-illustrated-background-colour: false !default;
 $site-navigation-illustrated-text-colour: false !default;
 
+$swim-lane-hero-background-position: center !default;
+
 @mixin white-lane() {
 	& + #swim-lane-browser-warning,
 	& + #partners,
@@ -646,7 +648,7 @@ $site-navigation-illustrated-text-colour: false !default;
 		background-color: $colour-moss-green-xl;
 		background-image: url(#{$home-hero});
 		background-size: cover;
-		background-position: center;
+		background-position: $swim-lane-hero-background-position;
 		background-repeat: no-repeat;
 		position: relative;
 
