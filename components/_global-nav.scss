@@ -502,7 +502,8 @@ $global-navigation-background-colour: $colour-green !default;
 	}
 
 	&:not(.variation-homepage):not(.variation-search-results) .container #quick-search-form,
-	body.logged-in & .container #quick-search-form {	
+	.logged-in & .container #quick-search-form,
+	&.logged-in .container #quick-search-form {	
 		@include search-open;	
 	}
 
