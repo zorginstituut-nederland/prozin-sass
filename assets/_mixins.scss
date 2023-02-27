@@ -51,65 +51,6 @@ $header-level-2-block-start: 3rem !default;
 	}
 }
 
-@mixin select-box {
-	// padding: 0 75px 0 12px;
-	// background: $button-background-colour;
-	// display: inline-block;
-	// height: var(--select-box-height);
-	// line-height: var(--select-box-height);
-	// position: relative;
-	// font-weight: normal !important;
-	// font-size: 0;
-	// position: relative;
-
-	// &:hover {
-	// 	background: $button-background-colour-hover;
-
-	// 	&:after {
-	// 		background: $button-background-colour-default-hover;
-	// 	}
-	// }
-
-	// &:before {
-	// 	font-size: 20px;
-	// 		content: attr(data-option);
-	//     color: $button-text-colour;
-	// }
-
-	// select {
-	// 	position: absolute;
-	// 	left: 0;
-	// 	right: 0;
-	// 	top: 0;
-	// 	bottom: 0;
-	// 	height: 100% !important;
-	// 	width: 100% !important;
-	// 	opacity: 0;
-	// 	margin: 0;
-	// 	z-index: 1;
-
-	// 	option {
-	// 		font-size: initial;
-	// 		color: black;
-	// 	}
-	// }
-
-	// &:after {
-	//   font-family: fontello;
-	//   content: '#{$glyph-down-open}';
-	//   height: var(--select-box-height);
-	//   width: var(--select-box-height);
-	//   color: white;
-	//   background-color: $colour-link;
-	//   display: block;
-	//   position: absolute;
-	//   top: 0;
-	//   right: 0;
-	//   text-align: center;
-	//   font-size: 22px;
-	// }
-}
-
 @mixin external-link-inline {
 	position: relative;
 	padding-left: 1rem;

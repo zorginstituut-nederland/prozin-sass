@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 // Assets
-@import "fontello-011/css/fontello.css";
+@import "fontello-012/css/fontello.css";
 @import "assets/colours";
 @import "assets/symbols";
 @import "assets/glyphs";
@@ -21,6 +21,10 @@ $border-radii: 0;
 // Modal
 
 $modal-panel-body-top-padding: 7px;
+
+// Button cluster
+
+$pat-button-cluster-background-colour-active: $colour-dark-green;
 
 // Form
 
