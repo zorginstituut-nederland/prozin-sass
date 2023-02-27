@@ -94,85 +94,105 @@ $swim-lane-hero-background-position: center !default;
 			margin: 3px auto;
 
 			.nav-tiles-illustrated {
-				display: flex;
+				@include screen-size(medium-large) {
+					display: flex;
 
-				&.count-3 {
-					li {
-						width: 33.33332%;
+					&.count-3 {
+						li {
+							width: 33.33332%;
+						}
 					}
+
 				}
 
 				li {	
 				    a {
-				      padding: 0 20px 40px;
-				      display: block;
-				      position: relative;
-				      height: 100%;
-				      text-decoration: none;
-				      text-align: center;
-				      @include box-sizing;
-				      color: black;
-
-				      &:hover {
-				        .no-touchevents & {
-				          .item-title {
-				            text-decoration: underline;
-				          }
-
-				          &:before {
-				          	transform: scale(1.1);
-				          }
-				        }
-				      }
-
-				      &:before {
 				      	display: block;
-				        height: 200px;
-				        line-height: 200px;
-				        font-size: 120px;
-					    text-align: center;
-					    width: 100%;
-						box-sizing: border-box;
-						padding: 0;
-						margin: 0;
-						margin-bottom: 30px;
-						transition: transform 0.2s;
-						color: $colour-green;
-				      }
-
-				      &.icon-swiss-army-knife {
-				      	&:before {
-				      		 font-size: 100px;
+				      	position: relative;
+				      	height: 100%;
+				      	text-decoration: none;
+				      	text-align: center;
+				      	@include box-sizing;
+				      	color: black;
+	
+				      	@include screen-size(medium-large) {
+					      	padding: 0 20px 40px;
 				      	}
-				      }
 
-				      .item-title {
-				        hyphens: auto;
-				        overflow: hidden;
-				        text-overflow: ellipsis;
-				        text-align: center;
-				        text-underline-offset: 0.18em;
-				        color: $colour-link;
+				      	@include screen-size(small) {
+					      	padding: 20px 20px 0px;
+					        
+					    }
 
-				        @include screen-size(medium-large) {
-				          	font-size: 1.45em;
-				          	line-height: 1.2em;
-					        margin-bottom: 15px;
-				        }
+					    &:hover {
+					        .no-touchevents & {
+					          	.item-title {
+					            	text-decoration: underline;
+					          	}
 
-				        @include screen-size(small) {
-				          font-size: 1.3125em;
-				          font-weight: bold;
-				          line-height: 1.2381;
-				          margin: 0;
-				        }
-				      }
+					          	&:before {
+					          		transform: scale(1.1);
+					          	}
+					        }
+					    }
 
-				      .byline {
-				        line-height: 1.375em;
-				        text-align: center;
-				        color: black;
-				      }
+				      	&:before {
+				      		display: block;
+					    	text-align: center;
+					    	width: 100%;
+							box-sizing: border-box;
+							padding: 0;
+							margin: 0;
+							transition: transform 0.2s;
+							color: $colour-green;
+
+					      	@include screen-size(medium-large) {
+						        height: 200px;
+						        line-height: 200px;
+								margin-bottom: 30px;
+						        font-size: 120px;
+						    }
+
+					      	@include screen-size(small) {
+						        height: 130px;
+						        line-height: 130px;
+						        font-size: 90px;
+					    	}
+				      	}
+
+				      	&.icon-swiss-army-knife {
+				      		&:before {
+				      		 	font-size: 100px;
+				      		}
+				      	}
+
+				      	.item-title {
+				        	hyphens: auto;
+				        	overflow: hidden;
+				        	text-overflow: ellipsis;
+				        	text-align: center;
+				        	text-underline-offset: 0.18em;
+				        	color: $colour-link;
+
+					        @include screen-size(medium-large) {
+					          	font-size: 1.45em;
+					          	line-height: 1.2em;
+						        margin-bottom: 15px;
+					        }
+
+					        @include screen-size(small) {
+					          	font-size: 1.3125em;
+					          	font-weight: bold;
+					          	line-height: 1.2381;
+						        margin-bottom: 15px;
+					        }
+				      	}
+
+				      	.byline {
+				        	line-height: 1.375em;
+				        	text-align: center;
+				        	color: black;
+				      	}
 				    }
 				}
 			}
