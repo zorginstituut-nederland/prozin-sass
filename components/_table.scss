@@ -495,7 +495,7 @@ table {
             }
 
             p.contribution {
-                // color: $colour-moss-green-l;
+                // color: $colour-green-l;
                 font-variant: italic;
                 font-size: 0.8em;
                 line-height: 1.4;
@@ -753,7 +753,7 @@ table {
         th {
             vertical-align: bottom;
             text-align: center;
-            // color: $colour-moss-green;
+            // color: $colour-green;
             hyphens: none;
 
             &.spacer-cell {
@@ -1442,11 +1442,11 @@ table {
                     display: block;
                     z-index: 1;
                     color: white;
-                    text-shadow: 0 0 2px $colour-moss-green,
-                                 0 0 2px $colour-moss-green,
-                                 0 0 2px $colour-moss-green,
-                                 0 0 2px $colour-moss-green,
-                                 0 0 2px $colour-moss-green;
+                    text-shadow: 0 0 2px $colour-green,
+                                 0 0 2px $colour-green,
+                                 0 0 2px $colour-green,
+                                 0 0 2px $colour-green,
+                                 0 0 2px $colour-green;
                     font-size: 0.6em;
                     line-height: 1.8em;
 
