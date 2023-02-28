@@ -160,6 +160,30 @@ $swim-lane-hero-background-position: center !default;
 					    	}
 				      	}
 
+				      	&.icon-quality-thumb,
+				      	&.icon-privacy-ok,
+				      	&.icon-analytics {
+				      		&:before {
+				      			color: transparent;
+				      			background-size: contain;
+				      			background-repeat: no-repeat;
+				      			background-position: center;
+				      			background-size: auto 70%;
+				      		}
+				      	}
+
+				      	&.icon-quality-thumb:before {
+				      		background-image: url(icon-kwaliteitsinstrumenten.svg);
+				      	}
+
+				      	&.icon-privacy-ok:before {
+				      		background-image: url(icon-kwaliteitsregistraties.svg);
+				      	}
+
+				      	&.icon-analytics:before {
+				      		background-image: url(icon-openbare-data.svg);
+				      	}
+
 				      	&.icon-swiss-army-knife {
 				      		&:before {
 				      		 	font-size: 100px;
