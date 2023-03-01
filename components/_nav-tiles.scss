@@ -3,7 +3,7 @@ $nav-tiles-font-size: 1.60181rem !default;
 .nav-tiles {
 
   @include screen-size(small) {
-    margin: 0 0 $baseline;
+    margin: 0 0 10px;
   }
 
   @include screen-size(medium-large) {
@@ -64,7 +64,6 @@ $nav-tiles-font-size: 1.60181rem !default;
 
       @include screen-size(small) {
         padding-bottom: 10px;
-        background: $colour-dark-blue;
         margin-bottom: 1px;
       }
 
@@ -125,7 +124,7 @@ $nav-tiles-font-size: 1.60181rem !default;
           font-size: 1.3125em;
           font-weight: bold;
           line-height: 1.2381;
-          margin: 0;
+          margin: 0 0 2px;
         }
       }
 

@@ -278,12 +278,10 @@ $swim-lane-hero-background-position: center !default;
 	}
 
 	&#site-navigation {
-		@include screen-size(medium-large) {
-			background: $colour-base;
+		background: $colour-base;
 
-			@if $site-navigation-background-colour {
-				background: $site-navigation-background-colour;
-			}
+		@if $site-navigation-background-colour {
+			background: $site-navigation-background-colour;
 		}
 
 		@if $site-navigation-text-colour {
