@@ -278,12 +278,10 @@ $swim-lane-hero-background-position: center !default;
 	}
 
 	&#site-navigation {
-		@include screen-size(medium-large) {
-			background: $colour-base;
+		background: $colour-base;
 
-			@if $site-navigation-background-colour {
-				background: $site-navigation-background-colour;
-			}
+		@if $site-navigation-background-colour {
+			background: $site-navigation-background-colour;
 		}
 
 		@if $site-navigation-text-colour {
@@ -339,7 +337,7 @@ $swim-lane-hero-background-position: center !default;
 
 	&#swim-lane-search {
 		@media screen {
-			background-color: $colour-moss-green-xl;
+			background-color: $colour-green-xl;
 		}
 
 		will-change: transform; // creates a new paint layer
@@ -416,7 +414,7 @@ $swim-lane-hero-background-position: center !default;
 				border-top: 0;
 				margin: 0 10px 0 0;
 				font-weight: normal;
-				color: $colour-moss-green-d;
+				color: $colour-green-d;
 				cursor: pointer;
 				text-decoration: none;
 				font-size: 1em;
@@ -476,7 +474,7 @@ $swim-lane-hero-background-position: center !default;
 					top: -0.8em;
 
 					&.disabled {
-						background-color: $colour-moss-green-l;
+						background-color: $colour-green-l;
 						animation: none;
 					}
 
@@ -541,7 +539,7 @@ $swim-lane-hero-background-position: center !default;
 				    &:before {
 				      font-family: fontello;
 				      content: '#{$glyph-double-chevron-right}';
-				      background: $colour-moss-green;
+				      background: $colour-green;
 				      line-height: 1.8em;
 				      text-align: center;
 				      position: absolute;
@@ -549,7 +547,7 @@ $swim-lane-hero-background-position: center !default;
 				      top: 0.3em;
 				      height: 1.8em;
 				      width: 1.8em;
-				      color: $colour-moss-green-xl;
+				      color: $colour-green-xl;
 				      border-radius: 50%;
 				      transition: all 0.5s;
 				    }
@@ -558,7 +556,7 @@ $swim-lane-hero-background-position: center !default;
 				      border: 2px white solid;
 				      padding-bottom: 0.5em;
 				      margin-left: -17em;
-				      background-color: $colour-moss-green-xl;
+				      background-color: $colour-green-xl;
 				      height: auto;
 				      width: 22em;
 
@@ -569,7 +567,7 @@ $swim-lane-hero-background-position: center !default;
 				      &:before {
 				        color: black;
 				      	// border-radius: 0;
-				      	background-color: $colour-moss-green-l;
+				      	background-color: $colour-green-l;
 				      	transform: rotate(90deg);
 				      }
 				    }
@@ -598,13 +596,13 @@ $swim-lane-hero-background-position: center !default;
 			right: 15px;
 			bottom: 0;
 			color: $colour-dark-blue;
-			text-shadow: 0 0 10px $colour-moss-green-xl,
-					     0 0 10px $colour-moss-green-xl,
-					     0 0 10px $colour-moss-green-xl,
-					     0 0 10px $colour-moss-green-xl,
-					     0 0 10px $colour-moss-green-xl,
-					     0 0 10px $colour-moss-green-xl,
-					     0 0 10px $colour-moss-green-xl;
+			text-shadow: 0 0 10px $colour-green-xl,
+					     0 0 10px $colour-green-xl,
+					     0 0 10px $colour-green-xl,
+					     0 0 10px $colour-green-xl,
+					     0 0 10px $colour-green-xl,
+					     0 0 10px $colour-green-xl,
+					     0 0 10px $colour-green-xl;
 		}
 
 		#breadcrumb {
@@ -689,7 +687,7 @@ $swim-lane-hero-background-position: center !default;
 	}
 
 	&#home-hero {
-		background-color: $colour-moss-green-xl;
+		background-color: $colour-green-xl;
 		background-image: url(#{$home-hero});
 		background-size: cover;
 		background-position: $swim-lane-hero-background-position;
