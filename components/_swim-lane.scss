@@ -12,6 +12,7 @@ $swim-lane-hero-background-position: center !default;
 	& + #swim-lane-browser-warning,
 	& + #partners,
 	& + #news,
+	& + #swim-lane-reports,
 	& + #site-summary,
 	& + #swim-lane-secondary-tasks,
 	& + #swim-lane-sectors {
@@ -56,6 +57,15 @@ $swim-lane-hero-background-position: center !default;
 	}
 
 	&#swim-lane-sectors {
+		@include white-lane;
+
+		.lane-title {
+			margin-top: 0;
+			border-top: none;
+		}
+	}
+
+	&#swim-lane-reports {
 		@include white-lane;
 
 		.lane-title {
