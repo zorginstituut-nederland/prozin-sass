@@ -65,6 +65,10 @@ $colour-browse-bar: $colour-base;
     margin-bottom: 0;
     opacity: 1;
     transition: all 0.5s;
+
+    .pat-button:not(.default) {
+      box-shadow: inset 0 0 0 1px $colour-link;
+    }
   }
 
   .pat-bar-toggles {
