@@ -106,6 +106,7 @@ $global-navigation-background-colour: $colour-green !default;
 
 			&#user-menu-trigger {
 				cursor: default;
+				overflow: hidden;
 
 				&:before {
 					content: "#{$glyph-user}";
