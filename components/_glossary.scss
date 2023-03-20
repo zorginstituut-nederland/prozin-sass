@@ -47,8 +47,12 @@
 	    		margin-left: 0;
 			    margin-top: -180px;
 
-			    a:hover {
+			    a {
 			    	text-decoration: underline;
+
+			    	&:hover {
+			    		color: darken($colour-link,10%);
+			    	}
 			    }
 
 	    		&:last-child {

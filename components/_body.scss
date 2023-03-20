@@ -147,6 +147,7 @@ body {
 	a {
 		text-decoration: none;
 		color: $colour-dark-blue;
+		text-underline-offset: 0.1em;
 
 		// &:hover {
 		// 	text-decoration: underline;
