@@ -5,7 +5,7 @@
 		display: grid;
 	    grid-column-gap: 10px;
 	    grid-template-columns: 30% 70%;
-	    margin-bottom: 30px;
+	    margin-bottom: 4px;
 	    padding-top: 180px;
 	    margin-top: -180px;
 
@@ -32,6 +32,7 @@
 	    		font-weight: bold;
 	    		float: left;
 	    		clear: both;
+	    		margin-top: 10px;
 
 	    		&:after {
 	    			content: '•';
@@ -41,10 +42,11 @@
 	    	}
 
 	    	dd {
-	    		margin: 0 0 20px;
+	    		padding: 10px 0 10px;
+	    		margin: 0;
 
 	    		&:last-child {
-	    			margin-bottom: 0;
+	    			padding-bottom: 6px;
 	    		}
 	    	}
 	    }
