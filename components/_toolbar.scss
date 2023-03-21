@@ -9,6 +9,17 @@
     padding-top: 0;
   }
 
+  &#glossary-toolbar {
+    > * {
+      grid-template-columns: auto 0 60px;
+    }
+
+    .toolbar-section.navigation {
+      grid-area: left;
+      text-align: left;
+    }
+  }
+
   &#cms-page-toolbar {
     .toolbar-functions-area,
     .toolbar-navigation-area {
