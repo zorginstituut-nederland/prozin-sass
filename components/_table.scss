@@ -1061,8 +1061,8 @@ table {
                 }
                 
                 @include screen-size(medium-large) {
-                    font-size: 0.8em;
-                    line-height: 0.75 * $baseline;
+                    // font-size: 0.8em;
+                    // line-height: 0.75 * $baseline;
                 }
 
                 @include screen-size(small) {
