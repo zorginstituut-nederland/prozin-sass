@@ -472,6 +472,10 @@ table {
                 }
                 
                 .suggested-content {
+                    > * {
+                         opacity: 0.5;
+                    }
+
                     &:before {
                       @include throbber();
                       opacity: 0;
@@ -484,6 +488,7 @@ table {
                 margin-bottom: 5px;
                 margin-top: 10px;
                 background-color: $colour-info;
+                position: relative;
 
                 p.buttons {
                     margin-top: 5px;
