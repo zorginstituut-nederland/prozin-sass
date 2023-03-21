@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+$scroll-offset: 120px !default;
+$bullet-space: 22px !default;
+
+.input-list {
+	line-height: 1.625rem;
+	margin-bottom: 1em;
+	
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+
+		&.deleted {
+			display: none;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			margin: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			box-sizing: border-box;
+		     height: $button-small-height;
+		}
+
+		.functions {
+			grid-area: functions;
+			text-align: right;
+
+			.button {
+				@include pat-button;
+				font-size: $button-small-font-size;
+			     padding: $button-small-paddings;
+			     height: $button-small-height;
+			     line-height: $button-small-line-height;
+			     vertical-align: baseline;
+			     font-weight:  $button-small-font-weight;
+
+			     .form-panel & {
+			     	box-shadow: 0 0 0 1px $colour-link;
+			     }
+
+			     margin: 0 0 -4px 5px;
+
+			     input {
+			     	position: absolute;
+			     	opacity: 0;
+			     }
+
+				// &:before {
+				// 	font-family: fontello;
+				// 	content: "#{$glyph-trash}";
+				// }
+			}
+		}
+	}
+}

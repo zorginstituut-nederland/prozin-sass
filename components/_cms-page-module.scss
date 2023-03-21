@@ -115,6 +115,16 @@ $cms-page-module-padding-left-right: 15px !default;
 		}
 	}
 
+	&.type-definition {
+		#synonyms {
+			margin-bottom: 0;
+
+			li:last-child {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
 	&.type-metadata {
 		margin-bottom: 60px;
 
