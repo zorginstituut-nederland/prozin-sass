@@ -491,6 +491,11 @@ $header-level-2-block-start: 3rem !default;
 		font-size: 1em;
 		font-weight: bold;
 		margin: 0;
+
+		& + ul,
+		& + ol {
+			margin-top: 10px;
+		}
 	}
 
 	h5 {
@@ -812,7 +817,7 @@ $header-level-2-block-start: 3rem !default;
 		margin-block-end: 1.25rem;
 
 		&:not(:last-child):not(.byline) {
-			margin: 0 0 1rem 0;
+			margin-bottom: 1rem;
 		}
 
 		// @include screen-size(small-medium) {

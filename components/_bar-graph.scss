@@ -3,6 +3,7 @@
 .bar-graph {
 	width: 100%;
 	@include clear-fix;
+	overflow: hidden;
 	
 	.segment {
 		float: left;

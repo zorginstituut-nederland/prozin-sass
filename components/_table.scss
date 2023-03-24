@@ -472,6 +472,10 @@ table {
                 }
                 
                 .suggested-content {
+                    > * {
+                         opacity: 0.5;
+                    }
+
                     &:before {
                       @include throbber();
                       opacity: 0;
@@ -484,6 +488,7 @@ table {
                 margin-bottom: 5px;
                 margin-top: 10px;
                 background-color: $colour-info;
+                position: relative;
 
                 p.buttons {
                     margin-top: 5px;
@@ -740,6 +745,7 @@ table {
         .separation-cell {
             vertical-align: bottom;
             padding-top: 1.5em;
+            background-color: transparent;
         }
 
         tr.header-row + .separation-row {
@@ -1056,8 +1062,8 @@ table {
                 }
                 
                 @include screen-size(medium-large) {
-                    font-size: 0.8em;
-                    line-height: 0.75 * $baseline;
+                    // font-size: 0.8em;
+                    // line-height: 0.75 * $baseline;
                 }
 
                 @include screen-size(small) {
@@ -1255,7 +1261,7 @@ table {
                     width: 420px;
                 }
                 
-                padding-right: 0;
+                // padding-right: 0;
             }
 
             @include screen-size(small) { 
