@@ -262,8 +262,8 @@ $header-level-2-block-start: 3rem !default;
 			}
 
 			.product-fk & {
-				color: $colour-orange;
-				background: rgba(255,100,0,0.1);
+				color: $colour-green;
+				background: $colour-green-xl;
 			}
 
 			&:focus {
