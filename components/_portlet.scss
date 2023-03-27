@@ -80,6 +80,14 @@ $colour-portlet: $colour-grey-1 !default;
 				.info-button {
 					float: right;
 					margin-top: 5px;
+					color: transparent;
+
+					&:before {
+						margin-right: 0;
+						color: $colour-link;
+						text-align: right;
+						display: block;
+					}
 				}
 
 				h1 {
