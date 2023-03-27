@@ -9,6 +9,10 @@
 		margin: 0 -0.7 * $grid-gutter;
 	}
 
+	.pat-message + & {
+		margin-top: 30px;
+	}
+
 	.js {
 		&:before {
 			position: fixed !important;
