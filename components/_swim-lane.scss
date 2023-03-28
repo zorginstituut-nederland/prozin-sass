@@ -81,7 +81,10 @@ $swim-lane-hero-background-position: center !default;
 	&#swim-lane-site-navigation-illustrated {
 
 		& + #swim-lane-secondary-tasks {
-			margin-top: 50px;
+			.lane-title {
+				margin-top: 0;
+				border-top: none;
+			}
 		}
 		
 		@include screen-size(medium-large) {
