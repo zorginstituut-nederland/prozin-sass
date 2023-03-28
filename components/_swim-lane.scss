@@ -100,19 +100,29 @@ $swim-lane-hero-background-position: center !default;
 		}
 
 		.container {
-			padding: 4rem 0rem 3.5rem 0rem;
+			padding-top: 4rem;
+			padding-bottom: 3.5rem;
 			margin: 0 auto;
 
 			.nav-tiles-illustrated {
 				@include screen-size(medium-large) {
-					display: flex;
+			      	display: grid;
+			      	grid-auto-flow: column;
+			      	gap: 0;
 
-					&.count-3 {
-						li {
-							width: 33.33332%;
-						}
-					}
+			      	&.count-2 {
+			      		grid-template-columns: 1fr 1fr;
+			      	}
 
+			      	&.count-3 {
+			      		grid-template-columns: 1fr 1fr 1fr;
+
+			      		li {
+			      			a {
+						      	padding: 0 5%;
+			      			}
+			      		}
+			      	}
 				}
 
 				li {	
@@ -124,15 +134,7 @@ $swim-lane-hero-background-position: center !default;
 				      	text-align: center;
 				      	@include box-sizing;
 				      	color: black;
-	
-				      	@include screen-size(medium-large) {
-					      	padding: 0 20px 40px;
-				      	}
-
-				      	@include screen-size(small) {
-					      	padding: 20px 20px 0px;
-					        
-					    }
+				      	padding: 0 10%;
 
 					    &:hover {
 					        .no-touchevents & {
