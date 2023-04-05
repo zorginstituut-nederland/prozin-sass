@@ -1,0 +1,40 @@
+// .searching-sentinel {
+// 	position: fixed;
+// 	bottom: 20px;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+// 	opacity: 0;
+// 	z-index: 8;
+// 	transition: opacity 0.5s;
+// 	pointer-events: none;
+
+// 	.instance-counter {
+// 		background: black;
+// 		color: white;
+// 		padding: 5px 10px;
+// 		border-radius: 10px;
+// 	}
+
+// 	.spotlight-on & {
+// 		opacity: 1;
+// 	}
+// }
+
+.spotlight {
+	transition: 
+		box-shadow 0.5s,
+		background 0.5s,
+		padding 0.5s,
+		margin 0.5s,
+		border-radius 0.5s;
+	padding: 0 0.35em;
+	margin: 0 -0.35em;
+	border-radius: 8px;
+	position: relative;
+	z-index: 9;
+
+	.spotlight-on & {
+		box-shadow: 0 0 0 0.15em white, 0 0 10px black;
+		background: white;
+	}
+}

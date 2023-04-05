@@ -4,9 +4,9 @@
 	margin-bottom: $baseline;
 	background: $colour-dark-blue-xl;
 
-	&:not(.editors-well) a:not(.pat-button):not(.file-download) {
-		text-decoration: underline;
-	}
+	// &:not(.editors-well) a:not(.pat-button):not(.file-download) {
+	// 	text-decoration: underline;
+	// }
 
 	@media print {
 		background: white;
