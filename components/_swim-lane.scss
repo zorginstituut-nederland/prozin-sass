@@ -30,15 +30,19 @@ $swim-lane-hero-background-position: center !default;
 		padding-bottom: 50px;
 
 		@include screen-size(small) {
-			// padding: 20px;
+			padding-top: 30px;
+			padding-bottom: 30px;
 		}
 	}
 
 	.lane-title {
 		margin: 0 0 20px 0;
 		font-size: 1.625rem;
-		padding-top: 10px;
-		border-top: 1px solid #e1e1e1
+
+		@include screen-size(medium-large) {
+			padding-top: 10px;
+			border-top: 1px solid #e1e1e1;
+		}
 	}
 
 	.lane-footer {
