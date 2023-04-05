@@ -987,6 +987,7 @@ table {
             label.pat-select.bare {
                 text-transform: None;
                 color: black;
+                float: left; // Prevents the clickable surface from being reduced to the arrow. 
             }
 
             a {
