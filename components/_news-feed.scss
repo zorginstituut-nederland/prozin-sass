@@ -203,12 +203,15 @@
     padding-right: $grid-gutter; // Needed for the flex layout.
     width: 33.33332%; // Needed for the flex layout.
     float: left; // Needed for old browsers such as IE
-    padding-bottom: 2 * $baseline;
     @include box-sizing;
 
     .portlet & {
       width: 100%;
       padding-bottom: 25px;
+    }
+
+    @include screen-size(medium-large) {
+      padding-bottom: 2 * $baseline;
     }
 
     @include screen-size(medium) {
@@ -221,6 +224,7 @@
 
     @include screen-size(small) {
       width: 100%; // Needed for the flex layout.
+      padding-bottom: $baseline;
     }
 
     &.warning {
