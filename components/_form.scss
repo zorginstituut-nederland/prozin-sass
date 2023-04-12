@@ -180,10 +180,6 @@ $form-proportion-value: 80% !default;
 			width: 100%; // Prevents buttonbar from collapsing after inject in Chrome, FF and Safari iOS (12.x).
 			margin: 0;
 
-			@include screen-size(medium-large) {
-				padding-left: $form-proportion-name;
-			}
-
 			.pat-button {
 				float: left;
 			}
