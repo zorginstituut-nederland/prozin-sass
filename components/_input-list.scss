@@ -6,6 +6,10 @@ $bullet-space: 22px !default;
 .input-list {
 	line-height: 1.625rem;
 	margin-bottom: 1em;
+
+	&:empty {
+		display: none;
+	}
 	
 	li {
 		margin: 0;
