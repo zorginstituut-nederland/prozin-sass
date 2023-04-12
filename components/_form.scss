@@ -180,10 +180,6 @@ $form-proportion-value: 80% !default;
 			width: 100%; // Prevents buttonbar from collapsing after inject in Chrome, FF and Safari iOS (12.x).
 			margin: 0;
 
-			@include screen-size(medium-large) {
-				padding-left: $form-proportion-name;
-			}
-
 			.pat-button {
 				float: left;
 			}
@@ -212,71 +208,6 @@ $form-proportion-value: 80% !default;
 	}
 
 	fieldset.horizontal {
-
-		.group {
-			.help {
-		        .help-label {
-		          right: 0;
-		          top: -1px;
-		        }
-	        }
-
-			&.image-selection,
-			&.image-upload,
-			&.video-upload {
-				.pat-button {
-				    margin: 0 0 -9px 0;
-				}
-			}
-
-			&.video-upload,
-			&.image-upload {
-				input,
-				video,
-				img {
-					width: 100%;
-				}
-			}
-		}
-
-		.help-icon {
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 2;
-			width: 26px;
-			height: 35px;
-			overflow: hidden;
-			background-color: $colour-dark-blue;
-			color: transparent;
-			padding: 0;
-			content: '#{$glyph-vraagteken}';
-			font-family: fontello;
-			transition: translate 0.25s;
-			transform: translateY(0%);
-
-			&:before {
-				content: '#{$glyph-vraagteken}';
-				background-color: transparent;
-				transform: none;
-				margin: 0;
-				font-family: fontello;
-				color: white;
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 100%;
-				height: 100%;
-				line-height: 35px;
-				text-align: center;
-				font-weight: normal;
-				font-style: normal;
-				font-size: 0.8em;
-				transition: opacity 0.8s;
-				transition-delay: 0.3s;
-			}
-			
-		}
 
 		.help {
 			padding: 0;
@@ -386,25 +317,25 @@ $form-proportion-value: 80% !default;
         div.group,
         .help,
         .instruction {
-        	z-index: 1;
+        	// z-index: 1;
 
-        	dfn.icon-help {
-        		margin-right: (100% - $form-proportion-name) * 100% / $form-proportion-name * -1;
-        		margin-left: 0;
-        	}
+        	// dfn.icon-help {
+        	// 	margin-right: (100% - $form-proportion-name) * 100% / $form-proportion-name * -1;
+        	// 	margin-left: 0;
+        	// }
 
-        	dfn.icon-help {
-        		// bottom: -28px;
+        	// dfn.icon-help {
+        	// 	// bottom: -28px;
 
-				&.collapsible-open.collapsible-in-progress {
-					// bottom: -28px;
-				}
+			// 	&.collapsible-open.collapsible-in-progress {
+			// 		// bottom: -28px;
+			// 	}
 
-				&.collapsible-open,
-				&.collapsible-closed.collapsible-in-progress {
-					bottom: -57px;
-				}
-        	}
+			// 	&.collapsible-open,
+			// 	&.collapsible-closed.collapsible-in-progress {
+			// 		bottom: -57px;
+			// 	}
+        	// }
         }
 
 	}
