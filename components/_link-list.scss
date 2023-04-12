@@ -7,6 +7,10 @@ $bullet-space: 22px !default;
 	line-height: 1.625rem;
 	margin-bottom: 1em;
 
+	&:empty {
+		display: none;
+	}
+
 	@include screen-size(large) {
 		&.col-2 {
 			column-count: 2;
