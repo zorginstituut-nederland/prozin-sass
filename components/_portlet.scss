@@ -242,37 +242,20 @@ $colour-portlet: $colour-grey-1 !default;
 		}
 	}
 
-	// &#portlet-manufacturer-new-medicines {
-	// 	.content {
-	// 		.link-list {
-	// 			margin-bottom: 26px;
-	// 		}
-	// 	}
-	// }
+	&#portlet-ready,
+	&#portlet-workflow {
+		.content {
+			background-color: $colour-violette-xl;			
 
-	// &#portlet-revise {
-	// 	.portlet-title {
-	// 		&:before {
-	// 			content: '#{$glyph-update}';
-	// 		}
-	// 	}
-	// }
+			.link-list {
+				a {
+					color: $colour-violette;
+				}
+			}
+		}
+	}
 
-	// &#portlet-bookmarked {
-	// 	.portlet-title {
-	// 		&:before {
-	// 			content: '#{$glyph-bookmark}';
-	// 		}
-	// 	}
-	// }
 
-	// &#portlet-ready {
-	// 	.portlet-title {
-	// 		&:before {
-	// 			content: '#{$glyph-1008-oog}';
-	// 		}
-	// 	}
-	// }
 
 	.link {
 		// padding: 0.2em 0;
