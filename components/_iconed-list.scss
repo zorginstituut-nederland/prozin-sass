@@ -1,0 +1,34 @@
+$scroll-offset: 120px !default;
+$bullet-space: 22px !default;
+
+.iconed-list {
+	li {
+		padding: 0 0 0 $bullet-space;
+
+		&.icon-ok-circle {
+			&:before {
+				color: $colour-green;
+			}
+		}
+
+		&:before {
+			grid-area: label;
+			font-family: fontello;
+			margin-left: -1 * $bullet-space;
+			font-weight: normal;
+			float: left;
+			text-decoration: none;
+			width: $bullet-space;
+			text-align: left;
+			speak: none;
+			display: inline-block;
+			line-height: inherit;
+			position: absolute; // Fix for missing icons of first item in second column and on in Firefox.
+
+			#sub-nav & {
+				margin-left: -30px;
+			}
+		
+		}
+	}
+}
