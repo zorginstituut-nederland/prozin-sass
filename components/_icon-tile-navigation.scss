@@ -4,7 +4,30 @@
 
     &.col-3 {
         @include screen-size(large) {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px; 
+
+            .icon-tile-navigation-follow {
+                padding: 6% 7%;
+                padding-left: 90px;
+
+                .title {
+                    font-size: 1.5em;
+                    line-height: 1.2;
+                    margin-bottom: 5px;
+                }
+
+                .byline {
+                    margin-bottom: 0;
+                }
+
+                &:before {
+                    width: 90px;
+                    background-size: auto 60% !important;
+                }
+            }
+
+
         }
 
         @include screen-size(medium) {
@@ -31,6 +54,8 @@
         display: block;
         padding: 7% 10%;
         position: relative;
+        -webkit-hyphens: auto;
+        hyphens: auto;
 
         @include screen-size(large) {
             padding-left: 170px;
