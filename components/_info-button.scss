@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.info-button {
+  cursor: pointer;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  height: 29px;
+  width: 29px;
+
+  &:before {
+    content: '#{$glyph-2002-info}';
+    font-family: fontello;
+    text-transform: none;
+    line-height: 29px;
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    color: $colour-dark-blue;
+  }
+
+  &:hover {
+    &:before {
+      color: $colour-dark-blue-d;
+    }
+  }
+}
