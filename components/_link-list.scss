@@ -7,7 +7,11 @@ $bullet-space: 22px !default;
 	line-height: 1.625rem;
 	margin-bottom: 1em;
 
-	&:empty {
+	&:empty,
+	&:blank,
+	&:-moz-only-whitespace,
+	&:-webkit-only-whitespace,
+	&:only-whitespace {
 		display: none;
 	}
 
