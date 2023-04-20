@@ -81,6 +81,7 @@ $form-proportion-value: 80% !default;
 		color: transparent;		
 		display: block;
 		animation: fadeIn 1s;
+		grid-area: label !important;
 	}
 
 	input,
