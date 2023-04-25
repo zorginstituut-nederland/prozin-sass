@@ -30,6 +30,11 @@
 					height: 100%;
 					object-fit: cover;
 				}
+
+				.link-tiles-photos-copyright {
+					@include copyright;
+					font-size: 0.5em;
+				}
 			}
 
 			figcaption {
