@@ -77,10 +77,13 @@ $form-proportion-value: 80% !default;
 		right:0;
 		background: rgba(255,100,0,0.1);
 		border-left: 8px solid rgba(255,100,0,0.2);
-		z-index: -1;
+		z-index: 0;
 		color: transparent;		
 		display: block;
 		animation: fadeIn 1s;
+		grid-area: label !important;
+      	grid-row: 1 / last;
+
 	}
 
 	input,
@@ -317,25 +320,7 @@ $form-proportion-value: 80% !default;
         div.group,
         .help,
         .instruction {
-        	// z-index: 1;
-
-        	// dfn.icon-help {
-        	// 	margin-right: (100% - $form-proportion-name) * 100% / $form-proportion-name * -1;
-        	// 	margin-left: 0;
-        	// }
-
-        	// dfn.icon-help {
-        	// 	// bottom: -28px;
-
-			// 	&.collapsible-open.collapsible-in-progress {
-			// 		// bottom: -28px;
-			// 	}
-
-			// 	&.collapsible-open,
-			// 	&.collapsible-closed.collapsible-in-progress {
-			// 		bottom: -57px;
-			// 	}
-        	// }
+        	position: relative; // For positioning of 'has changes'.
         }
 
 	}
