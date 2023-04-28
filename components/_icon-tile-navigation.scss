@@ -35,8 +35,9 @@
         }
     }
 
+    &.col-1,
     &.col-2 {
-        @include screen-size(large) {
+        @include screen-size(medium-large) {
             grid-template-columns: 1fr 1fr;
         }
 
