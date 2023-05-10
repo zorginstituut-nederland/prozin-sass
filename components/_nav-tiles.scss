@@ -83,14 +83,14 @@ $nav-tiles-font-size: 1.60181rem !default;
         @include screen-size(small) {
           // display: none;
           left: $container-padding-medium;
-          transform: translateY(-50%);
-          top: 50%;
+          top: 23px;
           height: auto;
+          margin: 0;
         }
       }
 
       @include screen-size(small) {
-        padding: 20px 40px 20px 55px;
+        padding: 20px 40px 20px 49px;
 
         &:after {
           position: absolute;
