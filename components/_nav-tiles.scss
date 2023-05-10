@@ -49,7 +49,7 @@ $nav-tiles-font-size: 1.60181rem !default;
     @include screen-size(small) {
       height: auto !important;
       padding: 0;
-      border-bottom: 1px solid white;
+      border-top: 2px solid white;
     }
 
     @include box-sizing;
@@ -81,12 +81,16 @@ $nav-tiles-font-size: 1.60181rem !default;
         color: $colour-green;
 
         @include screen-size(small) {
-          display: none;
+          // display: none;
+          left: $container-padding-medium;
+          transform: translateY(-50%);
+          top: 50%;
+          height: auto;
         }
       }
 
       @include screen-size(small) {
-        padding: 20px 40px 25px $container-padding-medium;
+        padding: 20px 40px 20px 55px;
 
         &:after {
           position: absolute;
@@ -108,19 +112,17 @@ $nav-tiles-font-size: 1.60181rem !default;
         text-overflow: ellipsis;
         // white-space: nowrap;
         color: $colour-link;
+        font-weight: normal;
 
         @include screen-size(medium-large) {
           font-size: $nav-tiles-font-size;
           line-height: 1.24859;
-          font-weight: normal;
           margin: 0rem 0rem 0 0rem;
         }
 
         @include screen-size(small) {
           font-size: 1.3125em;
-          font-weight: bold;
           line-height: 1.2381;
-          margin: 0 0 2px;
         }
       }
 
@@ -128,6 +130,7 @@ $nav-tiles-font-size: 1.60181rem !default;
         font-size: 1.125rem;
         line-height: 1.33333;
         color: black;
+        margin-top: 2px;
 
         @include screen-size(medium-large) {
           marign-top: 0.5rem;
