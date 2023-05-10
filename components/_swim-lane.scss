@@ -322,11 +322,11 @@ $swim-lane-hero-background-position: center !default;
 			}
 
 			@include screen-size(small) {
-				padding-bottom: 0;
-				padding-top: 25px;
+				padding: 0;
 
 				.intro {
 					margin-bottom: 20px;
+					padding: 0 $container-padding-medium;
 				}
 			}
 		}
