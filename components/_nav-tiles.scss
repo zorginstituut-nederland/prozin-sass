@@ -3,7 +3,7 @@ $nav-tiles-font-size: 1.60181rem !default;
 .nav-tiles {
 
   @include screen-size(small) {
-    margin: 0 0 10px;
+    margin: 0;
   }
 
   @include screen-size(medium-large) {
@@ -49,6 +49,7 @@ $nav-tiles-font-size: 1.60181rem !default;
     @include screen-size(small) {
       height: auto !important;
       padding: 0;
+      border-top: 2px solid white;
     }
 
     @include box-sizing;
@@ -61,11 +62,6 @@ $nav-tiles-font-size: 1.60181rem !default;
       height: 100%;
       text-decoration: none;
       @include box-sizing;
-
-      @include screen-size(small) {
-        padding-bottom: 10px;
-        margin-bottom: 1px;
-      }
 
       &:hover {
         .no-touchevents & {
@@ -85,12 +81,16 @@ $nav-tiles-font-size: 1.60181rem !default;
         color: $colour-green;
 
         @include screen-size(small) {
-          display: none;
+          // display: none;
+          left: $container-padding-medium;
+          top: 23px;
+          height: auto;
+          margin: 0;
         }
       }
 
       @include screen-size(small) {
-        padding: 15px 0 15px 0;
+        padding: 20px 40px 20px 49px;
 
         &:after {
           position: absolute;
@@ -112,19 +112,17 @@ $nav-tiles-font-size: 1.60181rem !default;
         text-overflow: ellipsis;
         // white-space: nowrap;
         color: $colour-link;
+        font-weight: normal;
 
         @include screen-size(medium-large) {
           font-size: $nav-tiles-font-size;
           line-height: 1.24859;
-          font-weight: normal;
           margin: 0rem 0rem 0 0rem;
         }
 
         @include screen-size(small) {
           font-size: 1.3125em;
-          font-weight: bold;
           line-height: 1.2381;
-          margin: 0 0 2px;
         }
       }
 
@@ -132,6 +130,7 @@ $nav-tiles-font-size: 1.60181rem !default;
         font-size: 1.125rem;
         line-height: 1.33333;
         color: black;
+        margin-top: 2px;
 
         @include screen-size(medium-large) {
           marign-top: 0.5rem;
