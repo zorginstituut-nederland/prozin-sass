@@ -721,6 +721,7 @@ $header-level-2-block-start: 3rem !default;
 		svg {
 			width: 100%;
 			overflow: hidden;
+			margin: 0 auto;
 
 			* {
 				font-family: 'RO Sans' !important;
@@ -802,7 +803,7 @@ $header-level-2-block-start: 3rem !default;
 
 	img {
 		max-width: 100%;
-		margin: 0 auto;
+		margin: 2em auto;
 		display: block;
 	}
 
