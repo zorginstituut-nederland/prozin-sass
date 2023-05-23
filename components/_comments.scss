@@ -188,7 +188,7 @@ $scroll-offset: 100px;
 	}
 
 	.comment-trail + .message-box {
-		margin-left: 42px;
-		margin-top: 20px;
+		margin-left: 42px !important;
+		margin-top: 20px !important;
 	}
 }
