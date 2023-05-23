@@ -13,10 +13,14 @@ $scroll-offset: 100px;
 
         padding-top: $table-cell-padding-top + $scroll-offset;
         padding-right: $table-cell-padding-right;
-        padding-bottom: $table-cell-padding-bottom;
+        padding-bottom: 2px;
         padding-left: $table-cell-padding-left;
 
         pointer-events: none;
+
+        textarea {
+        	min-height: 33px;
+        }
 
         > * {
         	pointer-events: auto;
