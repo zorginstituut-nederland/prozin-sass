@@ -29,10 +29,6 @@
     transition: all 0.5s;
   }
 
-  .group & {
-    width: 80%;
-  }
-
   .placeholder {
     color: $colour-link;
     -webkit-text-fill-color: $colour-link;
