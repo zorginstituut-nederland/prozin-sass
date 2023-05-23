@@ -112,29 +112,33 @@ $form-input-field-outline-offset: 2px !default;
     // opacity: 0; // Added to compensate for a bug in Chrome
   }
 
-  // &.status-inactive {
-  //   textarea {
-  //     cursor: default;
-  //     opacity: 0;
-  //     cursor: pointer;
+  &.status-inactive {
+    // textarea {
+    //   cursor: default;
+    //   opacity: 0;
+    //   cursor: pointer;
 
-  //     .pat-grid-list dd & {
-  //       cursor: pointer;
-  //     }
-  //   }
+    //   .pat-grid-list dd & {
+    //     cursor: pointer;
+    //   }
+    // }
 
-  //   &:before {
-  //     display: none;
-  //   }
+    // &:before {
+    //   display: none;
+    // }
 
-  //   &:hover {
-  //     .text {
-  //       .placeholder {
-  //         // background: $colour-dark-blue-d;
-  //       }
-  //     }
-  //   }
-  // }
+    // &:hover {
+    //   .text {
+    //     .placeholder {
+    //       // background: $colour-dark-blue-d;
+    //     }
+    //   }
+    // }
+
+    .button-bar {
+      opacity: 0;
+    }
+  }
 
   // &.status-active {
   //   .content-mirror {
@@ -154,8 +158,6 @@ $form-input-field-outline-offset: 2px !default;
     padding: 0 0.5em;
     overflow: hidden;
     margin: 0;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
     transition: all 0.4s;
     z-index: 2;
     position: relative;
