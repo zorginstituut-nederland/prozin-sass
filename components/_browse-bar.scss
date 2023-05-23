@@ -87,9 +87,13 @@ $colour-browse-bar: $colour-base;
       }
 
       &.visible {
-        height: 34px;
+        height: 38px;
       }
     }
+  }
+
+  .select2-container {
+    margin-top: 1px;
   }
 
   &.state-collapsed {
