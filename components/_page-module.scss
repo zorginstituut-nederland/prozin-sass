@@ -102,6 +102,7 @@ $header-level-2-block-start: 3rem !default;
 	}
 
 	&.pat-rich {
+		overflow-x: hidden;
 
 		> * {
 			&:last-child {

@@ -802,11 +802,11 @@ $rich-object-margin-top-bottom: 2rem;
 	}
 
 	table {
-		overflow-x: auto;
-		display: block;
 		padding: 0;
 		margin: $rich-object-margin-top-bottom auto;
-		// background-color: #f3f3f3;
+		overflow: hidden;
+		width: 100%;
+		max-width: 100%;
 
 		tbody {
 			tr {

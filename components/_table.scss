@@ -7,7 +7,11 @@ $table-cell-padding-bottom: 10px !default;
 $table-cell-padding-left: 15px !default;
 $table-line-height: 1.5 !default;
 
-.scroll-table {
+.scroll-table,
+.tableWrapper {
+
+    // tableWrapper is a TipTap class
+    
     overflow-x: auto;
     overflow-y: visible;
     -webkit-overflow-scrolling: touch;
