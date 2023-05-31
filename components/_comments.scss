@@ -2,7 +2,7 @@ $scroll-offset: 100px;
 
 .comments {
 	background-color: transparent;
-	margin: 0 0 1em 0;
+	margin: 0;
 	position: relative;
 
 	table & {
@@ -13,10 +13,14 @@ $scroll-offset: 100px;
 
         padding-top: $table-cell-padding-top + $scroll-offset;
         padding-right: $table-cell-padding-right;
-        padding-bottom: $table-cell-padding-bottom;
+        padding-bottom: 2px;
         padding-left: $table-cell-padding-left;
 
         pointer-events: none;
+
+        textarea {
+        	min-height: 33px;
+        }
 
         > * {
         	pointer-events: auto;
@@ -184,7 +188,7 @@ $scroll-offset: 100px;
 	}
 
 	.comment-trail + .message-box {
-		margin-left: 42px;
-		margin-top: 20px;
+		margin-left: 42px !important;
+		margin-top: 20px !important;
 	}
 }

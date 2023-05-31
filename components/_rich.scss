@@ -3,6 +3,7 @@ $scroll-offset: 120px !default;
 $text-bottom-margin: "1.25rem";
 $header-2-margin-bottom: 3rem !default;
 $header-level-2-block-start: 3rem !default;
+$rich-object-margin-top-bottom: 2rem;
 
 @charset "UTF-8";
 
@@ -656,7 +657,6 @@ $header-level-2-block-start: 3rem !default;
 		p,
 		ul,
 		ol,
-		table,
 		h3 {
 			margin: 0 0 #{$text-bottom-margin} 0;
 		}
@@ -678,7 +678,7 @@ $header-level-2-block-start: 3rem !default;
 		ol,
 		table,
 		h3 {
-		margin: 0 0 #{$text-bottom-margin} 0;
+			margin: 0 0 #{$text-bottom-margin} 0;
 		}
 
 		*:last-child {
@@ -801,14 +801,29 @@ $header-level-2-block-start: 3rem !default;
 		}
 	}
 
+	table {
+		padding: 0;
+		margin: $rich-object-margin-top-bottom auto;
+		overflow: hidden;
+		width: 100%;
+		max-width: 100%;
+
+		tbody {
+			tr {
+				th {
+					position: static;
+				}
+			}
+		}
+	}
+
 	img {
 		max-width: 100%;
-		margin: 2em auto;
+		margin: $rich-object-margin-top-bottom auto;
 		display: block;
 	}
 
 	p,
-	table,
 	ul,
 	ol,
 	dl {

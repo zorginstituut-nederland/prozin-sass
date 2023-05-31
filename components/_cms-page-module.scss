@@ -9,7 +9,7 @@ $cms-page-module-padding-left-right: 15px !default;
 	// transition: border 0.2s;
 	padding: 0 $cms-page-module-padding-left-right;
 	margin: 0 -1 * $cms-page-module-padding-left-right 0;
-	transition: margin 0.3s;
+	transition: margin 0.3s, box-shadow 1s;
 
 	.section-destroyer {
 		position: absolute;
@@ -388,7 +388,13 @@ $cms-page-module-padding-left-right: 15px !default;
 
 		&.open,
 		&.closed.in-progress {
-			border: 2px dotted black;
+			// border: 2px solid $colour-dark-blue-xl;
+			box-shadow: 
+				0 0 0 6px white,
+				0 0 40px rgba(0, 0, 0, 0.05), 
+				0 0 4px 6px rgba(0, 0, 0, 0.25);
+			// box-shadow: 
+			// 	0 0 0 2px rgba(0, 0, 0, 0.1);
 			margin-top: 50px;
 			margin-bottom: 50px;
 

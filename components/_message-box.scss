@@ -1,8 +1,13 @@
-@charset "UTF-8";
+$form-input-field-box-shadow: 0 0 0 1px dimgray !default;
+$form-input-field-box-shadow-disabled: 0 0 0 1px #efefef !default;
+$form-input-field-box-shadow-focus: 0 0 1px 1px dimgray !default;
+$form-input-field-outline-focus: 2px dotted black !default;
+$form-input-field-outline-offset: 2px !default;
 
 .message-box {
   position: relative;
   transition: all 1s;
+  margin: 0 !important;
 
   table & {
     margin-bottom: 0;
@@ -27,10 +32,11 @@
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-  }
+    background-color: white;
 
-  .group & {
-    width: 80%;
+    .placeholder {
+      display: none;
+    }
   }
 
   .placeholder {
@@ -46,26 +52,11 @@
   }
 
   &.status-active {
-    background-color: #efefef;
-
-    .placeholder {
-      display: none;
-    }
-
-    table & {
-      background-color: white;
-    }
-
-    .form-panel & {
-      background-color: white;
-    }
 
     .button-bar {
-      // height: 2.3em;
-
       height: 1.8em;
       padding-top: 2em;
-      padding-bottom: 0.5em;
+      padding-bottom: 0.7em;
     }
   }
 
@@ -74,39 +65,37 @@
   }
 
   textarea {
-    &:focus {
-      border: transparent 1px solid;
-    }
+    min-height: 36px;
   }
 
   textarea,
   .content-mirror {
-      margin: 0;
+      // margin: 0;
       padding-right: 2em;
       padding-left: 0.5em;
-      padding-top: 0.4em;
-      padding-bottom: 0;
-      line-height: $base-line-height;
-      font-size: 18px;
+      // padding-top: 0.4em;
+      // padding-bottom: 0;
+      // line-height: $base-line-height;
+      font-size: 1em;
       font-family: $body-font-family;
 
       table & {
         // padding: 0;
-        line-height: $table-line-height;
+        // line-height: $table-line-height;
       }
 
       float: left;
       // height: 2.3em;
       border: none;
       overflow: hidden;
-      background: transparent; // Was previous only declared for large screen, but necessary for all sizes.
+      // background: transparent; // Was previous only declared for large screen, but necessary for all sizes.
       
       resize: none;
       width: 100%;
 
       &:focus {
-        outline: none;
-        box-shadow: none;
+        // outline: none;
+        // box-shadow: none;
       }
   }
 
@@ -119,48 +108,50 @@
     left: 0;
     z-index: 1;
     height: 100%; // Needed for Firefox
-    box-shadow: none;
-    border: 1px solid dimgray;
+    // box-shadow: none;
+    // border: 1px solid dimgray;
     // opacity: 0; // Added to compensate for a bug in Chrome
   }
 
   &.status-inactive {
-    textarea {
-      cursor: default;
+    // textarea {
+    //   cursor: default;
+    //   opacity: 0;
+    //   cursor: pointer;
+
+    //   .pat-grid-list dd & {
+    //     cursor: pointer;
+    //   }
+    // }
+
+    // &:before {
+    //   display: none;
+    // }
+
+    // &:hover {
+    //   .text {
+    //     .placeholder {
+    //       // background: $colour-dark-blue-d;
+    //     }
+    //   }
+    // }
+
+    .button-bar {
       opacity: 0;
-      cursor: pointer;
-
-      .pat-grid-list dd & {
-        cursor: pointer;
-      }
-    }
-
-    &:before {
-      display: none;
-    }
-
-    &:hover {
-      .text {
-        .placeholder {
-          // background: $colour-dark-blue-d;
-        }
-      }
     }
   }
 
-  &.status-active textarea
-  &.status-active .content-mirror {
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
+  // &.status-active {
+  //   .content-mirror {
+  //     padding-top: 1em;
+  //     padding-bottom: 1em;
+  //   }
 
-  &.status-active {
+  //   textarea {
+  //     bottom: 2.6em;
+  //   }
 
-    textarea {
-      bottom: 2.6em;
-    }
-
-  }
+  // }
 
   .button-bar {
     background-color: blacken($colour-base, 10);
@@ -168,8 +159,6 @@
     padding: 0 0.5em;
     overflow: hidden;
     margin: 0;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
     transition: all 0.4s;
     z-index: 2;
     position: relative;
