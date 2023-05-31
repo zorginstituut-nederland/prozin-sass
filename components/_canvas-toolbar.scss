@@ -475,6 +475,17 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		line-height: $canvas-toolbar-button-height;
 		// float: left;
 
+		&.level-up {
+			float: left;
+			margin-left: 0;
+			transform: scale(-1, 1);
+			overflow: hidden;
+
+			&:before {
+				content: "#{$glyph-level-up}";
+			}
+		}
+
 		&:before {
 			font-family: fontello;
 			text-indent: 0;

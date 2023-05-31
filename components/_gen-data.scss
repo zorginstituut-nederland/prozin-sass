@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+#gen-data {
+	&.has-parent {
+		@include screen-size(large) {
+			padding-left: 80px;
+		}
+	}
+
+	@include screen-size(large) {
+		position: relative;
+
+		.canvas-toolbar {
+			position: absolute;
+			top: -3px;
+			left: 15px;
+			width: 50px;
+
+			.icon {
+				margin-left: 0;
+			}
+		}
+	}
+}
