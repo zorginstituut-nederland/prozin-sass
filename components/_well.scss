@@ -8,6 +8,13 @@
 	// 	text-decoration: underline;
 	// }
 
+	&.applied-filters .button-cancel {
+		float: right;
+		margin-top: -7px;
+		margin-right: 0;
+		margin-left: 1em;
+	}
+
 	@media print {
 		background: white;
 		border: 3px solid $colour-dark-blue-xl;
