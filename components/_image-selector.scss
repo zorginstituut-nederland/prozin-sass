@@ -231,6 +231,14 @@
 	      		transition: object-fit 0.4s;
 			}
 
+			&.state-draft {
+	      		border: 6px $colour-orange solid;
+
+				img {
+					filter: sepia(100%) hue-rotate(-30deg) saturate(200%);
+				}
+			}
+
 			&.checked,
 			&:active {
 			  	box-shadow: inset 0 0 0 5px var(--colour-accent);
