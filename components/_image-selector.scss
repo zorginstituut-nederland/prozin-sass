@@ -231,6 +231,16 @@
 	      		transition: object-fit 0.4s;
 			}
 
+			&.state-draft {
+	      		border: 6px $colour-orange solid;
+
+				img {
+					filter: sepia(100%) hue-rotate(-30deg) saturate(300%) contrast(150%);
+					border: solid white 3px;
+					box-sizing: border-box;
+				}
+			}
+
 			&.checked,
 			&:active {
 			  	box-shadow: inset 0 0 0 5px var(--colour-accent);
