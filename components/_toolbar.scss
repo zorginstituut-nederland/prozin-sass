@@ -37,6 +37,13 @@
       grid-template-columns: 4fr 1fr;
     }
   }
+
+  &#cms-settings-toolbar {
+    .toolbar-functions-area,
+    .toolbar-navigation-area {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+  }
   
   &#cms-page-toolbar-edit {
     .toolbar-functions-area {
