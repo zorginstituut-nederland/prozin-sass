@@ -79,6 +79,14 @@ $swim-lane-hero-background-position: center !default;
 	}
 
 	&#swim-lane-secondary-tasks {
+
+		.intro {
+			font-size: 1.60181rem;
+			line-height: 1.5;
+			font-weight: normal;
+			margin: 0 0 40px 0;
+		}
+		
 		@include white-lane;
 	}
 
