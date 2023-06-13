@@ -8,7 +8,7 @@
     bottom: 0;
     left: 0;
     background-color: rgba(255,255,255,0.9);
-    font-size: 0.9em;
+    font-size: 1em;
     border-top: 1px solid #cbcbcb;
     -moz-backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -27,10 +27,12 @@
         color: transparent;
         background: $colour-dark-blue;
         opacity: 1;
+        width: 50px;
+        height: 50px;
 
         @include screen-size(small) {
             top: auto;
-            bottom: 2.4em;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             font-size: 0.6em;
@@ -38,6 +40,11 @@
 
         &:before {
             color: white;
+            font-size: 30px;
+            text-align: center;
+            display: block;
+            width: 50px;
+            line-height: 50px;
         }
 
         &:hover {
