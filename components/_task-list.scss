@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 .task-list {
+	gap: 32px;
+
 	@include screen-size(medium-large) {
 		display: grid;
 	}
@@ -34,17 +36,6 @@
 	
 	li {
 
-		@include screen-size(medium-large) {
-			padding: 0 $grid-gutter;
-			box-sizing: border-box;
-			margin: 0 0 40px;
-			float: left;
-		}
-
-		@include screen-size(small) {
-			margin: 0 0 2px 0;
-			height: auto !important;
-		}
 
 		&.state-draft {
 			a {
@@ -66,6 +57,7 @@
 				display: block;
 				background-color: #f3f3f3;
 				position: relative;
+				margin-bottom: 2px;
 
 				&:after {
 				  position: absolute;
