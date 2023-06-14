@@ -50,6 +50,7 @@
         &:hover {
             &:before {
                 color: white;
+                background: $button-background-colour-default-hover;
             }
         }
     }
