@@ -31,11 +31,6 @@ $header-level-2-block-start: 3rem !default;
 		}
 	}
 
-	.page-module-title {
-		font-size: 1em;
-		margin-bottom: $text-bottom-margin;
-	}
-
 	.page-module-group-title {
 		@include header-level-3;
 	}
