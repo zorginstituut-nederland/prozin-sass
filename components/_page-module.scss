@@ -430,6 +430,13 @@ $header-level-2-block-start: 3rem !default;
 		background: $colour-dark-blue-xl;
 	}
 
+	&.type-listing {
+		.page-module-title + .link-list,
+		.page-module-summary + .link-list {
+			margin-top: 20px;
+		}
+	}
+
 	&.type-links {
 		// border-top: 1px solid #e1e1e1;
 
