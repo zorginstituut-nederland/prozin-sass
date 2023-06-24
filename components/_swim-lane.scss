@@ -285,8 +285,8 @@ $swim-lane-hero-background-position: center !default;
 								right: 15%;
 								height: 100px;
 								background-size: 150px auto;
-								background-repeat: no-repeat;
-								background-position: 50%;
+								background-repeat: no-repeat;							
+								background-position: calc(50% - 0.2px);
 								transform-origin: center 79px ;
 							}
 	
