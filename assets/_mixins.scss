@@ -213,6 +213,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 		color: #efefef;
 	}
 
+	&.sluice {
+		background: $colour-warning-background;
+		color: $colour-warning;
+	}
+
 	&.indication {
 		background: $colour-purple-l;
 		color: $colour-purple;

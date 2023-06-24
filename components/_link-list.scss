@@ -74,7 +74,7 @@ $bullet-space: 22px !default;
 	}
 
 	&.expanded {
-		li {
+		> li {
 			padding-bottom: 0.4em;
 		}
 	}
@@ -236,7 +236,7 @@ $bullet-space: 22px !default;
 			position: relative; // Fix for missing icons of first item in second column and on in Firefox.
 			grid-area: label;
 			font-size: 1em;
-			line-height: 28px;
+			line-height: 24px;
 
 			.link-title {
 				font-weight: normal;
