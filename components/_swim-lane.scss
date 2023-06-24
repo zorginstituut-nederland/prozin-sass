@@ -207,7 +207,13 @@ $swim-lane-hero-background-position: center !default;
 				      	}
 
 				      	&.icon-quality-thumb:before {
-				      		background-image: url(icon-kwaliteitsinstrumenten-bg.svg);
+							@include screen-size(medium-large) {
+				      			background-image: url(icon-kwaliteitsinstrumenten-bg.svg);
+							}
+
+							@include screen-size(small) {
+				      			background-image: url(icon-kwaliteitsinstrumenten.svg);
+							}
 				      	}
 
 						@keyframes thumb {
@@ -236,21 +242,23 @@ $swim-lane-hero-background-position: center !default;
 							}
 						}
 
-				      	&.icon-quality-thumb:after {
-				      		background-image: url(icon-kwaliteitsinstrumenten-fg.svg);
-							width: 110px;
-							height: 110px;
-							background-size: contain;
-							margin-left: -55px;
-							top: 44px;
-							left: 50%;
-							transform-origin: left middle;
-						}
+						@include screen-size(medium-large) {
+								&.icon-quality-thumb:after {
+									background-image: url(icon-kwaliteitsinstrumenten-fg.svg);
+								width: 110px;
+								height: 110px;
+								background-size: contain;
+								margin-left: -55px;
+								top: 44px;
+								left: 50%;
+								transform-origin: left middle;
+							}
 
-						&.icon-quality-thumb:hover:after {
-							animation: thumb 0.8s;
-							animation-fill-mode: forwards;
-							transform-origin: 0 50%;
+							&.icon-quality-thumb:hover:after {
+								animation: thumb 0.8s;
+								animation-fill-mode: forwards;
+								transform-origin: 0 50%;
+							}
 						}
 
 				      	&.icon-privacy-ok:before {
@@ -258,47 +266,55 @@ $swim-lane-hero-background-position: center !default;
 				      	}
 
 				      	&.icon-analytics:before {
-				      		background-image: url(icon-openbare-data-bg.svg);
+							@include screen-size(medium-large) {
+				      			background-image: url(icon-openbare-data-bg.svg);
+							}
+
+							@include screen-size(small) {
+				      			background-image: url(icon-openbare-data.svg);
+							}
 				      	}
 
-				      	&.icon-analytics:after {
-							background-image: url(icon-openbare-data-fg.svg);
-							top: 10px;
-							left: 15%;
-							right: 15%;
-							height: 100px;
-							background-size: auto 58.1%;
-							background-repeat: no-repeat;
-							background-position: 50%;
-							transform-origin: center 79px ;
+						@include screen-size(medium-large) {
+							&.icon-analytics:after {
+								background-image: url(icon-openbare-data-fg.svg);
+								top: 10px;
+								left: 15%;
+								right: 15%;
+								height: 100px;
+								background-size: auto 58.1%;
+								background-repeat: no-repeat;
+								background-position: 50%;
+								transform-origin: center 79px ;
+							}
+	
+							@keyframes bars {
+								0% {
+									transform: scaleY(1);
+								}
+	
+								40% {
+									transform: scaleY(1.1);
+								}
+	
+								60% {
+									transform: scaleY(0.2);
+								}
+	
+								80% {
+									transform: scaleY(1.4);
+								}
+	
+								100% {
+									transform: scaleY(1);
+								}
+							}
+							
+							&.icon-analytics:hover:after {
+								animation: bars 0.8s;
+								animation-fill-mode: forwards;
+							}
 						}
-
-						@keyframes bars {
-							0% {
-								transform: scaleY(1);
-							}
-
-							40% {
-								transform: scaleY(1.1);
-							}
-
-							60% {
-								transform: scaleY(0.2);
-							}
-
-							80% {
-								transform: scaleY(1.4);
-							}
-
-							100% {
-								transform: scaleY(1);
-							}
-						}
-
-						&.icon-analytics:hover:after {
-							animation: bars 0.8s;
-							animation-fill-mode: forwards;
-					  	}
 
 				      	&.icon-swiss-army-knife {
 				      		&:before {
