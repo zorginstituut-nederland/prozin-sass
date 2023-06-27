@@ -1,63 +1,41 @@
 @charset "UTF-8";
 
 .editorial-list {
-	@include screen-size(large) {
-		margin: 0 -1 * $grid-gutter;
+	gap: 32px;
 
+	@include screen-size(medium-large) {
+		display: grid;
+	}
+	@include screen-size(large) {
 		&.col-2 {
-			li {
-				width: 50%;
-			}
+			grid-template-columns: 1fr 1fr;
 		}
 
 		&.col-3 {
-			li {
-				width: 33.33332%;
-			}
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 
 		&.col-4 {
-			li {
-				width: 25%;
-			}
+			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 	}
 
 	@include screen-size(medium) {
-		margin: 0 -1 * $grid-gutter;
-
 		&.col-2 {
-			li {
-				width: 50%;
-			}
+			grid-template-columns: 1fr 1fr;
 		}
 
 		&.col-3 {
-			li {
-				width: 33.33332%;
-			}
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 
 		&.col-4 {
-			li {
-				width: 33.33332%;
-			}
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
 	
 	li {
 
-		@include screen-size(medium-large) {
-			padding: 0 $grid-gutter;
-			box-sizing: border-box;
-			margin: 0 0 40px;
-			float: left;
-		}
-
-		@include screen-size(small) {
-			margin: 0 0 2px 0;
-			height: auto !important;
-		}
 
 		&.state-draft {
 			a {
@@ -69,10 +47,8 @@
 			&:hover {
 				text-decoration: none;
 
-				@media (hover: hover) {
-					.item-title {
-						text-decoration: underline;
-					}
+				.item-title {
+					text-decoration: underline;
 				}
 			}
 
@@ -81,6 +57,7 @@
 				display: block;
 				background-color: #f3f3f3;
 				position: relative;
+				margin-bottom: 2px;
 
 				&:after {
 				  position: absolute;
@@ -95,11 +72,13 @@
 				}
 			}
 
-			h2,
 			.item-title {
-				font-size: 1.45em;
-				line-height: 1.2em;
-				margin-bottom: 5px;
+				font-size: 1.6018066406rem;
+				line-height: 1.2485901539;
+				font-weight: normal;
+				margin-top: 0;
+				margin-bottom: 0.5rem;
+				text-underline-offset: 0.18em;
 
 				@include screen-size(small) {
 		          font-size: 1.3125em;
@@ -109,12 +88,20 @@
 		        }
 			}
 
-			p,
 			.byline {
 				color: black;
 				line-height: 1.375em;
 				-webkit-hyphens: auto;
 				hyphens: auto;
+
+				display: -webkit-box;
+				display: box;
+				-webkit-box-orient: vertical;
+				box-orient: vertical;
+				-webkit-line-clamp: 3;
+				line-clamp: 3;
+				overflow: hidden;
+
 
 		        @include screen-size(small) {
 		          padding-top: 2px;
