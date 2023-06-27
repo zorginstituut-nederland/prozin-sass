@@ -78,23 +78,6 @@ $colour-toolbar-button-text: $button-text-colour !default;
 		}
 	}
 
-	&#toolbar-landing-browse {
-		@include screen-size(medium-large) {
-			#filter-mobile {
-				display: none;
-			}
-			#dynamic-options {
-				float: right;
-			}
-		}
-
-		@include screen-size(small) {
-			#content-types-landing-browse {
-				display: none;
-			}
-		}
-	}
-
 	& + .pat-rich > .pat-message {
 		margin-top: -1 * $baseline - 1px;
 	}

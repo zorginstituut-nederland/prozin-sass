@@ -9,6 +9,18 @@
     padding-top: 0;
   }
 
+	&#landing-browse-toolbar {
+    > * {
+      grid-template-columns: 2fr 3fr 2fr;
+    }
+
+		@include screen-size(small) {
+      #grouping-options {
+				display: none;
+			}
+		}
+	}
+
   &#organisations-toolbar {
     > * {
       grid-template-columns: auto 0 250px;
