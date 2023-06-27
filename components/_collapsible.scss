@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.pat-collapsible:not(.form-panel):not(.page-module):not(.free-form):not(.cms-page-module):not(.context-menu):not(.pat-context-menu):not(.place-on-homescreen):not(.search-box):not(.help):not(.pat-message):not(.filters):not(.help) {
+.pat-collapsible:not(.content):not(.form-panel):not(.page-module):not(.free-form):not(.cms-page-module):not(.context-menu):not(.pat-context-menu):not(.place-on-homescreen):not(.search-box):not(.help):not(.pat-message):not(.filters):not(.help) {
   clear: both;
   float: right; 
   width: 100%; // Prevents jumping scroll position issues in Firefox which is caused by an ineraction between the clear property above and position: sticky on the h2's

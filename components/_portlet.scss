@@ -63,7 +63,12 @@ $colour-portlet: $colour-grey-1 !default;
 
 	    .portlet-intro {
 			display: flex;
+			transition: padding 0.3s;
 			padding: 1 * $portlet-padding $portlet-padding 0.5 * $portlet-padding;
+
+			&.collapsible-closed {
+				padding: $portlet-padding;
+			}
 
 			.portlet-tool-group {
 				flex: 1;
