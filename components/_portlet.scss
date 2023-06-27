@@ -105,6 +105,13 @@ $colour-portlet: $colour-grey-1 !default;
 						&.info-button {		
 							&:before {	
 								content: '#{$glyph-info}';
+								background-color: $colour-dark-blue;
+								color: white;
+								font-size: 18px;
+							}
+
+							&:hover:before {
+								background-color: $colour-dark-blue-d;
 							}
 						}
 	
@@ -209,6 +216,7 @@ $colour-portlet: $colour-grey-1 !default;
 
 	.portlet-title {
 		margin: 0 0 0 0;
+		padding-right: 20px;
 		font-size: 28px;
 		line-height: 1.2;
 		font-weight: normal;
