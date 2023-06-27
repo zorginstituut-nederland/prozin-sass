@@ -61,37 +61,63 @@ $colour-portlet: $colour-grey-1 !default;
 		position: relative;
 		background: $colour-portlet;
 
+		&.pat-collapsible.closed {
+			.portlet-intro {
+				padding: $portlet-padding;
+			}
+		}
+
 	    .portlet-intro {
 			display: flex;
 			transition: padding 0.3s;
 			padding: 1 * $portlet-padding $portlet-padding 0.5 * $portlet-padding;
 
-			&.collapsible-closed {
-				padding: $portlet-padding;
-			}
-
-			.portlet-tool-group {
-				flex: 1;
-
-				> .pat-select,
-				.context-menu {
-					float: right;
-				}
-			}
-
 			.portlet-title-group {
-				flex: 4;
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
 
-				.info-button {
-					float: right;
-					margin-top: 5px;
-					color: transparent;
+				.buttons {
+					.button {
+						float: right;
+						margin-left: 15px;
+						color: transparent;
+						background: rgba(0,0,0,0.1);
+						width: 	     32px;
+						height: 	 32px;
+						line-height: 32px;
+						overflow: hidden;
 
-					&:before {
-						margin-right: 0;
-						color: $colour-link;
-						text-align: right;
-						display: block;
+						&:hover {
+							background: rgba(0,0,0,0.15);
+						}
+
+						&:before {
+							font-family: fontello;
+							width: 100%;
+							line-height: 32px;
+							display: block;
+							color: black;
+							font-size: 22px;
+							text-align: center;
+						}
+
+						&.info-button {		
+							&:before {	
+								content: '#{$glyph-info}';
+							}
+						}
+	
+						&.collapse-button {	
+							&:before {
+								content: '#{$glyph-down-open}';
+								transition: transform 0.2s;
+							}	
+
+							&.collapsible-open:before {
+								transform: scaleY(-100%)
+							}
+						}
 					}
 				}
 
