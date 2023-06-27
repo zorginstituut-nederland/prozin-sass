@@ -175,8 +175,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 }
 
 @mixin mutation-sentinel() {
-	width: 8px;
-    height: 8px;
+	width: 10px;
+    height: 10px;
     color: transparent !important;
     overflow: hidden;
     border: 2px solid white;
@@ -184,6 +184,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
     border-radius: 50%;
     background-color: $colour-heavenly-blue;
     background: linear-gradient(to bottom, #8fcae7 0%,#007bc7 100%);
+	display: inline-block;
+	margin-top: 0;
 }
 
 @mixin classification-tag() {
