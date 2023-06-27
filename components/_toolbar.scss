@@ -9,6 +9,27 @@
     padding-top: 0;
   }
 
+	&#toolbar-landing-browse {
+    > * {
+      grid-template-columns: 2fr 3fr 2fr;
+    }
+
+		@include screen-size(medium-large) {
+			#filter-mobile {
+				display: none;
+			}
+			#dynamic-options {
+				float: right;
+			}
+		}
+
+		@include screen-size(small) {
+			#content-types-landing-browse {
+				display: none;
+			}
+		}
+	}
+
   &#organisations-toolbar {
     > * {
       grid-template-columns: auto 0 250px;
