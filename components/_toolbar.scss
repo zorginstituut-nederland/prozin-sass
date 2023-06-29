@@ -11,15 +11,31 @@
 
 	&#landing-browse-toolbar {
     > * {
-      grid-template-columns: 2fr 3fr 2fr;
+      grid-template-columns: 1fr 0 1fr;
     }
 
-		@include screen-size(small) {
+    .toolbar-section {
+      &.view-options {
+        grid-area: right;
+        text-align: right;
+        
+        > * {
+          margin-right: 0;
+        }
+      }
+
+      &.navigation {
+        grid-area: left;
+        text-align: left;
+      }
+    }
+
+    @include screen-size(small) {
       #grouping-options {
-				display: none;
-			}
-		}
-	}
+        display: none;
+      }
+    }
+  }
 
   &#organisations-toolbar {
     > * {
