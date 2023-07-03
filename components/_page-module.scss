@@ -423,12 +423,21 @@ $header-level-2-block-start: 3rem !default;
 		padding: 8px 20px;
 		margin-top: 0;
 		background: $colour-dark-blue-xl;
-	}
-
-	&.type-listing {
+	}&.type-listing {
+	
 		.page-module-title + .link-list,
 		.page-module-summary + .link-list {
 			margin-top: 20px;
+		}
+	}&.type-table {
+	
+		.page-module-title + table,
+		.page-module-summary + table {
+			margin-top: 20px;
+		}
+
+		table {
+			margin-bottom: 30px;
 		}
 	}
 
