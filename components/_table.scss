@@ -365,9 +365,15 @@ table {
     tr {
         width: 100%;
 
-        &.content-type-prozin-landing-toc {
-            .item-name a {                
+        &.content-type-prozin-landing-toc,
+        &.folder {
+            .item-name a {    
+                padding-left: 22px;
+                position: relative;
+
                 &:before {
+                    position: absolute;
+                    left: 0;
                     display: inline-block;
                     margin-right: 5px;
                     font-family: fontello;
