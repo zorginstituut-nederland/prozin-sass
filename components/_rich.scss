@@ -1119,6 +1119,13 @@ $rich-object-margin-top-bottom: 2rem;
 		font-size: 1em;
 		line-height: 1.4;
 
+		.content-block {
+			// All these rules are to compensate for a FF drawing bug that is an interaction between the stickyness of the H2s and the collapsibles within the metro timelines of indication texts of FK.
+			// margin-left: -39% !important;
+			// padding-left: 39%;
+			// overflow: hidden; 
+		}
+
 		@include screen-size(large) {
 			@media screen {
 				padding-left: 28%;
