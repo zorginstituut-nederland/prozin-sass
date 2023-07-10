@@ -309,6 +309,7 @@ $global-navigation-background-colour: $colour-green !default;
 				height: 70px;
 				width: 60px;
 				color: rgba(0,0,0,0);
+				overflow: hidden; // Prevents bleeding of label text
 
 				&:before {
 					content: ' ';
