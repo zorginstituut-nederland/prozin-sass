@@ -14,6 +14,7 @@ $swim-lane-hero-background-position: center !default;
 	& + #news,
 	& + #swim-lane-reports,
 	& + #site-summary,
+	& + #swim-lane-quote,
 	& + #swim-lane-secondary-tasks,
 	& + #swim-lane-sectors {
 		.container {
@@ -763,6 +764,67 @@ $swim-lane-hero-background-position: center !default;
 				p {
 					font-size: 1.3125em;
 					line-height: 1.5238;
+				}
+			}
+		}
+	}
+	
+	&#swim-lane-quote {
+		background-color: white;
+		@include white-lane;
+	
+		.container {
+			// padding-bottom: 0; // Must be followed up by another white lane or news.
+	
+			.quote {
+				// font-family: "Times", Georgia, Times New Roman;
+				font-size: 40px;
+				line-height: 1.4;
+				word-wrap: break-word;
+				margin: 1.5em 0;
+				// float: left;
+				// clear: both;
+				position: relative;
+				border: none;
+				color: rgba(0, 0, 0, 0.5);
+				font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+				// font-family: Georgia, serif;
+				// font-weight: bold;
+				font-style: italic;
+			
+				*:last-child {
+					margin: 0;
+				}
+			
+				@include screen-size(small) {
+					// padding: 1.5em;
+				}
+			
+				@include screen-size(medium-large) {
+					&:before {
+						content: '“';
+						font-size: 4em;
+						font-weight: bold;
+						font-style: normal;
+						position: absolute;
+						top: 0;
+						left: 0;
+						line-height: 0.85em;
+						color: rgba(0, 0, 0, 0.2);
+					}
+			
+					padding: 0 2.5em;
+				}
+
+				.author {
+					color: black;
+					margin-top: 0.7em;
+					font-size: 0.7em;
+					font-style: normal;
+
+					// &:before {
+					// 	content: '—';
+					// }
 				}
 			}
 		}
