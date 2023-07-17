@@ -685,10 +685,37 @@ table {
             &.functions {
                 white-space: nowrap;
                 width: 1px;
+                padding: 0 !important;
 
                 a {
-                    margin-left: 20px;
+                    margin-left: 10px;
                     display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    float: left;
+                    overflow: hidden;
+                    color: transparent;
+
+                    &:hover {
+                        background-color: $button-background-colour-hover;
+                    }
+
+                    &:before {
+                        display: block;
+                        line-height: 30px;
+                        width: 30px;
+                        text-align: center;
+                        color: $colour-link;
+                    }
+
+                    &.tooltip-active-click {
+                        background-color: $colour-accent;
+                        border-radius: $border-radii;
+                        
+                        &:before {
+                            color: white;
+                        }
+                    }
 
                     &:first-child {
                         margin: 0;
