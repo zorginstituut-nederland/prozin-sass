@@ -431,6 +431,12 @@ table {
             border-bottom: 2px solid #fff;
             background-color: #f3f3f3;
 
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
             &.workflow-change {
                 width: 50px;
                 max-width: 50px;
