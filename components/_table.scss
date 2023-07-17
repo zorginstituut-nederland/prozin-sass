@@ -695,6 +695,7 @@ table {
                     float: left;
                     overflow: hidden;
                     color: transparent;
+                    cursor: default;
 
                     &:hover {
                         background-color: $button-background-colour-hover;
