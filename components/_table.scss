@@ -686,12 +686,13 @@ table {
                 white-space: nowrap;
                 width: 1px;
                 padding: 0 !important;
+                vertical-align: middle;
 
                 a {
                     margin-left: 10px;
                     display: inline-block;
-                    width: 30px;
-                    height: 30px;
+                    width: 47px;
+                    height: 47px;
                     float: left;
                     overflow: hidden;
                     color: transparent;
@@ -703,8 +704,8 @@ table {
 
                     &:before {
                         display: block;
-                        line-height: 30px;
-                        width: 30px;
+                        line-height: 47px;
+                        width: 100%;
                         text-align: center;
                         color: $colour-link;
                     }
@@ -1536,7 +1537,16 @@ table {
                 padding: 5px 10px 5px 10px;
             }
             
-        }   
+        }  
+        
+        tbody td.functions a {
+            width: 30px;
+            height: 30px;
+        
+            &:before {
+                line-height: 30px;
+            }
+        }
     }
 
 
