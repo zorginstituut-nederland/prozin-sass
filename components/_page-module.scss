@@ -155,11 +155,11 @@ $header-level-2-block-start: 3rem !default;
 
 		.page-module-title {
 			min-height: 60px;
-			font-weight: 600;
+			font-weight: normal;
 			color: $colour-dark-blue;
-			background-color: $colour-dark-blue-xl;
+			// background-color: $colour-dark-blue-xl;
 			padding: 10px 40px 10px 39px;
-			margin: -1px -15px 0;
+			margin: -1px 0 0;
 			position: relative;
 			-webkit-user-select: none;
 			user-select: none;
@@ -170,6 +170,11 @@ $header-level-2-block-start: 3rem !default;
 			justify-content: space-between;
 			border-top: 1px solid $colour-dark-blue-l;
 			border-bottom: 1px solid $colour-dark-blue-l;
+			
+			&:hover {
+				background-color: $colour-dark-blue-xl;
+				color: $colour-dark-blue;
+			}
 
 			.product-fk & {
 				border-top: 1px solid $colour-green-l;
@@ -322,7 +327,7 @@ $header-level-2-block-start: 3rem !default;
 			&.collapsible-open,
 			&.collapsible-closed.collapsible-in-progress {
 				border-bottom: none;
-				background-color: #cce0f1;
+				background-color: $colour-dark-blue-xl;
 
 				.product-fk & {
 					background: $colour-green-xl;
@@ -355,7 +360,7 @@ $header-level-2-block-start: 3rem !default;
 		}
 
 		> .panel-content {
-			padding: 20px 0 40px;
+			padding: 20px 15px 40px;
 		}
 	}
 

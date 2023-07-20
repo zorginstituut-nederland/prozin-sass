@@ -193,9 +193,9 @@ $form-proportion-value: 80% !default;
 				color: $colour-dark-blue;
 				padding: .4em 0;
 				cursor: pointer;
-				display: inline-block;
 				vertical-align: text-bottom;
 				line-height: 1.6;
+				// display: inline-block; // Float below
 				float: left;
 				font-size: 1em;
 

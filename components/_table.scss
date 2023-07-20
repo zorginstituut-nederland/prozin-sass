@@ -431,6 +431,12 @@ table {
             border-bottom: 2px solid #fff;
             background-color: #f3f3f3;
 
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
             &.workflow-change {
                 width: 50px;
                 max-width: 50px;
@@ -685,10 +691,39 @@ table {
             &.functions {
                 white-space: nowrap;
                 width: 1px;
+                padding: 0 !important;
+                vertical-align: middle;
 
                 a {
-                    margin-left: 20px;
+                    margin-left: 10px;
                     display: inline-block;
+                    width: 47px;
+                    height: 47px;
+                    float: left;
+                    overflow: hidden;
+                    color: transparent;
+                    cursor: default;
+
+                    &:hover {
+                        background-color: $button-background-colour-hover;
+                    }
+
+                    &:before {
+                        display: block;
+                        line-height: 47px;
+                        width: 100%;
+                        text-align: center;
+                        color: $colour-link;
+                    }
+
+                    &.tooltip-active-click {
+                        background-color: $colour-accent;
+                        border-radius: $border-radii;
+                        
+                        &:before {
+                            color: white;
+                        }
+                    }
 
                     &:first-child {
                         margin: 0;
@@ -1510,7 +1545,16 @@ table {
                 padding: 5px 10px 5px 10px;
             }
             
-        }   
+        }  
+        
+        tbody td.functions a {
+            width: 31px;
+            height: 31px;
+            
+            &:before {
+                line-height: 32px;
+            }
+        }
     }
 
 

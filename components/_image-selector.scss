@@ -120,6 +120,24 @@
 		perspective: 100px;
 		perspective-origin: bottom;
 
+		&.no-image {
+			&:before {
+				font-family: fontello;
+				content: '#{$glyph-image}';
+				display: block;
+				position: absolute;
+				top: 50%;
+				height: 50px;
+				line-height: 50px;
+				font-size: 50px;
+				margin-top: -25px;
+				width: 100%;
+				text-align: center;
+				text-indent: 2%;
+				color: gray;
+			}
+		}
+
 	    &[href] {
 	    	cursor: pointer;
 	    }
