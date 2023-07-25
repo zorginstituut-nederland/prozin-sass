@@ -435,6 +435,12 @@ table {
             border-bottom: 2px solid #fff;
             background-color: #f3f3f3;
 
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
             &.workflow-change {
                 width: 50px;
                 max-width: 50px;
@@ -1106,8 +1112,10 @@ table {
                 }
                 
                 @include screen-size(medium-large) {
-                    // font-size: 0.8em;
-                    // line-height: 0.75 * $baseline;
+                    .product-fk .content-block & {
+                        font-size: 0.8em;
+                        line-height: 0.75 * $baseline;
+                    }
                 }
 
                 @include screen-size(small) {
@@ -1544,11 +1552,11 @@ table {
         }  
         
         tbody td.functions a {
-            width: 30px;
-            height: 30px;
-        
+            width: 31px;
+            height: 31px;
+            
             &:before {
-                line-height: 30px;
+                line-height: 32px;
             }
         }
     }
