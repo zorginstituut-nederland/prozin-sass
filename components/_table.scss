@@ -42,6 +42,10 @@ table {
     width: 100%;
     // table-layout: fixed; // Fixed causes issues with FK cost tables
 
+    .tableWrapper {
+        display: none !important; // Hide nested tables in both edit and view.
+    }
+
     ins {
         background-color: palegreen;
         text-decoration: none;
