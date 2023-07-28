@@ -707,7 +707,8 @@ table {
                     margin: 0;
                     display: inline-block;
                    
-                    &.icon {
+                    &.icon,
+                    &.iconified {
                         margin: 0;
                         padding: 0;
                         display: inline-block;
