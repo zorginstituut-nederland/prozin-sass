@@ -551,6 +551,10 @@ table {
                 width: 100px;
             }
 
+            &.date {
+                white-space: nowrap;
+            }
+
             &.indicator-order,
             &.indicator-number {
                 width: 50px;
