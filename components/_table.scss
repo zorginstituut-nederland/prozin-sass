@@ -711,7 +711,8 @@ table {
                     &.iconified {
                         margin: 0;
                         padding: 0;
-                        display: inline-block;
+                        // display: inline-block;
+                        float: left;
                         width: 47px;
                         height: 47px;
                         overflow: hidden;
