@@ -697,40 +697,52 @@ table {
                 width: 1px;
                 padding: 0 !important;
                 vertical-align: middle;
+                white-space: nowrap;
 
                 a {
-                    margin-left: 10px;
+                    padding-top: $table-cell-padding-top;
+                    padding-right: $table-cell-padding-right;
+                    padding-bottom: $table-cell-padding-bottom;
+                    padding-left: $table-cell-padding-left;
+                    margin: 0;
                     display: inline-block;
-                    width: 47px;
-                    height: 47px;
-                    float: left;
-                    overflow: hidden;
-                    color: transparent;
-                    cursor: default;
-
-                    &:hover {
-                        background-color: $button-background-colour-hover;
-                    }
-
-                    &:before {
-                        display: block;
-                        line-height: 47px;
-                        width: 100%;
-                        text-align: center;
-                        color: $colour-link;
-                    }
-
-                    &.tooltip-active-click {
-                        background-color: $colour-accent;
-                        border-radius: $border-radii;
-                        
-                        &:before {
-                            color: white;
-                        }
-                    }
-
-                    &:first-child {
+                   
+                    &.icon {
                         margin: 0;
+                        padding: 0;
+                        display: inline-block;
+                        width: 47px;
+                        height: 47px;
+                        overflow: hidden;
+                        color: transparent;
+                        cursor: default;
+                        text-decoration: none;
+
+                        &:hover {
+                            background-color: $button-background-colour-hover;
+                        }
+
+                        &:before {
+                            display: block;
+                            line-height: 47px;
+                            width: 100%;
+                            text-align: center;
+                            color: $colour-link;
+                            margin: 0;
+                        }
+
+                        &.tooltip-active-click {
+                            background-color: $colour-accent;
+                            border-radius: $border-radii;
+
+                            &:before {
+                                color: white;
+                            }
+                        }
+
+                        &:first-child {
+                            margin: 0;
+                        }
                     }
                 }
             }
