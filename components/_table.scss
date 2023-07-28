@@ -698,7 +698,6 @@ table {
             }
 
             &.functions {
-                white-space: nowrap;
                 width: 1px;
                 padding: 0 !important;
                 vertical-align: middle;
@@ -712,8 +711,7 @@ table {
                     margin: 0;
                     display: inline-block;
                    
-                    &.icon,
-                    &.iconified {
+                    &.icon {
                         margin: 0;
                         padding: 0;
                         // display: inline-block;
