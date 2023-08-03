@@ -972,31 +972,31 @@ $swim-lane-hero-background-position: center !default;
 		    	display: none;
 		    }
 
-			.product-fk &,
-			.product-farmacotherapeutisch-kompas & {
-				&:after {
-					display: block;
-					width: 100%;
-					height: 200px;
-					content: ' ';
-					position: absolute;
-					top: 0;
-					transition: opacity 1s; 
+			// .product-fk &,
+			// .product-farmacotherapeutisch-kompas & {
+			// 	&:after {
+			// 		display: block;
+			// 		width: 100%;
+			// 		height: 200px;
+			// 		content: ' ';
+			// 		position: absolute;
+			// 		top: 0;
+			// 		transition: opacity 1s; 
 
-					.current & {
-						opacity: 0;
-					}
+			// 		.current & {
+			// 			opacity: 0;
+			// 		}
 
-					@include screen-size(medium-large) {
-						background: url(zoek-memo.svg) no-repeat;
-						background-position: right top;
-						background-size: 551px 235px;
-						animation: bounce-memo 0.7s;
-						animation-iteration-count: 3;
-						animation-delay: 1s;
-					}
-				}
-			}
+			// 		@include screen-size(medium-large) {
+			// 			background: url(zoek-memo.svg) no-repeat;
+			// 			background-position: right top;
+			// 			background-size: 551px 235px;
+			// 			animation: bounce-memo 0.7s;
+			// 			animation-iteration-count: 3;
+			// 			animation-delay: 1s;
+			// 		}
+			// 	}
+			// }
 
 			@include screen-size(medium-large) {
 				opacity: 0;
