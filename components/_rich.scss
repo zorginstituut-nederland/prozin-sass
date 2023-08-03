@@ -1124,6 +1124,10 @@ $rich-object-margin-top-bottom: 2rem;
 			// margin-left: -39% !important;
 			// padding-left: 39%;
 			// overflow: hidden; 
+
+			.recipe .doses .details {
+				margin-bottom: 2px;
+			}
 		}
 
 		@include screen-size(large) {
