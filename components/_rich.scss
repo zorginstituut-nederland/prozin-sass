@@ -1128,6 +1128,16 @@ $rich-object-margin-top-bottom: 2rem;
 			.recipe .doses .details {
 				margin-bottom: 2px;
 			}
+
+			&#extra-info {
+				.link-list {
+					padding-left: $bullet-space;
+		
+					li {
+						position: static;
+					}
+				}
+			}
 		}
 
 		@include screen-size(large) {

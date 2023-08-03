@@ -143,11 +143,11 @@ $bullet-space: 22px !default;
 		}
 
 		&.type-reference {
-			padding: $scroll-offset 0.5em 0 $bullet-space;
-			margin: -1 * $scroll-offset 0 0 0 ; 
-			-moz-pointer-events: none;
-			-webkit-pointer-events: none;
-			pointer-events: none;
+			// padding: $scroll-offset 0.5em 0 $bullet-space;
+			// margin: -1 * $scroll-offset 0 0 0 ; 
+			// -moz-pointer-events: none;
+			// -webkit-pointer-events: none;
+			// pointer-events: none;
 		}
 
 		> * {
@@ -197,6 +197,7 @@ $bullet-space: 22px !default;
 				font-size: 0.7em;
 				margin-top: 4px;
 				position: relative;
+				line-height: 1.49em;
 
 				&:before {
 					position: absolute;
