@@ -1124,6 +1124,16 @@ $rich-object-margin-top-bottom: 2rem;
 			// margin-left: -39% !important;
 			// padding-left: 39%;
 			// overflow: hidden; 
+
+			&#extra-info {
+				.link-list {
+					padding-left: $bullet-space;
+		
+					li {
+						position: static;
+					}
+				}
+			}
 		}
 
 		@include screen-size(large) {
