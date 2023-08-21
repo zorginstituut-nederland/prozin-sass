@@ -1,15 +1,14 @@
 $bullet-space: 22px !default;
-$scroll-offset: 120px !default;
-$text-bottom-margin: "1.25rem";
+$scroll-offset: 170px !default;
+$text-bottom-margin: "1.25rem" !default;
 $header-2-margin-bottom: 3rem !default;
 $header-level-2-block-start: 3rem !default;
-$rich-object-margin-top-bottom: 2rem;
+$rich-object-margin-top-bottom: 2rem !default;
 
 @charset "UTF-8";
 
 // Rich text
 
-.article.content,
 .pat-rich {
 	// -moz-hyphens: auto;
 	// -webkit-hyphens: auto;
@@ -19,9 +18,9 @@ $rich-object-margin-top-bottom: 2rem;
 	line-height: 1.38272;
 
 	.inline-reference {
-		padding: $scroll-offset 0 0 0;
+		padding: #{$scroll-offset} 0 0 0;
 
-		margin: -1 * $scroll-offset 0 0 0 ; 
+		margin: calc(-1 * #{$scroll-offset}) 0 0 0 ; 
 		-moz-pointer-events: none;
 		-webkit-pointer-events: none;
 		pointer-events: none;
