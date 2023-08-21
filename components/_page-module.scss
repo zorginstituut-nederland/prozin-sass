@@ -446,6 +446,18 @@ $header-level-2-block-start: 3rem !default;
 		}
 	}
 
+	&.type-treatment-plan {
+		.pat-collapsible {
+			float: none !important;
+			margin: 0;
+			clear: both;
+			
+			.title {
+				font-size: 1em;
+			}
+		}
+	}
+
 	&.pat-collapsible + .page-module.type-links,
 	&.pat-collapsible + .page-module.type-attributions {
 		.page-module-title {
