@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 .reference-badge {
-	height: 1.4em;
-	line-height: 1.4em;
-	min-width: 1.4em;
+	height: 19px;
+	line-height: 19px;
+	min-width: 19px;
 	text-align: center;
 	box-sizing: border-box;
 	padding: 0 0.1em;
@@ -11,8 +11,12 @@
 	background: $colour-dark-blue-l;
 	color: $colour-link !important;
 	display: inline-block;
-	font-size: 1em;
+	font-size: 18px;
 	text-decoration: none !important;
+
+	&:before {
+		line-height: 19px;
+	}
 
 	&.active {
 		box-shadow: 0 0 1px 1px $colour-dark-blue;

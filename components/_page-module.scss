@@ -446,14 +446,29 @@ $header-level-2-block-start: 3rem !default;
 		}
 	}
 
-	&.pat-collapsible + .page-module.type-links {
+	&.pat-collapsible + .page-module.type-links,
+	&.pat-collapsible + .page-module.type-attributions {
 		.page-module-title {
 			padding-top: 0.5rem;
+			border-top: none;
+			margin-top: 80px;
+		}
+	}
+
+	&.pat-collapsible + .page-module.type-attributions + .page-module.type-links {
+		.page-module-title {
 			border-top: none;
 		}
 	}
 
-	&.type-links {
+	&.type-applicability {
+		.pat-collapsible {
+			margin-bottom: 30px;
+		}
+	}
+
+	&.type-links,
+	&.type-attributions {
 		// border-top: 1px solid #e1e1e1;
 
 		h3 + .link-list {

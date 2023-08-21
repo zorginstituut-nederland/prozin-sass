@@ -1131,6 +1131,10 @@ $rich-object-margin-top-bottom: 2rem;
 		
 					li {
 						position: static;
+
+						.reference-badge {
+							top: 4px;
+						}
 					}
 				}
 			}

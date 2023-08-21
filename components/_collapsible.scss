@@ -19,7 +19,7 @@
     margin-top: calc(-1 * #{$baseline} - 1px);
   }
 
-  .collapsible-closed:hover {
+  &:not(.borderless) .collapsible-closed:hover {
     .no-touchevents & {
       background-color: rgba(0,0,0,0.03);
     }
