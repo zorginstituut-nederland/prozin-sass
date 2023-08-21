@@ -446,6 +446,13 @@ $header-level-2-block-start: 3rem !default;
 		}
 	}
 
+	&.pat-collapsible + .page-module.type-links {
+		.page-module-title {
+			padding-top: 0.5rem;
+			border-top: none;
+		}
+	}
+
 	&.type-links {
 		// border-top: 1px solid #e1e1e1;
 
