@@ -179,9 +179,7 @@
     }
 
     &:hover {
-      .no-touchevents & {
-        color: black;
-      }
+      text-decoration: underline;
     }
   }
 
