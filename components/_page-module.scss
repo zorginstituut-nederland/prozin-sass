@@ -80,6 +80,10 @@ $main-content-width: 768px !default;
 		}
 	}
 
+	&.type-icon-tile-navigation {
+		padding-bottom: 1rem;
+	}
+
 	&.type-object {
 		figcaption {
 			.enlarge-link {
