@@ -518,6 +518,14 @@ $main-content-width: 768px !default;
 
 		.link-list {
 			li {
+				padding-top: 120px;
+				margin-top: -120px;
+				pointer-events: none;
+			
+				> * {
+					pointer-events: all;
+				}
+
 				a {
 					&[href] {
 						&:hover {
@@ -529,6 +537,7 @@ $main-content-width: 768px !default;
 						}
 					}
 				}
+
 			}
 		}
 
