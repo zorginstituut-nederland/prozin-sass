@@ -16,7 +16,7 @@
   // margin-bottom: $baseline;
 
   & + .pat-collapsible {
-    margin-top: calc(-1 * #{$baseline} - 1px);
+    // margin-top: calc(-1 * #{$baseline} - 1px); // No overlapping collapsibles on FK indication pages.
   }
 
   &:not(.borderless) .collapsible-closed:hover {
