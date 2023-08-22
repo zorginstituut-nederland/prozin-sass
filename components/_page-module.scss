@@ -479,6 +479,19 @@ $header-level-2-block-start: 3rem !default;
 		}
 	}
 
+	&.type-topics {
+		.page-module-title {
+			margin-bottom: 1.5rem;
+			padding-top: 0.5rem;
+			border-top: 1px solid #e1e1e1;
+		}
+
+		.page-module-title + .link-list,
+		.page-module-summary + .link-list {
+			margin-top: 20px;
+		}
+	}
+
 	&.type-links,
 	&.type-attributions {
 		// border-top: 1px solid #e1e1e1;
