@@ -6,6 +6,14 @@ $header-level-2-margin-bottom: 1rem !default;
 $header-level-2-block-start: 3rem !default;
 $main-content-width: 768px !default;
 
+@mixin module-separator() {
+	.page-module-title {
+		margin-bottom: 1.5rem;
+		padding-top: 0.5rem;
+		border-top: 1px solid #e1e1e1;
+	}
+}
+
 .page-module {
 	// margin-bottom: 30px;
 	@include clear-fix;
@@ -34,6 +42,23 @@ $main-content-width: 768px !default;
 
 	.page-module-group-title {
 		@include header-level-3;
+	}
+
+	.page-module-footer {
+		a {
+			font-weight: bold;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&:before {
+				display: inline-block;
+				width: 1em;
+				font-family: fontello;
+				content: '#{$glyph-angle-right}';
+			}
+		}
 	}
 
 	&.type-dosage {
@@ -429,13 +454,22 @@ $main-content-width: 768px !default;
 		padding: 8px 20px;
 		margin-top: 0;
 		background: $colour-dark-blue-xl;
-	}&.type-listing {
+	}
+
+	&.type-news {
+		@include module-separator;
+	}
+	
+	&.type-listing {
+		@include module-separator;
 	
 		.page-module-title + .link-list,
 		.page-module-summary + .link-list {
 			margin-top: 20px;
 		}
-	}&.type-table {
+	}
+	
+	&.type-table {
 	
 		.page-module-title + table,
 		.page-module-summary + table {
@@ -481,11 +515,7 @@ $main-content-width: 768px !default;
 	}
 
 	&.type-topics {
-		.page-module-title {
-			margin-bottom: 1.5rem;
-			padding-top: 0.5rem;
-			border-top: 1px solid #e1e1e1;
-		}
+		@include module-separator;
 
 		.page-module-title + .link-list,
 		.page-module-summary + .link-list {
@@ -501,7 +531,7 @@ $main-content-width: 768px !default;
 
 	&.type-links,
 	&.type-attributions {
-		// border-top: 1px solid #e1e1e1;
+		@include module-separator;
 
 		h3 + .link-list {
 			margin-bottom: 20px;
@@ -539,11 +569,6 @@ $main-content-width: 768px !default;
 				}
 
 			}
-		}
-
-		.page-module-title {
-			padding-top: 0.5rem;
-			border-top: 1px solid #e1e1e1;
 		}
 	}
 

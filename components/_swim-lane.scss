@@ -52,6 +52,10 @@ $swim-lane-hero-background-position: center !default;
 		a {
 			font-weight: bold;
 
+			&:hover {
+				text-decoration: underline;
+			}
+
 			&:before {
 				display: inline-block;
 				width: 1em;
