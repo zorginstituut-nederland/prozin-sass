@@ -4,6 +4,7 @@ $header-2-top-margin: 3rem !default;
 $text-bottom-margin: 1.25rem !default;
 $header-level-2-margin-bottom: 1rem !default;
 $header-level-2-block-start: 3rem !default;
+$main-content-width: 768px !default;
 
 .page-module {
 	// margin-bottom: 30px;
@@ -489,6 +490,11 @@ $header-level-2-block-start: 3rem !default;
 		.page-module-title + .link-list,
 		.page-module-summary + .link-list {
 			margin-top: 20px;
+		}
+
+		.page-module-summary {
+			max-width: $main-content-width;
+			margin-top: -10px;
 		}
 	}
 
