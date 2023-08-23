@@ -24,11 +24,36 @@ $rich-object-margin-top-bottom: 2rem !default;
 		-moz-pointer-events: none;
 		-webkit-pointer-events: none;
 		pointer-events: none;
+		display: inline-block;
+		position: relative;
+
+		& {
+			
+
+			&:target:before {
+				content: '';
+				background-color: #ffff0036;
+				display: block;
+				top: calc(#{$scroll-offset} - 4px);
+				right: -9px;
+				bottom: -4px;
+				left: -9px;
+				border-radius: 4px;
+				position: absolute;
+				border: 2px solid yellow;
+				z-index: 0;
+			}
+		}
 
 		> * {
 			-moz-pointer-events: auto;
 			-webkit-pointer-events: auto;
 			pointer-events: auto;	
+		}
+
+		.reference-badge {
+			position: relative;
+			z-index: 1; // Raise above the yellow haze.
 		}
 	}
 
