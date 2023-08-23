@@ -1,5 +1,5 @@
 $bullet-space: 22px !default;
-$scroll-offset: 170px !default;
+$scroll-offset: 200px !default;
 $text-bottom-margin: "1.25rem" !default;
 $header-2-margin-bottom: 3rem !default;
 $header-level-2-block-start: 3rem !default;
@@ -19,29 +19,42 @@ $rich-object-margin-top-bottom: 2rem !default;
 
 	.inline-reference {
 		padding: #{$scroll-offset} 0 0 0;
-
 		margin: calc(-1 * #{$scroll-offset}) 0 0 0 ; 
 		-moz-pointer-events: none;
 		-webkit-pointer-events: none;
 		pointer-events: none;
-		display: inline-block;
-		position: relative;
+		transition: all 1s;
 
-		& {
+		&:target {	
+			text-shadow:
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow; // Stacking many text-shadow until text-stroke icm paint-order is properly supported in Chrome.
 			
-
-			&:target:before {
-				content: '';
-				background-color: #ffff0036;
-				display: block;
-				top: calc(#{$scroll-offset} - 4px);
-				right: -9px;
-				bottom: -4px;
-				left: -9px;
-				border-radius: 4px;
-				position: absolute;
-				border: 2px solid yellow;
-				z-index: 0;
+			.reference-badge {
+				box-shadow: 0 0 0 4px yellow;
+				text-shadow: none;
 			}
 		}
 
@@ -52,8 +65,8 @@ $rich-object-margin-top-bottom: 2rem !default;
 		}
 
 		.reference-badge {
-			position: relative;
-			z-index: 1; // Raise above the yellow haze.
+			// position: relative;
+			// z-index: 1; // Raise above the yellow haze.
 		}
 	}
 

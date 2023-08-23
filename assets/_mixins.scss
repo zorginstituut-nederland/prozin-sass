@@ -7,6 +7,17 @@ $header-level-2-block-start: 3rem !default;
   --select-box-height: 44px;; 
 }
 
+@mixin text-stroke($color: #000, $size: 1px) {
+	text-shadow: -#{$size} -#{$size} 0 $color,
+	0 -#{$size} 0 $color,
+	#{$size} -#{$size} 0 $color,
+	#{$size} 0 0 $color,
+	#{$size} #{$size} 0 $color,
+	0 #{$size} 0 $color,
+	-#{$size} #{$size} 0 $color,
+	-#{$size} 0 0 $color;
+}
+
 @mixin header-level-2 {
 	margin: 0rem 0rem $header-level-2-margin-bottom 0rem;
 	font-size: 1.80203rem;

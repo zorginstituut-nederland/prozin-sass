@@ -18,7 +18,14 @@
 		line-height: 19px;
 	}
 
-	&.active {
+	&.active,
+	&.tooltip-active-hover {
 		box-shadow: 0 0 1px 1px $colour-dark-blue;
+	}
+
+
+	&.tooltip-active-hover{
+		background: $colour-dark-blue-d;
+		color: white !important;
 	}
 }
