@@ -552,8 +552,6 @@ $main-content-width: 768px !default;
 
 		.link-list {
 			li {
-				padding-top: 120px;
-				margin-top: -120px;
 				pointer-events: none;
 			
 				> * {
@@ -576,8 +574,13 @@ $main-content-width: 768px !default;
 		}
 	}
 
-	&.type-logos {
-		
+	&.type-attributions {
+		.link-list {
+			li {
+				padding-top: 120px;
+				margin-top: -120px;
+			}
+		}
 	}
 
 	&.type-sample-card {
