@@ -1197,6 +1197,11 @@ $rich-object-margin-top-bottom: 2rem !default;
 					// top: 20px;
 					top: 90px; // New value with sticky green bar.
 					@include box-sizing;
+					transition: all 0.4s;
+
+					body.scroll-down & {
+						top: 20px;
+					}
 
 					@-moz-document url-prefix() { 
 						// position: relative; // Blocks firefox position sticky for its poor support.
