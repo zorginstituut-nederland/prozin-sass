@@ -1177,6 +1177,15 @@ $rich-object-margin-top-bottom: 2rem !default;
 			}
 		}
 
+		.metro-line {
+			padding-left: 0;
+			 
+			li {
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+		}
+		
 		@include screen-size(large) {
 			@media screen {
 				padding-left: 28%;
