@@ -232,7 +232,8 @@ $bullet-space: 22px !default;
           page-break-inside: avoid;
                break-inside: avoid;
 		> a,
-		.group-title {
+		> .group-title,
+		> .link-title {
 			display: block;
 			padding: 0 !important; // !important to reverse the effect of external links left padding in a pat-rich context. 
 			font-weight: normal;
