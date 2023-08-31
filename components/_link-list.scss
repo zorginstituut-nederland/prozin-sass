@@ -382,6 +382,12 @@ $bullet-space: 22px !default;
 				text-decoration: underline;
 				color: $colour-dark-blue-d;
 
+				.classification-tags {
+					.classification-tag {
+						text-decoration: none;
+					}
+				}
+
 				&:has(.link-title) {
 					text-decoration: none;
 				}

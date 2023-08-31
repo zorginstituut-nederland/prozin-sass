@@ -204,6 +204,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 	&.mutated {
 		@include mutation-sentinel;
 	}
+	
+	&.wegiz {
+		background: $colour-red;
+		color: white;
+	}
 
 	&.biosimilar {
 		background: $colour-light-green;
