@@ -276,7 +276,7 @@
 				
 				&:before {
 					content: '#{$glyph-edit}';
-					@include text-outline($colour-orange, 5px);
+					@include text-outline($colour-orange, 4px);
 				}
 			}
 
@@ -291,7 +291,7 @@
 				
 				&:before {
 					content: '#{$glyph-archive}';
-					@include text-outline(black, 5px);
+					@include text-outline(black, 4px);
 				}
 			}
 
