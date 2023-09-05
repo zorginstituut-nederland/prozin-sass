@@ -261,87 +261,7 @@
 					text-align: center;
 					transform: translateY(-50%);
 					font-size: 90px;
-					text-shadow: 
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px,
-						white 0 0 3px;
+					color: white;
 				}
 			}
 			
@@ -356,7 +276,7 @@
 				
 				&:before {
 					content: '#{$glyph-edit}';
-					color: $colour-orange;
+					@include text-outline($colour-orange, 5px);
 				}
 			}
 
@@ -371,7 +291,7 @@
 				
 				&:before {
 					content: '#{$glyph-archive}';
-					color: black;
+					@include text-outline(black, 5px);
 				}
 			}
 
