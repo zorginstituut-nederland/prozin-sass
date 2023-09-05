@@ -256,12 +256,17 @@
 					z-index: 1;
 					font-family: fontello;
 					display: block;
-					top: 50%;
-					width: 100%;
+					bottom: 0;
+					right: 0;
+					font-size: 20px;
+					width: 		 35px;
+					height:  	 35px;
+					line-height: 35px;
 					text-align: center;
-					transform: translateY(-50%);
-					font-size: 90px;
 					color: white;
+					border-left: 3px white solid;
+					border-top:  3px white solid;
+					padding: 5px 0 0 5px;
 				}
 			}
 			
@@ -276,7 +281,7 @@
 				
 				&:before {
 					content: '#{$glyph-edit}';
-					@include text-outline($colour-orange, 4px);
+					background-color: $colour-orange;
 				}
 			}
 
@@ -291,7 +296,7 @@
 				
 				&:before {
 					content: '#{$glyph-archive}';
-					@include text-outline(black, 4px);
+					background: black;
 				}
 			}
 
