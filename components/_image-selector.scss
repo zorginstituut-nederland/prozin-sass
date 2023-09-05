@@ -251,7 +251,7 @@
 
 			&.state-draft,
 			&.state-archived {
-				&:before {
+				&:after {
 					position: absolute;
 					z-index: 1;
 					font-family: fontello;
@@ -279,7 +279,7 @@
 					box-sizing: border-box;
 				}
 				
-				&:before {
+				&:after {
 					content: '#{$glyph-edit}';
 					background-color: $colour-orange;
 				}
@@ -294,7 +294,7 @@
 					box-sizing: border-box;
 				}
 				
-				&:before {
+				&:after {
 					content: '#{$glyph-archive}';
 					background: black;
 				}
