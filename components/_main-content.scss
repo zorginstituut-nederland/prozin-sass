@@ -15,9 +15,9 @@ $main-content-width: 768px !default;
 
 		.body-text {
 			.ProseMirror {
-				min-height: 200px;
+				min-height: 0;
 				margin: -15px;
-				padding: 15px; // Allows for easer cursor placing after an image or table.
+				padding: 15px 15px 100px 15px; // Allows for easer cursor placing after an image or table.
 			}
 		}
 	}
