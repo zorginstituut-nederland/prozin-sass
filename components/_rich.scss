@@ -27,6 +27,7 @@ $rich-object-margin-top-bottom: 2rem !default;
 		color: #000;
 		border-left: 0.5rem solid dimgray;
 		background: #f3f3f3;
+		box-sizing: border-box;
 
 		&:before {
 			display: block;
