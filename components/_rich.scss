@@ -18,6 +18,28 @@ $rich-object-margin-top-bottom: 2rem;
 	font-size: 1.26562rem;
 	line-height: 1.38272;
 
+	blockquote {
+		display: block;
+		font-style: italic;
+		clear: both;
+		width: 100%;
+		margin: 2rem 0 1rem 0;
+		padding: 1rem 1rem 1rem 1rem;
+		color: #000;
+		border-left: 0.5rem solid dimgray;
+		background: #f3f3f3;
+
+		&:before {
+			display: block;
+			margin-top: 0.75rem;
+			margin-bottom: 0rem;
+			content: "“";
+			color: dimgray;
+			font-size: 6rem;
+			line-height: .1em;
+		}
+	}
+
 	.inline-reference {
 		padding: $scroll-offset 0 0 0;
 
