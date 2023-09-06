@@ -159,6 +159,7 @@ $bullet-space: 22px !default;
 		&.state-archived {
 			.link-title {
 				text-decoration: line-through;
+				opacity: 0.5;
 			}
 		}
 
