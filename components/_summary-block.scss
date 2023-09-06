@@ -1,6 +1,10 @@
 #page-intro {
   position: relative;
 
+  .validation.message {
+    font-size: 1rem;
+  }
+
   .placeholder {
     font-style: normal;
     color: silver;

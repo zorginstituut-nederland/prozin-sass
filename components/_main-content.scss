@@ -1,9 +1,9 @@
-@charset "UTF-8";
+$main-content-width: 768px !default;
 
 #main-content:not(.content-group) {
 	// float: left;
 	// width: 66.66667%;
-	width: 68.3%;
+	max-width: $main-content-width;
 	// margin-left: 16.66667%;
 	margin: 0 auto;
 	counter-reset: tab fig;  
@@ -15,9 +15,9 @@
 
 		.body-text {
 			.ProseMirror {
-				min-height: 200px;
+				min-height: 0;
 				margin: -15px;
-				padding: 15px; // Allows for easer cursor placing after an image or table.
+				padding: 15px 15px 100px 15px; // Allows for easer cursor placing after an image or table.
 			}
 		}
 	}
@@ -58,8 +58,8 @@
 	}
 
 	@include screen-size(medium-large) {
-		padding-left: 15px;
-		padding-right: 15px;
+		// padding-left: 15px;
+		// padding-right: 15px;
 
 		.variation-medicine-compare-versions ~ #main & {
 			margin: 0;

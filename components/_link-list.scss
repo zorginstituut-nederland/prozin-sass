@@ -143,17 +143,24 @@ $bullet-space: 22px !default;
 		}
 
 		&.type-reference {
-			padding: $scroll-offset 0.5em 0 $bullet-space;
-			margin: -1 * $scroll-offset 0 0 0 ; 
-			-moz-pointer-events: none;
-			-webkit-pointer-events: none;
-			pointer-events: none;
+			// padding: $scroll-offset 0.5em 0 $bullet-space;
+			// margin: -1 * $scroll-offset 0 0 0 ; 
+			// -moz-pointer-events: none;
+			// -webkit-pointer-events: none;
+			// pointer-events: none;
 		}
 
 		> * {
 			-moz-pointer-events: auto;
 			-webkit-pointer-events: auto;
 			pointer-events: auto;	
+		}
+
+		&.state-archived {
+			.link-title {
+				text-decoration: line-through;
+				opacity: 0.5;
+			}
 		}
 
 		&.state-draft,
@@ -187,6 +194,8 @@ $bullet-space: 22px !default;
 		}
 
 		&.type-reference {
+			display: list-item;
+
 			a:before {
 				display: none !important;
 			}
@@ -195,8 +204,10 @@ $bullet-space: 22px !default;
 				float: left;
 				margin-left: -1 * $bullet-space;
 				font-size: 0.7em;
-				margin-top: 4px;
+				margin-top: 2px;
 				position: relative;
+				// line-height: 1.49em;
+				line-height: 19px;
 
 				&:before {
 					position: absolute;
@@ -228,7 +239,8 @@ $bullet-space: 22px !default;
           page-break-inside: avoid;
                break-inside: avoid;
 		> a,
-		.group-title {
+		> .group-title,
+		> .link-title {
 			display: block;
 			padding: 0 !important; // !important to reverse the effect of external links left padding in a pat-rich context. 
 			font-weight: normal;
@@ -378,9 +390,28 @@ $bullet-space: 22px !default;
 				text-decoration: underline;
 				color: $colour-dark-blue-d;
 
+				.classification-tags {
+					.classification-tag {
+						text-decoration: none;
+					}
+				}
+
+				&:has(.link-title) {
+					text-decoration: none;
+				}
+
 				.link-byline {
 					text-decoration: none !important;
 				}
+				
+				&:hover {
+					// text-decoration: none;
+
+					.link-title {
+						text-decoration: underline;
+					}
+				}
+
 			}
 		}
 

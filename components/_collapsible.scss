@@ -16,10 +16,10 @@
   // margin-bottom: $baseline;
 
   & + .pat-collapsible {
-    margin-top: calc(-1 * #{$baseline} - 1px);
+    // margin-top: calc(-1 * #{$baseline} - 1px); // No overlapping collapsibles on FK indication pages.
   }
 
-  .collapsible-closed:hover {
+  &:not(.borderless) .collapsible-closed:hover {
     .no-touchevents & {
       background-color: rgba(0,0,0,0.03);
     }
@@ -179,9 +179,7 @@
     }
 
     &:hover {
-      .no-touchevents & {
-        color: black;
-      }
+      text-decoration: underline;
     }
   }
 

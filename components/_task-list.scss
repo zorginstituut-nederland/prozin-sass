@@ -2,6 +2,7 @@
 
 .task-list {
 	gap: 32px;
+	margin-bottom: 1em;
 
 	@include screen-size(medium-large) {
 		display: grid;

@@ -3,62 +3,67 @@
 
 	.glossary-section {
 		display: grid;
-	    grid-column-gap: 10px;
-	    grid-template-columns: 30% 70%;
-	    margin-bottom: 20px;
-	    padding-top: 180px;
-	    margin-top: -180px;
+		grid-column-gap: 10px;
+		grid-template-columns: 30% 70%;
+		margin-bottom: 20px;
+		padding-top: 180px;
+		margin-top: -180px;
 
-	    .glossary-section-title {
-	    	background-color: $colour-green-l;
-	    	text-align: center;
-	    	padding: 20px 30px;
-	    	font-weight: 100;
-	    	font-size: 210px;
-	    	line-height: 245px;
-	    	color: white;
-	    }
+		.glossary-section-title {
+			background-color: $colour-green-l;
+			text-align: center;
+			padding: 20px 30px;
+			font-weight: 100;
+			font-size: 210px;
+			line-height: 245px;
+			color: white;
+		}
 
-	    .terms-list {
-	    	padding: 0 30px;
-	    	margin: 0;
+		.terms-list {
+			padding: 0 30px;
+			margin: 0;
 
-	    	dt,
-	    	dd {
-	    		padding: 0;
-	    	}
+			dt,
+			dd {
+				padding: 0;
+			}
 
-	    	dt {
-	    		font-weight: bold;
-	    		float: left;
-	    		clear: both;
-	    		margin-top: 0;
+			dt {
+				font-weight: bold;
+				float: left;
+				clear: both;
+				margin-top: 0;
 
-	    		&:after {
-	    			content: '•';
-	    			display: inline-block;
-	    			padding: 0 7px;
-	    		}
-	    	}
+				&:after {
+					content: '•';
+					display: inline-block;
+					padding: 0 7px;
+				}
+			}
 
-	    	dd {
-	    		padding: 0 0 20px;
-			    padding-top: 180px;
-	    		margin-left: 0;
-			    margin-top: -180px;
+			dd {
+				padding: 0 0 20px;
+				padding-top: 180px;
+				margin-left: 0;
+				margin-top: -180px;
+				pointer-events: none;
 
-			    a {
-			    	text-decoration: underline;
+				> * {
+					pointer-events: auto;
+				}
 
-			    	&:hover {
-			    		color: darken($colour-link,10%);
-			    	}
-			    }
+				a {
+					text-decoration: underline;
 
-	    		&:last-child {
-	    			padding-bottom: 0;
-	    		}
-	    	}
-	    }
+					&:hover {
+						color: darken($colour-link, 10%);
+					}
+				}
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+		}
 	}
 }

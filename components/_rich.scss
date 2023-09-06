@@ -1,15 +1,14 @@
 $bullet-space: 22px !default;
-$scroll-offset: 120px !default;
-$text-bottom-margin: "1.25rem";
+$scroll-offset: 200px !default;
+$text-bottom-margin: "1.25rem" !default;
 $header-2-margin-bottom: 3rem !default;
 $header-level-2-block-start: 3rem !default;
-$rich-object-margin-top-bottom: 2rem;
+$rich-object-margin-top-bottom: 2rem !default;
 
 @charset "UTF-8";
 
 // Rich text
 
-.article.content,
 .pat-rich {
 	// -moz-hyphens: auto;
 	// -webkit-hyphens: auto;
@@ -41,17 +40,55 @@ $rich-object-margin-top-bottom: 2rem;
 	}
 
 	.inline-reference {
-		padding: $scroll-offset 0 0 0;
-
-		margin: -1 * $scroll-offset 0 0 0 ; 
+		padding: #{$scroll-offset} 0 0 0;
+		margin: calc(-1 * #{$scroll-offset}) 0 0 0 ; 
 		-moz-pointer-events: none;
 		-webkit-pointer-events: none;
 		pointer-events: none;
+		transition: all 1s;
+
+		&:target {	
+			text-shadow:
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow,
+				0 0 12px yellow; // Stacking many text-shadow until text-stroke icm paint-order is properly supported in Chrome.
+			
+			.reference-badge {
+				box-shadow: 0 0 0 4px yellow;
+				text-shadow: none;
+			}
+		}
 
 		> * {
 			-moz-pointer-events: auto;
 			-webkit-pointer-events: auto;
 			pointer-events: auto;	
+		}
+
+		.reference-badge {
+			// position: relative;
+			// z-index: 1; // Raise above the yellow haze.
 		}
 	}
 
@@ -1146,8 +1183,31 @@ $rich-object-margin-top-bottom: 2rem;
 			// margin-left: -39% !important;
 			// padding-left: 39%;
 			// overflow: hidden; 
+
+			&#extra-info {
+				.link-list {
+					padding-left: $bullet-space;
+		
+					li {
+						position: static;
+
+						.reference-badge {
+							top: 0;
+						}
+					}
+				}
+			}
 		}
 
+		.metro-line {
+			padding-left: 0;
+			 
+			li {
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+		}
+		
 		@include screen-size(large) {
 			@media screen {
 				padding-left: 28%;
@@ -1168,6 +1228,11 @@ $rich-object-margin-top-bottom: 2rem;
 					// top: 20px;
 					top: 90px; // New value with sticky green bar.
 					@include box-sizing;
+					transition: all 0.4s;
+
+					body.scroll-down & {
+						top: 20px;
+					}
 
 					@-moz-document url-prefix() { 
 						// position: relative; // Blocks firefox position sticky for its poor support.
