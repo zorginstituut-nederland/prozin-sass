@@ -156,6 +156,12 @@ $bullet-space: 22px !default;
 			pointer-events: auto;	
 		}
 
+		&.state-archived {
+			.link-title {
+				text-decoration: line-through;
+			}
+		}
+
 		&.state-draft,
 		&.state-new {
 			a[href] {
