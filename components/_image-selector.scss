@@ -249,13 +249,54 @@
 	      		transition: object-fit 0.4s;
 			}
 
+			&.state-draft,
+			&.state-archived {
+				&:after {
+					position: absolute;
+					z-index: 1;
+					font-family: fontello;
+					display: block;
+					bottom: 0;
+					right: 0;
+					font-size: 20px;
+					width: 		 35px;
+					height:  	 35px;
+					line-height: 35px;
+					text-align: center;
+					color: white;
+					border-left: 3px white solid;
+					border-top:  3px white solid;
+					padding: 5px 0 0 5px;
+				}
+			}
+			
 			&.state-draft {
-	      		border: 6px $colour-orange solid;
-
+				border: 6px $colour-orange solid;
+			
 				img {
 					filter: sepia(100%) hue-rotate(-30deg) saturate(300%) contrast(150%);
 					border: solid white 3px;
 					box-sizing: border-box;
+				}
+				
+				&:after {
+					content: '#{$glyph-edit}';
+					background-color: $colour-orange;
+				}
+			}
+
+			&.state-archived {
+	      		border: 6px black solid;
+
+				img {
+					filter: grayscale(100%);
+					border: solid white 3px;
+					box-sizing: border-box;
+				}
+				
+				&:after {
+					content: '#{$glyph-archive}';
+					background: black;
 				}
 			}
 
