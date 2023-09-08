@@ -8,29 +8,29 @@
 		display: grid;
 	}
 	@include screen-size(large) {
-		&.col-2 {
+		&.count-2 {
 			grid-template-columns: 1fr 1fr;
 		}
 
-		&.col-3 {
+		&.count-3 {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 
-		&.col-4 {
+		&.count-4 {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 	}
 
 	@include screen-size(medium) {
-		&.col-2 {
+		&.count-2 {
 			grid-template-columns: 1fr 1fr;
 		}
 
-		&.col-3 {
+		&.count-3 {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 
-		&.col-4 {
+		&.count-4 {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
