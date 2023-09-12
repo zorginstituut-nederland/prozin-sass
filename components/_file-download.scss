@@ -16,6 +16,10 @@
 	position: relative;
 	// cursor: pointer;
 
+	.form-panel & {
+		border: gray 1px solid;
+	}
+
 	.sortable-item & {
 		transition: all 0.2s;
 		margin: 0.5rem 0;

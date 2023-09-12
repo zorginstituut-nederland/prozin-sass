@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .pat-toolbar {
-  z-index: 10;
+  z-index: 11; // z-index 10 ducks underneath form rich field toolbars.
   
   .pat-modal & {
     margin-top: -7px;
