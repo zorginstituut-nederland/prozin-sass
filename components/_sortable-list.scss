@@ -8,34 +8,60 @@
 	.sortable-item {
 		// list-style: decimal;
 		counter-increment: count;
-		padding: 0.2em 0 0.2em 0.6em;
+		padding: 4px 0;
 		position: relative;
-		border-top: solid 1px transparent;
-		border-bottom: solid 1px transparent;
-		transition: border 0.2s;
-		margin: 4px 0 0 1.6em;
-		animation: all 1s linear;
-		// overflow: hidden;
+		margin: 0 0 0 30px;
 
 		&.dragged {
 			opacity: 0.5;
 		}
 
-		&.drop-target-above {
-			border-top: 38px solid transparent;
+		&:not(.dragged) {
+			animation: fadeIn 1s;
 		}
 
-		&.drop-target-below {
-			border-bottom: 38px solid transparent;
+		// &:not(.drop-target-above):not(.drop-target-below) {
+		// 	overflow: hidden;
+		// }
+
+		&:after {
+			display: block;
+			opacity: 0;
+			height: 2px;
+			content: ' ';
+			background: $colour-link;
+			position: absolute;
+			left: -15px;
+			right: 15px;
+		}
+
+		&.drop-target-above,
+		&.drop-target-below { 
+			&:after {
+				opacity: 1;
+			}
+
+			.sortable-handle {
+				margin-top: -24px;
+			}
+		}
+
+		&.drop-target-above:after {
+			top: -1px;
+		}
+
+		&.drop-target-below:after {
+			bottom: -1px;
 		}
 
 		input,
 		.label {
-			margin: -0.2em 0 -0.2em -0.5em;
-			width: calc(100% - 0.4em);
+			margin: 0;
+			// width: calc(100% - 40px);
 			box-sizing: inherit;
 			padding: 0.2em 0.5em;
 			cursor: default;
+			box-sizing: border-box;
 
 		    border-top-left-radius: 0px;
 		    border-bottom-left-radius: 0px;
@@ -55,8 +81,8 @@
 			color: white;
 			display: block;
 			position: absolute;
-			left: -1.6em;
-			top: 0;
+			left: -30px;
+			top: 4px;
 			width: 1.8em;
 			height: 1.6765em;
 			background: $colour-accent;
