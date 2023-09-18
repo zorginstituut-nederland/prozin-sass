@@ -472,6 +472,16 @@ $main-content-width: 768px !default;
 			margin-top: 20px;
 		}
 	}
+
+	&.type-wegiz,
+	&.type-wegiz-sector {
+		@include module-separator;
+
+		.page-module-title + .link-list,
+		.page-module-summary + .link-list {
+			margin-top: 20px;
+		}
+	}
 	
 	&.type-table {
 	
