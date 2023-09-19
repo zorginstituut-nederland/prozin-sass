@@ -686,6 +686,21 @@ table {
                     padding-bottom: $table-cell-padding-bottom;
                     margin-top: -1 * $table-cell-padding-top;
                     margin-bottom: -1 * $table-cell-padding-bottom;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    &:hover {
+                        text-decoration: none;
+
+                        .link-title {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .classification-tags {
+                        line-height: 19px;
+                    }
                 }
             }
         }

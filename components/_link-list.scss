@@ -130,6 +130,13 @@ $bullet-space: 22px !default;
 			}
 		}
 
+		.classification-tags {
+			line-height: 15px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
 		&.deleted {
 			display: none;
 		}
@@ -391,6 +398,7 @@ $bullet-space: 22px !default;
 				color: $colour-dark-blue-d;
 
 				.classification-tags {
+
 					.classification-tag {
 						text-decoration: none;
 					}
