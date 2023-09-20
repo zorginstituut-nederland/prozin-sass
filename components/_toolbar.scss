@@ -9,6 +9,32 @@
     padding-top: 0;
   }
 
+  &#cms-section-toolbar {
+    #content.mode-select & {
+      .toolbar-navigation-area {
+        display: none;
+      }
+
+      .toolbar-functions-area,
+      .toolbar-navigation-area {
+        grid-template-columns: 1fr 0 1fr;
+      }
+
+      .filter-menu {
+        display: none;
+      }
+    }
+
+    .batch-operation {
+      display: none;
+      animation: fadeIn 1s;
+
+      #content.mode-select & {
+        display: inline-block;
+      }
+    }
+  }
+
 	&#landing-browse-toolbar {
     > * {
       grid-template-columns: 1fr 0 1fr;
