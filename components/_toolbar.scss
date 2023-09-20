@@ -11,9 +11,7 @@
 
   &#cms-section-toolbar {
     .toolbar-navigation-area {
-      .pat-tabs {
-        
-      }
+      transition: opacity 1s;
     }
 
     #content.mode-select & {
