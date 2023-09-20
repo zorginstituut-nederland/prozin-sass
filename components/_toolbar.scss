@@ -10,13 +10,19 @@
   }
 
   &#cms-section-toolbar {
+    .toolbar-navigation-area {
+      .pat-tabs {
+        
+      }
+    }
+
     #content.mode-select & {
       .toolbar-navigation-area {
-        display: none;
+        opacity: 0;
+        pointer-events: none;
       }
 
-      .toolbar-functions-area,
-      .toolbar-navigation-area {
+      .toolbar-functions-area {
         grid-template-columns: 1fr 0 1fr;
       }
 
