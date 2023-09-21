@@ -440,10 +440,14 @@ table {
                 box-sizing: border-box;
                 overflow: hidden;
                 padding: 0 !important;
-                transition: all 1s;
+                transition: width 1s, border 1s;
                 border-left: 0 solid white;
                 border-right: 0 solid white;
                 position: relative;
+
+                &:hover {
+                    background-color: #dbdbdb;
+                }
 
                 label {
                     width: 100%;
