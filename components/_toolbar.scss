@@ -26,7 +26,8 @@
       }
   }
 
-  &#cms-section-toolbar {
+  &#cms-section-toolbar,
+  &#folder-toolbar {
     .toolbar-navigation-area {
       transition: opacity 1s;
     }
@@ -41,7 +42,20 @@
         grid-template-columns: 1fr 0 1fr;
       }
 
-      .filter-menu {
+      .pat-toolbar-search-field,
+      .icon.new {
+        opacity: 0.5;
+        -webkit-pointer-events: none;
+        pointer-events: none;
+      }
+
+      .filter-menu,,
+      .toolbar-title,
+      .icon.level-up,
+      .pat-modal.pat-button,
+      .icon.language,
+      .icon.preview
+       {
         display: none;
       }
     }
