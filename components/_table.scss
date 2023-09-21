@@ -435,6 +435,52 @@ table {
             border-bottom: 2px solid #fff;
             background-color: #f3f3f3;
 
+            &.select {
+                width: 0;
+                box-sizing: border-box;
+                overflow: hidden;
+                padding: 0 !important;
+                transition: width 1s, border 1s;
+                border-left: 0 solid white;
+                border-right: 0 solid white;
+                position: relative;
+                -webkit-user-select: none;
+                user-select: none;
+
+                &:hover {
+                    background-color: #dbdbdb;
+                }
+
+                label {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    display: block;
+                    @include checkbox();
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    color: transparent;
+                    box-sizing: border-box;
+
+                    &:before {
+                        position: absolute;
+                        top: 50% !important;
+                        left: 50% !important;
+                        transform: translate(-50%,-50%) !important;
+                        font-size: 18px !important;
+                        color: black;
+                    }
+                }
+
+                #content.mode-select & {
+                    width: 32px;
+                    border-right: 2px solid white;
+                }
+            }
+
             a {
                 &:hover {
                     text-decoration: underline;

@@ -2,6 +2,14 @@
 
 $glyph-icon-ellipsis: $glyph-ellipsis-hor !default;
 
+.pat-context-menu {
+	&.filter-menu {
+		.panel-content {
+			width: 400px;
+		}
+	}
+}
+
 .context-menu.pat-collapsible {
 	position: relative;
 	display: inline-block;
