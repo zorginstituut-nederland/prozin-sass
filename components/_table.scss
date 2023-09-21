@@ -444,6 +444,8 @@ table {
                 border-left: 0 solid white;
                 border-right: 0 solid white;
                 position: relative;
+                -webkit-user-select: none;
+                user-select: none;
 
                 &:hover {
                     background-color: #dbdbdb;
