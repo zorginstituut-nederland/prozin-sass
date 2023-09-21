@@ -15,6 +15,46 @@ $bullet-space: 22px !default;
 		display: none;
 	}
 
+	.facets {
+		text-transform: lowercase;
+						
+		.facet {
+			color: black;
+
+			&:first-child {
+				&:before {
+					content: '(';
+					color: black;
+				}
+			}
+
+			&.reimbursed {
+				color: $colour-green;
+			}
+
+			&.partially-reimbursed {
+				color: $colour-warning;
+			}
+
+			&.not-reimbursed {
+				color: $colour-red;
+			}
+
+			&:last-child {
+				&:after {
+					content: ')';
+					color: black;
+				}
+			}
+
+			&:not(:last-child) {
+				&:after {
+					content: ', '
+				}
+			}
+		}
+	}
+
 	@include screen-size(large) {
 		&.col-2 {
 			column-count: 2;
