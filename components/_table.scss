@@ -416,12 +416,12 @@ table {
         &.content-type-prozin-landing-toc,
         &.folder {
             .item-name a {    
-                padding-left: 22px;
+                padding-left: 30px !important;
                 position: relative;
 
                 &:before {
                     position: absolute;
-                    left: 0;
+                    left: 8px;
                     display: inline-block;
                     margin-right: 5px;
                     font-family: fontello;
@@ -802,16 +802,20 @@ table {
                     }
 
                     &:hover {
-                        text-decoration: none;
+                        text-decoration: underline;
+                       
+                        &:has(.link-title) {
+                            text-decoration: none;
 
-                        .link-title {
-                            text-decoration: underline;
+                            .link-title {
+                                text-decoration: underline;
 
-                            &:has(.byline) {
-                                text-decoration: none;
+                                &:has(.byline) {
+                                    text-decoration: none;
 
-                                .title {
-                                    text-decoration: underline;
+                                    .title {
+                                        text-decoration: underline;
+                                    }
                                 }
                             }
                         }
