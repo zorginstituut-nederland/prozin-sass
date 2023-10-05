@@ -8,31 +8,21 @@ $table-cell-padding-left: 15px !default;
 $table-line-height: 1.5 !default;
 
 @mixin table-row-selection-mechanism {
-    padding-top: calc(0.5 * #{$table-cell-padding-top});
-    padding-bottom: calc(0.5 * #{$table-cell-padding-top});
+    overflow: hidden;
+    display: block;
+    @include checkbox();
+    padding: 0;
+    color: transparent;
+    box-sizing: border-box;
+    transition: padding-left 1s;
 
     input {
         position: absolute;
         opacity: 0;
     }
 
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: block;
-    @include checkbox();
-    padding-left: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    color: transparent;
-    box-sizing: border-box;
-    transition: padding-left 1s;
-
     .mode-select & {
-        padding-left: 15px;
+        padding-left: 20px;
 
         &:hover {
             background-color: #dbdbdb;
@@ -47,7 +37,7 @@ $table-line-height: 1.5 !default;
     &:before {
         position: absolute;
         top: 50% !important;
-        left: 15px !important;
+        left: -5px !important;
         transform: translate(-50%, -50%) !important;
         font-size: 18px !important;
         color: black;
@@ -56,6 +46,7 @@ $table-line-height: 1.5 !default;
 
         .mode-select & {
             opacity: 1;
+            left: 15px !important;
         }
     }
 }
@@ -783,6 +774,7 @@ table {
             }
             
             &.item-name {
+                padding: 0;
 
                 a {
                     display: block;
@@ -790,8 +782,6 @@ table {
                     padding-bottom: $table-cell-padding-bottom;
                     padding-left: $table-cell-padding-left;
                     padding-right: $table-cell-padding-right;
-                    margin-top: -1 * $table-cell-padding-top;
-                    margin-bottom: -1 * $table-cell-padding-bottom;
                     display: flex;
                     justify-content: space-between;
 
@@ -978,6 +968,14 @@ table {
                 width: 50px;
                 z-index: 2;
                 width: 31px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+
+                &:before {
+                    top: 16px !important;
+                }
             }
 
             &.spacer-cell {
@@ -1713,8 +1711,9 @@ table {
         tfoot {
             font-size: 0.8em;
 
-            th,
-            td {
+            th:not(.item-name),
+            td,
+            .item-name a {
                 padding: 5px 10px 5px 10px;
             }
             
