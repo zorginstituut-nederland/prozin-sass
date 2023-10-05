@@ -85,6 +85,11 @@ table {
     // border-right: 2px solid #fff;
     width: 100%;
     // table-layout: fixed; // Fixed causes issues with FK cost tables
+    
+    .mode-select & {
+        -webkit-user-select: none;
+        user-select: none;
+    }
 
     .tableWrapper {
         display: none !important; // Hide nested tables in both edit and view.
