@@ -419,6 +419,11 @@ table {
                 padding-left: 30px !important;
                 position: relative;
 
+                .mode-select & {
+                    -webkit-pointer-events: none;
+                    pointer-events: none;
+                }
+
                 &:before {
                     position: absolute;
                     left: 8px;
