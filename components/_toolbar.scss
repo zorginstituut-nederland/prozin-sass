@@ -9,7 +9,25 @@
     padding-top: 0;
   }
 
-  &#cms-section-toolbar {
+  .pat-context-menu {
+
+    .panel-content {
+        font-size: 18px;
+    
+        .menu-list {
+          li {
+    
+            button,
+            a {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+  }
+
+  &#cms-section-toolbar,
+  &#folder-toolbar {
     .toolbar-navigation-area {
       transition: opacity 1s;
     }
@@ -24,7 +42,20 @@
         grid-template-columns: 1fr 0 1fr;
       }
 
-      .filter-menu {
+      .pat-toolbar-search-field,
+      .icon.new {
+        opacity: 0.5;
+        -webkit-pointer-events: none;
+        pointer-events: none;
+      }
+
+      .filter-menu,,
+      .toolbar-title,
+      .icon.level-up,
+      .pat-button.edit,
+      .icon.language,
+      .icon.preview
+       {
         display: none;
       }
     }

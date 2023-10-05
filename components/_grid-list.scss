@@ -64,12 +64,22 @@
 								&:first-child {
 									&:before {
 										content: '(';
+										color: black;
 									}	
+								}
+
+								&.reimbursed {
+									colour: green;
+								}
+
+								&.not-reimbursed {
+									color: red;
 								}
 
 								&:last-child {
 									&:after {
 										content: ')';
+										color: black;
 									}	
 								}
 
