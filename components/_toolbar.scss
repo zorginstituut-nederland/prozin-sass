@@ -26,6 +26,10 @@
       }
   }
 
+  &#dashboard-toolbar > * {
+    grid-template-columns: 1fr 0 1fr;
+  }
+
   &#cms-section-toolbar,
   &#folder-toolbar {
     .toolbar-navigation-area {
