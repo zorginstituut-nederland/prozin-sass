@@ -171,6 +171,21 @@ $scroll-offset: 120px !default;
 				}
 			}
 
+			a { 
+				color: rgba(0,0,0,0.3);
+				text-decoration: none;
+				
+				&[href] {
+					color: $colour-link;
+
+					&:hover {
+						.name {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
 		    .icon-cog {
 		      	position: absolute;
 		      	right: 0;
