@@ -39,7 +39,7 @@ $main-content-width: 768px !default;
 			line-height: 24px;
 			font-size: 16px;
 			border-radius: 12px;
-			padding: 0 4px;
+			padding: 0 6px;
 			height: 24px;
 			min-width: 24px;
 			box-sizing: border-box;
@@ -483,6 +483,7 @@ $main-content-width: 768px !default;
 	&.type-organisations {
 		.link-list {
 			font-size: 1.26562rem;
+			line-height: 1.38272;
 		}
 	}
 	
