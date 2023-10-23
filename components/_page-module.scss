@@ -35,6 +35,21 @@ $main-content-width: 768px !default;
 		@include header-level-2;
 		margin-block-start: $header-level-2-block-start - $text-bottom-margin;
 
+		.counter {
+			line-height: 24px;
+			font-size: 16px;
+			border-radius: 12px;
+			padding: 0 4px;
+			height: 24px;
+			min-width: 24px;
+			box-sizing: border-box;
+			display: inline-block;
+			background-color: $colour-purple-xl;
+			color: $colour-purple;
+			text-align: center;
+			font-weight: normal;
+		}
+
 		&.assistive {
 			position: absolute !important;
 		}
@@ -462,6 +477,13 @@ $main-content-width: 768px !default;
 
 	&.type-news {
 		@include module-separator;
+	}
+
+	&.type-involved-parties,
+	&.type-organisations {
+		.link-list {
+			font-size: 1.26562rem;
+		}
 	}
 	
 	&.type-listing {
