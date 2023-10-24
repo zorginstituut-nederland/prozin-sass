@@ -166,11 +166,13 @@ $scroll-offset: 120px !default;
 				display: inline-block;
 				padding-right: 0.15em;
 				color: $colour-link;
+				display: inline-block;
 
 				&:after {
 					content: " —";
 					display: inline-block;
 					color: rgba(0, 0, 0, 0.5);
+					padding-left: 5px;
 				}
 			}
 
