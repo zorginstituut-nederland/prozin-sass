@@ -165,20 +165,25 @@ $scroll-offset: 120px !default;
 			.name {
 				display: inline-block;
 				padding-right: 0.15em;
+				color: $colour-link;
 
 				&:after {
-					content: " —"
+					content: " —";
+					display: inline-block;
+					color: rgba(0, 0, 0, 0.5);
 				}
 			}
 
 			a { 
-				color: rgba(0,0,0,0.3);
+				color: rgba(0,0,0,0.5);
 				text-decoration: none;
 				
 				&[href] {
-					color: $colour-link;
+					
 
 					&:hover {
+						text-decoration: none;
+
 						.name {
 							text-decoration: underline;
 						}
