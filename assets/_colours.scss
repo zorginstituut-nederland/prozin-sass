@@ -14,7 +14,7 @@ $colour-dark-blue-xd: darken($colour-dark-blue, 30%);
 $colour-dark-blue-xl: #e5f0f9; // Donker blauw extra light
 $colour-dark-brown: #673327; // Donker bruin
 $colour-dark-green: #275937; // Donker groen    							Basiskleur 2
-$colour-dark-yellow: #ffb612; // Donker geel   								Grafiekkleur 1
+$colour-dark-yellow: #ffb612; // Donker geel   							Grafiekkleur 1
 $colour-green: #39870c; // Groen											Basiskleur 1
 $colour-green-d: #2b6709; // Groen, donker		 							
 $colour-green-l: #c4dbb6; // Groen, licht							
@@ -37,6 +37,7 @@ $colour-notice-background: #fdf6bb;
 $colour-notice: #84710a; 
 $colour-orange: #e17000; // Oranje  										Grafiekkleur 2
 $colour-orange-d: darken($colour-orange, 10%); // Oranje darker
+$colour-orange-xd: darken($colour-orange, 20%); // Oranje darker
 $colour-orange-l: #f6d4b2; // Oranje light
 $colour-orange-xl: #fbead9; // Oranje extra light
 $colour-portlet: $colour-grey-1;

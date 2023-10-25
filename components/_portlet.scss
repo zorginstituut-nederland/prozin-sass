@@ -281,14 +281,26 @@ $colour-portlet: $colour-grey-1 !default;
 		}
 	}
 
-	&#portlet-ready,
-	&#portlet-workflow {
+	&.type-ready,
+	&.type-workflow {
 		.content {
 			background-color: $colour-violette-xl;			
 
 			.link-list {
 				a {
 					color: $colour-violette;
+				}
+			}
+		}
+	}
+
+	&.state-approved {
+		.content {
+			background-color: $colour-green-xl;			
+
+			.link-list {
+				a {
+					color: $colour-green;
 				}
 			}
 		}
