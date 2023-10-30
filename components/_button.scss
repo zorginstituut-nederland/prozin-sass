@@ -8,6 +8,13 @@
 	}
 }
 
+.pat-button:not(.default) {
+	.form-panel &,
+	.pat-well & {
+		box-shadow: 0 0 0 1px $colour-link;
+	}
+}
+
 .pat-button,
 #document-alert-bar .context-menu,
 .status-inactive .content-mirror .placeholder {

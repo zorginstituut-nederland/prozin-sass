@@ -43,10 +43,6 @@ $bullet-space: 22px !default;
 			     vertical-align: baseline;
 			     font-weight:  $button-small-font-weight;
 
-			     .form-panel & {
-			     	box-shadow: 0 0 0 1px $colour-link;
-			     }
-
 			     margin: 0 0 -4px 5px;
 
 			     input {

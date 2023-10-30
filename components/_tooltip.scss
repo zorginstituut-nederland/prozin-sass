@@ -4,6 +4,22 @@
     width: 450px;
   }
 
+  &.versioning-menu {
+    .tippy-box {
+      width: 700px;
+      max-width: 100% !important;
+
+      .pat-grid-list {
+        font-size: 0.8em;
+        margin-bottom: 20px;
+      }
+
+      .pat-button-bar {
+        margin-bottom: -8px;
+      }
+    }
+  }
+
   > div {
     > section.pat-rich:last-child {
       > *:last-child {
