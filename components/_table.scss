@@ -906,10 +906,14 @@ table {
                 vertical-align: middle;
                 white-space: nowrap;
 
-                a {                   
+                a.pat-select {                   
                     background-color: $button-background-colour;
                     color: black;
                     cursor: default;
+                    display: block;
+                    padding-right: 35px;
+
+                    --select-box-arrow-background-colour: transparent;
 
                     &:hover {
                         background-color: $button-background-colour-hover;
