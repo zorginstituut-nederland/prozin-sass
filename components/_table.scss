@@ -906,6 +906,15 @@ table {
                 vertical-align: middle;
                 white-space: nowrap;
 
+                a {
+                    color: black;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
                 a.pat-select {                   
                     background-color: $button-background-colour;
                     color: black;

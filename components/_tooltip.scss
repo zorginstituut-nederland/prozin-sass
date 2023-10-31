@@ -5,9 +5,16 @@
   }
 
   &.versioning-menu {
+    $tooltip-background-colour: red;
+
+    .tippy-content {
+      padding: 25px;
+    }
+
     .tippy-box {
       width: 700px;
       max-width: 100% !important;
+
 
       .pat-grid-list {
         font-size: 0.8em;
@@ -15,16 +22,21 @@
       }
 
       .pat-well {
-        padding: 15px 12px 12px 12px; 
-        margin: -12px -12px 15px;
+        padding: 15px 18px 18px 18px; 
+        margin: -18px -18px 15px;
+        // background-color: $colour-notice-background;
 
         &:last-child {
-          margin: -12px;
+          margin: -18px;
         }
       }
 
       .pat-button-bar {
         margin-bottom: -8px;
+      }
+
+      .link-list {
+        columns: 4;
       }
     }
   }
