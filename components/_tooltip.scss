@@ -19,6 +19,14 @@
       .pat-grid-list {
         font-size: 0.8em;
         margin-bottom: 20px;
+
+        .pat-message {
+          margin-top: 8px;
+          margin-bottom: 5px;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1) ;
+          padding: 9px;
+          font-size: 0.9em;
+        }
       }
 
       .pat-well {
