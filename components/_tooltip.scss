@@ -19,6 +19,7 @@
       .pat-grid-list {
         font-size: 0.8em;
         margin-bottom: 20px;
+        grid-template-columns: 25% auto;
 
         a {
           text-decoration: none;
