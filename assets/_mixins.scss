@@ -371,43 +371,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 	
 	&.wegiz {
 		background: $colour-red;
-		color: white;
+		color: white !important;
 	}
 
 	&.biosimilar {
 		background: $colour-light-green;
-		color: $colour-green;
+		color: $colour-green !important;
 	}
 
 	&.generic {
 		background: #666;
-		color: #efefef;
+		color: #efefef !important;
 	}
 
 	&.sluice {
 		background: $colour-warning-background;
-		color: $colour-warning;
+		color: $colour-warning !important;
 	}
 
 	&.indication {
 		background: $colour-purple-l;
-		color: $colour-purple;
+		color: $colour-purple !important;
 	}
 
 	&.meerjarenagenda {
 		background: $colour-orange;
-		color: white;
+		color: white !important;
 	}
 
 	&.has-mutations {
 		background: $colour-orange;
-		color: white;
+		color: white !important;
 		text-transform: uppercase;
 	}
 
 	&.new {
 		background: $colour-green;
-		color: white;
+		color: white !important;
 		text-transform: uppercase;
 	}
 
