@@ -15,6 +15,10 @@ $pat-select-arrow-edge-distance: 13px;
 $pat-select-arrow-space: 35px;
 $pat-auto-suggest-cancel-button-edge-distance: 13px;
 
+// Toolbar
+
+$pat-toolbar-z-index: 11; // z-index 10 ducks underneath form rich field toolbars.
+
 // Layout 
 
 $main-content-width: 768px;
