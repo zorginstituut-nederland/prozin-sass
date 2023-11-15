@@ -907,6 +907,7 @@ $swim-lane-hero-background-position: center !default;
 			animation-fill-mode: forwards;
 			overflow: hidden;
 			background: white;
+			grid-area: promo;
 
 			@include screen-size(medium-large) {
 				background: white url(checklist.jpg) no-repeat;
@@ -948,7 +949,7 @@ $swim-lane-hero-background-position: center !default;
 			}
 		}
 
-		&.has-top-task-push {
+		&.has-top-tasks.has-top-task-push {
 			.promo-block {
 				background: white;
 				padding-right: 25px;
@@ -967,43 +968,12 @@ $swim-lane-hero-background-position: center !default;
 			position: relative;
 
 			@include screen-size(medium-large) {
-				display: flex;
+				display: grid;
 			    justify-content: space-between;
-			    align-items: flex-start;
-			}
-
-		    &:after {
-		    	display: none;
-		    }
-
-			// .product-fk &,
-			// .product-farmacotherapeutisch-kompas & {
-			// 	&:after {
-			// 		display: block;
-			// 		width: 100%;
-			// 		height: 200px;
-			// 		content: ' ';
-			// 		position: absolute;
-			// 		top: 0;
-			// 		transition: opacity 1s; 
-
-			// 		.current & {
-			// 			opacity: 0;
-			// 		}
-
-			// 		@include screen-size(medium-large) {
-			// 			background: url(zoek-memo.svg) no-repeat;
-			// 			background-position: right top;
-			// 			background-size: 551px 235px;
-			// 			animation: bounce-memo 0.7s;
-			// 			animation-iteration-count: 3;
-			// 			animation-delay: 1s;
-			// 		}
-			// 	}
-			// }
-
-			@include screen-size(medium-large) {
+				grid-template-areas: "top-tasks promo breaking-news";
 				opacity: 0;
+				align-items: start;
+
 				animation: fadeIn 1s;
 				animation-delay: 0.5s; 
 				animation-fill-mode: forwards;
@@ -1013,6 +983,10 @@ $swim-lane-hero-background-position: center !default;
 			@include screen-size(small) {
 				padding: 20px 15px 25px;
 			}
+
+			&:after {
+		    	display: none;
+		    }
 		}
 
 		.nav-tiles {
@@ -1023,7 +997,7 @@ $swim-lane-hero-background-position: center !default;
 
 		.top-task-push {
 			padding: 25px;
-
+			grid-area: breaking-news;
 			background-color: $colour-dark-green;
 
 			// -webkit-backdrop-filter: blur(20px) brightness(0.7) saturate(2);
@@ -1085,13 +1059,13 @@ $swim-lane-hero-background-position: center !default;
 			padding: 25px;
 			// padding-left: 62px;
 			margin-bottom: 0px;
+			grid-area: top-tasks;
 
 			@include box-sizing;
 
 			@include screen-size(medium-large) {
 				margin-left: -25px;
-				width: 33.33332%;
-				min-width: 33.33332%;
+				width: 100%;
 				opacity: 0;
 				animation: fadeInDown 0.2s;
 				animation-delay: 1.5s; 
