@@ -111,6 +111,25 @@ $global-navigation-background-colour: $colour-green !default;
 				&:before {
 					content: "#{$glyph-user}";
 				}
+
+				&:has(img) {
+					&::before {
+						display: none;
+					}
+				}
+
+				img {
+					position: absolute;
+					top: 0;
+					left: 50%;
+					border-radius: 50%;
+					width: 56%;
+					background: white;
+					top: 50%;
+					transform: translate(-50%,-50%);
+					border: 2px white solid;
+					box-sizing: border-box;
+				}
 			}
 		}
 	}
