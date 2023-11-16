@@ -71,6 +71,7 @@ $global-navigation-background-colour: $colour-green !default;
 			position: relative;
 			float: left;
 			margin: 0 0 0 7px;
+			cursor: default;
 
 			&:hover {
 				background-color: rgba(0, 0, 0, 0.2);
@@ -105,7 +106,7 @@ $global-navigation-background-colour: $colour-green !default;
 			}
 
 			&#user-menu-trigger {
-				cursor: default;
+				// cursor: default;
 				overflow: hidden;
 
 				&:before {
