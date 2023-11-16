@@ -639,10 +639,18 @@ $main-content-width: 768px !default;
 			@include screen-size(medium-large) {
 				float: left;
 				width: 50%;
-				margin: 0 20px 20px 0;
+				margin: 5px 34px 10px 0;
 
+				.picture,
 				img {
 					float: left;
+
+					img {
+						float: none;
+						height: 275px;
+						object-fit: cover;
+						cursor: zoom-in;
+					}
 				}
 			}
 			@include screen-size(small) {
