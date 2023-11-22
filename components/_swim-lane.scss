@@ -1065,7 +1065,7 @@ $swim-lane-hero-background-position: center !default;
 
 			@include screen-size(medium-large) {
 				margin-left: -25px;
-				width: 100%;
+				width: 390px;
 				opacity: 0;
 				animation: fadeInDown 0.2s;
 				animation-delay: 1.5s; 
