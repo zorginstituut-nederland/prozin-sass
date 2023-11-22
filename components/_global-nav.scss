@@ -113,7 +113,8 @@ $global-navigation-background-colour: $colour-green !default;
 					content: "#{$glyph-user}";
 				}
 
-				&:has(img) {
+				&:has(img),
+				&.has-image {
 					&::before {
 						display: none;
 					}
