@@ -81,6 +81,13 @@ $swim-lane-hero-background-position: center !default;
 			margin-top: 0;
 			border-top: none;
 		}
+
+		.task-list {
+			@include screen-size(medium-large) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+			}
+		}
 	}
 
 	&#swim-lane-secondary-tasks {
