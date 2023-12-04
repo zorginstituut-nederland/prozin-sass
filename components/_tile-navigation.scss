@@ -48,14 +48,33 @@
         }
 
         .title {
-            @include header-level-3;
+            font-size: 1.6018066406rem;
+            line-height: 1.2485901539;
+            font-weight: normal;
             margin-top: 0;
-            padding-top: 0;
+            margin-bottom: 0.5rem;
+            text-underline-offset: 0.18em;
+        
+            @include screen-size(small) {
+                font-size: 1.3125em;
+                font-weight: bold;
+                line-height: 1.2381;
+                margin: 0;
+            }
         }
 
         .byline {
-            margin-bottom: 10px;
             color: black;
+            line-height: 1.375em;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+            display: -webkit-box;
+            display: box;
+            -webkit-box-orient: vertical;
+            box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            overflow: hidden;
         }
     }
 }
