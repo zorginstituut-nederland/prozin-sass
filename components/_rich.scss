@@ -14,6 +14,10 @@ $rich-object-margin-top-bottom: 2rem !default;
 	// -webkit-hyphens: auto;
 	// hyphens: auto;
 
+	&#page-head {
+		max-width: $main-content-width;
+	}
+
 	font-size: 1.26562rem;
 	line-height: 1.38272;
 
