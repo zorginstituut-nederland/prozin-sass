@@ -191,7 +191,7 @@ $form-proportion-value: 80% !default;
 			}
 		}
 
-		&#settings-content-updates {
+		&#settings-panel-content-updates {
 			.form-separation-header {
 				&:before {
 					content: '#{$glyph-update}';	
