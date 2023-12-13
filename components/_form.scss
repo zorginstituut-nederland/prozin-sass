@@ -199,6 +199,14 @@ $form-proportion-value: 80% !default;
 			}
 		}
 
+		&#settings-panel-footer {
+			.form-separation-header {
+				&:before {
+					content: '#{$glyph-footer}';	
+				}
+			}
+		}
+
 		div.pat-modal & {
 			padding: 0;
 			background-color: transparent;
