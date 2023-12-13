@@ -192,6 +192,24 @@ $form-proportion-value: 80% !default;
 		}
 
 		&#settings-panel-content-updates {
+			.horizontal {
+				display: grid;
+
+				@include screen-size(medium-large) {
+					grid-template-columns: 1fr 1fr 1fr;
+					gap: 15px;
+
+					.pat-well {
+						display: flex;
+						flex-wrap: wrap;
+
+						.button-bar {
+							align-self: flex-end;
+						}
+					}
+				}
+			}
+
 			.form-separation-header {
 				&:before {
 					content: '#{$glyph-update}';	
