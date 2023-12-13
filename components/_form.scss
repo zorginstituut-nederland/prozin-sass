@@ -191,10 +191,10 @@ $form-proportion-value: 80% !default;
 			}
 		}
 
-		&#settings-site-update {
+		&#settings-content-updates {
 			.form-separation-header {
 				&:before {
-					content: '#{$glyph-home}';	
+					content: '#{$glyph-update}';	
 				}
 			}
 		}
