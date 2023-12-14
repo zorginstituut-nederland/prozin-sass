@@ -264,12 +264,17 @@
       .illustration {
         margin-bottom: 10px;
 
+        .picture {
+          margin-bottom: 14px;
+        }
+
         img {
           width: 100%;
           border: none;
           background-size: cover;
           background-position: center;
           background-color: $colour-green-xl;
+          display: block;
         }
       }
 
