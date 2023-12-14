@@ -3,7 +3,7 @@
 .image-uploader {
   position: relative;
   overflow: hidden;
-  min-height: 238px;
+  aspect-ratio: 1 / 1;
   display: block;
   background-color: $colour-base-light;
         
@@ -110,6 +110,8 @@
     display: block;
     position: relative;
     z-index: 1;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 
     &+.upload-button {
     	color: white;
