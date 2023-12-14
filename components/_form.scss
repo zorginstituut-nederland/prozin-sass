@@ -200,11 +200,23 @@ $form-proportion-value: 80% !default;
 					gap: 15px;
 
 					.pat-well {
-						display: flex;
-						flex-wrap: wrap;
+						display: grid;
+						grid-template-columns: 100%;
+						align-content: space-between;
+						grid-template-rows: min-content 1fr min-content;
+
+						.well-separation-header {
+							margin-bottom: 10px;
+							font-size: 22px;
+							align-self: start;
+						}
+
+						.description {
+							align-self: stretch;
+						}
 
 						.button-bar {
-							align-self: flex-end;
+							align-self: end;
 						}
 					}
 				}
