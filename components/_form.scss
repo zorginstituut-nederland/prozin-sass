@@ -204,6 +204,7 @@ $form-proportion-value: 80% !default;
 						grid-template-columns: 100%;
 						align-content: space-between;
 						grid-template-rows: min-content 1fr min-content;
+						overflow: hidden;
 
 						.well-separation-header {
 							margin-bottom: 10px;
@@ -217,6 +218,10 @@ $form-proportion-value: 80% !default;
 
 						.button-bar {
 							align-self: end;
+						}
+
+						.pat-message {
+							animation: bounceInUp 0.8s;
 						}
 					}
 				}
