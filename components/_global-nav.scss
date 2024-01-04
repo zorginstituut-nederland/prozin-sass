@@ -48,6 +48,44 @@ $global-navigation-background-colour: $colour-green !default;
 	// margin-top: 125px;
 	// display: none;
 
+	&.app {
+		.app-label {
+			&:before {
+				width: 48px;
+				height: 48px;
+				padding: 0;
+				border: 0;
+				color: transparent;
+				font-size: 18px;
+				position: relative;
+				float: left;
+				margin: 12px 10px 0 0;
+				cursor: default;
+				color: white;
+				content: '';
+				display: inline-block;
+				font-family: fontello;
+				font-size: 30px;
+				font-weight: normal;
+				background-color: rgba($color: white, $alpha: 0.3);
+				color: white;
+				text-align: center;
+			}
+		}
+
+		&.app-image-bank {
+			background-color: $colour-app-image-bank;
+
+			.app-label:before {
+				content: '#{$glyph-image-bank}';
+				font-size: 50px;
+				line-height: 46px;
+				text-indent: -2px;
+				// background-color: $colour-violette-xl;
+			}
+		}
+	}
+
 	.icons {
 		position: absolute;
 		right: 70px;

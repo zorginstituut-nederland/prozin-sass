@@ -40,13 +40,13 @@ $app-icons-icon-size: 165px !default;
         font-size: 20px;
 
         &.settings:before {
-            background-color: $colour-grey-2;
-            color: black;
+            background-color: gray;
+            color: white;
             content: '#{$glyph-cog}';
         }
         
         &.image-bank:before {
-            background-color: $colour-violette;
+            background-color: $colour-app-image-bank;
             color: white;
             content: '#{$glyph-image}';
         }
