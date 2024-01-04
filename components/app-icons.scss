@@ -43,13 +43,14 @@ $app-icons-icon-size: 165px !default;
             background-color: gray;
             color: white;
             content: '#{$glyph-cog}';
+            font-size: 90px;
         }
         
         &.image-bank:before {
             background-color: $colour-app-image-bank;
             color: white;
             content: '#{$glyph-image-bank}';
-            font-size: 120px;
+            font-size: 140px;
         }
         
         &.organisations:before {
