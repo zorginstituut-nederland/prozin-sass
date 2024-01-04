@@ -54,14 +54,14 @@ $app-icons-icon-size: 165px !default;
         }
         
         &.organisations:before {
-            background-color: $colour-purple;
+            background-color: $colour-app-organisations;
             color: white;
             content: '#{$glyph-building}';
         }
         
         &.users:before,
         &.user-management:before {
-            background-color: $colour-brown;
+            background-color: $colour-app-user-management;
             color: white;
             content: '#{$glyph-users}';
         }

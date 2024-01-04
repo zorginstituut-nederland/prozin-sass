@@ -66,11 +66,12 @@ $global-navigation-background-colour: $colour-green !default;
 				content: '';
 				display: inline-block;
 				font-family: fontello;
-				font-size: 30px;
+				font-size: 24px;
 				font-weight: normal;
 				background-color: rgba($color: black, $alpha: 0.2);
 				color: white;
 				text-align: center;
+				line-height: 48px;
 			}
 		}
 
@@ -83,6 +84,27 @@ $global-navigation-background-colour: $colour-green !default;
 				line-height: 46px;
 				text-indent: -2px;
 				// background-color: $colour-violette-xl;
+			}
+		}
+
+		&.app-organisations {
+			background-color: $colour-app-organisations;
+
+			.app-label:before {
+				content: '#{$glyph-image-bank}';
+				font-size: 50px;
+				line-height: 46px;
+				text-indent: -2px;
+				// background-color: $colour-violette-xl;
+			}
+		}
+
+		&.app-user-management {
+			background-color: $colour-app-user-management;
+
+			.app-label:before {
+				content: '#{$glyph-users}';
+
 			}
 		}
 	}
