@@ -107,6 +107,15 @@ $global-navigation-background-colour: $colour-green !default;
 
 			}
 		}
+
+		&.app-settings {
+			background-color: $colour-app-settings;
+
+			.app-label:before {
+				content: '#{$glyph-cog}';
+
+			}
+		}
 	}
 
 	.icons {

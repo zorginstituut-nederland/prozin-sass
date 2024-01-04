@@ -40,7 +40,7 @@ $app-icons-icon-size: 165px !default;
         font-size: 20px;
 
         &.settings:before {
-            background-color: gray;
+            background-color: $colour-app-settings;
             color: white;
             content: '#{$glyph-cog}';
             font-size: 90px;
