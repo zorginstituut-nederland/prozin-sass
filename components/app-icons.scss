@@ -58,13 +58,15 @@ $app-icons-icon-size: 165px !default;
             content: '#{$glyph-building}';
         }
         
-        &.users:before {
+        &.users:before,
+        &.user-management:before {
             background-color: $colour-brown;
             color: white;
             content: '#{$glyph-users}';
         }
         
-        &.documents:before {
+        &.documents:before,
+        &.pdocs:before {
             background-color: $colour-dark-blue;
             color: white;
             content: '#{$glyph-docs}';
