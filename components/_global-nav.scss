@@ -105,6 +105,12 @@ $global-navigation-background-colour: $colour-green !default;
 				font-size: 20px;
 			}
 
+			&#apps-trigger:before {
+				content: "#{$glyph-app}";
+				font-size: 38px;
+				line-height: 52px;
+			}
+
 			&#user-menu-trigger {
 				// cursor: default;
 				overflow: hidden;

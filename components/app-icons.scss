@@ -1,0 +1,72 @@
+$app-icons-icon-size: 165px !default;
+
+.app-icons {
+    display: grid;
+    margin-top: 40px;
+
+    @include screen-size(small) {
+        grid-template-columns: 1fr 1fr
+    }
+
+    @include screen-size(medium) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @include screen-size(large) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .app-icon {
+
+        &:before {
+            font-family: fontello;
+            display: block;
+            margin: 0 auto 10px;
+            overflow: hidden;
+            font-size: 65px;
+            width: $app-icons-icon-size;
+            height: $app-icons-icon-size;
+            line-height: $app-icons-icon-size;
+            background-color: #efefef;
+            font-weight: normal;
+            content: '';
+        }
+
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 0 40px 0;
+        color: black;
+        font-size: 20px;
+
+        &.settings:before {
+            background-color: $colour-grey-2;
+            color: black;
+            content: '#{$glyph-cog}';
+        }
+        
+        &.image-bank:before {
+            background-color: $colour-violette;
+            color: white;
+            content: '#{$glyph-image}';
+        }
+        
+        &.organisations:before {
+            background-color: $colour-purple;
+            color: white;
+            content: '#{$glyph-building}';
+        }
+        
+        &.users:before {
+            background-color: $colour-brown;
+            color: white;
+            content: '#{$glyph-users}';
+        }
+        
+        &.documents:before {
+            background-color: $colour-dark-blue;
+            color: white;
+            content: '#{$glyph-docs}';
+        }
+    }
+}
