@@ -1,0 +1,13 @@
+.app-icons {
+    display: grid;
+    grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    .app-icon {
+        &:before {
+            content: '';
+        }
+
+        display: inline-block;
+        text-align: center;
+    }
+}
