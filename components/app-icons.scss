@@ -48,7 +48,8 @@ $app-icons-icon-size: 165px !default;
         &.image-bank:before {
             background-color: $colour-app-image-bank;
             color: white;
-            content: '#{$glyph-image}';
+            content: '#{$glyph-image-bank}';
+            font-size: 120px;
         }
         
         &.organisations:before {
