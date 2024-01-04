@@ -34,6 +34,10 @@
     grid-template-columns: 1fr 0 1fr;
   }
 
+  // &#cms-settings-toolbar > * {
+  //   grid-template-columns: auto 600px auto;
+  // }
+
   &#cms-section-toolbar,
   &#folder-toolbar {
     .toolbar-navigation-area {
