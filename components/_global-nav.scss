@@ -47,6 +47,7 @@ $global-navigation-background-colour: $colour-green !default;
 	clear: both;
 	// margin-top: 125px;
 	// display: none;
+	transition: all 0.4s;
 
 	&.app {
 		.app-label {
@@ -516,6 +517,15 @@ $global-navigation-background-colour: $colour-green !default;
 					font-size: 27px;
 				}
 			}
+		}
+	}
+
+	&.app {
+		margin-top: -130px;
+
+		& ~ #site-header {
+			height: 0;
+			opacity: 0;
 		}
 	}
 
