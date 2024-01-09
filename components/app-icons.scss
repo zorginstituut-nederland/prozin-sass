@@ -72,5 +72,12 @@ $app-icons-icon-size: 165px !default;
             color: white;
             content: '#{$glyph-docs}';
         }
+        
+        &.cost:before,
+        &.kosten:before {
+            background-color: $colour-app-cost;
+            color: white;
+            content: '#{$glyph-euro}';
+        }
     }
 }
