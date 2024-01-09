@@ -69,8 +69,8 @@ $app-icons-icon-size: 165px !default;
         &.user-management:before {
             background-color: $colour-app-user-management;
             color: white;
-            content: '#{$glyph-users}';
-            font-size: 65px;
+            content: '#{$glyph-3905-user}';
+            font-size: 75px;
         }
         
         &.documents:before,
