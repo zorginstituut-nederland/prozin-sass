@@ -86,5 +86,15 @@ $app-icons-icon-size: 165px !default;
             color: white;
             content: '#{$glyph-9003-stapeltje-euros}';
         }
+        
+        &.helpdesk:before,
+        &.help-desk:before {
+            background-color: $colour-app-help-desk;
+            color: white;
+            content: '#{$glyph-headset}';
+            font-size: 75px;
+        }
+
+                
     }
 }
