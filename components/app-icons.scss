@@ -39,6 +39,12 @@ $app-icons-icon-size: 165px !default;
         color: black;
         font-size: 20px;
 
+        &:hover {
+            &::before {
+                filter: brightness(1.2);
+            }
+        }
+
         &.settings:before {
             background-color: $colour-app-settings;
             color: white;
