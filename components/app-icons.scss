@@ -23,7 +23,7 @@ $app-icons-icon-size: 165px !default;
             display: block;
             margin: 0 auto 10px;
             overflow: hidden;
-            font-size: 65px;
+            font-size: 85px;
             width: $app-icons-icon-size;
             height: $app-icons-icon-size;
             line-height: $app-icons-icon-size;
@@ -55,14 +55,14 @@ $app-icons-icon-size: 165px !default;
         &.image-bank:before {
             background-color: $colour-app-image-bank;
             color: white;
-            content: '#{$glyph-image-bank}';
-            font-size: 140px;
+            content: '#{$glyph-6027-planten-en-bloemen}';
         }
         
         &.organisations:before {
             background-color: $colour-app-organisations;
             color: white;
             content: '#{$glyph-building}';
+            font-size: 65px;
         }
         
         &.users:before,
@@ -70,20 +70,21 @@ $app-icons-icon-size: 165px !default;
             background-color: $colour-app-user-management;
             color: white;
             content: '#{$glyph-users}';
+            font-size: 65px;
         }
         
         &.documents:before,
         &.pdocs:before {
             background-color: $colour-dark-blue;
             color: white;
-            content: '#{$glyph-docs}';
+            content: '#{$glyph-2019-formulier_diap}';
         }
         
         &.cost:before,
         &.kosten:before {
             background-color: $colour-app-cost;
             color: white;
-            content: '#{$glyph-euro}';
+            content: '#{$glyph-9003-stapeltje-euros}';
         }
     }
 }

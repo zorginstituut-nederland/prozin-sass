@@ -79,10 +79,10 @@ $global-navigation-background-colour: $colour-green !default;
 			background-color: $colour-app-image-bank;
 
 			.app-label:before {
-				content: '#{$glyph-image-bank}';
-				font-size: 50px;
-				line-height: 46px;
-				text-indent: -2px;
+				content: '#{$glyph-6027-planten-en-bloemen}';
+				// font-size: 50px;
+				// line-height: 46px;
+				// text-indent: -2px;
 				// background-color: $colour-violette-xl;
 			}
 		}
