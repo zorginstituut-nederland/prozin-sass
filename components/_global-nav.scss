@@ -558,6 +558,10 @@ $global-navigation-background-colour: $colour-green !default;
 			height: 0;
 			opacity: 0;
 		}
+
+		& ~ #footer {
+			display: none;
+		}
 	}
 
 	&.variation-compare,
