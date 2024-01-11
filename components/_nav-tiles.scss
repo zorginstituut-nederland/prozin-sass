@@ -1,62 +1,39 @@
 $nav-tiles-font-size: 1.60181rem !default;
 
 .nav-tiles {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 1rem;
+
+  @include screen-size(large) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  @include screen-size(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   @include screen-size(small) {
+    grid-template-columns: 1fr;
     margin: 0;
   }
 
-  @include screen-size(medium-large) {
-    margin: 0 -1 * $grid-gutter $baseline;
-
-    &.count-1 {
-      .item {
-        width: 100%;
-      }
-    }
-
-    &.count-2,
-    &.count-4 {
-      .item {
-        width: 50%;
-
-        &:nth-child(odd) {
-          clear: both;
-        }
-      }
-    }
-
-    // &.count-5 {
-    //   .item:nth-child(4),
-    //   .item:nth-child(5) {
-    //     width: 50%;
-    //   }
-
-    //   .item:nth-child(4) {
-    //     clear: both;
-    //   }
-    // }
+  &.count-1 {
+    grid-template-columns: 100%;
   }
+
+  &.count-2,
+  &.count-4 {
+    @include screen-size(large) {
+        grid-template-columns: 1fr 1fr;
+      }
+  }
+
   .item {
-
-    @include screen-size(medium-large) {
-      width: 33.333332%;
-      float: left;
-      padding-left: $grid-gutter; 
-      padding-right: $grid-gutter; 
-    }
-
-    @include screen-size(small) {
-      height: auto !important;
-      padding: 0;
-      border-top: 2px solid white;
-    }
-
-    @include box-sizing;
 
     a {
       padding-left: 40px;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       display: block;
       position: relative;
       height: 100%;
@@ -79,6 +56,9 @@ $nav-tiles-font-size: 1.60181rem !default;
         height: 100%;
         font-size: 25px;
         color: $colour-green;
+        font-family: fontello;
+        line-height: 1em;
+        text-align: center;
 
         @include screen-size(small) {
           // display: none;
@@ -86,6 +66,15 @@ $nav-tiles-font-size: 1.60181rem !default;
           top: 23px;
           height: auto;
           margin: 0;
+        }
+      }
+
+      &:not([class*="icon-"]) {
+        &:before {
+          content: '#{$glyph-right-open}';
+          font-size: 18px;
+          line-height: 28px;
+          text-indent: 12px;
         }
       }
 
@@ -130,10 +119,9 @@ $nav-tiles-font-size: 1.60181rem !default;
         font-size: 1.125rem;
         line-height: 1.33333;
         color: black;
-        margin-top: 2px;
 
         @include screen-size(medium-large) {
-          marign-top: 0.5rem;
+          margin-top: 0.5rem;
         }
 
         @include screen-size(small) {

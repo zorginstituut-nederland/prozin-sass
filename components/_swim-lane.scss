@@ -769,12 +769,20 @@ $swim-lane-hero-background-position: center !default;
 				// margin-bottom: 60px;
 
 				@include screen-size(large) {
-					width: 66.66667%;
+					width: 770px;
 				}
 
 				p {
 					font-size: 1.3125em;
 					line-height: 1.5238;
+				}
+			}
+
+			.video-player {
+				margin-top: 40px;
+				
+				@include screen-size(large) {
+					width: 770px;
 				}
 			}
 		}
