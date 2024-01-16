@@ -1,0 +1,58 @@
+.social-list {
+    font-size: 1.265625rem;
+    line-height: 28px;
+
+    li {
+        margin-bottom: 1rem;
+
+        a {
+            display: block;
+            position: relative;
+            padding-left: 33px;
+
+            &:hover {
+                text-decoration: underline;
+
+                &::before {
+                    text-decoration: none;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                display: block;
+                font-family: fontello;
+                font-weight: normal;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                color: black;
+                text-align: left;
+                font-size: 30px;
+                line-height: 26px;
+                top: -1px;
+                left: 0;
+                width: 26px;
+                height: 26px;
+                border-radius: 5px;
+                overflow: hidden;
+                // background-color: pink;
+            }
+
+            &.facebook:before {
+                color: #3c5193;
+                content: "#{$glyph-facebook-squared}";
+            }
+
+            &.linkedin:before {
+                color: #007bb6;
+                content: "#{$glyph-linkedin-squared}";
+            }
+
+            &.x:before {
+                color: black;
+                content: "#{$glyph-x-squared}";
+                font-size: 26px;
+            }
+        }
+    }
+}
