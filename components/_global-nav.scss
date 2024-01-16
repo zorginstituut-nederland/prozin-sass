@@ -91,10 +91,10 @@ $global-navigation-background-colour: $colour-green !default;
 			background-color: $colour-app-organisations;
 
 			.app-label:before {
-				content: '#{$glyph-image-bank}';
-				font-size: 50px;
-				line-height: 46px;
-				text-indent: -2px;
+				content: '#{$glyph-building}';
+				// font-size: 50px;
+				// line-height: 46px;
+				// text-indent: -2px;
 				// background-color: $colour-violette-xl;
 			}
 		}
