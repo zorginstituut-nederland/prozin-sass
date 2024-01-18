@@ -5,7 +5,7 @@ $nav-tiles-font-size: 1.60181rem !default;
   grid-column-gap: 30px;
   grid-row-gap: 10px;
 
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 
   @include screen-size(large) {
     grid-template-columns: 1fr 1fr 1fr;
