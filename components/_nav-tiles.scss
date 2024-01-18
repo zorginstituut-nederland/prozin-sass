@@ -2,7 +2,9 @@ $nav-tiles-font-size: 1.60181rem !default;
 
 .nav-tiles {
   display: grid;
-  gap: 30px;
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+
   margin-bottom: 1rem;
 
   @include screen-size(large) {
@@ -119,6 +121,7 @@ $nav-tiles-font-size: 1.60181rem !default;
         font-size: 1.125rem;
         line-height: 1.33333;
         color: black;
+        margin-bottom: 20px;
 
         @include screen-size(medium-large) {
           margin-top: 0.5rem;
