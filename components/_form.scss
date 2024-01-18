@@ -151,13 +151,20 @@ $form-proportion-value: 80% !default;
 		}
 	}
 
-	fieldset.form-panel {
+	fieldset.form-panel,
+	div.form-panel {
 		padding: $baseline 0 0 20px;
 		background: $colour-grey-1;
 		@include box-sizing;
 
 		.form-separation-header {
 			margin-top: 0;
+
+			&:before {
+				display: inline-block;
+				margin-right: 8px;
+				font-family: fontello;
+			}
 		}
 
 		> h3 {
@@ -165,6 +172,73 @@ $form-proportion-value: 80% !default;
 
 			&:before {
 				content: counter(form-panel) '. ';
+			}
+		}
+
+		&#settings-panel-language {
+			.form-separation-header {
+				&:before {
+					content: '#{$glyph-globe}';	
+				}
+			}
+		}
+
+		&#settings-panel-homepage {
+			.form-separation-header {
+				&:before {
+					content: '#{$glyph-home}';	
+				}
+			}
+		}
+
+		&#settings-panel-content-updates {
+			.horizontal {
+				display: grid;
+
+				@include screen-size(medium-large) {
+					grid-template-columns: 1fr 1fr 1fr;
+					gap: 15px;
+
+					.pat-well {
+						display: grid;
+						grid-template-columns: 100%;
+						align-content: space-between;
+						grid-template-rows: min-content 1fr min-content;
+						overflow: hidden;
+
+						.well-separation-header {
+							margin-bottom: 10px;
+							font-size: 22px;
+							align-self: start;
+						}
+
+						.description {
+							align-self: stretch;
+						}
+
+						.button-bar {
+							align-self: end;
+						}
+
+						.pat-message {
+							animation: bounceInUp 0.8s;
+						}
+					}
+				}
+			}
+
+			.form-separation-header {
+				&:before {
+					content: '#{$glyph-update}';	
+				}
+			}
+		}
+
+		&#settings-panel-footer {
+			.form-separation-header {
+				&:before {
+					content: '#{$glyph-footer}';	
+				}
 			}
 		}
 

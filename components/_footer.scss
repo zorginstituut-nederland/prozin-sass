@@ -81,8 +81,9 @@ $footer-background-colour: $colour-green !default;
 		a {
 		    text-decoration: none;
 		    color: white;
-		    padding: 2px 0 2px 0;
+		    padding: 10px 0 2px 0;
 		    display: block;
+			line-height: 24px;
 
 			@include screen-size(small) {
 				padding: 0;

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 // Assets
-@import "fontello-017/css/fontello.css";
+@import "fontello-019/css/fontello.css";
 @import "assets/colours";
 @import "assets/symbols";
 @import "assets/glyphs";
@@ -63,6 +63,10 @@ $form-input-field-outline-offset: 2px;
 
 $advanced-search-animation-speed: 0.4s;
 
+// Back button
+
+$back-button-font-weight: normal;
+
 // Buttons
 
 $button-cluster-toggle-margin: 6px;
@@ -101,6 +105,7 @@ $button-small-font-weight: normal;
 
 // Tooltip
 
+$tooltip-padding: 14px !default;
 // $tooltip-background-colour: #E5F0F9;
 
 // Toolbar
@@ -172,10 +177,11 @@ $pswp__include-minimal-style: true;
 
 @import "libraries/reset";
 @import "libraries/animate";
-@import "libraries/patterns/patterns";
+@import "../patterns/patterns";
 
 // Components
 
+@import "components/app-icons";
 @import "components/body";
 @import "components/bar-graph";
 @import "components/bar-toggles";
@@ -241,10 +247,12 @@ $pswp__include-minimal-style: true;
 @import "components/sub-nav";
 @import "components/summary-block";
 @import "components/swim-lane";
+@import "components/social-list";
 @import "components/sortable-blocks";
 @import "components/sortable-list";
 @import "components/table";
 @import "components/task-list";
+@import "components/tile-navigation";
 @import "components/title-block";
 @import "components/toolbar";
 @import "components/tooltip";

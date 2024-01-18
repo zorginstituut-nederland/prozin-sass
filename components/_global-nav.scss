@@ -47,6 +47,76 @@ $global-navigation-background-colour: $colour-green !default;
 	clear: both;
 	// margin-top: 125px;
 	// display: none;
+	transition: all 0.4s;
+
+	&.app {
+		.app-label {
+			&:before {
+				width: 48px;
+				height: 48px;
+				padding: 0;
+				border: 0;
+				color: transparent;
+				font-size: 18px;
+				position: relative;
+				float: left;
+				margin: 12px 10px 0 0;
+				cursor: default;
+				color: white;
+				content: '';
+				display: inline-block;
+				font-family: fontello;
+				font-size: 24px;
+				font-weight: normal;
+				background-color: rgba($color: black, $alpha: 0.2);
+				color: white;
+				text-align: center;
+				line-height: 48px;
+			}
+		}
+
+		&.app-image-bank {
+			background-color: $colour-app-image-bank;
+
+			.app-label:before {
+				content: '#{$glyph-6027-planten-en-bloemen}';
+				// font-size: 50px;
+				// line-height: 46px;
+				// text-indent: -2px;
+				// background-color: $colour-violette-xl;
+			}
+		}
+
+		&.app-organisations {
+			background-color: $colour-app-organisations;
+
+			.app-label:before {
+				content: '#{$glyph-building}';
+				// font-size: 50px;
+				// line-height: 46px;
+				// text-indent: -2px;
+				// background-color: $colour-violette-xl;
+			}
+		}
+
+		&.app-user-management {
+			background-color: $colour-app-user-management;
+
+			.app-label:before {
+				content: '#{$glyph-3905-user}';
+
+			}
+		}
+
+		&.app-settings {
+			background-color: $colour-app-settings;
+
+			.app-label:before {
+				content: '#{$glyph-cog}';
+
+			}
+		}
+	}
 
 	.icons {
 		position: absolute;
@@ -103,6 +173,12 @@ $global-navigation-background-colour: $colour-green !default;
 			&#dashboard-trigger:before {
 				content: "#{$glyph-dashboard}";
 				font-size: 20px;
+			}
+
+			&#apps-trigger:before {
+				content: "#{$glyph-app}";
+				font-size: 38px;
+				line-height: 52px;
 			}
 
 			&#user-menu-trigger {
@@ -472,6 +548,19 @@ $global-navigation-background-colour: $colour-green !default;
 					font-size: 27px;
 				}
 			}
+		}
+	}
+
+	&.app {
+		margin-top: -130px;
+
+		& ~ #site-header {
+			height: 0;
+			opacity: 0;
+		}
+
+		& ~ #footer {
+			display: none;
 		}
 	}
 

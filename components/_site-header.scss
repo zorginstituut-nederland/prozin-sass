@@ -1,19 +1,22 @@
 @charset "UTF-8";
 
+
+
 #site-header {
 	line-height: 16px;
 	border: none;
 	border-bottom: none;
 	@include screen-size(small) {
-		min-height: 72px;
+		height: 72px;
 	}
 	@include screen-size(medium-large) {
-		min-height: 125px;
+		height: 125px;
 	}
 	background-color: #fff;
 	position: absolute;
 	top: 0;
 	width: 100%;
+	transition: all 0.4s;
 
 	@media all and (display-mode: standalone) {
 		display: none;

@@ -16,7 +16,8 @@ $swim-lane-hero-background-position: center !default;
 	& + #site-summary,
 	& + #swim-lane-quote,
 	& + #swim-lane-secondary-tasks,
-	& + #swim-lane-sectors {
+	& + #swim-lane-sectors,
+	& + #swim-lane-social {
 		.container {
 			padding-top: 0;
 		}
@@ -38,7 +39,8 @@ $swim-lane-hero-background-position: center !default;
 
 	.lane-title {
 		margin: 0 0 20px 0;
-		font-size: 1.625rem;
+		// font-size: 1.625rem;
+		font-size: 1.8020324707rem;
 
 		@include screen-size(medium-large) {
 			padding-top: 10px;
@@ -48,6 +50,7 @@ $swim-lane-hero-background-position: center !default;
 
 	.lane-footer {
 		clear: both; // Required for IE 11.
+		font-size: 1.265625rem;
 
 		a {
 			font-weight: bold;
@@ -475,6 +478,12 @@ $swim-lane-hero-background-position: center !default;
 		}
 	}
 
+	&#swim-lane-social {
+		.container > * {
+			max-width: 370px;
+		}
+	}
+
 	&#swim-lane-search {
 		@media screen {
 			background-color: $colour-green-xl;
@@ -769,12 +778,20 @@ $swim-lane-hero-background-position: center !default;
 				// margin-bottom: 60px;
 
 				@include screen-size(large) {
-					width: 66.66667%;
+					width: 770px;
 				}
 
 				p {
 					font-size: 1.3125em;
 					line-height: 1.5238;
+				}
+			}
+
+			.video-player {
+				margin-top: 40px;
+				
+				@include screen-size(large) {
+					width: 770px;
 				}
 			}
 		}
