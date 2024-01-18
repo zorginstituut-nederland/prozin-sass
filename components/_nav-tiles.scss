@@ -4,8 +4,11 @@ $nav-tiles-font-size: 1.60181rem !default;
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 10px;
+  margin-bottom: 1rem;
 
-  // margin-bottom: 1rem;
+  &:has(.byline) {
+    margin-bottom: 0;
+  }
 
   @include screen-size(large) {
     grid-template-columns: 1fr 1fr 1fr;
