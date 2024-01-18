@@ -1,0 +1,11 @@
+.app-body {
+    @include screen-size(medium-large) {
+        padding-top: 60px;
+        padding-bottom: 70px;
+	}
+
+	@include screen-size(small) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
