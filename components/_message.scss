@@ -69,7 +69,7 @@
 	&.warning .panel-content {	
 		&:before {
 			background-color: $colour-orange;
-			color: $colour-orange-xl;
+			color: $colour-orange-xl !important;
 		}
 	}
 
