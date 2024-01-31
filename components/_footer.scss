@@ -84,6 +84,7 @@ $footer-background-colour: $colour-green !default;
 		    padding: 10px 0 2px 0;
 		    display: block;
 			line-height: 24px;
+			hyphens: auto;
 
 			@include screen-size(small) {
 				padding: 0;
