@@ -8,6 +8,10 @@ $sortable-form-fields-handle-colour: $colour-accent !default;
 	user-select: none;
 
     & + .button-bar {
+        margin-top: 0px;
+    }
+
+    &:has(.sortable-item) +  .button-bar {
         margin-top: 10px;
     }
 
