@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$sortable-form-fields-handle-colour: $colour-accent !default;
+
 .sortable-form-fields {
 	counter-reset: count;
 	-webkit-user-select: none;
@@ -66,7 +68,7 @@
 			top: 5px;
 			bottom: 5px;
 			width: 32px;
-			background: $colour-accent;
+			background: $sortable-form-fields-handle-colour;
 			border-top-left-radius: $border-radii;
 			border-bottom-left-radius: $border-radii;
 			overflow: hidden;
@@ -82,11 +84,11 @@
 		.sortable-handle {
 			opacity: 0;
 			text-indent: -10em;
-			background: $colour-accent;
+			background: $sortable-form-fields-handle-colour;
 			cursor: grab;
 
 			&:hover {
-				background: darken($colour-accent, 10%);
+				background: darken($sortable-form-fields-handle-colour, 10%);
 			}
 				
 			&:active,
