@@ -167,13 +167,13 @@ $form-proportion-value: 80% !default;
 			}
 		}
 
-		> h3 {
-			counter-increment: form-panel;
+		// > h3 {
+		// 	counter-increment: form-panel;
 
-			&:before {
-				content: counter(form-panel) '. ';
-			}
-		}
+		// 	&:before {
+		// 		content: counter(form-panel) '. ';
+		// 	}
+		// }
 
 		&#settings-panel-language {
 			.form-separation-header {
