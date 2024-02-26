@@ -8,20 +8,25 @@ $main-content-width: 768px !default;
 	margin: 0 auto;
 	counter-reset: tab fig;  
 
-	&:has(.link-list li:nth-child(12)) {
-		max-width: 100%;
+	.variation-landing-toc ~ #main & {
+		margin: 0;
+		padding: 0;
+	
+		&:has(.link-list li:nth-child(12)) {
+			max-width: 100%;
 
-		.link-list {
-			@include screen-size(large) {
-				column-count: 4;
-			}
+			.link-list {
+				@include screen-size(large) {
+					column-count: 4;
+				}
 
-			@include screen-size(medium) {
-				column-count: 3;
-			}
+				@include screen-size(medium) {
+					column-count: 3;
+				}
 
-			@include screen-size(small) {
-				column-count: 1;
+				@include screen-size(small) {
+					column-count: 1;
+				}
 			}
 		}
 	}
