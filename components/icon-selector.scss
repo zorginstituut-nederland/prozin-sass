@@ -3,6 +3,8 @@
 .icon-selector,
 .pat-checklist.icon-selector {
 	overflow: hidden;
+	-webkit-user-select: none;
+	user-select: none;
 
 	label {
 		float: left;
