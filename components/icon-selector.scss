@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.icon-selector,
+.pat-checklist.icon-selector {
+	overflow: hidden;
+
+	label {
+		float: left;
+		margin: 0;
+		width: 1.8em !important; // Rushed out, needs refactoring without !important
+		height: 1.8em;
+		overflow: hidden;
+		border-radius: $border-radii;
+		// background-color: white;
+		border: 2px solid transparent !important; // Rushed out, needs refactoring without !important
+		position: relative;
+		line-height: 1.9em;
+		padding: 0;
+		color: transparent;
+
+		&:hover {
+			background-color: $colour-base;
+
+			&:before {
+				color: black;
+			}
+		}
+
+		&.checked {
+			background-color: $colour-accent;
+
+			&:before {
+				color: white;
+			}
+		}
+
+		&:before {
+			float: left;
+			margin: 0;
+			text-align: center;
+			width: 100%;
+			line-height: 1.9em;
+			color: rgba(0,0,0,0.6);
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+
+		input {
+			position: absolute;
+			opacity: 0;
+		}
+	}
+}
