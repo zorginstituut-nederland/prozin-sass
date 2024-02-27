@@ -19,7 +19,7 @@
 		color: transparent;
 
 		&:hover {
-			background-color: $colour-base;
+			background-color: rgba(0,0,0,0.1);
 
 			&:before {
 				color: black;
