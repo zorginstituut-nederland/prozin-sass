@@ -1,0 +1,225 @@
+$process-diagram-button-background-colour: $colour-base;
+$process-diagram-button-background-colour-hover: $button-background-colour-hover;
+$process-diagram-button-text-colour: $colour-green;
+$process-diagram-button-text-colour-hover: $colour-green-d;
+
+.process-diagram {
+	.process-diagram-title {
+		margin-bottom: 40px;
+		font-size: 50px;
+	}
+	
+	.process-diagram-graph {
+		margin-bottom: 30px;
+		margin-top: 0;
+
+		.process-diagram-steps {
+			display: flex;
+			margin: 0 -20px;
+
+			#main-content & {
+				margin: 0 -10px;
+
+				.step {
+					margin: 0 10px;
+
+					a {
+						padding: 24px 20px 0;
+						font-size: 16px;
+						height: 178px;
+
+						.step-title {
+							line-height: 22px;
+							height: 48px;
+						}
+
+						&:before {
+							font-size: 60px;
+							margin: 5px 0 5px 0;
+							line-height: 80px;
+						}
+
+						&:after {
+							right: -20px;
+							width: 40px;
+							height: 40px;
+							margin-top: -20px;
+						}
+					}
+				}
+			}
+
+			.step {
+				color: $colour-green;
+				text-align: center;
+				display: block;
+				flex-grow: 1;
+				box-sizing: border-box;
+				position: relative;
+				width: 25%;
+				margin: 0 20px;
+				// box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+				&:nth-child(1) {
+					z-index: 10;
+				}
+
+				&:nth-child(2) {
+					z-index: 9;
+				}
+
+				&:nth-child(3) {
+					z-index: 8;
+				}
+
+				&:nth-child(4) {
+					z-index: 7;
+				}
+
+				&:nth-child(5) {
+					z-index: 6;
+				}
+
+				&:nth-child(6) {
+					z-index: 5;
+				}
+
+				&:last-child a:after {
+					display: none;
+				}
+
+				&.current+.step:before {
+					background: $colour-dark-blue;
+				}
+
+				&.size-2 {
+					flex-grow: 2;
+				}
+
+				a {
+					display: block;
+					font-size: 25px;
+					padding: 50px 40px 30px;
+					box-sizing: border-box;
+					height: 100%;
+					z-index: 1;
+					color: $process-diagram-button-text-colour;
+					background: $process-diagram-button-background-colour;
+
+					.step-title {
+						-webkit-hyphens: auto;
+						hyphens: auto;
+						display: -webkit-box;
+						display: box;
+						-webkit-box-orient: vertical;
+						box-orient: vertical;
+						-webkit-line-clamp: 2;
+						line-clamp: 2;
+						overflow: hidden;
+						height: 60px;
+						line-height: 30px;
+						color: black;
+					}
+
+					&:after {
+						width: 80px;
+						height: 80px;
+						transform: rotate(45deg);
+						content: ' ';
+						background: $process-diagram-button-background-colour;
+						position: absolute;
+						right: -40px;
+						top: 50%;
+						margin-top: -40px;
+						// box-shadow: 0 0 20px rgba(0,0,0,0.1);
+						box-shadow: 0 0 0 3px white;
+						z-index: -1;
+					}
+
+					&:hover {
+						background: $process-diagram-button-background-colour-hover;
+						text-decoration: none;
+						color: $process-diagram-button-text-colour-hover;
+
+						&:after {
+							background: $process-diagram-button-background-colour-hover;
+						}
+					}
+
+					&.current {
+						background: $colour-dark-blue;
+						cursor: default;
+						color: white;
+
+						.step-title {
+							color: white;
+						}
+
+						&:after {
+							background: $colour-dark-blue;
+						}
+					}
+
+					&:before {
+						width: 100%;
+						font-size: 80px;
+						line-height: 100px;
+						display: block;
+						margin: 0 0 20px;
+					}
+				}
+			}
+
+			&:has(.step:nth-child(6)) {
+				#main-content & {
+					.step {
+						a {
+							padding: 10px 20px 30px;
+							height: 160px;
+
+							&:before {
+								font-size: 35px;
+							}
+
+							.step-title {
+								height: 50px;
+								font-size: 14px;
+								line-height: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.process-diagram-explanations {
+		.explanation {
+			font-size: 30px;
+			line-height: 1.4;
+			margin-bottom: 20px;
+			float: left;
+			width: 100%;
+			margin-left: -100%;
+			opacity: 0;
+			display: block !important;
+			-webkit-pointer-events: none;
+			-moz-pointer-events: none;
+			pointer-events: none;
+
+			.step-title {
+				font-size: 1em;
+			}
+
+			&.visible {
+				margin-left: 0;
+				animation: fadeInUp 0.5s;
+				-webkit-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+				-webkit-pointer-events: initial;
+				-moz-pointer-events: initial;
+				pointer-events: initial;
+			}
+		}
+	}
+}
