@@ -30,6 +30,39 @@ $main-content-width: 768px !default;
 		}
 	}
 
+	.variation-landing-tiles ~ #main & {
+
+		.tile-navigation.col-3 {
+			@include screen-size(large) {
+				grid-template-columns: repeat(2, 1fr);
+				grid-gap: 20px;
+			}
+
+			@include screen-size(medium) {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		&:has(.tile-navigation .tile-navigation-follow:nth-child(5)) {
+			margin: 0;
+			padding: 0;
+			max-width: 100%;
+
+			.tile-navigation {
+				&.col-3 {
+					@include screen-size(large) {
+						grid-template-columns: repeat(3, 1fr);
+						grid-gap: 20px;
+					}
+
+					@include screen-size(medium) {
+						grid-template-columns: 1fr 1fr;
+					}
+				}
+			}
+		}
+	}
+
 	&.cms-edit-form {
 		.metadata {
 			// margin-bottom: 50px;
