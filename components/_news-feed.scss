@@ -267,7 +267,7 @@
         .picture {
           margin-bottom: 14px;
           aspect-ratio: 16/9;
-          background-color: $colour-green-xl;
+          background-color: $colour-base;
         }
 
         img {
@@ -275,7 +275,7 @@
           border: none;
           background-size: cover;
           background-position: center;
-          background-color: $colour-green-xl;
+          background-color: $colour-base;
           display: block;
           object-fit: cover;
           aspect-ratio: 16/9;
