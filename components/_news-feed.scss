@@ -266,6 +266,8 @@
 
         .picture {
           margin-bottom: 14px;
+          aspect-ratio: 16/9;
+          background-color: $colour-green-xl;
         }
 
         img {
