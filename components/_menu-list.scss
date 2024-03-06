@@ -1,5 +1,4 @@
-$pat-checklist-label-padding-left: 32px !default;
-$menu-list-item-left-padding: $pat-checklist-label-padding-left !default;
+$menu-list-item-left-padding: 32px !default;
 
 ul.menu,
 .menu-list {
@@ -45,7 +44,7 @@ ul.menu,
       // padding-right: 15px;
       padding: 0.3em 0 0.3em var(--pat-checklist-label-padding-left) !important;
       color: #666;
-      line-height: 1.3em;
+      line-height: 24px;
       // height: 1.5em;
       cursor: default;
       overflow: hidden;
