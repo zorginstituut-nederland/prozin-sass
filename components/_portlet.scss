@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 $portlet-padding: 25px;
+$bullet-space: 22px !default;
 $colour-portlet: $colour-grey-1 !default;
 
 @mixin title-link {
@@ -321,8 +322,20 @@ $colour-portlet: $colour-grey-1 !default;
 
 	.portlet-footer {
 		// font-size: 0.8em;
+
 		a {
-			text-decoration: underline;
+			font-weight: bold;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&:before {
+				display: inline-block;
+				width: $bullet-space;
+				font-family: fontello;
+				content: '#{$glyph-angle-right}';
+			}
 		}
 	}
 
