@@ -921,7 +921,11 @@ table {
                     cursor: default;
                     display: block;
                     padding-right: 35px;
+                    height: auto;
+                    line-height: inherit;
 
+                    --select-box-box-shadow: none;
+                    --select-box-heightt: inherit;
                     --select-box-arrow-background-colour: transparent;
 
                     &:hover {
