@@ -320,7 +320,10 @@ $colour-portlet: $colour-grey-1 !default;
 	}
 
 	.portlet-footer {
-		font-size: 0.8em;
+		// font-size: 0.8em;
+		a {
+			text-decoration: underline;
+		}
 	}
 
 	.title {
