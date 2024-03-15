@@ -14,15 +14,18 @@ $table-line-height: 1.5 !default;
     padding: 0;
     color: transparent;
     box-sizing: border-box;
-    transition: padding-left 1s;
+    transition: grid 1s;
+    overflow: hidden;
 
     input {
         position: absolute;
         opacity: 0;
     }
+    
+    grid-template-columns: 0 auto;
 
     .mode-select & {
-        padding-left: 20px;
+        grid-template-columns: 20px auto;
 
         &:hover {
             background-color: #dbdbdb;
@@ -43,6 +46,7 @@ $table-line-height: 1.5 !default;
         color: black;
         opacity: 0;
         transition: all 1s;
+        margin-top: 0 !important;
 
         .mode-select & {
             opacity: 1;
@@ -492,6 +496,7 @@ table {
             &.item-name,
             &.item-state {
                 padding: 0;
+                overflow: hidden; // Nicer slide in of tick boxes in selection mode.
         
                 a {
                     display: block;

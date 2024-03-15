@@ -15,6 +15,18 @@ $pat-select-arrow-edge-distance: 13px;
 $pat-select-arrow-space: 35px;
 $pat-auto-suggest-cancel-button-edge-distance: 13px;
 
+:root {
+
+    // Checklist
+
+    --pat-checklist-label-padding-start: 32px;
+
+    // Menu list
+
+    --pat-menu-list-item-padding-start: 32px;
+
+}
+
 // Toolbar
 
 $pat-toolbar-z-index: 11; // z-index 10 ducks underneath form rich field toolbars.
