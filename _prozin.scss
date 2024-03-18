@@ -15,18 +15,6 @@ $pat-select-arrow-edge-distance: 13px;
 $pat-select-arrow-space: 35px;
 $pat-auto-suggest-cancel-button-edge-distance: 13px;
 
-:root {
-
-    // Checklist
-
-    --pat-checklist-label-padding-start: 32px;
-
-    // Menu list
-
-    --pat-menu-list-item-padding-start: 32px;
-
-}
-
 // Toolbar
 
 $pat-toolbar-z-index: 11; // z-index 10 ducks underneath form rich field toolbars.
@@ -195,6 +183,27 @@ $pswp__include-minimal-style: true;
 @import "libraries/reset";
 @import "libraries/animate";
 @import "../patterns/patterns";
+
+// CSS Variables
+
+:root {
+
+    // Checklist
+
+    --pat-checklist-label-padding-start: 32px;
+    --pat-checklist-checkbox-size: 18px;
+    --pat-checklist-checkbox-background-colour: white;
+    --pat-checklist-checkbox-box-shadow: inset 0 0 0 2px black;
+    --pat-checklist-checkbox-box-shadow-checked: none;
+    --pat-checklist-checkbox-box-shadow-radio-checked: inset 0 0 0 2px #{$colour-link},
+    inset 0 0 0 5px white;
+    --pat-checklist-checkbox-background-colour-checked: #{$colour-link};
+
+    // Menu list
+
+    --pat-menu-list-item-padding-start: 32px;
+
+}
 
 // Components
 

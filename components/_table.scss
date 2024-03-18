@@ -42,7 +42,7 @@ $table-line-height: 1.5 !default;
         top: 50% !important;
         left: -5px !important;
         transform: translate(-50%, -50%) !important;
-        font-size: 18px !important;
+        // font-size: 18px !important;
         color: black;
         opacity: 0;
         transition: all 1s;
@@ -584,7 +584,7 @@ table {
                         top: 50% !important;
                         left: 50% !important;
                         transform: translate(-50%,-50%) !important;
-                        font-size: 18px !important;
+                        // font-size: 18px !important;
                         color: black;
                     }
                 }
