@@ -1,0 +1,76 @@
+$transparent-light: rgba(0, 8, 16, 0.08) !default;
+
+:root {
+	--pat-tooltip-box-shadow: 0 4px 14px -2px $transparent-light;
+}
+
+.context-menu.pat-collapsible,
+.pat-context-menu {
+	position: relative;
+
+	&.save-button {
+		.close-menu {
+			color: transparent;
+			text-align: right;
+			cursor: default;
+
+			&:after {
+				font-family: fontello;
+				content: '#{$glyph-close}';
+				color: gray;
+				font-size: 1.2em;
+			}
+
+			&:hover {
+				&:after {
+					color: black;
+				}
+			}
+		}
+	}
+
+	.panel-content {
+		position: absolute;
+		left: 0;
+		display: none;
+		background-color: white;
+		padding: 1em;
+		width: 350px;
+		z-index: 10;
+		top: 53px;
+
+		*:last-child {
+			margin-bottom: 0;
+		}
+
+		@include screen-size(small) {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width: 90%;
+			box-sizing: border-box;
+			max-height: 80%;
+			transform: translate(-50%, -50%);
+			z-index: 1000;
+		}
+
+		li {
+			button,
+			.button {
+				margin: 0;
+			}
+		}
+
+		border: 1px solid silver;
+		box-shadow: var(--pat-tooltip-box-shadow);
+	}
+
+	&.align-right {
+		.panel-content {
+			@include screen-size(medium-large) {
+				right: 0;
+				left: inherit;
+			}
+		}
+	}
+}

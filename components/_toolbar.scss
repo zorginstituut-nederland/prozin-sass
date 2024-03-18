@@ -162,8 +162,12 @@
   }
   
   &#cms-page-toolbar-edit {
+    .context-menu {
+      display: inline-block;
+    }
+    
     .toolbar-functions-area {
-      grid-template-columns: 3fr 1fr;
+      grid-template-columns: auto 0 auto;
     }
   }
 
