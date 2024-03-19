@@ -198,6 +198,7 @@ $pswp__include-minimal-style: true;
     --pat-checklist-checkbox-box-shadow-radio-checked: inset 0 0 0 2px #{$colour-link},
     inset 0 0 0 5px white;
     --pat-checklist-checkbox-background-colour-checked: #{$colour-link};
+    --pat-checklist-checkbox-border-radius: 0;
 
     // Menu list
 
