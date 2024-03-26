@@ -19,12 +19,12 @@
 #document-alert-bar .context-menu,
 .status-inactive .content-mirror .placeholder {
 	display: inline-block;
-	margin: 0 20px 0 0;
+	// margin: 0 20px 0 0;
 
-	&.float-after {
-		margin-right: 0;
-		margin-left: 20px;
-	}
+	// &.float-after {
+	// 	margin-right: 0;
+	// 	margin-left: 20px;
+	// }
 
 	@keyframes make-ok {
 	  	0% {

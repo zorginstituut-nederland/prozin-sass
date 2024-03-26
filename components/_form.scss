@@ -252,11 +252,7 @@
 
 		> .button-bar {
 			width: 100%; // Prevents buttonbar from collapsing after inject in Chrome, FF and Safari iOS (12.x).
-			margin: 0;
-
-			.pat-button {
-				float: left;
-			}
+			margin: 0 !important;
 
 			.filter-toggle {
 				background: transparent;

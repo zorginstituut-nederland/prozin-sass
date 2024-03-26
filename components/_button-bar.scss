@@ -1,6 +1,5 @@
-.pat-button-bar {
-	margin-bottom: $baseline;
-	@include clear-fix;
+.button-bar {
+	@include pat-button-bar;
 
 	&#button-bar-organise-sections {
 		margin: 40px 0;
