@@ -930,9 +930,9 @@ table {
                     line-height: inherit;
                     font-size: inherit;
 
-                    --select-box-box-shadow: none;
-                    --select-box-height: inherit;
-                    --select-box-arrow-background-colour: transparent;
+                    --pat-select-box-box-shadow: none;
+                    --pat-select-box-height: inherit;
+                    --pat-select-box-arrow-background-colour: transparent;
 
                     &:hover {
                         background-color: $button-background-colour-hover;
@@ -1098,6 +1098,7 @@ table {
     @include screen-size(medium-large) {
         padding: 10px 15px 10px 15px;
         line-height: $table-line-height;
+        --pat-checklist-line-height: #{$table-line-height};
     }
 
     -moz-hyphens: auto;
