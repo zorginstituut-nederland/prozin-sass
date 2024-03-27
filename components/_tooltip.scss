@@ -49,7 +49,7 @@
       }
 
       .pat-button-bar {
-        margin-bottom: -8px;
+        // margin-bottom: -8px; // No longer needed now button bars use display: flex;.
       }
 
       .link-list {
