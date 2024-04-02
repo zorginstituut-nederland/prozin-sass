@@ -160,7 +160,6 @@ $pswp__include-minimal-style: true;
 :root {
 
     // Checklist
-
     --pat-checklist-label-padding-start: 32px;
     --pat-checklist-checkbox-size: 18px;
 	--pat-checklist-checkbox-vertical-position: 10.5px;
@@ -173,11 +172,9 @@ $pswp__include-minimal-style: true;
     --pat-checklist-checkbox-border-radius: 0;
 
     // Menu list
-
     --pat-menu-list-item-padding-start: 32px;
 
     // Form
-
     --pat-form-input-field-padding-top-bottom: 4px;
     --pat-form-input-field-padding-start-end: 8px;
     --pat-form-input-field-line-height: 28px;
@@ -202,10 +199,12 @@ $pswp__include-minimal-style: true;
     --pat-form-panel-colour: $colour-grey-1;
 
     // Select
-
     --pat-select-box-padding-top-bottom: 4px;
     --pat-select-box-padding-start-end: 8px;
     --pat-select-box-font-size: {#$base-font-size};
+
+    // Toggle
+    --pat-toggle-background-colour-on: #{$colour-green};
 
     // Various
 
