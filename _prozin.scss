@@ -212,6 +212,9 @@ $pswp__include-minimal-style: true;
     --pat-toggle-box-shadow: inset 0 0 0 2px black;
     --pat-toggle-box-shadow-on: inset 0 0 0 2px rgba(0, 0, 0, 0);
 
+    //
+    --sortable-form-fields-handle-colour: #{$colour-green};
+
     // Various
 
     --border-radii: 0;
