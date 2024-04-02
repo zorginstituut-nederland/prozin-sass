@@ -205,6 +205,12 @@ $pswp__include-minimal-style: true;
 
     // Toggle
     --pat-toggle-background-colour-on: #{$colour-green};
+    --pat-toggle-background-colour-off: white;
+    --pat-toggle-toggle-background-colour: #{$colour-link};
+    --pat-toggle-toggle-background-colour-on: white;
+    --pat-toggle-toggle-distance: 4px;
+    --pat-toggle-box-shadow: inset 0 0 0 2px black;
+    --pat-toggle-box-shadow-on: inset 0 0 0 2px rgba(0, 0, 0, 0);
 
     // Various
 
