@@ -58,6 +58,12 @@ $app-icons-icon-size: 165px !default;
             content: '#{$glyph-6027-planten-en-bloemen}';
         }
         
+        &.contacts:before {
+            background-color: $colour-app-contacts;
+            color: white;
+            content: '#{$glyph-at}';
+        }
+        
         &.organisations:before {
             background-color: $colour-app-organisations;
             color: white;
