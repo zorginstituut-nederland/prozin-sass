@@ -6,6 +6,11 @@ body {
 	line-height: $base-line-height;
 	font-size: $base-font-size;
 
+	&.page-type-prozin-component {
+		padding: 20px;
+		margin: 0;
+	}
+
 	@media screen {
 		// background-color: #e6e6e6;
 		background-color: white;
