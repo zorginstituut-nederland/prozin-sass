@@ -129,8 +129,8 @@ $table-line-height: 1.5 !default;
 // Font treatment
 
 $body-font-family: 'RO Sans';
-$base-font-size: 20px;
-$base-line-height: 1.625;
+$base-font-size: 1.265625rem;
+$base-line-height: 1.3827160494;
 
 // Collapsibles
 
@@ -223,6 +223,10 @@ $pswp__include-minimal-style: true;
 }
 
 // Components
+
+@import "components/advanced-search";
+@import "components/applied-filters";
+@import "components/search";
 
 @import "components/app-body";
 @import "components/app-icons";

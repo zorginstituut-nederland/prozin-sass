@@ -1,4 +1,30 @@
-@charset "UTF-8";
+html {
+	line-height: 1.15;
+
+	@include screen-size(small) {
+		font-size: 80%;
+
+		:root {
+			font-size: 80%;
+		}
+	}
+
+	@include screen-size(medium) {
+		font-size: 90%;
+
+		:root {
+			font-size: 90%;
+		}
+	}
+
+	@include screen-size(large) {
+		font-size: 100%;
+
+		:root {
+			font-size: 100%;
+		}
+	}
+}
 
 body {
  	font-family: $body-font-family;
@@ -38,9 +64,9 @@ body {
 		padding-top: 125px;
 	}
 
-	@include screen-size(large) {
-		font-size: 112.5%;
-	}
+	// @include screen-size(large) {
+	// 	font-size: 112.5%;
+	// }
 
 	@media all and (display-mode: standalone) {
 		padding-top: 70px;

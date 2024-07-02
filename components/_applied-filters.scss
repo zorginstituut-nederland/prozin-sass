@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.applied-filters {
+	background: $colour-notice;
+	padding: 1em;
+	@include clear;
+
+	a {
+		text-decoration: underline;
+	}
+
+	button {
+		// padding: 0;
+		// background: none;
+
+		margin: -0.5em;
+		margin-left: 1em;
+
+		float: right;
+		color: white;
+	}
+}

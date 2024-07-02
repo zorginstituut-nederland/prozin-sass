@@ -48,8 +48,8 @@ $footer-background-colour: $colour-green !default;
 		font-family: "RO Serif";
 		color: white;
 		position: relative;
-		font-size: 1.75em;
-		line-height: 1.4;
+		font-size: 2.0272865295rem;
+		line-height: .9865403685;
 		font-style: italic;
 
 		@include screen-size(large) {
@@ -74,7 +74,7 @@ $footer-background-colour: $colour-green !default;
 	}
 
 	li {
-	    font-family: "RO Sans", sans-serif;
+	    // font-family: "RO Sans", sans-serif;
 	    list-style: none;
 	    margin: 0;
 
@@ -107,8 +107,8 @@ $footer-background-colour: $colour-green !default;
 		font-weight: normal;
 		border: 0;
 
-		@include screen-size(small) {
-			font-size: 1.25em;
-		}
+		// @include screen-size(small) {
+		// 	font-size: 1.25em;
+		// }
 	}
 }

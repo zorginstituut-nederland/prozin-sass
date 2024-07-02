@@ -37,6 +37,10 @@
     }
 
     .description {
+      font-size: 1.125rem;
+      line-height: 1.3333333333;
+      font-weight: normal;
+      
       .facet { 
         display: inline-block;
 
@@ -85,18 +89,21 @@
     }
 
     .result-title {
-      line-height: 1.444em;
-      font-size: 1.125em;
-      padding-bottom: .3em;
-      font-style: bold;
+      line-height: 28px;
+      font-size: 1.423828125rem;
+      margin: 0rem 0rem 0.5rem 0rem;
+      font-style: normal;
+      font-weight: normal;
       color: $colour-dark-blue;
     }
 
     .meta {
       display: block;
-      color: #666;
-      font-size: .875rem;
+      font-size: 0.8888888889rem;
+      line-height: 1.6875;
       font-weight: normal;
+      color: #535353;
+      margin-top: 0.5rem 0 0 0;
 
       .facet.price {
 
@@ -174,16 +181,16 @@
       font-family: fontello;
       position: absolute;
       top: 2px;
-      font-size: 0.8em;
+      font-size: 1rem;
       left: 0;
       display: inline-block;
-      color: $colour-dark-blue;
+      color: #{$colour-dark-blue};
       font-style: normal;
     }
 
     &.generic:before {
       content: '#{$glyph-right-open}';
-      font-size: 0.6em;
+      font-size: 1rem;
     }
 
     &.news-item:before {

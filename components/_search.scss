@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 .search-box {
+	// margin-bottom: 30px;
+	-webkit-user-select: none;
+	user-select: none;
+	
 	&.closed #close-trigger,
 	&.open #open-trigger {
 		display: none;
@@ -12,8 +16,104 @@
 		margin: 0;
 	}
 	
+ 	.main-filter-toggle {
+ 		display: none !important;
+ 	}
+
+ 	&.filters-closed #close-trigger,
+ 	&.filters-open #open-trigger {
+ 		display: none;
+ 	}
+
+
+	.filter-header {
+ 		border-bottom: 1px solid #767676;
+ 		@include clear-fix;
+
+ 		.filter-tags {
+ 			.tag {
+ 				float: left;
+				line-height: 32px;
+ 				background-color: #{$button-background-colour};
+ 				color: #000;
+ 				padding: 0 30px 0 0.5rem;
+ 				margin: 0 10px 6px 0;
+ 				border-radius: 3px;
+ 				font-size: .875rem;
+ 				position: relative;
+ 				overflow: hidden;
+ 				@include box-sizing;
+ 			    animation: fadeIn 1s;
+ 			    white-space: nowrap;
+				position: relative;
+
+ 				&.collapsed {
+ 					opacity: 0;
+ 					width: 0;
+ 					margin: 0 0 6px 0;
+ 				}
+
+ 				&:after {
+ 					font-family: fontello;
+ 					content: '#{$glyph-close}';
+ 					right: 10px;
+					top: 0px;
+					font-size: 16px;
+					position: absolute;
+ 				}
+
+				&:hover {
+					text-decoration: line-through;
+					background-color: #{$button-background-colour-hover};
+					color: black;
+
+					&:after {
+						text-align: none;
+					}
+				}
+ 			}
+ 		}
+
+ 		.buttons {
+ 			.filter-toggle {
+ 				background-color: transparent;
+ 				white-space: nowrap;
+ 				color: black;
+ 				font-size: 1rem;
+ 				padding: 0 30px 0 0.5rem;
+ 				margin: 0 0 17px 0;
+ 				border-radius: 3px;
+ 				float: right;
+ 				cursor: pointer;
+				line-height: 32px;
+				position: relative;
+				cursor: default;
+
+ 				&:after {
+ 					font-family: fontello;
+ 					content: '#{$glyph-down-open}';
+ 					right: 10px;
+					top: 0px;
+					position: absolute;
+					font-size: 22px;
+					transition: transform 0.2ms;
+ 				}
+
+				&.filter-close-trigger {
+					&:after {
+						content: '#{$glyph-up-open}';
+					}	
+				}
+
+				&:hover {
+					background-color: #{$button-background-colour-hover};
+					color: black;
+				}
+ 			}
+ 		}
+ 	}
+	
 	.filters {
-		margin: 0;
 
 		&.panel-content {
 			padding-top: 0;
@@ -27,36 +127,25 @@
 			display: none;
 		}
 
-		.form-panel.panel-content {
-			padding: 0 0 1.5em 0;
-		}
+		.form-panel {
+			@include screen-size(small) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 
-		&.closed ~ .button-bar #close-trigger,
-		&.open ~ .button-bar #open-trigger {
-			display: none;
+			.panel-content {
+				padding: 0 0 1.5em 0;
+			}
 		}
-	}
-
-	.form-panel + .sorting {
-		// margin-top: 0;
 	}
 
 	.sorting {
-		margin: 20px 0;
+		margin: 1rem 0rem 2rem 0rem;
+		clear: both;
 
-		.product-med & {
-			margin: 1.8em 0;
-		}
-
-		a,
-		.link {
-			color: #767676;
-			margin: 0;
-
-			&:hover {
-				color: black;
-				text-decoration: underline !important; // Added !important until I figured out why the button component has an !important on this property.
-			}
+		a {
+			color: black;
+			text-decoration: underline;
 		}
 	}
 }
