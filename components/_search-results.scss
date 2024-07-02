@@ -30,13 +30,13 @@
         text-decoration: underline;
       }
 
-      .description,
+      .result-description,
       .meta .facet {
         text-decoration: none;
       }
     }
 
-    .description {
+    .result-description {
       font-size: 1.125rem;
       line-height: 1.3333333333;
       font-weight: normal;
@@ -50,7 +50,7 @@
 
         &:last-child {
           &:after {
-            display: none;
+            content: '.'
           }
         }
       }
@@ -105,7 +105,20 @@
       color: #535353;
       margin: 0.5rem 0 0 0;
 
-      .facet.price {
+      .byline-item {
+        padding-right: 7px;
+        margin-right: 7px;
+        border-right: 1px silver solid;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      .byline-item.price {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
 
         &:before {
           font-family: fontello;
@@ -117,7 +130,7 @@
           color: $colour-red;
 
           &:before {
-            content: '#{$glyph-wallet}';
+            // content: '#{$glyph-wallet}';
 
           }
         }
@@ -126,35 +139,34 @@
           color: $colour-green;
 
           &:before {
-            content: '#{$glyph-wallet}';
+            // content: '#{$glyph-wallet}';
 
           }
         }
 
         &.possibly-reimbursed {
-          color: $colour-orange;
+          color: $colour-orange;   
 
           &:before {
-            content: '#{$glyph-wallet}';
+            // content: '#{$glyph-wallet}';
           }
           
         }
 
         &.partially-reimbursed {
-          color: $colour-orange;
+          color: $colour-orange;   
 
           &:before {
-            content: '#{$glyph-wallet}';
+            // content: '#{$glyph-wallet}';
           }
           
         }
       }
 
-      .facet.reimbursement {
+      .byline-item.reimbursement {
         &:before {
           content: '(';
         }
-
         &:after {
           content: ')';
         }
@@ -180,7 +192,7 @@
     &:before {
       font-family: fontello;
       position: absolute;
-      top: 2px;
+      top: 0;
       font-size: 1rem;
       left: 0;
       display: inline-block;
