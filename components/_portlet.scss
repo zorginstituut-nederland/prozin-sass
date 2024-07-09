@@ -33,6 +33,8 @@ $colour-portlet: $colour-grey-1 !default;
 }
 
 .portlet {
+	font-size: 1.125rem;
+
 	&.height-full {
 		@include screen-size(large) {
 			min-height: 100%;
