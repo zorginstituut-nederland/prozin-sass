@@ -2,6 +2,7 @@
     display: grid;
     grid-gap: 30px; 
     grid-auto-rows: 1fr;
+    font-size: 1.125rem;
 
     &.col-3 {
         @include screen-size(large) {

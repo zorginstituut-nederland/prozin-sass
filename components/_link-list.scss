@@ -15,6 +15,12 @@ $bullet-space: 22px !default;
 		display: none;
 	}
 
+	&.col-2,
+	&.col-3,
+	&.col-full {
+		font-size: 1.125rem;
+	}
+
 	.facets {
 		text-transform: lowercase;
 						
