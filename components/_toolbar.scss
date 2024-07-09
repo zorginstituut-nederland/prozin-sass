@@ -38,6 +38,10 @@
   //   grid-template-columns: auto 600px auto;
   // }
 
+  &#medicine-landing-toolbar > * {
+    grid-template-columns: 4fr 0 1fr;
+  }
+
   &#cms-section-toolbar,
   &#folder-toolbar {
     .toolbar-navigation-area {
