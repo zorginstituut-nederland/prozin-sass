@@ -6,6 +6,7 @@ $table-cell-padding-right: 15px !default;
 $table-cell-padding-bottom: 10px !default;
 $table-cell-padding-left: 15px !default;
 $table-line-height: 1.5 !default;
+$table-font-size: 1.125rem;
 
 @mixin table-row-selection-mechanism {
     overflow: hidden;
@@ -89,6 +90,7 @@ table {
     // border-right: 2px solid #fff;
     width: 100%;
     // table-layout: fixed; // Fixed causes issues with FK cost tables
+    font-size: #{$table-font-size};
     
     .mode-select & {
         -webkit-user-select: none;
