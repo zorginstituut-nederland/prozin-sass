@@ -13,7 +13,7 @@ $colour-timeline: $colour-green;
     width: 15px;
     top: 2em;
     bottom: 2em;
-    left: 16px;
+    left: 19px;
     background: $colour-timeline;
     z-index: 1;
   }
@@ -29,7 +29,9 @@ $colour-timeline: $colour-green;
     }
 
     form {
-      a {
+      a,
+      button {
+        font-size: 16px;
         text-decoration: underline;
         
         &:hover {
@@ -38,6 +40,10 @@ $colour-timeline: $colour-green;
           color: $colour-link-hover;
         }
       }
+    }
+
+    &:last-child form {
+      padding-bottom: 40px;
     }
 
     .meta {
@@ -66,7 +72,7 @@ $colour-timeline: $colour-green;
     .byline {
       padding-bottom: 6px;
       margin-bottom: 0;
-      font-size: 16px;
+      font-size: 1.125rem;
 
       a {
           text-decoration: underline;
@@ -85,7 +91,7 @@ $colour-timeline: $colour-green;
       font-style: normal;
       background-color: $colour-notice-background;
       padding: 12px 14px;
-      margin: 0 0 7px 0;
+      margin: 6px 0;
       font-size: 16px;
       line-height: 1.4;
       color: black;
