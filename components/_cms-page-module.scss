@@ -81,7 +81,8 @@ $cms-page-module-padding-left-right: 15px !default;
 		}
 	}
 
-	&.type-downloads {
+	&.type-downloads,
+	&.type-reports {
 		&.pat-collapsible {
 			.panel-content {
 				padding: $cms-page-module-padding-left-right; 
