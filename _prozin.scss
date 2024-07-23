@@ -196,7 +196,11 @@ $pswp__include-minimal-style: true;
     --pat-form-input-field-background-colour: white;
     --pat-form-input-field-background-colour-disabled: #efefef;
     --pat-form-placeholder-colour: rgba(0, 0, 0, 0.35);
+
     --pat-form-panel-colour: $colour-grey-1;
+    --pat-form-panel-padding-large: 20px;
+    --pat-form-panel-padding-medium: 20px;
+    --pat-form-panel-padding-small: 20px;
 
     // Select
     --pat-select-box-padding-top-bottom: 4px;

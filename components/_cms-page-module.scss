@@ -135,6 +135,16 @@ $cms-page-module-padding-left-right: 15px !default;
 				margin-bottom: 15px;
 			}
 		}
+
+		.pat-button-bar {
+			margin-top: 0;
+		} 
+
+		&:has(.link-list li) {
+			.pat-button-bar {
+				margin-top: 15px;
+			}
+		}
 	}
 
 	&.type-data-exchange {
