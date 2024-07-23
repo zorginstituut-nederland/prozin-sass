@@ -81,6 +81,18 @@ $colour-browse-bar: $colour-base;
       line-height: 32px;
       transition: height 1s, padding 1s;
 
+      border-left: 1px solid dimgray; 
+      border-right: 1px solid dimgray;
+      
+      &:first-of-type {
+        border-top: 1px solid dimgray;
+        margin-top: -4px;
+      }
+
+      &:last-of-type {
+        border-bottom: 1px solid dimgray;
+      }
+
       &.pat-depends {
         height: 0;
         // padding-top: 0;
