@@ -13,12 +13,6 @@
 }
 
 .pat-message {
-	padding: $table-cell-padding;
-	line-height: 1.4;
-
-	a {
-		text-decoration: underline;
-	}
 
 	&.processing {
 		padding: 30px 30px 30px 140px ;
