@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 #gen-data {
+
 	&.has-parent {
 		@include screen-size(large) {
 			padding-left: 80px;
@@ -9,6 +10,15 @@
 
 	@include screen-size(large) {
 		position: relative;
+		display: grid;
+		grid-template-columns: auto 300px;
+		grid-template-areas:
+			"main sidebar";
+		gap: 30px;
+
+		#sidebar-end {
+			grid-area: sidebar
+		}
 
 		.canvas-toolbar {
 			position: absolute;

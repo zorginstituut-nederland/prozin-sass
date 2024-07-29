@@ -34,24 +34,10 @@ $main-content-width: 768px !default;
 		width: 100%;
 		max-width: 100%;
 		margin: 0;
-		display: grid;
-		grid-template-columns: auto 300px;
-		grid-template-areas:
-			"main sidebar";
-		gap: 30px;
-
-		> * {
-			grid-area: main;
-		}
+		grid-area: main;
 
 		.pat-message + .pat-rich {
-			margin-top: 2rem;
-		}
-
-		.pat-well {
-			&.interpretation {
-				grid-area: sidebar;
-			}
+			margin-top: 3rem;
 		}
 	}
 
