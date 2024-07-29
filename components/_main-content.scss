@@ -34,7 +34,24 @@ $main-content-width: 768px !default;
 		width: 100%;
 		max-width: 100%;
 		margin: 0;
-		grid-area: main;
+
+		@include screen-size(large) {
+			&:has(.sidebar) {
+				display: grid;
+				grid-template-columns: auto 300px;
+				grid-template-areas:
+					"main sidebar";
+				gap: 30px;
+			}
+		}
+
+		.table-data {
+			grid-area: main;
+		}
+
+		.sidebar {
+			grid-area: sidebar;
+		}
 
 		.pat-message + .pat-rich {
 			margin-top: 3rem;

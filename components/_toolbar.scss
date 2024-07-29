@@ -42,6 +42,14 @@
     grid-template-columns: 4fr 0 1fr;
   }
 
+  &#report-toolbar > * {
+    grid-template-columns: 100% 0 0;
+
+    .toolbar-section.view-options {
+      justify-content: flex-start;
+    }
+  }
+
   &#cms-section-toolbar,
   &#folder-toolbar {
     .toolbar-navigation-area {
