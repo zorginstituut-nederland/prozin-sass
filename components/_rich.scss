@@ -357,9 +357,9 @@ $rich-object-margin-top-bottom: 2rem !default;
 	h4,
 	h5,
 	h6 {
-		&:not(.collapsible-open):not(.collapsible-closed):not([class^="icon-"]):first-letter {
-			text-transform: capitalize;
-		}
+		// &:not(.collapsible-open):not(.collapsible-closed):not([class^="icon-"]):first-letter {
+		// 	text-transform: capitalize;
+		// }
 
 		.brand-name,
 		.adm-r,
@@ -431,9 +431,9 @@ $rich-object-margin-top-bottom: 2rem !default;
 			margin-left: 15px;
 		}
 
-		&:first-letter {
-			text-transform: capitalize;
-		}
+		// &:first-letter {
+		// 	text-transform: capitalize;
+		// }
 
 		@include screen-size(small) {
 			margin-bottom: .7692em;
