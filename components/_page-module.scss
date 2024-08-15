@@ -264,6 +264,8 @@ $main-content-width: 768px !default;
 
 			.buttons-segment {
 				white-space: nowrap;
+				--pat-form-input-field-border: none;
+				--pat-select-box-box-shadow: 0 0 0 1px white;
 
 				.pat-select {
 					--select-box-height: 39px;
