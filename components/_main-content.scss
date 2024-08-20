@@ -47,6 +47,7 @@ $main-content-width: 768px !default;
 
 		.table-data {
 			grid-area: main;
+			overflow: auto;
 		}
 
 		.sidebar {
