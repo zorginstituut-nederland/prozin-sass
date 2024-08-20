@@ -115,6 +115,11 @@
 		outline: 1px solid silver;
 		background-color: rgba(0,0,0,0.02);
 
+		.legend {
+			float: left;
+			font-weight: bold;
+		}
+
 		.functions {
 			padding-right: 5px;
 
