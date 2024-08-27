@@ -5,4 +5,10 @@
     &.state-paused {
         display: none;
     }
+
+    .app-frame {
+        &.state-inactive {
+            display: none;
+        }
+    }
 }
