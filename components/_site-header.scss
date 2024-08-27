@@ -1,7 +1,3 @@
-@charset "UTF-8";
-
-
-
 #site-header {
 	line-height: 16px;
 	border: none;
@@ -17,6 +13,12 @@
 	top: 0;
 	width: 100%;
 	transition: all 0.4s;
+
+	body:has(#app-space.state-on) &,
+	body:has(nav.app-icons) & {
+		height: 0 !important;
+		opacity: 0;
+	}
 
 	@media all and (display-mode: standalone) {
 		display: none;

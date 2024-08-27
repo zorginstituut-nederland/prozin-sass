@@ -1,0 +1,5 @@
+#app-space {
+    &.state-paused {
+        display: none;
+    }
+}

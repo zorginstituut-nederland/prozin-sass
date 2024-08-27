@@ -27,6 +27,10 @@
 	         -o-background-size: 100% $baseline;
 	            background-size: 100% $baseline;
 	}
+
+	body:has(#app-space.state-on) & {
+		display: none;
+	}
 }
 
 .variation-compare ~ #main #content,
