@@ -331,15 +331,20 @@ $rich-object-margin-top-bottom: 2rem !default;
 
 	.introduction#page-intro {
 		font-size: 1.60181rem;
+		--pat-form-input-field-font-size: 1.60181rem;
 		line-height: 1.40466;
+		--pat-form-input-field-line-height: 1.40466;
 		-webkit-hyphens: auto;
 		hyphens: auto;
+		color: black;
+		--pat-form-input-field-text-colour: black; // Only for the cursor colour
 
 		margin-top: 2rem;
 		margin-bottom: 1.5rem;
 
 		@include screen-size(small) {
 			line-height: "1.3 * #{$baseline}";
+			--pat-form-input-field-line-height: "1.3 * #{$baseline}";
 		}
 	}
 
