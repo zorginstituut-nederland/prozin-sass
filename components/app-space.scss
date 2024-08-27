@@ -1,4 +1,7 @@
 #app-space {
+    @include injection;
+    background-color: white;
+
     &.state-paused {
         display: none;
     }
