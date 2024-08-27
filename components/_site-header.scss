@@ -15,7 +15,8 @@
 	transition: all 0.4s;
 
 	body:has(#app-space.state-on) &,
-	body:has(nav.app-icons) & {
+	body:has(nav.app-icons) &,
+	body:has(#global-nav.logged-in) & {
 		height: 0 !important;
 		opacity: 0;
 	}

@@ -74,7 +74,8 @@ body {
 	}
 
 	&:has(#app-space.state-on),
-	&:has(nav.app-icons) {
+	&:has(nav.app-icons),
+	&:has(#global-nav.logged-in) {
 		padding-top: 0 !important;
 	}
 
