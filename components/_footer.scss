@@ -7,6 +7,7 @@ $footer-background-colour: $colour-green !default;
 	font-size: 1.125rem;
 
 	body:has(#global-nav.app) &,
+	body:has(#global-nav.environment-management) &,
 	body:has(nav.app-icons) & {
 		display: none;
 	}
