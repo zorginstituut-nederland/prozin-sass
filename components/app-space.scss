@@ -18,5 +18,29 @@
         &.app-launchpad {
             padding-top: 60px;
         }
+        
+        .app-loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            display: block;
+            color: rgba(0,0,0,0.5);
+            text-align: center;
+            color: rgba(0,0,0,0.6);
+            box-sizing: border-box;
+            clear: both;
+            text-decoration: none !important;
+            cursor: default;
+            -webkit-pointer-events: none;
+            pointer-events: none;
+            padding-top: 100px;
+
+            &:before {
+                @include throbber();
+                color: rgba(0,0,0,0.5);
+            }
+        }
     }
 }
