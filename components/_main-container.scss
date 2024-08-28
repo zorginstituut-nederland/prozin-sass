@@ -6,6 +6,16 @@
 	padding-top: 70px; // Benefit for pat-scroll.
 	margin-top: -70px; // Benefit for pat-scroll.
 
+	// width: 100%;
+	// display: grid;
+	// grid-template-columns: 100%;
+	// grid-template-areas: "main";
+
+	// #content,
+	// #app-space {
+	// 	grid-area: main;
+	// }
+
 	.page-type-homepage & {
 		&.injecting {
 			* {

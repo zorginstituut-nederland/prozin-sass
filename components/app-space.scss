@@ -6,9 +6,17 @@
         display: none;
     }
 
-    .app-frame {
+    .pane {
         &.state-inactive {
             display: none;
+        }
+        
+        &.state-active {
+            display: block;
+        }
+
+        &.app-launchpad {
+            padding-top: 60px;
         }
     }
 }
