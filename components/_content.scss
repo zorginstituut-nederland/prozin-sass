@@ -1,7 +1,5 @@
 #content,
 #search-content {
-	// padding-top: 2 * $baseline;
-
 	min-height: calc(100vh - 70px);
 	box-sizing: border-box;
 
@@ -10,9 +8,17 @@
 		padding-bottom: 70px;
 	}
 
+	&:has(.swimlane) {
+		padding-top: 0;
+	}
+
 	@include screen-size(small) {
 		padding-top: 20px;
 		padding-bottom: 20px;
+	}
+
+	&:has(.swim-lane) {
+		padding-top: 0;
 	}
 
 	&.grid-on {

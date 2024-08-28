@@ -19,6 +19,7 @@
         float: left;
         display: none;
         cursor: default;
+        animation: bounceIn 0.4s;
 
         &.state-on,
         &.state-dormant {
