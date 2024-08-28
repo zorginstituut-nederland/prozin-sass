@@ -5,10 +5,6 @@
 	margin: 0;
 	animation: fadeIn 0.4s;
 
-	#main:has(nav.app-icons) & {
-		display: none;
-	}
-
 	#hero {
 		margin: 0;
 	}

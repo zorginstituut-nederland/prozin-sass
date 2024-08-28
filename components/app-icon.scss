@@ -1,0 +1,44 @@
+.app-icon {
+    aspect-ratio: 1/1;
+    background-color: #efefef;
+
+    &.app-settings {
+        background-color: #{$colour-app-settings};
+    }
+
+    &.app-image-bank {
+        background-color: #{$colour-app-image-bank};
+    }
+
+    &.app-contacts {
+        background-color: #{$colour-app-contacts};
+    }
+
+    &.app-organisations {
+        background-color: #{$colour-app-organisations};
+    }
+
+    &.app-user-management {
+        background-color: #{$colour-app-user-management};
+    }
+
+    &.app-documents {
+        background-color: #{$colour-app-documents};
+    }
+
+    &.app-cost {
+        background-color: #{$colour-app-cost};
+    }
+
+    &.app-help-desk {
+        background-color: #{$colour-app-help-desk};
+    }
+
+    &.app-medicines {
+        background-color: #{$colour-app-medicines};
+    }
+
+    &.app-indicators {
+        background-color: #{$colour-app-indicators};
+    }
+}
