@@ -3,7 +3,8 @@ $app-icons-icon-size: 165px !default;
 .app-tiles {
     display: grid;
     margin: 40px;
-    gap: 70px;
+    column-gap: 70px;
+    row-gap: 40px;
     -webkit-user-select: none;
     user-select: none;
 
@@ -30,7 +31,7 @@ $app-icons-icon-size: 165px !default;
         display: inline-block;
         text-align: center;
         font-weight: bold;
-        margin: 0 0 40px 0;
+        margin: 0;
         color: black;
         font-size: 20px;
 
