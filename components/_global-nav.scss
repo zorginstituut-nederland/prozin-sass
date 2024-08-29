@@ -319,7 +319,7 @@ $global-navigation-background-colour: $colour-green !default;
 
 	.container {
 		position: relative;
-  		padding: 0 $container-padding + 170px 0 $container-padding;
+  		padding: 0 calc(#{$container-padding} + 220px) 0 #{$container-padding};
 
 		#breadcrumbs {
 			body:has(#app-space.state-on) & {
