@@ -22,10 +22,14 @@
         .coming-soon {
             position: fixed;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            font-size: 40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin-top: -30px;
+            font-size: 60px;
             font-style: italic;
+            animation: pulse 0.4s;
+            animation-delay: 0.4s;
         }
         
         .app-loader {
