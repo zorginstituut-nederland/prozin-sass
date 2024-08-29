@@ -18,6 +18,15 @@
         &.app-launchpad {
             padding-top: 60px;
         }
+
+        .coming-soon {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 40px;
+            font-style: italic;
+        }
         
         .app-loader {
             position: fixed;
