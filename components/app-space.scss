@@ -7,6 +7,8 @@
     }
 
     .pane {
+        @include injection;
+        
         &.state-inactive {
             display: none;
         }
