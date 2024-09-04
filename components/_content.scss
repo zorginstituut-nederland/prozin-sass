@@ -1,4 +1,4 @@
-#content,
+#product-space,
 #search-content {
 	min-height: calc(100vh - 70px);
 	box-sizing: border-box;
@@ -40,13 +40,13 @@
 	}
 }
 
-.variation-compare ~ #main #content,
+.variation-compare ~ #main #product-space,
 .variation-compare ~ #main #search-content,
-.variation-medicine-compare ~ #main #content,
+.variation-medicine-compare ~ #main #product-space,
 .variation-medicine-compare ~ #main #search-content,
-.variation-indication-compare ~ #main #content,
+.variation-indication-compare ~ #main #product-space,
 .variation-indication-compare ~ #main #search-content,
-.variation-medicine-group-compare ~ #main #content
+.variation-medicine-group-compare ~ #main #product-space
 .variation-medicine-group-compare ~ #main #search-content {
 	
 	&:not(.compare-count-0) {
