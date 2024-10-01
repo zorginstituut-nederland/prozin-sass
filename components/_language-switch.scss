@@ -7,6 +7,10 @@
 	background: white;
 	clear: both;
 
+	body:has(#app-space.state-on) & {
+		display: none;
+	}
+
 	.languages-list {
 		text-align: center;
 		li {
