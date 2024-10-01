@@ -451,9 +451,11 @@ table {
             color: $colour-warning;
         }
 
-        &.state-archived th a {
+        &.state-archived th a,
+        &.state-inactive th a {
             text-decoration:line-through;
             opacity: 0.5;
+            filter: grayscale(1);
         }
 
         &.mutated,
