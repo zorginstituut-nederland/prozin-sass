@@ -17,9 +17,14 @@
 		padding-bottom: 20px;
 	}
 
-	&:has(.swim-lane) {
+	&:has(.swim-lane),
+	&:has(#browse-bar) {
 		padding-top: 0;
 		padding-bottom: 0;
+
+		#content {
+			padding: 60px;
+		}
 	}
 
 	&.grid-on {
