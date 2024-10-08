@@ -20,11 +20,14 @@
 	&:has(.swim-lane) {
 		padding-top: 0;
 		padding-bottom: 0;
+	}
 
-		&:has(#browse-bar) {
-			#content {
-				padding: 60px;
-			}
+	&:has(#browse-bar) {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		#content {
+			padding: 40px 0;
 		}
 	}
 
