@@ -17,13 +17,14 @@
 		padding-bottom: 20px;
 	}
 
-	&:has(.swim-lane),
-	&:has(#browse-bar) {
+	&:has(.swim-lane) {
 		padding-top: 0;
 		padding-bottom: 0;
 
-		#content {
-			padding: 60px;
+		&:has(#browse-bar) {
+			#content {
+				padding: 60px;
+			}
 		}
 	}
 
