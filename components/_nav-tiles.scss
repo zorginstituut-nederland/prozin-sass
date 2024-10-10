@@ -30,7 +30,7 @@ $nav-tiles-font-size: 1.60181rem !default;
   &.count-2,
   &.count-4 {
     @include screen-size(large) {
-        grid-template-columns: minmax(1fr, 1fr) minmax(1fr, 1fr);
+        grid-template-columns: 50% 50%;
       }
   }
 
