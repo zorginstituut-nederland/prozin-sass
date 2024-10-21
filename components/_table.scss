@@ -154,7 +154,7 @@ table {
             padding-bottom: $table-cell-padding-bottom + 2px;
 
             a {
-                &:hover {
+                &[href]:hover {
                     text-decoration: underline;
 
                     &:before {
@@ -333,7 +333,7 @@ table {
                             cursor: pointer;
                             text-decoration: none;
                         
-                            &:hover {
+                            &[href]:hover {
                                 text-decoration: underline;
                                 color: $colour-link;
                             }
@@ -534,7 +534,7 @@ table {
                         font-weight: normal;
                     }
         
-                    &:hover {
+                    &[href]:hover {
                         text-decoration: underline;
         
                         &:has(.link-title) {
@@ -607,7 +607,7 @@ table {
             }
 
             a {
-                &:hover {
+                &[href]:hover {
                     text-decoration: underline;
                 }
             }
