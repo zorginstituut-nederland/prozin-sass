@@ -83,6 +83,8 @@ $table-font-size: 1.125rem;
 
 table {
     border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
     // background-color: #f3f3f3;
     padding: 5px 10px 5px 10px;
     border-collapse: collapse;
@@ -503,7 +505,8 @@ table {
             vertical-align: top;
             border-right: 2px solid #fff;
             border-bottom: 2px solid #fff;
-            background-color: #f3f3f3;
+            background-color: rgba(0, 0, 0, 0.05);
+            
             
             &.item-name,
             &.item-state {
@@ -511,14 +514,39 @@ table {
                 overflow: hidden; // Nicer slide in of tick boxes in selection mode.
         
                 a {
-                    display: block;
                     padding-top: $table-cell-padding-top;
                     padding-bottom: $table-cell-padding-bottom;
                     padding-left: $table-cell-padding-left;
                     padding-right: $table-cell-padding-right;
                     display: flex;
                     justify-content: space-between;
-        
+
+                    &:has(.avatar) {
+                        display: grid;
+                        grid-template-columns: 38px auto auto;
+                        grid-template-areas: "avatar label markers";
+                        align-items: center;
+                        justify-content: initial;
+
+                        .avatar {
+                            grid-area: avatar;
+                            margin: -6px 8px -6px -6px;
+                            justify-self: start;
+                            height: 34px;
+                            width: 34px;
+                        }
+
+                        .label {
+                            grid-area: label;
+                            justify-self: start;
+                        }
+
+                        .markers {
+                            justify-self: end;
+                            grid-area: markers;
+                        }
+                    }
+
                     .addition {
                         &:before {
                             content: ', ';
@@ -1019,7 +1047,7 @@ table {
             position: sticky;
             left: 0;
             z-index: 9;
-            background: #e6e6e6;
+            background: rgba(0, 0, 0, 0.09);
         }
 
         tr.header-row {
