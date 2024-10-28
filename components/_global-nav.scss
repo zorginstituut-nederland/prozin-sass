@@ -43,11 +43,30 @@ $global-navigation-background-colour: $colour-green !default;
 
 #global-nav {
 	border: none;
-	background-color: $global-navigation-background-colour;
+	background-color: #{$global-navigation-background-colour};
 	clear: both;
 	transition: all 0.4s;
 	-webkit-user-select: none;
 	user-select: none;
+
+	@keyframes red-alert {
+		0% {
+			background-color: #{$global-navigation-background-colour};
+		}
+
+		50% {
+			background-color: #{$colour-red};
+		}
+
+		100% {
+			background-color: #{$global-navigation-background-colour};
+		}
+	}
+
+	&.impersonation {
+		animation: red-alert 0.9s;
+		animation-iteration-count: infinite;
+	}
 
 	// &.app {
 	// 	#breadcrumbs {
