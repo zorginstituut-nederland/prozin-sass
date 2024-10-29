@@ -9,90 +9,12 @@
 // }
 
 .file-download {
-	display: block;
-	background: $colour-grey-1;
-	margin: 0 0 1rem 0;
-	padding: 1rem;
-	position: relative;
-	// cursor: pointer;
+    @include pat-well;
+    padding: 1rem;
+    background-color: #{$colour-grey-1};
 
-	.form-panel & {
-		border: gray 1px solid;
-	}
-
-	.sortable-item & {
-		transition: all 0.2s;
-		margin: 0.5rem 0;
-		padding: 1rem 1rem 1rem 60px;
-		box-sizing: border-box;
-		clear: both;
-		overflow: hidden;
-
-		&[data-value="on"] {
-			height: 0;
-			margin: 0;
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-	}
-
-	&[href]:hover {
-		text-decoration: none;
-
-		.title {
-			color: #01496d;
-		}
-	}
-
-	&:before {
-		display: none; // Downwards compatible
-	}
-
-	.title {
-		font-size: 1.6018066406rem;
-		line-height: 1.2485901539;
-		position: relative;
-		width: 100%;
-		margin: 0rem 0rem 0.5rem 0rem;
-		color: $colour-link;
-	}
-
-	.meta {
-		font-size: 1.125rem;
-		line-height: 1.3333333333;
-		font-weight: normal;
-		margin: 0;
-		color: #535353;
-		width: 100%;
-
-		&:last-child {
-			margin: 0;
-		}
-
-		@include screen-size(small) {
-			display: inline;
-		}
-
-		.meta-item {
-			@include screen-size(medium-large) {
-				@include byline-item;
-			}
-
-			@include screen-size(small) {
-				&:after {
-					content: ', ';
-				}
-			}
-		}
-
-		@include screen-size(small) {
-			&:last-child {
-				.meta-item:last-child {
-					&:after {
-						content: '.';
-					}
-				}
-			}
-		}
-	}
+   .meta {
+		margin-top: 5px;
+		@include meta-bar;
+   }
 }
