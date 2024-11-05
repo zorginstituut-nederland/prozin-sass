@@ -405,24 +405,6 @@ table {
                 left: 0;
                 z-index: 9;
                 background: #e6e6e6;
-
-                &.section-header {
-                    // background: white;
-                    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 500%); 
-                    text-shadow: 0 0 20px white;
-                    padding-left: 0;
-                    left: 15px;
-                    z-index: 8;
-                    // z-index: 9;
-
-                    h2 {
-                        margin: 20px 0 0 0;
-                    }
-
-                    .byline {
-                        font-weight: normal;
-                    }
-                }
             }
 
             td {
@@ -1048,6 +1030,24 @@ table {
             left: 0;
             z-index: 9;
             background: rgba(0, 0, 0, 0.09);
+
+            &.section-header {
+                // background: white;
+                background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 500%); 
+                text-shadow: 0 0 20px white;
+                padding-left: 0;
+                left: 15px;
+                z-index: 8;
+                // z-index: 9;
+
+                h2 {
+                    margin: 20px 0 0 0;
+                }
+
+                .byline {
+                    font-weight: normal;
+                }
+            }
         }
 
         tr.header-row {
