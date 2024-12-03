@@ -509,15 +509,15 @@ table {
 
                     &:has(.avatar) {
                         display: grid;
-                        grid-template-columns: var(--table-avatar-height) auto auto;
+                        grid-template-columns: calc(var(--table-avatar-height) + 6px) auto auto;
                         grid-template-areas: "avatar label markers";
                         align-items: center;
                         justify-content: initial;
 
                         .avatar {
                             grid-area: avatar;
-                            margin: -6px 8px -6px -6px;
-                            justify-self: start;
+                            margin: -6px 20% -6px 0;
+                            justify-self: end;
                             height: var(--table-avatar-height);
                             width: auto;
                         }
