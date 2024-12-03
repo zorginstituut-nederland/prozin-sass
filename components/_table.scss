@@ -520,6 +520,7 @@ table {
                             justify-self: end;
                             height: var(--table-avatar-height);
                             width: auto;
+                            object-fit: cover;
                         }
 
                         .label {
