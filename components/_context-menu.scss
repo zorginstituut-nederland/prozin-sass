@@ -8,6 +8,11 @@ body:has(#app-dashboard .app-body.mode-select) {
 	.pat-toggle.select {
 		color: #{$colour-accent};
 	}
+
+	li:has(a) {
+		opacity: 0.4;
+		pointer-events: none;
+	}
 }
 
 .context-menu.pat-collapsible,
