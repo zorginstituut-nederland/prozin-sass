@@ -4,6 +4,12 @@ $transparent-light: rgba(0, 8, 16, 0.08) !default;
 	--pat-tooltip-box-shadow: 0 4px 14px -2px $transparent-light;
 }
 
+body:has(#app-dashboard .app-body.mode-select) {
+	.pat-toggle.select {
+		color: #{$colour-accent};
+	}
+}
+
 .context-menu.pat-collapsible,
 .pat-context-menu {
 	position: relative;
