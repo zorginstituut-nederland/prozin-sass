@@ -1,3 +1,0 @@
-[submodule "libraries/patterns"]
-	path = libraries/patterns
-	url = https://github.com/patternslib/patterns-sass.git
