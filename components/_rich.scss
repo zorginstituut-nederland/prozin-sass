@@ -342,6 +342,12 @@ $rich-object-margin-top-bottom: 2rem !default;
 		margin-top: 2rem;
 		margin-bottom: 1.5rem;
 
+		&:has(.pat-content-mirror) {
+			#document-summary {
+				white-space: pre-wrap;
+			}
+		}
+
 		@include screen-size(small) {
 			line-height: "1.3 * #{$baseline}";
 			--pat-form-input-field-line-height: "1.3 * #{$baseline}";
