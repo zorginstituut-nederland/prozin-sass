@@ -353,6 +353,8 @@ $global-navigation-background-colour: $colour-green !default;
 			letter-spacing: .03rem;
 			float: left;
 			line-height: 70px;
+			display: flex;
+			width: calc(100% - 20px);
 
 			@include screen-size(small) {
 				padding-top: 0;
@@ -370,10 +372,17 @@ $global-navigation-background-colour: $colour-green !default;
 				max-width: 100%;
 				white-space: nowrap;
 				height: 70px;
-				float: left;
+				display: inline-block;
+				position: relative;
+				padding-right: 37px;
 
 				&.homepage {
 					font-weight: normal;
+					min-width: min-content;
+				}
+
+				&:last-child {
+					min-width: fit-content;
 				}
 
 				@include screen-size(medium-large) {
@@ -416,6 +425,10 @@ $global-navigation-background-colour: $colour-green !default;
 							text-decoration: none;
 							width: 21px;
 							text-align: center;
+
+							position: absolute;
+							right: 0;
+							top: 27px;
 						}
 					}
 
