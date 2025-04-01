@@ -347,7 +347,7 @@ $global-navigation-background-colour: $colour-green !default;
 		}
 
 		#breadcrumbs,
-		.breadcrumbs {
+		#dashboard-breadcrumbs {
 			line-height: 1.6em;
 			font-size: 1.25rem;
 			letter-spacing: .03rem;
@@ -372,6 +372,7 @@ $global-navigation-background-colour: $colour-green !default;
 				max-width: 100%;
 				white-space: nowrap;
 				height: 70px;
+				float: left; // Prevent unwanted white spaces
 				display: inline-block;
 				position: relative;
 				padding-right: 37px;
