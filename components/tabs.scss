@@ -11,6 +11,10 @@
         body:has(#app-dashboard.state-active) & {
             display: block;
         }
+
+        body:has(#app-dashboard.state-inactive) & {
+            display: none;
+        }
     }
     
     .tabs {
