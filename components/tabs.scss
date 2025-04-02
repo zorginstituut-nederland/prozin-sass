@@ -9,7 +9,7 @@
         display: none;
 
         body:has(#app-dashboard.state-active) & {
-            display: block;
+            display: flex;
         }
 
         body:has(#app-dashboard.state-inactive) & {
