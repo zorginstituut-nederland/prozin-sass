@@ -338,6 +338,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 	color: black;
 	margin-top: -2px;
 	margin-left: 3px;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none !important;
+	}
+
+	&.language {
+		&.active {
+			background: $colour-heavenly-blue;
+			color: white !important;
+		}
+	}
 
 	&.mutated {
 		@include mutation-sentinel;
