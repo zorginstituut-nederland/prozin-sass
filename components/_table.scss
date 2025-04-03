@@ -44,7 +44,7 @@ $table-font-size: 1.125rem;
 
     &:before {
         position: absolute;
-        top: 50% !important;
+        --pat-checklist-checkbox-vertical-position: 15px;
         left: -5px !important;
         transform: translate(-50%, -50%) !important;
         // font-size: 18px !important;
