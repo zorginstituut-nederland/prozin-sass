@@ -89,11 +89,7 @@ $main-content-width: 768px !default;
 	}
 
 	&.type-message {
-		.pat-message {
-			&:last-child {
-				margin-bottom: 2rem;
-			}
-		}
+		padding-bottom: 2rem;
 	}
 
 	&.type-composition {
