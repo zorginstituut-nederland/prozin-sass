@@ -88,6 +88,14 @@ $main-content-width: 768px !default;
 		}
 	}
 
+	&.type-message {
+		.pat-message {
+			&:last-child {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
 	&.type-composition {
 		.compare-to-other {
 			margin-top: 60px;
