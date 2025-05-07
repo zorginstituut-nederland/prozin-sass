@@ -641,6 +641,10 @@ $main-content-width: 768px !default;
 				margin-bottom: 20px;
 			}
 		}
+
+		.pat-rich h2:first-child {
+			margin-top: 0;
+		}
 	}
 
 	&#section-group-information {
