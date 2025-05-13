@@ -534,6 +534,52 @@ table {
                         }
                     }
 
+                    &:has(.node) {
+                        display: flex;
+
+                        &:hover {
+                            text-decoration: none;
+
+                            .node {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .node {
+                        display: inline;
+                        vertical-align: middle;
+
+                        &.folder {
+                            padding-left: 20px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            position: relative;
+                            display: inline-block;
+                            float: left;
+                            max-width: 100%;
+
+                            &:after {
+                                content: '#{$glyph-right-open-1}';
+                                display: inline-block;
+                                width: 20px;
+                                font-family: fontello;
+                                text-align: center;
+                                font-size: 0.8rem;
+                                font-weight: normal;
+                            }
+
+                            &:before {
+                                position: absolute;
+                                left: 0;
+                                display: inline-block;
+                                font-family: fontello;
+                                content: '#{$glyph-folder}';
+                                font-weight: normal;
+                            }
+                        }
+                    }
+
                     .addition {
                         &:before {
                             content: ', ';
