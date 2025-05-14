@@ -291,12 +291,22 @@
         color: $colour-dark-blue;
         width: auto; // Required for IE
         text-underline-offset: 0.18em;
+				hyphens: auto;
       }
 
       p {
         font-size: 1.125rem;
         line-height: 1.33333;
         margin-bottom: .5em;
+				hyphens: auto;
+
+				display: -webkit-box;
+				display: box;
+				-webkit-box-orient: vertical;
+				box-orient: vertical;
+				-webkit-line-clamp: 3;
+				line-clamp: 3;
+				overflow: hidden;
       }
 
       .byline {
