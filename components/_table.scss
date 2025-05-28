@@ -559,7 +559,7 @@ table {
                             float: left;
                             max-width: 100%;
 
-                            &:after {
+                            &:not(:last-of-type):after {
                                 content: '#{$glyph-right-open-1}';
                                 display: inline-block;
                                 width: 20px;
