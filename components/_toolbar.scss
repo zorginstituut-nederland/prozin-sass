@@ -95,23 +95,20 @@
   }
 
 	&#landing-browse-toolbar {
+
     > * {
       grid-template-columns: 1fr 0 1fr;
     }
-
+    
     .toolbar-section {
       &.view-options {
+        justify-content: flex-end;
         grid-area: right;
-        text-align: right;
-        
-        > * {
-          margin-right: 0;
-        }
       }
 
       &.navigation {
+        justify-content: flex-start;
         grid-area: left;
-        text-align: left;
       }
     }
 
