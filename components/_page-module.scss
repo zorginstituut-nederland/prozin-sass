@@ -461,6 +461,16 @@ $main-content-width: 768px !default;
 	&.type-news {
 		@include module-separator;
 	}
+	
+	&.type-medicines {
+		margin-bottom: 15px;
+
+		.medicine-group-header {
+			display: grid;
+			grid-template-columns: auto auto;
+			justify-content: space-between;
+		}
+	}
 
 	&.type-involved-parties,
 	&.type-organisations {
