@@ -89,7 +89,13 @@ $main-content-width: 768px !default;
 	}
 
 	&.type-message {
-		padding-bottom: 2rem;
+		padding: 0;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+
+		.pat-well {
+			margin: 0;
+		}
 	}
 
 	&.type-composition {
