@@ -54,6 +54,10 @@
         background-color: #{$colour-app-tags};
     }
 
+    &.app-aanlevering-zorgaanbieder {
+        background-color: #{$colour-app-aanlevering-zorgaanbieder};
+    }
+
     &.app-demo {
         background-color: #{$colour-app-demo};
     }
