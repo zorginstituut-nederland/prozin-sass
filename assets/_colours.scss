@@ -11,6 +11,7 @@ $colour-dark-blue: #01689b; // Donker blauw
 $colour-dark-blue-d: darken($colour-dark-blue, 10%);
 $colour-dark-blue-l: #cce0f1; // Donker blauw light
 $colour-dark-blue-xd: darken($colour-dark-blue, 30%);
+$colour-darker-blue: #31597D;
 $colour-dark-blue-xl: #e5f0f9; // Donker blauw extra light
 $colour-dark-brown: #673327; // Donker bruin
 $colour-dark-green: #275937; // Donker groen    							Basiskleur 2
@@ -77,4 +78,5 @@ $colour-app-medicines: #{$colour-mint};
 $colour-app-indicators: #{$colour-heavenly-blue};
 $colour-app-public-data: #{$colour-green-d};
 $colour-app-tags: #{$colour-ruby};
+$colour-app-aanlevering-zorgaanbieder: #{$colour-darker-blue};
 $colour-app-demo: #c2e608;
