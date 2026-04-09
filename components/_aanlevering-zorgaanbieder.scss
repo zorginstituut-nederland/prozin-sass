@@ -86,3 +86,21 @@
 		}
 	}
 }
+
+.disclaimer-editor {
+	.tiptap-container {
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		background: white;
+		padding: 10px;
+	}
+
+	.tiptap-container:focus-within {
+		border-color: $colour-dark-blue;
+		box-shadow: 0 0 0 2px rgba($colour-dark-blue, 0.1);
+	}
+
+	.tiptap-container .ProseMirror {
+		min-height: 120px;
+	}
+}
