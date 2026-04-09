@@ -1,0 +1,88 @@
+#aanlevering-zorgaanbieder-beheerder-toolbar-view-options {
+
+	.back-button--compact {
+		display: inline-flex;
+		align-items: center;
+		width: 50px;
+		min-width: 50px;
+		max-width: 50px;
+		flex: 0 0 50px;
+		padding-left: 0.8em;
+		padding-right: 0.6em;
+	}
+
+	.back-button--compact:before {
+		border-width: 22px 13px 22px 0;
+		left: 0;
+		top: 0;
+	}
+
+	.back-button--compact:after {
+		left: 10px;
+	}
+
+	.back-button--compact .icon-left-open:before {
+		margin: 0;
+	}
+
+	.pat-button {
+		width: auto;
+		min-width: max-content;   // 👈 key
+		white-space: nowrap;
+	}
+}
+
+.healthcare-providers {
+	margin: 2rem 0;
+
+	> .page-module-header {
+		margin-bottom: 10px;
+	}
+
+	table {
+		margin-top: 10px;
+	}
+	.title-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		margin-bottom: 10px;
+	}
+
+	.title-segment {
+		margin: 0;
+	}
+
+	a.pat-button {
+		white-space: nowrap;
+		flex: 0 0 auto;
+	}
+
+	.link-button--inline {
+		background: none;
+		box-shadow: none;
+		border: none;
+
+		height: auto;
+		line-height: normal;
+		padding: 0;
+
+		font-size: 18px;
+		color: $colour-dark-blue;
+
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+
+		&:hover {
+			background: none;
+			text-decoration: underline;
+		}
+
+		&:before {
+			font-size: 16px;
+			margin: 0;
+		}
+	}
+}
