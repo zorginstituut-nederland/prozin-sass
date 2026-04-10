@@ -22,13 +22,38 @@
 	}
 
 	.back-button--compact .icon-left-open:before {
-		margin: 0;
+		margin: auto 3px;
 	}
 
 	.pat-button {
 		width: auto;
 		min-width: max-content;   // 👈 key
 		white-space: nowrap;
+	}
+}
+
+#aanlevering-zorgaanbieder-beheerder-toolbar-quick-functions {
+	.state-label {
+		height: 44px;
+		line-height: 39px;
+		display: inline-block;
+		box-sizing: border-box;
+		padding: 0 12px;
+		margin-right: 8px;
+		font-size: 20px;
+		font-weight: normal;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+
+	.state-label.is-open {
+		background: $colour-dark-blue-xl;
+		color: $colour-dark-blue;
+	}
+
+	.state-label.is-closed {
+		background: $colour-orange-xl;
+		color: $colour-orange;
 	}
 }
 
