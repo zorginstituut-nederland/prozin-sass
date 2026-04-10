@@ -777,13 +777,37 @@ $main-content-width: 768px !default;
 		align-items: stretch;
 		justify-content: space-between;
 
-		min-height: 60px;
+		min-height: 40px;
 		padding-left: 10px;
 		box-sizing: border-box;
 
 		font-size: 26px;
 		line-height: 34px;
 		font-weight: normal;
+
+		.fraction-name {
+			padding: 4px 0;
+			font-size: 26px;
+			line-height: 34px;
+		}
+
+		.fraction-id {
+			border-radius: 4px;
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 33px;
+			height: 32px;
+			background: $colour-dark-blue-xl;
+			filter: brightness(0.92);
+			font-family: monospace;
+			color: rgba(black, 0.6);
+			padding: 0 15px;
+			display: inline-flex;
+			align-items: center;
+
+
+
+		}
 	}
 
 	.title-left {
@@ -791,26 +815,6 @@ $main-content-width: 768px !default;
 		align-items: center;
 		gap: 10px;
 		margin: 0;
-	}
-
-	.fraction-id {
-		border-radius: 4px;
-		font-size: 16px;
-		line-height: 33px;
-		height: 32px;
-		background: $colour-dark-blue-xl;
-		filter: brightness(0.92);
-		font-family: monospace;
-		color: rgba(black, 0.6);
-		padding: 0 15px;
-		display: inline-flex;
-		align-items: center;
-	}
-
-	.fraction-name {
-		padding: 4px 0;
-		font-size: 26px;
-		line-height: 34px;
 	}
 
 	.title-right.state-label {
