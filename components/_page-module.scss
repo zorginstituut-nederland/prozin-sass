@@ -277,8 +277,10 @@ $main-content-width: 768px !default;
 				width: 100%;
 				display: flex;
 				justify-content: flex-start;
-				font-size: 26px;
+				font-size: 24px;
 				line-height: 34px;
+				margin-right: 10px;
+				gap: 18px;
 
 				.fraction-name {
 					padding: 4px 0;
@@ -286,19 +288,24 @@ $main-content-width: 768px !default;
 
 				.fraction-id {
 					border-radius: 4px;
-					font-size: 16px;
-					line-height: 33px;
-					position: relative;
-					top: 5px;
-					height: 32px;
-					margin-right: 10px;
+					font-size: 15px;
+					font-weight: bold;
+					line-height: 30px;
+					height: 30px;
 					background: $colour-dark-blue-xl;
 					filter: brightness(0.92);
-					font-weight: normal;
 					font-family: monospace;
 					color: rgba(black, 0.6);
-					padding: 0 15px;
-					display: inline-block;
+					padding: 6px 12px;
+					display: inline-flex;
+					align-items: center;
+				}
+
+				.fraction-status {
+					padding: 4px 0 4px 20px;
+					font-weight: normal;
+					font-size: 18px;
+					line-height: inherit;
 				}
 			}
 
@@ -716,6 +723,20 @@ $main-content-width: 768px !default;
 		.page-module-title {
 			border-top: 0;
 			padding: 10px 40px 10px 10px;
+
+			&.is-disabled {
+				opacity: 0.3;
+
+				.title-link {
+					pointer-events: none;
+					cursor: default;
+				}
+
+				.fraction-id,
+				.fraction-status {
+					text-decoration: none;
+				}
+			}
 		}
 
 		.title-link {
@@ -728,6 +749,28 @@ $main-content-width: 768px !default;
 				content: none;
 				display: none;
 			}
+
+			&[href]:hover {
+				text-decoration: none;
+			}
+
+			.fraction-id,
+			.fraction-status {
+				text-decoration: none;
+			}
+
+			.fraction-name {
+				text-decoration: none;
+			}
+
+			&[href]:hover .fraction-name {
+				text-decoration: underline;
+			}
+
+			&[href]:hover .fraction-id,
+			&[href]:hover .fraction-status {
+				text-decoration: none;
+			}
 		}
 
 		.title-segment {
@@ -737,7 +780,6 @@ $main-content-width: 768px !default;
 
 		.buttons-segment {
 			label.state-label {
-
 				display: inline-block;
 				box-sizing: border-box;
 				padding: var(--pat-button-paddings);
@@ -755,12 +797,14 @@ $main-content-width: 768px !default;
 				cursor: default;
 			}
 
-			label.state-label.is-open {
+			label.state-label.is-open,
+			label.state-label.is-delivered {
 				background: $colour-dark-blue-xl;
 				color: $colour-dark-blue;
 			}
 
-			label.state-label.is-closed {
+			label.state-label.is-closed,
+			label.state-label.needs-delivery {
 				background: $colour-orange-xl;
 				color: $colour-orange;
 			}
@@ -780,42 +824,46 @@ $main-content-width: 768px !default;
 		justify-content: space-between;
 
 		min-height: 40px;
-		//padding-left: 10px;
 		box-sizing: border-box;
 
-		font-size: 26px;
+		font-size: 24px;
 		line-height: 34px;
 		font-weight: normal;
+		gap: 18px;
 
 		.fraction-name {
 			padding: 4px 0;
-			font-size: 26px;
+			font-size: 24px;
 			line-height: 34px;
 		}
 
 		.fraction-id {
 			border-radius: 4px;
-			font-size: 16px;
-			font-weight: normal;
-			line-height: 33px;
-			height: 32px;
+			font-size: 15px;
+			font-weight: bold;
+			line-height: 30px;
+			height: 30px;
 			background: $colour-dark-blue-xl;
 			filter: brightness(0.92);
 			font-family: monospace;
 			color: rgba(black, 0.6);
-			padding: 0 15px;
+			padding: 6px 12px;
 			display: inline-flex;
 			align-items: center;
+		}
 
-
-
+		.fraction-status {
+			padding: 4px 0;
+			font-size: 26px;
+			line-height: 34px;
+			text-decoration: none;
 		}
 	}
 
 	.title-left {
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 18px;
 		margin: 0;
 	}
 
