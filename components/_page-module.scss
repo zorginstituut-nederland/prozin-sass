@@ -737,19 +737,21 @@ $main-content-width: 768px !default;
 
 		.buttons-segment {
 			label.state-label {
-				height: 39px;
-				line-height: 39px;
+
 				display: inline-block;
-				vertical-align: middle;
 				box-sizing: border-box;
-				padding: 0 12px;
+				padding: var(--pat-button-paddings);
+				font-weight: normal;
+				white-space: nowrap;
+				vertical-align: top;
+				float: none;
+				font-size: var(--pat-toolbar-font-size);
+				height: 40px;
+				line-height: 40px;
 				margin: 0;
 				background: white;
 				color: $colour-dark-blue;
 				box-shadow: 0 0 0 1px white;
-				font-size: 20px;
-				font-weight: normal;
-				white-space: nowrap;
 				cursor: default;
 			}
 
@@ -778,7 +780,7 @@ $main-content-width: 768px !default;
 		justify-content: space-between;
 
 		min-height: 40px;
-		padding-left: 10px;
+		//padding-left: 10px;
 		box-sizing: border-box;
 
 		font-size: 26px;

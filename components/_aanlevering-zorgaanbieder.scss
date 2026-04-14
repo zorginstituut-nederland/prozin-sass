@@ -35,15 +35,15 @@
 #aanlevering-zorgaanbieder-beheerder-toolbar-quick-functions {
 	.state-label {
 		height: 44px;
-		line-height: 39px;
+		line-height: var(--pat-toolbar-button-line-height);
 		display: inline-block;
 		box-sizing: border-box;
-		padding: 0 12px;
-		margin-right: 8px;
-		font-size: 20px;
+		padding: var(--pat-button-paddings);
 		font-weight: normal;
 		white-space: nowrap;
-		vertical-align: middle;
+		vertical-align: top;
+		float: none;
+		font-size: var(--pat-toolbar-font-size);
 	}
 
 	.state-label.is-open {
@@ -93,7 +93,7 @@
 		line-height: normal;
 		padding: 0;
 
-		font-size: 18px;
+		font-size: 16px;
 		color: $colour-dark-blue;
 
 		display: inline-flex;
