@@ -133,3 +133,99 @@
 .introduction-aanleverportaal {
 	margin-bottom: 50px;
 }
+
+.vertical.aanlevering-zorgaanbieder-vertical {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 24px;
+
+	.question {
+		margin-bottom: 30px;
+	}
+
+	.question-label {
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	.vraag-id {
+		font-weight: bold;
+	}
+
+	.vraag-text {
+		display: block;
+		margin-top: 4px;
+		font-weight: normal;
+	}
+
+	.answers {
+		display: flex;
+		gap: 16px;
+		margin-bottom: 30px;
+
+		input[type="text"],
+		textarea {
+			flex: 1;
+			width: 100%;
+			font-size: inherit;
+			margin-top: 0;
+		}
+
+		> .help-icon {
+			flex-shrink: 0;
+			margin: 0;
+			top: auto;
+			transform: none;
+		}
+	}
+
+	.answers:has(input[type="text"]),
+	.answers.input-field {
+		align-items: flex-start;
+	}
+
+	.answers:has(textarea),
+	.answers.textarea-field{
+		align-items: center;
+
+		> .help-icon {
+			margin-top: 0;
+		}
+	}
+
+	.input-large {
+		min-height: 140px;
+		resize: none;
+	}
+
+	.pat-checklist.radio.horizontal {
+		display: flex;
+		gap: 100px;
+
+		label {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			line-height: 1.2;
+			margin: 0;
+			vertical-align: middle;
+
+			span {
+				position: relative;
+				top: 2px;
+			}
+		}
+	}
+
+	.toelichting {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 8px;
+		input {
+			font-size: inherit;
+			display: block;
+			margin-top: 8px;
+			width: 100%;
+		}
+	}
+}
