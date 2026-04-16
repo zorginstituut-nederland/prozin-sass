@@ -247,10 +247,14 @@
 
 	.qa-row {
 		display: grid;
-		grid-template-columns: 0.6fr 320px;
+		grid-template-columns: 0.7fr 320px;
 		column-gap: 40px;
 		padding: 16px 0;
 		align-items: start;
+	}
+
+	.qa-row.sub {
+		border-top: 1px solid #e5e5e5;
 	}
 
 	.question {
@@ -275,13 +279,8 @@
 
 	.answer {
 		text-align: left;
-		padding-left: 30px;
+		padding-left: 50px;
 		word-break: break-word;
-	}
-
-	.answer:empty::before {
-		content: "—";
-		color: rgba(0, 0, 0, 0.45);
 	}
 }
 
