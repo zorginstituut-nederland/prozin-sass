@@ -218,6 +218,25 @@
 			}
 		}
 	}
+	.pat-checklist.radio.vertical {
+		label {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			column-gap: 10px;
+			align-items: start;
+			margin-bottom: 10px;
+		}
+
+		input[type="radio"] {
+			margin: 0;
+			align-self: start;
+		}
+
+		span {
+			line-height: 26px;
+			font-weight: normal;
+		}
+	}
 
 	.toelichting {
 		display: block;
