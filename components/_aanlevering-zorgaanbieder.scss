@@ -140,6 +140,7 @@
 	padding: 24px;
 
 	.question {
+		display: block;
 		margin-bottom: 30px;
 	}
 
@@ -150,11 +151,12 @@
 
 	.vraag-id {
 		font-weight: bold;
+		display: inline;
+		margin-right: 4px;
 	}
 
 	.vraag-text {
-		display: block;
-		margin-top: 4px;
+		display: inline;
 		font-weight: normal;
 	}
 
@@ -228,4 +230,63 @@
 			width: 100%;
 		}
 	}
+}
+
+.aanlevering-zorgaanbieder-antwoorden {
+	font-size: 18px;
+	line-height: 24px;
+	margin-top: 24px;
+
+	.question-group {
+		border-top: 1px solid #e5e5e5;
+
+		&:last-child {
+			border-bottom: 1px solid #e5e5e5;
+		}
+	}
+
+	.qa-row {
+		display: grid;
+		grid-template-columns: 0.6fr 320px;
+		column-gap: 40px;
+		padding: 16px 0;
+		align-items: start;
+	}
+
+	.question {
+		display: block;
+		padding-right: 20px;
+	}
+
+	.vraag-id {
+		font-weight: bold;
+		display: inline;
+		margin-right: 4px;
+	}
+
+	.vraag-text {
+		display: inline;
+		font-weight: normal;
+	}
+	.qa-row.sub .vraag-text {
+		margin-top: 0;
+		opacity: 0.85;
+	}
+
+	.answer {
+		text-align: left;
+		padding-left: 30px;
+		word-break: break-word;
+	}
+
+	.answer:empty::before {
+		content: "—";
+		color: rgba(0, 0, 0, 0.45);
+	}
+}
+
+
+.aanlevering-zorgaanbieder-antwoorden-introduction {
+	font-size: 18px;
+	line-height: 26px;
 }
