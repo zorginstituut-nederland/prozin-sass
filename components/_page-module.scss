@@ -329,6 +329,10 @@ $main-content-width: 768px !default;
 					}
 				}
 
+				.state-label {
+					vertical-align: middle;
+				}
+
 				.icon {
 					color: transparent;
 					width: 39px;
@@ -788,8 +792,8 @@ $main-content-width: 768px !default;
 				vertical-align: top;
 				float: none;
 				font-size: var(--pat-toolbar-font-size);
-				height: 40px;
-				line-height: 40px;
+				height: 39px;
+				line-height: 39px;
 				margin: 0;
 				background: white;
 				color: $colour-dark-blue;
