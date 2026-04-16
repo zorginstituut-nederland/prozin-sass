@@ -11,6 +11,68 @@
 	font-size: 1rem;
 }
 
+.notification-toast {
+	position: fixed;
+	bottom: 24px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	z-index: 9999;
+
+	// optional max width
+	max-width: 400px;
+	width: auto;
+}
+
+// compact styling (keep yours)
+.notification-bar--compact {
+	padding: 14px;
+
+	.notification-main {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.notification-actions {
+		display: none;
+	}
+}
+
+.notification-toast {
+	position: fixed;
+	bottom: 24px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 9999;
+	min-width: 500px;
+	max-width: 550px;
+	width: auto;
+}
+
+.auto-dismiss {
+	animation: toastFade 5s forwards;
+}
+@keyframes toastFade {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(10px);
+	}
+	6% {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+	}
+	88% {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(10px);
+		pointer-events: none;
+	}
+}
+
 .notification-main {
 	display: flex;
 	align-items: center;
@@ -32,8 +94,9 @@
 	flex-wrap: wrap;
 	align-items: center;
 	gap: 4px;
-	line-height: 1.4;
-	font-size: 1rem;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: normal;
 }
 
 .notification-label {
