@@ -215,6 +215,11 @@ $bullet-space: 22px !default;
 				text-decoration: line-through;
 				opacity: 0.5;
 			}
+
+			a[href] {
+				opacity: 0.5;
+				filter: grayscale(1);
+			}
 		}
 
 		&.state-draft,
