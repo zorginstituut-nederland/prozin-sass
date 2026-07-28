@@ -426,6 +426,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 			right: 0;
 		}
 
+		&.dropdown {
+			grid-area: extra;
+			max-width: min-content;
+		}
+
 		@media only screen and (max-width: 770px) {
 			display: flex;
 			margin-top: 15px;
