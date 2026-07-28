@@ -11,4 +11,11 @@
 			padding-bottom: 0.5em;
 		}
 	}
+
+	/* Overrule patternslib */
+	&:not(.free-form) > label,
+	&:not(.free-form) .label,
+	&:not(.free-form) li > label {
+		grid-template-columns: 32px 320px;
+	}
 }

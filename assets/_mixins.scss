@@ -413,7 +413,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e17000', end
 		border-radius: 8px;
 	}
 
-	&.appropriate {
+	&.risk {
+		font-size: 12px;
+		padding: 2px 10px 2px 8px;
+		background: #FEF2DD;
+		border: 1px solid #F3D190;
+		border-radius: 8px;
+
+		&.radiobutton {
+			position: absolute;
+			top: 5px;
+			right: 0;
+		}
+
+		@media only screen and (max-width: 770px) {
+			display: flex;
+			margin-top: 15px;
+			max-width: max-content;
+		}
+	}
+
+	&.appropriate_use {
 		margin-left: 6px;
 		font-size: 12px;
 		padding: 2px 10px 2px 8px;

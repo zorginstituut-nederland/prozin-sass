@@ -380,7 +380,15 @@
 			// position: relative;
 			clear: both;
 			z-index: 1;
-		} 
+		}
+
+		@media only screen and (min-width: 770px) {
+			> label.badge-grid-layout,
+			> .panel-content > label.badge-grid-layout {
+				grid-template-columns: var(--pat-form-horizontal-label-width) auto 0;
+				align-items: center;
+			}
+		}
 
 		fieldset.group,
         div.group,
