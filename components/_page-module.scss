@@ -77,6 +77,9 @@ $main-content-width: 768px !default;
 	&.type-dosage {
 		.pat-collapsible {
 		}
+		hr {
+			border-top: 1px solid $colour-grey-2;
+		}
 	}
 
 	&.type-downloads {
