@@ -78,7 +78,18 @@ $main-content-width: 768px !default;
 		.pat-collapsible {
 		}
 		hr {
+			border: none;
 			border-top: 1px solid $colour-grey-2;
+			height: 0;
+		}
+	}
+
+	&.type-treatment-plan {
+		hr {
+			border: none;
+			border-top: 1px solid $colour-grey-2;
+			height: 0;
+			margin: 16px 0;
 		}
 	}
 
