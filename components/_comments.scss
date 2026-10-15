@@ -124,6 +124,9 @@ $scroll-offset: 120px !default;
 			p {
 				white-space: pre-line;
 				margin-bottom: 0;
+				max-width: 100%;
+				overflow-wrap: anywhere;
+				word-break: break-word;
 			}
 		}
 
