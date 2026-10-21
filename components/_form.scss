@@ -93,6 +93,8 @@
 		// padding: 2px 5px;
 		// margin-top: -3px;
 		// margin-bottom: -3px;
+		overflow-wrap: anywhere;
+		word-break: break-word;
 		font-family: $body-font-family;
 
 		&[size="4"] {
