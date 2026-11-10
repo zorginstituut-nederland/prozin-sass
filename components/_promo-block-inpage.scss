@@ -1,0 +1,35 @@
+.promo-block-inpage {
+	font-size: 28px;
+	animation: fadeInDown 0.2s;
+	animation-delay: 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	background: white;
+	grid-area: promo;
+	padding: 20px 25% 5px 25px;
+	border-radius: 10px;
+	border: 1px solid #cedae1;
+
+	@include screen-size(medium-large) {
+		background: white url(checklist.jpg) no-repeat;
+		background-size: 33% auto;
+		background-position: center right;
+		padding: 20px 25% 5px 25px;
+	}
+
+	@include screen-size(small) {
+		padding: 25px;
+	}
+
+	.button-bar {
+		margin-bottom: 0;
+		margin-top: 30px;
+
+		.pat-button {
+			margin: 0;
+			float: left;
+			padding: 5px 30px;
+		}
+	}
+}

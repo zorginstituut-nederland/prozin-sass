@@ -17,6 +17,10 @@ $rich-object-margin-top-bottom: 2rem !default;
 	&#page-head {
 		max-width: $main-content-width;
 		margin-bottom: 45px;
+
+		&.has-promo {
+			margin-bottom: 20px;
+		}
 	}
 
 	font-size: 1.26562rem;
@@ -494,6 +498,10 @@ $rich-object-margin-top-bottom: 2rem !default;
 				transform: translateY(-50%);
 			}
 		}
+	}
+
+	&.has-promo h1 {
+		margin-bottom: 15px;
 	}
 
 	h1,
