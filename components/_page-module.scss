@@ -397,6 +397,306 @@ $main-content-width: 768px !default;
 			}
 		}
 
+		.page-module-form {
+			min-height: 60px;
+			font-weight: normal;
+			color: $colour-dark-blue;
+			padding: 10px 40px 10px 10px;
+			margin-left: 132px;
+			position: relative;
+			-webkit-user-select: none;
+			user-select: none;
+			cursor: default;
+			box-sizing: border-box;
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+			border-top: 1px solid $colour-dark-blue-l;
+			border-bottom: 1px solid $colour-dark-blue-l;
+
+			.product-fk & {
+				border-top: 1px solid $colour-green-l;
+				border-bottom: 1px solid $colour-green-l;
+			}
+
+			.title-segment {
+				padding: 10px 20px 10px 39px;
+				margin: -10px 0 -10px -39px;
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+				font-size: 24px;
+				line-height: 34px;
+				margin-right: 10px;
+				gap: 18px;
+
+				.fraction-name {
+					padding: 4px 0;
+				}
+
+				.fraction-id {
+					border-radius: 4px;
+					font-size: 15px;
+					font-weight: bold;
+					line-height: 30px;
+					height: 30px;
+					background: $colour-dark-blue-xl;
+					filter: brightness(0.92);
+					font-family: monospace;
+					color: rgba(black, 0.6);
+					padding: 6px 12px;
+					display: inline-flex;
+					align-items: center;
+				}
+
+				.fraction-status {
+					padding: 4px 0 4px 20px;
+					font-weight: normal;
+					font-size: 18px;
+					line-height: inherit;
+				}
+			}
+
+			.buttons-segment {
+				white-space: nowrap;
+				--pat-form-input-field-border: none;
+				--pat-select-box-box-shadow: 0 0 0 1px white;
+
+				.pat-select {
+					--select-box-height: 39px;
+					--select-box-padding-top-bottom: 0;
+					--select-box-box-shadow: none;
+					--pat-select-box-font-size: 20px;
+					@include select-box;
+					height: 39px;
+					line-height: 32px;
+					vertical-align: middle;
+
+					&.injecting {
+						opacity: 0.3;
+					}
+				}
+
+				.state-label {
+					vertical-align: middle;
+				}
+
+				.icon {
+					color: transparent;
+					width: 39px;
+					height: 39px;
+					line-height: 39px;
+					position: relative;
+					background: $button-background-colour-default;
+					display: inline-block;
+					margin-left: 5px;
+					cursor: default;
+					vertical-align: middle;
+
+					&:hover {
+						text-decoration: none;
+						background: $button-background-colour-default-hover;
+					}
+
+					&:before {
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						text-align: center;
+						color: white;
+						line-height: 39px;
+						font-size: 20px;
+						width: 100%;
+						margin: 0;
+					}
+				}
+			}
+
+			.product-fk & {
+				color: $colour-green;
+				background: white;
+				font-weight: normal;
+			}
+
+			&:focus {
+				border-bottom: 1px solid rgba(white, 0);
+				outline: 2px solid $colour-heavenly-blue;
+				z-index: 2;
+			}
+
+			&.collapsible-open,
+			&.collapsible-closed.collapsible-in-progress {
+				border-bottom: none;
+				background-color: $colour-dark-blue-xl;
+
+				.product-fk & {
+					background: $colour-green-xl;
+					color: $colour-dark-green;
+				}
+
+				&:before {
+					content: '#{$glyph-up-open}';
+				}
+			}
+		}
+
+		.page-module-content {
+			min-height: 60px;
+			font-weight: normal;
+			color: $colour-dark-blue;
+			padding: 10px 40px 10px 10px;
+			margin-left: 132px;
+			position: relative;
+			-webkit-user-select: none;
+			user-select: none;
+			cursor: default;
+			box-sizing: border-box;
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+			border-top: 1px solid $colour-dark-blue-l;
+			border-bottom: 1px solid $colour-dark-blue-l;
+
+			&:hover {
+				background-color: $colour-dark-blue-xl;
+				color: $colour-dark-blue;
+			}
+
+			.product-fk & {
+				border-top: 1px solid $colour-green-l;
+				border-bottom: 1px solid $colour-green-l;
+
+				&:hover {
+					background-color: $colour-green-xl;
+					color: $colour-dark-green;
+				}
+			}
+
+			.title-segment {
+				padding: 10px 20px 10px 39px;
+				margin: -10px 0 -10px -39px;
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+				font-size: 24px;
+				line-height: 34px;
+				margin-right: 10px;
+				gap: 18px;
+
+				.fraction-name {
+					padding: 4px 0;
+				}
+
+				.fraction-id {
+					border-radius: 4px;
+					font-size: 15px;
+					font-weight: bold;
+					line-height: 30px;
+					height: 30px;
+					background: $colour-dark-blue-xl;
+					filter: brightness(0.92);
+					font-family: monospace;
+					color: rgba(black, 0.6);
+					padding: 6px 12px;
+					display: inline-flex;
+					align-items: center;
+				}
+
+				.fraction-status {
+					padding: 4px 0 4px 20px;
+					font-weight: normal;
+					font-size: 18px;
+					line-height: inherit;
+				}
+			}
+
+			.buttons-segment {
+				white-space: nowrap;
+				--pat-form-input-field-border: none;
+				--pat-select-box-box-shadow: 0 0 0 1px white;
+
+				.pat-select {
+					--select-box-height: 39px;
+					--select-box-padding-top-bottom: 0;
+					--select-box-box-shadow: none;
+					--pat-select-box-font-size: 20px;
+					@include select-box;
+					height: 39px;
+					line-height: 32px;
+					vertical-align: middle;
+
+					&.injecting {
+						opacity: 0.3;
+					}
+				}
+
+				.state-label {
+					vertical-align: middle;
+				}
+
+				.icon {
+					color: transparent;
+					width: 39px;
+					height: 39px;
+					line-height: 39px;
+					position: relative;
+					background: $button-background-colour-default;
+					display: inline-block;
+					margin-left: 5px;
+					cursor: default;
+					vertical-align: middle;
+
+					&:hover {
+						text-decoration: none;
+						background: $button-background-colour-default-hover;
+					}
+
+					&:before {
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						text-align: center;
+						color: white;
+						line-height: 39px;
+						font-size: 20px;
+						width: 100%;
+						margin: 0;
+					}
+				}
+			}
+
+			.product-fk & {
+				color: $colour-green;
+				background: white;
+				font-weight: normal;
+			}
+
+			&:focus {
+				border-bottom: 1px solid rgba(white, 0);
+				outline: 2px solid $colour-heavenly-blue;
+				z-index: 2;
+			}
+
+			&.collapsible-open,
+			&.collapsible-closed.collapsible-in-progress {
+				border-bottom: none;
+				background-color: $colour-dark-blue-xl;
+
+				.product-fk & {
+					background: $colour-green-xl;
+					color: $colour-dark-green;
+				}
+
+				&:before {
+					content: '#{$glyph-up-open}';
+				}
+			}
+		}
+
 		&.open {
 			.page-module-title {
 				&:before {
@@ -727,7 +1027,48 @@ $main-content-width: 768px !default;
 	&.indicator-lane {
 		.page-module-title {
 			border-top: 0;
+			border-bottom: 0;
 			padding: 10px 40px 10px 10px;
+
+			&.is-disabled {
+				opacity: 0.3;
+
+				.title-link {
+					pointer-events: none;
+					cursor: default;
+				}
+
+				.fraction-id,
+				.fraction-status {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.page-module-form {
+			border-top: 0;
+			padding: 10px 40px 10px 10px;
+			margin-left: 132px;
+
+			&.is-disabled {
+				opacity: 0.3;
+
+				.title-link {
+					pointer-events: none;
+					cursor: default;
+				}
+
+				.fraction-id,
+				.fraction-status {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.page-module-content {
+			border-top: 0;
+			padding: 10px 40px 10px 10px;
+			margin-left: 132px;
 
 			&.is-disabled {
 				opacity: 0.3;
