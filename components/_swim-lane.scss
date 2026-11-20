@@ -1138,3 +1138,14 @@ $swim-lane-hero-background-position: center !default;
 		}
 	}
 }
+
+#swim-lane-related-information {
+	.container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		h2 {
+			margin-bottom: 1.5em;
+		}
+	}
+}
