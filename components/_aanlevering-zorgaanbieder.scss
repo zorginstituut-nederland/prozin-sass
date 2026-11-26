@@ -318,3 +318,79 @@
 	font-size: 18px;
 	line-height: 26px;
 }
+
+.zorgaanbieders {
+
+	> tr.collapsible-open > td:first-child {
+		&:before {
+			position: relative;
+			left: 0px;
+			top: 10px;
+			transform: translateY(-50%);
+			font-family: fontello;
+			content: '#{$glyph-up-open}';
+			display: inline-block;
+			width: 20px;
+			text-align: center;
+			font-weight: normal;
+			pointer-events: none;
+		}
+	}
+
+	> tr.collapsible-closed > td:first-child {
+		&:before {
+			position: relative;
+			left: 0px;
+			top: 10px;
+			transform: translateY(-50%);
+			font-family: fontello;
+			content: '#{$glyph-down-open}';
+			display: inline-block;
+			width: 20px;
+			text-align: center;
+			font-weight: normal;
+			pointer-events: none;
+		}
+	}
+
+	> tr.non-collapsible > td:first-child {
+		padding-left: 34px;
+	}
+
+	> tr.zorgaanbieder-locaties > td.pat-collapsible {
+		padding: 0 !important;
+		float: none !important;
+		display: revert !important;
+		background: none;
+
+		.panel-content {
+			padding: 0 0 0 2em !important;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin: 0;
+			background: white;
+		}
+
+		thead th,
+		tbody td {
+			font-weight: normal;
+		}
+
+		thead th {
+			font-weight: bold;
+			color: $colour-dark-blue;
+		}
+
+		tbody a {
+			color: $colour-dark-blue;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
